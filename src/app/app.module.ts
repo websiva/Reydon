@@ -36,6 +36,7 @@ import { PropertyManagementComponent } from './property-management/property-mana
 import { FinancialPlanningComponent } from './financial-planning/financial-planning.component';
 import { ProductsComponent } from './products/products.component';
 import { CommingSoonComponent } from './comming-soon/comming-soon.component';
+import { TopbarComponent } from './topbar/topbar.component';
 
 register();
 
@@ -66,7 +67,8 @@ register();
     PropertyManagementComponent,
     FinancialPlanningComponent,
     ProductsComponent,
-    CommingSoonComponent
+    CommingSoonComponent,
+    TopbarComponent
   ],
   imports: [
     BrowserModule,

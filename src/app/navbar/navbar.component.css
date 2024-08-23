@@ -1,10 +1,9 @@
+
 .navbar-custom{
-    min-height: 80px;
     background-color: var(--background-color)!important;
 }
 .navbar-brand{
     width: 120px;
-    height: auto;
 }
 .navbar-brand img{
     width: 100%;

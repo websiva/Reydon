@@ -40,20 +40,19 @@
                     <!--<li class="nav-item mx-2">
                         <a class="nav-link" routerLink="/about" routerLinkActive="active" (click)="collapseNavbar()">About</a>
                     </li>-->
-                    <li class="nav-item mx-2">
-                        <a class="nav-link" routerLink="/contact" routerLinkActive="active"
-                            (click)="collapseNavbar()">Contact</a>
+                    <li class="nav-item mx-2 dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false" routerLinkActive="active">Contact</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" routerLink="/about">About Us</a></li>
+                            <li><a class="dropdown-item" routerLink="/contact">Contact Us</a></li>
+                        </ul>
                     </li>
                 </ul>
                 <form class="d-flex me-2" role="search">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                     <button class="btn btn-outline-success search" type="submit">Search</button>
                 </form>
-                <button class="d-flex phone py-0 px-2">
-                    <mat-icon class="my-auto" aria-hidden="false" aria-label="Example home icon"
-                        fontIcon="call"></mat-icon>
-                    <h5 class="phone-number ms-2 my-auto">+91 7708943894</h5>
-                </button>
             </div>
         </div>
     </nav>
