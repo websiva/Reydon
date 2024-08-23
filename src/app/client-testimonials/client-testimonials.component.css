@@ -1,0 +1,92 @@
+.container-fluid{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+.container-box{
+    width: 100%;
+    max-width: 1450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0;
+}
+.section-headings{
+    font-size: 38px;
+    font-weight: 500;
+    text-align: center;
+    color: var(--primary-color);
+}
+.cards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.card{
+    width: 100%;
+    width: 320px;
+    min-height: 345px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    margin: 15px;
+}
+.quote{
+    top: 0;
+    padding-bottom: 20px;
+}
+i{
+    color:var(--primary-color);
+    text-align: left;
+}
+.message{
+    text-align: center;
+    font-size: 20px;
+    font-weight: 300;
+}
+.person-details{
+    display: flex;
+    flex-direction: column;
+    align-items:end;
+    justify-content: center;
+    margin-top: 20px;
+}
+.image-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.image-container img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.name{
+    color: var(--primary-color);
+    font-size: 16px;
+    font-weight: 500;
+}
+.load-more-button{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 20px 0;
+    padding: 0 35px;
+}
+.load-more-button button{
+    right: 0;
+    padding: 8px 15px;
+    font-size: 18px;
+    font-weight: 400;
+    color: white;
+    background-color: var(--button-color);
+    border-radius: 6px;
+    transition: 0.2s all ease;
+    border: none;
+}
+
+.load-more-button button:hover{
+    background-color: var(--button-hover);
+}

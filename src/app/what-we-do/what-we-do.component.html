@@ -1,0 +1,26 @@
+<div class="container-fluid d-flex justify-content-center" >
+    <div class="row">
+        <h6 class="section-header">What We Do?</h6>
+        <div class="section-header-description">
+            <p>We offer a comprehensive suite of real estate services designed to meet the diverse needs of our clients.
+                Whether you're buying, selling, or investing in property, our expert team is dedicated to providing
+                personalized and professional assistance every step of the way.</p>
+        </div>
+        <div class="cards">
+            <div class="card" *ngFor="let doing of whatWeDo">
+                <div class="cards-header">
+                    <div class="icon">
+                        <i [class]="doing.Icon"></i>
+                    </div>
+                    <h6 class="card-title">{{doing.Title}}</h6>
+                </div>
+                <div class="cards-body overflow-hidden">
+                    <p class="card-description mx-auto">{{doing.Description}}</p>
+                </div>
+                <div class="cards-footer">
+                    <a routerLink="/services">Know more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

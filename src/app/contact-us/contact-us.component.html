@@ -1,0 +1,131 @@
+<div class="container-fluid banner p-0">
+    <div class="row">
+        <div class="col-12">
+            <div class="overlay">
+                <img src="contactpage.jpg" alt="">
+                <h2 class="banner-title">Contact Us</h2>
+            </div>
+        </div>
+    </div>
+</div>
+<app-about-us></app-about-us>
+<div class="container-fluid w-100 form-section">
+    <div class="row g-5 form-content-section">
+        <div class="col-lg-7 form">
+            <p>If you have any questions or need further information, please feel free to contact us.</p>
+            <form [formGroup]="contactForm" (ngSubmit)="ngSubmit()">
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="name" class="form-label required">Name</label>
+                        <input type="text" id="name" class="form-control" placeholder="Enter your name"
+                            formControlName="name" />
+                        <div *ngIf="contactForm.controls['name'].invalid && contactForm.controls['name'].touched"
+                            class="text-danger">
+                            <small *ngIf="contactForm.controls['name'].errors?.['required']">Name is required.</small>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="phoneNumber" class="form-label required">Phone number</label>
+                        <input type="text" maxlength="10" id="phoneNumber" class="form-control"
+                            placeholder="Phone number" formControlName="phone" />
+                        <div *ngIf="contactForm.controls['phone'].invalid && contactForm.controls['phone'].touched"
+                            class="text-danger">
+                            <small *ngIf="contactForm.controls['phone'].errors?.['required']">Phone number is
+                                required.</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="location" class="form-label required">Location</label>
+                        <input type="text" id="location" class="form-control" placeholder="Location"
+                            formControlName="location" />
+                        <div *ngIf="contactForm.controls['location'].invalid && contactForm.controls['location'].touched"
+                            class="text-danger">
+                            <small *ngIf="contactForm.controls['location'].errors?.['required']">Location is
+                                required.</small>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="subject" class="form-label required">Subject</label>
+                        <select id="subject" class="form-control" formControlName="subject">
+                            <option value="Services">Services</option>
+                            <option value="Sales-enquiry">Sales Enquiry</option>
+                            <option value="Residential Plots/Building">Residential Plots/Building</option>
+                            <option value="Commercial Plots/Building">Commercial Plots/Building</option>
+                            <option value="Property Management">Property Management</option>
+                            <option value="Reydon Interior Design Furniture">Reydon Interior Design Furniture</option>
+                            <option value="Service Complaint">Service Complaint</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 mb-3">
+                        <label for="email" class="form-label required">Email</label>
+                        <input type="email" id="email" class="form-control" placeholder="Email"
+                            formControlName="email" />
+                        <div *ngIf="contactForm.controls['email'].invalid && contactForm.controls['email'].touched"
+                            class="text-danger">
+                            <small *ngIf="contactForm.controls['email'].errors?.['required']">Email is required.</small>
+                            <small *ngIf="contactForm.controls['email'].errors?.['email']">Please enter a valid email
+                                address.</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 mb-3">
+                        <label for="message" class="form-label required">Message</label>
+                        <textarea id="message" rows="5" class="form-control" placeholder="Message"
+                            formControlName="message"></textarea>
+                        <div *ngIf="contactForm.controls['message'].invalid && contactForm.controls['message'].touched"
+                            class="text-danger">
+                            <small *ngIf="contactForm.controls['message'].errors?.['required']">Message is required.</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <button type="submit" class="btn send-button w-100" [disabled]="contactForm.invalid">Send
+                            message</button>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+        <div class="col-lg-5  form-contact-content-section">
+            <div class="row bg-white px-2 py-5">
+                <div class="col-12">
+                    <p class="fw-bold">For enquires contact</p>
+                    <div class="d-flex align-items-center phone py-2 px-2">
+                        <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="call"></mat-icon>
+                        <h5 class="phone-number ms-3 my-auto">7708943894, 9042439980</h5>
+                    </div>
+                    <div class="d-flex align-items-center email py-2 px-2">
+                        <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="email"></mat-icon>
+                        <h5 class="email-id ms-3 my-auto">reydonrpl&#64;gmail.com</h5>
+                    </div>
+                    <div class="d-flex align-items-start location py-2 ps-2">
+                        <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="map"></mat-icon>
+                        <address class="ms-3">
+                            Reydon Resources Private Limited,<br>
+                            D.NO.28-East, L.S Nagar,<br>
+                            Mathakottai Road, Serfoji College Post,<br>
+                            Thanjavur Dist-613005, Tamilnadu.
+                        </address>
+                    </div>
+                </div>
+            </div>
+            <div class="row my-5">
+                <div class="col-12">
+                    <div class="social-media-icons">
+                        <img src="social-media/facebook.svg" alt="Facebook">
+                        <img src="social-media/twitter.svg" alt="Twitter">
+                        <img src="social-media/linkedin.svg" alt="LinkedIn">
+                        <img src="social-media/youtube.svg" alt="LinkedIn">
+                        <img src="social-media/instagram.svg" alt="LinkedIn">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

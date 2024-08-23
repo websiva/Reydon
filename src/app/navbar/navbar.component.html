@@ -1,0 +1,56 @@
+<div class="container-fluid p-0">
+    <nav class="navbar navbar-expand-lg navbar-light navbar-custom">
+        <div class="container-fluid">
+            <a class="navbar-brand d-flex align-items-center p-0" href="#">
+                <img src="Logo Final.png" alt="logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" aria-current="page" routerLink="/home" routerLinkActive="active"
+                            (click)="collapseNavbar()">Home</a>
+                    </li>
+                    <li class="nav-item mx-2 dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false" routerLink="/projects" routerLinkActive="active">Projects</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" routerLink="/residencial">Residential</a></li>
+                            <li><a class="dropdown-item" routerLink="/commercial">Commercial</a></li>
+                            <li><a class="dropdown-item" routerLink="/upcoming-projects">Upcoming Projects</a></li>
+                        </ul>
+                    </li>
+                    <!--<li class="nav-item mx-2">
+                        <a class="nav-link" routerLink="/properties" routerLinkActive="active" (click)="collapseNavbar()">Products</a>
+                    </li>-->
+                    <li class="nav-item mx-2 dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false" routerLink="/services" routerLinkActive="active">Services</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" routerLink="/real-estate">Real Estate</a></li>
+                            <li><a class="dropdown-item" routerLink="/property-management">Property Management</a></li>
+                            <li><a class="dropdown-item" routerLink="/financial-planning">Financial Planning</a></li>
+                            <li><a class="dropdown-item" routerLink="/products">Products</a></li>
+                        </ul>
+                    </li>
+                    <!--<li class="nav-item mx-2">
+                        <a class="nav-link" routerLink="/about" routerLinkActive="active" (click)="collapseNavbar()">About</a>
+                    </li>-->
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" routerLink="/contact" routerLinkActive="active"
+                            (click)="collapseNavbar()">Contact</a>
+                    </li>
+                </ul>
+                <button class="d-flex phone py-2 px-2">
+                    <mat-icon class="my-auto" aria-hidden="false" aria-label="Example home icon"
+                        fontIcon="call"></mat-icon>
+                    <h5 class="phone-number ms-2 my-auto">+91 7708943894</h5>
+                </button>
+            </div>
+        </div>
+    </nav>
+</div>

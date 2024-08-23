@@ -1,0 +1,14 @@
+<div class="container-fluid">
+    <div class="row">
+        <h2>Our Values</h2>
+        <div class="section" *ngFor="let value of values">
+            <div class="logo">
+                <i [class]="value.image" aria-hidden="true"></i>
+            </div>
+            <div class="content">
+                <h6 class="title">{{value.Title}}</h6>
+                <p class="paraText">{{value.ValueText}}</p>
+            </div>
+        </div>
+    </div>
+</div>

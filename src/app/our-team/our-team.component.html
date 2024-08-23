@@ -1,0 +1,37 @@
+<div class="container d-flex justify-content-center">
+    <div class="row">
+        <h6 class="section-header">Our Exceptional Team</h6>
+        <div class="section-header-description">
+            <p>Meet the dedicated professionals behind our success. Our team is committed to delivering outstanding
+                results and exceptional service in every project we undertake.</p>
+        </div>
+        <div class="cards">
+            <div class="row card-section" *ngFor="let member of members">
+                <div class="col-lg-5 card-left p-0">
+                    <img [src]="member.image" alt="CEO">
+                </div>
+                <div class="col-lg-7 card-right">
+                    <div class="row m-0 p-0">
+                        <div class="col-6 name">
+                            {{member.name}}
+                        </div>
+                        <div class="col-6 role">{{member.position}}</div>
+                    </div>
+                    <div class="row p-0 m-0">
+                        <div class="col-12 description">{{member.roleDetails}}</div>
+                    </div>
+                    <div class="row  p-0 m-0">
+                        <div class="col-6 icons">
+                            <img src="social-media/facebook.svg" alt="Facebook">
+                            <img src="social-media/twitter.svg" alt="Twitter">
+                            <img src="social-media/instagram.svg" alt="LinkedIn">
+                        </div>
+                        <div class="col-6 detail-btn">
+                            <a href="">View in detail</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import "bootstrap-icons/font/bootstrap-icons.css";
+body{
+    width: 100%;
+    min-height: 100vh;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: "Roboto", sans-serif; }
+
+:root{
+    /* Colors*/
+    --primary-color:#004274;
+    /*--button-color:#00aeff;*/
+    --button-color:#F68712;
+    --button-hover:rgba(246, 135, 18,0.8);
+    
+
+    --button-shade1:#E5F7FF;
+    --button-shade2:#CCEFFF;
+    --button-shade3:#B2E7FF;
+    --button-shade4:#99DFFF;
+    --button-shade5:#66CEFF;
+    --button-shade6:#33BEFF;
+
+    --background-color:#f7f8fa;
+    --background-color2:#ffffff;
+
+
+}
+
+.company-name{
+    font-weight: 600;
+    color: var(--primary-color);
+}

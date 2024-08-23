@@ -1,0 +1,16 @@
+<div class="container-fluid">
+    <h3 class="m-5">Properties</h3>
+    <div *ngIf="isLoading">
+        <app-skeleton-loader></app-skeleton-loader>
+        <app-skeleton-loader></app-skeleton-loader>
+        <app-skeleton-loader></app-skeleton-loader>
+    </div>
+    <div *ngIf="!isLoading" class="cards-container d-flex justify-content-center align-items-center flex-wrap">
+        <div *ngFor="let property of properties" class="property-card me-md-3">
+            <img [src]="property.image"  loading="lazy" alt="Property Image text-center">
+            <h5 class=" property-title my-2">{{property.title}}</h5>
+            <p class="property-description">{{property.description}}</p>
+            <button class="property-book-button" (click)="bookProperty(property.id)">Book now</button>
+        </div>
+    </div>
+</div>
