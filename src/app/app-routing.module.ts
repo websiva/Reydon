@@ -30,7 +30,7 @@ const routes: Routes = [
   { path: 'property-management', component: PropertyManagementComponent },
   { path: 'financial-planning', component: FinancialPlanningComponent },
   { path: 'products', component: ProductsComponent },
-  { path: '**', redirectTo: '/home' },
+  { path: '**', redirectTo: '/' },
 ];
 
 @NgModule({
