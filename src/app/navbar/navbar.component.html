@@ -19,9 +19,9 @@
                         <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false" routerLink="/projects" routerLinkActive="active">Projects</a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" routerLink="/residencial">Residential</a></li>
-                            <li><a class="dropdown-item" routerLink="/commercial">Commercial</a></li>
-                            <li><a class="dropdown-item" routerLink="/upcoming-projects">Upcoming Projects</a></li>
+                            <li><a class="dropdown-item" routerLink="/residencial" (click)="collapseNavbar()">Residential</a></li>
+                            <li><a class="dropdown-item" routerLink="/commercial" (click)="collapseNavbar()">Commercial</a></li>
+                            <li><a class="dropdown-item" routerLink="/upcoming-projects" (click)="collapseNavbar()">Upcoming Projects</a></li>
                         </ul>
                     </li>
                     <!--<li class="nav-item mx-2">
@@ -31,10 +31,10 @@
                         <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false" routerLink="/services" routerLinkActive="active">Services</a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" routerLink="/real-estate">Real Estate</a></li>
-                            <li><a class="dropdown-item" routerLink="/property-management">Property Management</a></li>
-                            <li><a class="dropdown-item" routerLink="/financial-planning">Financial Planning</a></li>
-                            <li><a class="dropdown-item" routerLink="/products">Products</a></li>
+                            <li><a class="dropdown-item" routerLink="/real-estate" (click)="collapseNavbar()">Real Estate</a></li>
+                            <li><a class="dropdown-item" routerLink="/property-management" (click)="collapseNavbar()">Property Management</a></li>
+                            <li><a class="dropdown-item" routerLink="/financial-planning" (click)="collapseNavbar()">Financial Planning</a></li>
+                            <li><a class="dropdown-item" routerLink="/products" (click)="collapseNavbar()">Products</a></li>
                         </ul>
                     </li>
                     <!--<li class="nav-item mx-2">
@@ -44,14 +44,14 @@
                         <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false" routerLinkActive="active">Contact</a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" routerLink="/about">About Us</a></li>
-                            <li><a class="dropdown-item" routerLink="/contact">Contact Us</a></li>
+                            <li><a class="dropdown-item" routerLink="/about" (click)="collapseNavbar()">About Us</a></li>
+                            <li><a class="dropdown-item" routerLink="/contact" (click)="collapseNavbar()">Contact Us</a></li>
                         </ul>
                     </li>
                 </ul>
                 <form class="d-flex me-2" role="search">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success search" type="submit">Search</button>
+                    <mat-icon class="my-auto" aria-hidden="false" aria-label="Example home icon" fontIcon="search"></mat-icon>
                 </form>
             </div>
         </div>
