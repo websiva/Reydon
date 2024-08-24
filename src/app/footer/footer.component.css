@@ -36,7 +36,7 @@ h6{
     align-items: center;
 }
 .discover ul{
-    padding: 0;
+    padding: 0 0 0 10px;
 }
 .discover li{
     list-style-type: none;
@@ -119,4 +119,23 @@ a:hover{
 }
 .about p{
     font-size: 16px;
+}
+
+
+@media (max-width:768px){
+    .discover{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: start;
+    }
+}
+
+@media (max-width:480px){
+    .discover{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: start;
+    }
 }
