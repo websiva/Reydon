@@ -12,8 +12,8 @@ body { margin: 0; font-family: "Roboto", sans-serif; }
     /* Colors*/
     --primary-color:#004274;
     /*--button-color:#00aeff;*/
-    --button-color:#F68712;
-    --button-hover:rgba(246, 135, 18,0.8);
+    --button-color:#00adef;
+    --button-hover:#00abefde;
     
 
     --button-shade1:#E5F7FF;
