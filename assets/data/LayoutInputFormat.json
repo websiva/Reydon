@@ -2,7 +2,7 @@
 	{
 		"ProjectId": "0001",
 		"ProjectName": "Heritage Avenue",
-		"Type": "Residential",
+		"Type": "",
 		"Category": "Layout",
 		"HeaderLocation": "Bodi, Theni",
 		"DTCPApproved": true,
@@ -364,3 +364,5 @@
 		]
 	}
 ]
+
+435.60
