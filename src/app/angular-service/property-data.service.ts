@@ -7,7 +7,7 @@ import { map, Observable } from 'rxjs';
 })
 export class PropertyDataService {
   //private jsonUrl = 'assets/data/LayoutInputFormat.json';
-  private jsonUrl = 'https://gist.githubusercontent.com/websiva/0af1545b9c067ab87477357083e9d505/raw/f32e0734fff58b2840f689e6bae6dd9713e7ef3a/ReydonData.json';
+  private jsonUrl = 'https://gist.githubusercontent.com/websiva/0af1545b9c067ab87477357083e9d505/raw/ReydonData.json';
   constructor(private http:HttpClient) { }
 
   //Retriving all data from json file
