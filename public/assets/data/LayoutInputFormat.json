@@ -1,0 +1,366 @@
+[
+	{
+		"ProjectId": "0001",
+		"ProjectName": "Heritage Avenue",
+		"Type": "Residential",
+		"Category": "Layout",
+		"HeaderLocation": "Bodi, Theni",
+		"DTCPApproved": true,
+		"RERAApproved": true,
+		"VerifiedByReydon": true,
+		"ProjectLaunchDate":"2024-08-30",
+		"BannerImagesNames": [
+			"heritageBanner1.png",
+			"heritageBanner2.png",
+			"heritageBanner3.png",
+			"heritageBanner4.png"
+		],
+		"CardImage":"RES005001.jpeg",
+		"TotalArea": 10,
+		"TotalPlots": 154,
+		"AvailablePlots": 148,
+		"Phases": {
+			"NoOfPhases": 3,
+			"PhasesDetails": [
+				{
+					"StartNumber": 101,
+					"EndNumber": 150
+				},
+				{
+					"StartNumber": 201,
+					"EndNumber": 250
+				},
+				{
+					"StartNumber": 301,
+					"EndNumber": 352
+				}
+			]
+		},
+		"PropertyDescription": "Heritage Avenue is a premium plot development situated along the scenic Bodi - Munnar National Highway in Bodinayakanur, Tamil Nadu.",
+		"AddressDetails": {
+			"Address": "Mundhal",
+			"PostOffice": "Anaikaraipatti",
+			"Taluk": "Bodinayakkanur",
+			"PinCode": "625582",
+			"District": "Theni",
+			"Landmark": "Bodi-(Theni To Munnar National Highway)",
+			"Zone": "Theni",
+			"Topography": "Foothills",
+			"GoogleMapLink": ""
+		},
+		"Amenities": [
+			"Water Pipeline Connection",
+			"Black top tar Road",
+			"Garden",
+			"Street Light",
+			"Play Area & Park",
+			"Sports Area",
+			"Convention Centre",
+			"Entrance Arch",
+			"Security",
+			"Gated Community",
+			"CCTV Surveillance"
+		],
+		"CardAmenities": [
+			"Street Light",
+			"Gated Community",
+			"Security",
+			"CCTV Surveillance",
+			"Water Pipeline Connection"
+		],
+		"NearByProximity": [
+			{
+				"ProximityName": "Theni New Bus stand",
+				"Distance": 23,
+				"Duration": 33
+			},
+			{
+				"ProximityName": "Bodi Bus stand",
+				"Distance": 6.8,
+				"Duration": 12
+			},
+			{
+				"ProximityName": "Bodi Railway Station",
+				"Distance": 5.3,
+				"Duration": 8
+			},
+			{
+				"ProximityName": "Bodi Govt Engg College",
+				"Distance": 8.5,
+				"Duration": 15
+			},
+			{
+				"ProximityName": "CPA College of Arts and Science",
+				"Distance": 3.0,
+				"Duration": 4
+			},
+			{
+				"ProximityName": "Bodi Govt Hospital",
+				"Distance": 5.7,
+				"Duration": 10
+			},
+			{
+				"ProximityName": "Munnar",
+				"Distance": 63,
+				"Duration": 100
+			},
+			{
+				"ProximityName": "Kurangani Falls",
+				"Distance": 10.6,
+				"Duration": 17
+			},
+			{
+				"ProximityName": "Green Royal Resort, Bodi",
+				"Distance": 1.0,
+				"Duration": 2
+			}
+		],
+		"TopFiveReasons": [
+			{
+				"ReasonNo": 1,
+				"Title": "Scenic Location",
+				"Description": "Enjoy breathtaking views and serene surroundings, perfect for relaxation.",
+				"ImageUrl": ""
+			},
+			{
+				"ReasonNo": 2,
+				"Title": "Key Landmarks",
+				"Description": "Conveniently located near schools, hospitals, and popular attractions.",
+				"ImageUrl": ""
+			},
+			{
+				"ReasonNo": 3,
+				"Title": "Investment Potential",
+				"Description": "Secure your future in a rapidly growing real estate market.",
+				"ImageUrl": ""
+			},
+			{
+				"ReasonNo": 4,
+				"Title": "Excellent Connectivity",
+				"Description": "Well-connected to nearby towns and major destinations.",
+				"ImageUrl": ""
+			},
+			{
+				"ReasonNo": 5,
+				"Title": "Healthy Lifestyle",
+				"Description": "Live in a peaceful, pollution-free environment surrounded by nature.",
+				"ImageUrl": ""
+			}
+		],
+		"LegalAndFinancial": {
+			"DTCPApprovalNo": "LP /AD DTCP(TD) No:SWP/72/2023",
+			"RERAApprovalNo": "NIL",
+			"TitdleDeedisClearDocument": true,
+			"LitigationProperty": false,
+			"EncumberanceCertificateisClear": true,
+			"PropertyisUnderHypothecationbyBank": true
+		},
+		"BankPartners": [
+			"HDFC",
+			"SBI",
+			"AXIS",
+			"ICICI",
+			"KVB"
+		]
+	},
+	{
+		"ProjectId": "0002",
+		"ProjectName": "Sunshine City",
+		"Type": "Commercial",
+		"Category": "Layout",
+		"HeaderLocation": "OMR, Tambaram",
+		"DTCPApproved": true,
+		"RERAApproved": false,
+		"VerifiedByReydon": false,
+		"ProjectLaunchDate":"2024-05-30",
+		"BannerImagesNames": [
+			"sunshine1.png",
+			"sunshine2.png"
+		],
+		"CardImage":"RES005001.jpeg",
+		"TotalArea": 20,
+		"TotalPlots": 250,
+		"AvailablePlots": 100,
+		"Phases": {
+			"NoOfPhases": 2,
+			"PhasesDetails": [
+				{
+					"StartNumber": 1,
+					"EndNumber": 125
+				},
+				{
+					"StartNumber": 126,
+					"EndNumber": 250
+				}
+			]
+		},
+		"PropertyDescription": "A modern residential township in Chennai offering luxurious amenities.",
+		"AddressDetails": {
+			"Address": "OMR",
+			"PostOffice": "Sholinganallur",
+			"Taluk": "Tambaram",
+			"PinCode": "600119",
+			"District": "Chennai",
+			"Landmark": "Near SIPCOT IT Park",
+			"Zone": "Chennai",
+			"Topography": "Plains",
+			"GoogleMapLink": ""
+		},
+		"Amenities": [
+			"Clubhouse",
+			"Swimming Pool",
+			"Jogging Track",
+			"Security",
+			"CCTV Surveillance",
+			"Gym"
+		],
+		"CardAmenities": [
+			"Street Light",
+			"Gated Community",
+			"Security",
+			"CCTV Surveillance",
+			"Water Pipeline Connection"
+		],
+		"NearByProximity": [
+			{
+				"ProximityName": "SIPCOT IT Park",
+				"Distance": 5,
+				"Duration": 10
+			},
+			{
+				"ProximityName": "Phoenix Mall",
+				"Distance": 12,
+				"Duration": 25
+			},
+			{
+				"ProximityName": "Airport",
+				"Distance": 15,
+				"Duration": 35
+			}
+		],
+		"TopFiveReasons": [
+			{
+				"ReasonNo": 1,
+				"Title": "Luxury Amenities",
+				"Description": "Enjoy world-class facilities.",
+				"ImageUrl": ""
+			},
+			{
+				"ReasonNo": 2,
+				"Title": "Prime Location",
+				"Description": "Located in the heart of the city.",
+				"ImageUrl": ""
+			}
+		],
+		"LegalAndFinancial": {
+			"DTCPApprovalNo": "LP/AD DTCP(TD) No:SWP/45/2022",
+			"RERAApprovalNo": "TN/29/2023",
+			"TitdleDeedisClearDocument": true,
+			"LitigationProperty": false,
+			"EncumberanceCertificateisClear": true,
+			"PropertyisUnderHypothecationbyBank": false
+		},
+		"BankPartners": [
+			"ICICI",
+			"KVB",
+			"HDFC"
+		]
+	},
+	{
+		"ProjectId": "0003",
+		"ProjectName": "Green Meadows",
+		"Type": "Commercial",
+		"Category": "Farm Lands",
+		"HeaderLocation": "Coonoor",
+		"DTCPApproved": true,
+		"RERAApproved": true,
+		"VerifiedByReydon": true,
+		"ProjectLaunchDate":"2024-02-30",
+		"BannerImagesNames": [
+			"meadows1.png",
+			"meadows2.png",
+			"meadows3.png"
+		],
+		"CardImage":"RES005001.jpeg",
+		"TotalArea": 50,
+		"TotalPlots": 30,
+		"AvailablePlots": 15,
+		"Phases": {
+			"NoOfPhases": 1,
+			"PhasesDetails": [
+				{
+					"StartNumber": 1,
+					"EndNumber": 30
+				}
+			]
+		},
+		"PropertyDescription": "Serene farm lands nestled in the lush green hills of Coorg.",
+		"AddressDetails": {
+			"Address": "Suntikoppa",
+			"PostOffice": "Madikeri",
+			"Taluk": "Coonoor",
+			"PinCode": "571201",
+			"District": "Coorg",
+			"Landmark": "Near Dubare Elephant Camp",
+			"Zone": "Coimbatore",
+			"Topography": "Hilly Terrain",
+			"GoogleMapLink": ""
+		},
+		"Amenities": [
+			"Organic Farming",
+			"Irrigation Facilities",
+			"Fencing",
+			"24x7 Security"
+		],
+		"CardAmenities": [
+			"Street Light",
+			"Gated Community",
+			"Security",
+			"CCTV Surveillance",
+			"Water Pipeline Connection"
+		],
+		"NearByProximity": [
+			{
+				"ProximityName": "Dubare Elephant Camp",
+				"Distance": 3,
+				"Duration": 10
+			},
+			{
+				"ProximityName": "Abbey Falls",
+				"Distance": 18,
+				"Duration": 45
+			},
+			{
+				"ProximityName": "Madikeri Town",
+				"Distance": 12,
+				"Duration": 30
+			}
+		],
+		"TopFiveReasons": [
+			{
+				"ReasonNo": 1,
+				"Title": "Organic Living",
+				"Description": "Cultivate your own organic produce.",
+				"ImageUrl": ""
+			},
+			{
+				"ReasonNo": 2,
+				"Title": "Beautiful Surroundings",
+				"Description": "Live amidst nature.",
+				"ImageUrl": ""
+			}
+		],
+		"LegalAndFinancial": {
+			"DTCPApprovalNo": "NIL",
+			"RERAApprovalNo": "NIL",
+			"TitdleDeedisClearDocument": true,
+			"LitigationProperty": false,
+			"EncumberanceCertificateisClear": true,
+			"PropertyisUnderHypothecationbyBank": false
+		},
+		"BankPartners": [
+			"SBI",
+			"Canara Bank"
+		]
+	}
+]

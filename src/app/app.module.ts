@@ -37,6 +37,7 @@ import { FinancialPlanningComponent } from './financial-planning/financial-plann
 import { ProductsComponent } from './products/products.component';
 import { CommingSoonComponent } from './comming-soon/comming-soon.component';
 import { TopbarComponent } from './topbar/topbar.component';
+import { PropertyDataService } from './angular-service/property-data.service';
 
 register();
 
@@ -77,7 +78,7 @@ register();
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [provideHttpClient(), provideAnimationsAsync(),PropertyService,PropertyResolverService],
+  providers: [provideHttpClient(), provideAnimationsAsync(),PropertyService,PropertyResolverService,PropertyDataService],
   bootstrap: [AppComponent],
   schemas:[CUSTOM_ELEMENTS_SCHEMA]
 })
