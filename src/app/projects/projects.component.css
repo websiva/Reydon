@@ -74,6 +74,10 @@
 .form-control{
     color: black;
 }
+.reset-button{
+    background-color: var(--button-color);
+    color: white;
+}
 
 /*************************Project card****************/
 .cards-container{

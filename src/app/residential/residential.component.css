@@ -74,6 +74,10 @@
 .form-control{
     color: black;
 }
+.reset-button{
+    background-color: var(--button-color);
+    color: white;
+}
 
 /*************************Project card****************/
 .cards-container{
@@ -267,7 +271,7 @@
     .filter-section-large {
         width: 100%;
         display: block;
-        background-color: #F7F8FA;
+        background-color: transparent;
         padding: 20px 0;
         margin-top: 0px;
     }
