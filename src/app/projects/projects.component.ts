@@ -1,5 +1,6 @@
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { PropertyDataService } from '../angular-service/property-data.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-projects',
@@ -24,7 +25,7 @@ export class ProjectsComponent implements OnInit {
   pricePerUnit: number = 0;
   selectedUnit: string = 'Sq Ft';
 
-  constructor(private propertyDataService: PropertyDataService, private cdr: ChangeDetectorRef) {
+  constructor(private propertyDataService: PropertyDataService, private cdr: ChangeDetectorRef,private router:Router) {
 
   }
 
@@ -178,6 +179,11 @@ export class ProjectsComponent implements OnInit {
     this.selectedProperty = "All";
     this.selectedCity = "All";
     this.selectedZone = "All";
+  }
+
+  goingDetailPage(category:string,projectName:string,projectId:string){
+    const formattedProjectName = projectName.replace(/\s+/g, '-').toLowerCase();
+    this.router.navigate(["/"+category,formattedProjectName],{queryParams:{id:projectId}});
   }
 
 

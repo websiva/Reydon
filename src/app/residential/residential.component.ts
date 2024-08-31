@@ -1,5 +1,6 @@
 import { Component, OnInit,ChangeDetectorRef } from '@angular/core';
 import { PropertyDataService } from '../angular-service/property-data.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-residential',
@@ -24,7 +25,7 @@ export class ResidentialComponent implements OnInit {
   pricePerUnit: number = 0;
   selectedUnit: string = 'Sq Ft';
 
-  constructor(private propertyDataService: PropertyDataService, private cdr: ChangeDetectorRef) {
+  constructor(private propertyDataService: PropertyDataService, private cdr: ChangeDetectorRef,private router:Router) {
 
   }
 
@@ -178,6 +179,10 @@ export class ResidentialComponent implements OnInit {
     this.selectedProperty = "All";
     this.selectedCity = "All";
     this.selectedZone = "All";
+  }
+
+  goingDetailPage(category:string){
+    this.router.navigate(["/"+category]);
   }
 
 

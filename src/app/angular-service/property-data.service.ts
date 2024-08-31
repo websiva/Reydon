@@ -13,47 +13,6 @@ export class PropertyDataService {
   //Retriving all data from json file
   getAllData():Observable<any[]>{
    return this.http.get<any[]>(this.jsonUrl);
-  }
-
-  //Retriving categories for all projects from objects
-  getUniqueCategories(): Observable<string[]> {
-    return this.getAllData().pipe(
-      map(data => this.gettingUniqueCategories(data))
-    );
-  }
-
-  //extract unique categories
-  gettingUniqueCategories(data:any[]):string[]{
-    const categories = data.map(item=>item.Category);
-    return [...new Set(categories)]
-  }
-
-  //Retriving City from objects
-  getCities():Observable<string[]>{
-    return this.getAllData().pipe(
-      map(data=>this.getUniqueCities(data))
-    );
-  }
-
-  //extract unique city
-  getUniqueCities(data:any[]):string[]{
-    const cities = data.map(item=>item.AddressDetails.Taluk);
-    return [...new Set(cities)];
-  }
-
-  //Retriving zone from objects
-  getZones():Observable<string[]>{
-    return this.getAllData().pipe(
-      map(data=>this.getUniqueZones(data))
-    );
-  }
-
-  //Extract unique zone from objects
-  getUniqueZones(data:any[]):string[]{
-    const zones = data.map(item=>item.AddressDetails.Zone)
-    return [...new Set(zones)];
-  }
-
-  
+  }  
 
 }

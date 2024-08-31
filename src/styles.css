@@ -11,7 +11,7 @@ body { margin: 0; font-family: "Roboto", sans-serif; }
 :root{
     /* Colors*/
     --primary-color:#004274;
-    /*--button-color:#00aeff;*/
+    --logo-color:#F68712;
     --button-color:#00adef;
     --button-hover:#00abefde;
     

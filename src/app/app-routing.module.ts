@@ -14,6 +14,7 @@ import { RealEstateComponent } from './real-estate/real-estate.component';
 import { PropertyManagementComponent } from './property-management/property-management.component';
 import { FinancialPlanningComponent } from './financial-planning/financial-planning.component';
 import { ProductsComponent } from './products/products.component';
+import { LayoutComponent } from './layout/layout.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -30,6 +31,7 @@ const routes: Routes = [
   { path: 'property-management', component: PropertyManagementComponent },
   { path: 'financial-planning', component: FinancialPlanningComponent },
   { path: 'products', component: ProductsComponent },
+  {path:'Layout/:projectName',component:LayoutComponent},
   { path: '**', redirectTo: '/home' },
 ];
 

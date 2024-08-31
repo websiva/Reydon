@@ -1,6 +1,7 @@
-import { Component, OnInit ,ChangeDetectorRef} from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import { PropertyDataService } from '../angular-service/property-data.service';
 import { map, Observable } from 'rxjs';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-commercial',
@@ -25,7 +26,7 @@ export class CommercialComponent implements OnInit {
   pricePerUnit: number = 0;
   selectedUnit: string = 'Sq Ft';
 
-  constructor(private propertyDataService: PropertyDataService, private cdr: ChangeDetectorRef) {
+  constructor(private propertyDataService: PropertyDataService, private cdr: ChangeDetectorRef, private router: Router) {
 
   }
 
@@ -36,7 +37,7 @@ export class CommercialComponent implements OnInit {
   //Getting full object from service
   loaddata() {
     this.propertyDataService.getAllData().subscribe(data => {
-      this.LayoutData = data.filter(project=>project.Type === 'Commercial');
+      this.LayoutData = data.filter(project => project.Type === 'Commercial');
       this.FilteredProjects = this.LayoutData;
       this.updateDropdownValues();
     })
@@ -179,5 +180,9 @@ export class CommercialComponent implements OnInit {
     this.selectedProperty = "All";
     this.selectedCity = "All";
     this.selectedZone = "All";
+  }
+
+  goingDetailPage(category: string) {
+    this.router.navigate(["/" + category]);
   }
 }

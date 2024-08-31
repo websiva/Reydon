@@ -38,6 +38,8 @@ import { ProductsComponent } from './products/products.component';
 import { CommingSoonComponent } from './comming-soon/comming-soon.component';
 import { TopbarComponent } from './topbar/topbar.component';
 import { PropertyDataService } from './angular-service/property-data.service';
+import { LayoutComponent } from './layout/layout.component';
+import { BuildingComponent } from './building/building.component';
 
 register();
 
@@ -69,7 +71,9 @@ register();
     FinancialPlanningComponent,
     ProductsComponent,
     CommingSoonComponent,
-    TopbarComponent
+    TopbarComponent,
+    LayoutComponent,
+    BuildingComponent
   ],
   imports: [
     BrowserModule,
