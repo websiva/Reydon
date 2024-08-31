@@ -37,7 +37,7 @@
                         <p>Project Id: <span>{{project.ProjectId}}</span></p>
                     </div>
                 </div>
-                <div class="col-md-6 d-flex justify-content-end align-items-center">
+                <div class="col-md-6 header-images">
                     <img src="DTCP.png" alt="" class="dtcp-approved-image"
                         *ngIf="project.DTCPApproved===true&&project.RERAApproved===false">
                     <img src="RERA.png" alt="" class="dtcp-approved-image"
@@ -207,33 +207,33 @@
                 <h6 class="section-title w-100">Legal & Financial</h6>
                 <div class="col-md-6">
                     <table class="w-100">
-                        <tr>
-                            <th>DTCP Approval No</th>
-                            <td>: {{project.LegalAndFinancial.DTCPApprovalNo}}</td>
+                        <tr class="row m-0">
+                            <th class="col-md-4">DTCP Approval No</th>
+                            <td class="col-md-8 my-auto">: {{project.LegalAndFinancial.DTCPApprovalNo}}</td>
                         </tr>
-                        <tr>
-                            <th>RERA Approval No</th>
-                            <td>: {{project.LegalAndFinancial.RERAApprovalNo}}</td>
+                        <tr class="row m-0">
+                            <th class="col-md-4">RERA Approval No</th>
+                            <td class="col-md-8 my-auto">: {{project.LegalAndFinancial.RERAApprovalNo}}</td>
                         </tr>
-                        <tr>
-                            <th>Litigation Property</th>
-                            <td>: {{project.LegalAndFinancial.LitigationProperty}}</td>
+                        <tr class="row m-0">
+                            <th class="col-md-4">Litigation Property</th>
+                            <td class="col-md-8 my-auto">: {{project.LegalAndFinancial.LitigationProperty}}</td>
                         </tr>
                     </table>
                 </div>
                 <div class="col-md-6">
                     <table class="w-100">
-                        <tr>
-                            <th>Titdle Deed is Clear Document</th>
-                            <td>: {{project.LegalAndFinancial.TitdleDeedisClearDocument}}</td>
+                        <tr class="row m-0">
+                            <th class="col-md-9">Titdle Deed is Clear Document</th>
+                            <td class="col-md-3 my-auto">: {{project.LegalAndFinancial.TitdleDeedisClearDocument}}</td>
                         </tr>
-                        <tr>
-                            <th>Encumberance Certificate is Clear</th>
-                            <td>: {{project.LegalAndFinancial.EncumberanceCertificateisClear}}</td>
+                        <tr class="row m-0">
+                            <th class="col-md-9">Encumberance Certificate is Clear</th>
+                            <td class="col-md-3 my-auto">: {{project.LegalAndFinancial.EncumberanceCertificateisClear}}</td>
                         </tr>
-                        <tr>
-                            <th>Property is Under Hypothecation by Bank/Finance</th>
-                            <td>: {{project.LegalAndFinancial.PropertyisUnderHypothecationbyBank}}</td>
+                        <tr class="row m-0">
+                            <th class="col-md-9">Property is Under Hypothecation by Bank/Finance</th>
+                            <td class="col-md-3 my-auto">: {{project.LegalAndFinancial.PropertyisUnderHypothecationbyBank}}</td>
                         </tr>
                     </table>
                 </div>
@@ -262,14 +262,14 @@
         <div class="contact-information-section">
             <div class="row m-0">
                 <h6 class="section-title w-100">Contact Information</h6>
-                <div class="row contact">
+                <div class="row contact m-0">
                     <div class="col-md-6">
                         <img src="contact.png" alt="">
                     </div>
                     <div class="col-md-6 contact-form">
                         <form [formGroup]="contactForm" (ngSubmit)="ngSubmit()">
-                            <div class="row">
-                                <div class="col-12 mb-3">
+                            <div class="row m-0 w-100">
+                                <div class="col-12 mb-3 p-0">
                                     <label for="name" class="form-label required">Name</label>
                                     <input type="text" id="name" class="form-control" placeholder="Enter your name"
                                         formControlName="name" />
@@ -280,8 +280,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col-12 mb-3">
+                            <div class="row m-0 w-100">
+                                <div class="col-12 mb-3 p-0">
                                     <label for="phoneNumber" class="form-label required">Phone number</label>
                                     <input type="text" maxlength="10" id="phoneNumber" class="form-control"
                                         placeholder="Phone number" formControlName="phone" />
@@ -293,8 +293,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col-12 mb-3">
+                            <div class="row m-0">
+                                <div class="col-12 p-0 mb-3">
                                     <label for="email" class="form-label required">Email</label>
                                     <input type="email" id="email" class="form-control" placeholder="Email"
                                         formControlName="email" />
@@ -309,8 +309,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col-12 mb-3">
+                            <div class="row m-0">
+                                <div class="col-12 p-0 mb-3">
                                     <label for="message" class="form-label required">Message</label>
                                     <textarea id="message" rows="5" class="form-control" placeholder="Message"
                                         formControlName="message"></textarea>

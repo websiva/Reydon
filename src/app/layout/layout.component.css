@@ -88,17 +88,12 @@
     color: var(--logo-color);
 }
 /***********Header images***/
-.verified-image{
-    width: 100px;
-    height: auto;
-    margin:0 10px;
+.header-images{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
-.dtcp-approved-image{
-    width: 100px;
-    height: auto;
-    margin:0 10px;
-}
-.dtcp-rera-approved-image{
+.header-images img{
     width: 100px;
     height: auto;
     margin:0 10px;
@@ -375,6 +370,11 @@
     width: 100%;
     padding: 40px 0;
 }
+.contact-information-section .contact img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
 .contact-form{
     padding: 0 40px;
 }
@@ -419,6 +419,7 @@
 .banks img{
  height: 70px;
  width: auto;
+ margin: 10px;
 }
 
 
@@ -600,6 +601,32 @@
 
 /* Media query for small screens  */
 @media (max-width: 576px) {
+
+    .header-images img{
+        width: 50px;
+        height: auto;
+        margin:0 10px;
+    }
+    .header-images{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .Legal-Financial-section th{
+        font-size: 18px;
+        padding: 10px;
+        font-weight: 400;
+    }
+    .Legal-Financial-section td{
+        font-size: 16px;
+        font-weight: 500;
+    }
+    .contact-information-section .contact img{
+       display: none;
+    }
+    .contact-form{
+        padding: 0;
+    }
     
     .cards-container .row{
         display: flex;
