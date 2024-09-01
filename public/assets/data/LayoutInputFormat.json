@@ -555,5 +555,191 @@
 			"KVB",
 			"HDFC"
 		]
+	},
+	{
+		"ProjectId": "0004",
+		"ProjectName": "Heritage Avenue",
+		"Type": "Residential",
+		"Category": "Layout",
+		"HeaderLocation": "Bodi, Theni",
+		"DTCPApproved": true,
+		"RERAApproved": true,
+		"VerifiedByReydon": true,
+		"ProjectLaunchDate": "2024-08-30",
+		"PricePerSqFt": 3500,
+		"BannerImagesNames": [
+			"heritageBanner1.png",
+			"heritageBanner2.png",
+			"heritageBanner3.png",
+			"heritageBanner4.png"
+		],
+		"CardImage": "RES005001.jpeg",
+		"TotalArea": 10,
+		"TotalPlots": 154,
+		"AvailablePlots": 148,
+		"Phases": {
+			"NoOfPhases": 3,
+			"PhasesDetails": [
+				{
+					"StartNumber": 101,
+					"EndNumber": 150
+				},
+				{
+					"StartNumber": 201,
+					"EndNumber": 250
+				},
+				{
+					"StartNumber": 301,
+					"EndNumber": 352
+				}
+			]
+		},
+		"PropertyDescription": "Heritage Avenue is a premium plot development situated along the scenic Bodi - Munnar National Highway in Bodinayakanur, Tamil Nadu. Nestled amidst lush greenery and rolling hills, it offers an ideal setting for building a dream home or holiday retreat. With easy access to both Bodinayakanur town and the popular hill station of Munnar, Heritage Avenue provides the perfect blend of tranquility and convenience, making it a great investment opportunity in one of the region's most picturesque locales.",
+		"AddressDetails": {
+			"Address": "Mundhal",
+			"PostOffice": "Anaikaraipatti",
+			"Taluk": "Bodinayakkanur",
+			"PinCode": "625582",
+			"District": "Theni",
+			"Landmark": "Bodi-(Theni To Munnar National Highway)",
+			"Zone": "Theni",
+			"Topography": "Foothills",
+			"GoogleMapLink": "",
+			"Latitude": 10.047981747106626,
+			"Longitude": 77.31411692305962
+		},
+		"Amenities": [
+			"Street Light",
+			"Black top Tar road",
+			"White Top Metal Road",
+			"Water Pipeline Connection",
+			"Water Tank",
+			"Drainage system",
+			"Drainage system (Covered)",
+			"Entrance Arch",
+			"Compound wall/Gated community",
+			"Landscaped Garden",
+			"Parking",
+			"Security"
+		],
+		"CardAmenities": [
+			"Street Light",
+			"Gated Community",
+			"Security",
+			"CCTV Surveillance",
+			"Water Pipeline Connection"
+		],
+		"NearByProximity": [
+			{
+				"ProximityName": "Theni New Bus stand",
+				"Distance": "23 km",
+				"Duration": "33 Min",
+				"Latitude": 10.010682293781145,
+				"Longitude": 77.49501109187932
+			},
+			{
+				"ProximityName": "Bodi Bus stand",
+				"Distance": "6.8 km",
+				"Duration": "12 Min",
+				"Latitude": 10.008542388292139,
+				"Longitude": 77.34941831937107
+			},
+			{
+				"ProximityName": "Bodi Railway Station",
+				"Distance": "5.3 km",
+				"Duration": "8 Min",
+				"Latitude": 10.019150675717402,
+				"Longitude": 77.34590096383862
+			},
+			{
+				"ProximityName": "Bodi Govt Engg College",
+				"Distance": "8.5 Km",
+				"Duration": "15 Min",
+				"Latitude": 9.994882272434757,
+				"Longitude": 77.34943961140806
+			},
+			{
+				"ProximityName": "CPA College of Arts and Science",
+				"Distance": "3 Km",
+				"Duration": "4 Min",
+				"Latitude": 10.028987126594691,
+				"Longitude": 77.33110839518933
+			},
+			{
+				"ProximityName": "Bodi Govt Hospital",
+				"Distance": "5.7 km",
+				"Duration": "10 Min",
+				"Latitude": 10.016901818371247,
+				"Longitude": 77.35274648014287
+			},
+			{
+				"ProximityName": "Munnar",
+				"Distance": "63 Km",
+				"Duration": "01 Hr 40 Min",
+				"Latitude": 10.08554776673238,
+				"Longitude": 77.06070753264868
+			},
+			{
+				"ProximityName": "Kurangani Falls",
+				"Distance": "10.6 Km",
+				"Duration": "17 Min",
+				"Latitude": 10.088076601273248,
+				"Longitude": 77.24629265189485
+			},
+			{
+				"ProximityName": "Green Royal Resort, Bodi",
+				"Distance": "1 km",
+				"Duration": "2 Min",
+				"Latitude": 10.03982832652384,
+				"Longitude": 77.31960296723395
+			}
+		],
+		"TopFiveReasons": [
+			{
+				"ReasonNo": 1,
+				"Title": "Scenic Location",
+				"Description": "Enjoy breathtaking views and serene surroundings, perfect for relaxation.",
+				"ImageUrl": ""
+			},
+			{
+				"ReasonNo": 2,
+				"Title": "Key Landmarks",
+				"Description": "Conveniently located near schools, hospitals, and popular attractions.",
+				"ImageUrl": ""
+			},
+			{
+				"ReasonNo": 3,
+				"Title": "Investment Potential",
+				"Description": "Secure your future in a rapidly growing real estate market.",
+				"ImageUrl": ""
+			},
+			{
+				"ReasonNo": 4,
+				"Title": "Excellent Connectivity",
+				"Description": "Well-connected to nearby towns and major destinations.",
+				"ImageUrl": ""
+			},
+			{
+				"ReasonNo": 5,
+				"Title": "Healthy Lifestyle",
+				"Description": "Live in a peaceful, pollution-free environment surrounded by nature.",
+				"ImageUrl": ""
+			}
+		],
+		"LegalAndFinancial": {
+			"DTCPApprovalNo": "LP /AD DTCP(TD) No:SWP/72/2023",
+			"RERAApprovalNo": "NIL",
+			"TitdleDeedisClearDocument": "Yes",
+			"LitigationProperty": "No",
+			"EncumberanceCertificateisClear": "Yes",
+			"PropertyisUnderHypothecationbyBank": "Yes"
+		},
+		"BankPartners": [
+			"HDFC",
+			"SBI",
+			"AXIS",
+			"ICICI",
+			"KVB"
+		]
 	}
 ]

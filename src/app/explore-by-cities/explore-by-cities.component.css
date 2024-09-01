@@ -1,0 +1,129 @@
+.container-fluid {
+    padding: 40px 0;
+    width: 100%;
+    max-width: 1450px;
+}
+.cities{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cities .column{
+    height: 450px;
+    padding: 10px;
+}
+.content{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    padding: 10px;
+}
+.content h4{
+    font-size: 26px;
+    font-weight: 400;
+    padding: 0;
+    margin: 0;
+    color: var(--primary-color);
+}
+.content p{
+    font-size: 14px;
+    text-align: start;
+    font-weight: 300;
+    margin: 8px 0;
+}
+.card-content{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    padding: 20px;
+    border-radius: 12px;
+    transition: 0.15s all ease-in-out;
+}
+.card-content .header p{
+    font-size: 16px;
+    color: white;
+    font-weight: 400;
+    padding: 0;
+    margin: 0;
+}
+.card-content .header p:nth-child(2){
+    font-size: 22px;
+    margin: 5px 0;
+}
+.card-content button{
+    background-color: transparent;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 300;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card-content button svg{
+    width: 24px;
+    height: auto;
+    margin-right: 8px;
+}
+
+.card-content:hover{
+    transform: scale(1.05);
+
+}
+/* Media query for medium screens */
+@media (min-width: 1200px) {
+    .cities .column{
+        width: 280px;
+    }
+    .section-description{
+        width: 280px;
+    }
+}
+
+/* Media query for medium screens */
+@media (max-width: 1200px) {
+    .cities .column{
+        width: 300px;
+    }
+    .section-description{
+        width: 300px;
+    }
+}
+
+/* Media query for medium screens  */
+@media (max-width: 992px) {
+    .cities .column{
+        width: 50%;
+    }
+    .section-description{
+        width: 50%;
+    }
+}
+
+/* Media query for medium screens  */
+@media (max-width: 768px) {
+
+    .cities .column{
+        width: 100%;
+    }
+    .section-description{
+        width: 100%;
+    }
+}
+
+/* Media query for small screens  */
+@media (max-width: 576px) {
+    .cities .column{
+        width: 100%;
+        height: 300px;
+    }
+    .section-description{
+        width: 100%;
+    }
+}

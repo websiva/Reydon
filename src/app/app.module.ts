@@ -42,6 +42,8 @@ import { PropertyDataService } from './angular-service/property-data.service';
 import { LayoutComponent } from './layout/layout.component';
 import { BuildingComponent } from './building/building.component';
 import { ProximityMapComponent } from './proximity-map/proximity-map.component';
+import { ExploreByCitiesComponent } from './explore-by-cities/explore-by-cities.component';
+import { HomeProjectsComponent } from './home-projects/home-projects.component';
 
 register();
 
@@ -76,7 +78,9 @@ register();
     TopbarComponent,
     LayoutComponent,
     BuildingComponent,
-    ProximityMapComponent
+    ProximityMapComponent,
+    ExploreByCitiesComponent,
+    HomeProjectsComponent
   ],
   imports: [
     BrowserModule,
