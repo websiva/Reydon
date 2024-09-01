@@ -211,13 +211,13 @@
     align-items: center;
 }
 .aminities-card .icon{
-    padding: 10px;
+    padding: 15px;
     background-color: var(--primary-color);
     border: none;
     border-radius: 50%;
     margin-right: 10px;
 }
-.aminities-card .icon svg{
+.aminities-card .icon img{
     width: 50px;
 }
 .aminities-card h6{

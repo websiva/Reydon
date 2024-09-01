@@ -15,6 +15,7 @@ import { PropertyManagementComponent } from './property-management/property-mana
 import { FinancialPlanningComponent } from './financial-planning/financial-planning.component';
 import { ProductsComponent } from './products/products.component';
 import { LayoutComponent } from './layout/layout.component';
+import { ProximityMapComponent } from './proximity-map/proximity-map.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -32,6 +33,7 @@ const routes: Routes = [
   { path: 'financial-planning', component: FinancialPlanningComponent },
   { path: 'products', component: ProductsComponent },
   {path:'Layout/:projectName',component:LayoutComponent},
+  {path:'proximity-map',component:ProximityMapComponent},
   { path: '**', redirectTo: '/home' },
 ];
 

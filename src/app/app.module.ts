@@ -15,6 +15,7 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { SkeletonLoaderComponent } from './skeleton-loader/skeleton-loader.component';
 import {MatIconModule} from '@angular/material/icon';
 import { BreadCrumbComponent } from './bread-crumb/bread-crumb.component';
+import {GoogleMapsModule} from '@angular/google-maps';
 
 import { register } from 'swiper/element/bundle';
 import { FooterComponent } from './footer/footer.component';
@@ -40,6 +41,7 @@ import { TopbarComponent } from './topbar/topbar.component';
 import { PropertyDataService } from './angular-service/property-data.service';
 import { LayoutComponent } from './layout/layout.component';
 import { BuildingComponent } from './building/building.component';
+import { ProximityMapComponent } from './proximity-map/proximity-map.component';
 
 register();
 
@@ -73,14 +75,16 @@ register();
     CommingSoonComponent,
     TopbarComponent,
     LayoutComponent,
-    BuildingComponent
+    BuildingComponent,
+    ProximityMapComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     MatIconModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    GoogleMapsModule
   ],
   providers: [provideHttpClient(), provideAnimationsAsync(),PropertyService,PropertyResolverService,PropertyDataService],
   bootstrap: [AppComponent],

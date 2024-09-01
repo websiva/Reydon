@@ -182,7 +182,8 @@ export class CommercialComponent implements OnInit {
     this.selectedZone = "All";
   }
 
-  goingDetailPage(category: string) {
-    this.router.navigate(["/" + category]);
+  goingDetailPage(category:string,projectName:string,projectId:string){
+    const formattedProjectName = projectName.replace(/\s+/g, '-').toLowerCase();
+    this.router.navigate(["/"+category,formattedProjectName],{queryParams:{id:projectId}});
   }
 }
