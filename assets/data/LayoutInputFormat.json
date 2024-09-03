@@ -78,63 +78,72 @@
 				"Distance": "23 km",
 				"Duration": "33 Min",
 				"Latitude": 10.010682293781145,
-				"Longitude": 77.49501109187932
+				"Longitude": 77.49501109187932,
+				"Category":"bus-stand"
 			},
 			{
 				"ProximityName": "Bodi Bus stand",
 				"Distance": "6.8 km",
 				"Duration": "12 Min",
 				"Latitude": 10.008542388292139,
-				"Longitude": 77.34941831937107
+				"Longitude": 77.34941831937107,
+				"Category":"bus-stand"
 			},
 			{
 				"ProximityName": "Bodi Railway Station",
 				"Distance": "5.3 km",
 				"Duration": "8 Min",
 				"Latitude": 10.019150675717402,
-				"Longitude": 77.34590096383862
+				"Longitude": 77.34590096383862,
+				"Category":"railway-station"
 			},
 			{
 				"ProximityName": "Bodi Govt Engg College",
 				"Distance": "8.5 Km",
 				"Duration": "15 Min",
 				"Latitude": 9.994882272434757,
-				"Longitude": 77.34943961140806
+				"Longitude": 77.34943961140806,
+				"Category":"college"
 			},
 			{
 				"ProximityName": "CPA College of Arts and Science",
 				"Distance": "3 Km",
 				"Duration": "4 Min",
 				"Latitude": 10.028987126594691,
-				"Longitude": 77.33110839518933
+				"Longitude": 77.33110839518933,
+				"Category":"college"
 			},
 			{
 				"ProximityName": "Bodi Govt Hospital",
 				"Distance": "5.7 km",
 				"Duration": "10 Min",
 				"Latitude": 10.016901818371247,
-				"Longitude": 77.35274648014287
+				"Longitude": 77.35274648014287,
+				"Category":"hospital"
 			},
 			{
 				"ProximityName": "Munnar",
 				"Distance": "63 Km",
 				"Duration": "01 Hr 40 Min",
 				"Latitude": 10.08554776673238,
-				"Longitude": 77.06070753264868
+				"Longitude": 77.06070753264868,
+				"Category":"hills"
 			},
 			{
 				"ProximityName": "Kurangani Falls",
 				"Distance": "10.6 Km",
 				"Duration": "17 Min",
 				"Latitude": 10.088076601273248,
-				"Longitude": 77.24629265189485
+				"Longitude": 77.24629265189485,
+				"Category":"falls"
 			},
 			{
 				"ProximityName": "Green Royal Resort, Bodi",
 				"Distance": "1 km",
 				"Duration": "2 Min",
 				"Latitude": 10.03982832652384,
-				"Longitude": 77.31960296723395
+				"Longitude": 77.31960296723395,
+				"Category":"resort"
 			}
 		],
 		"TopFiveReasons": [
@@ -258,70 +267,64 @@
 				"Distance": "1 km",
 				"Duration": "5 min",
 				"Latitude": 12.9763,
-				"Longitude": 80.2436
+				"Longitude": 80.2436,
+				"Category":"it-park"				
 			},
 			{
 				"ProximityName": "Sholinganallur Bus Stop",
 				"Distance": "1.5 km",
 				"Duration": "7 min",
 				"Latitude": 12.9775,
-				"Longitude": 80.2381
+				"Longitude": 80.2381,
+				"Category":"bus-stand"
 			},
 			{
 				"ProximityName": "St. Thomas Mount Railway Station",
 				"Distance": "3 km",
 				"Duration": "15 min",
 				"Latitude": 12.9864,
-				"Longitude": 80.2128
+				"Longitude": 80.2128,
+				"Category":"railway-station"
 			},
 			{
 				"ProximityName": "VGP Universal Kingdom",
 				"Distance": "4 km",
 				"Duration": "20 min",
 				"Latitude": 12.9835,
-				"Longitude": 80.2075
-			},
-			{
-				"ProximityName": "Grand Southern Trunk Road (GST Road)",
-				"Distance": "5 km",
-				"Duration": "25 min",
-				"Latitude": 12.958,
-				"Longitude": 80.1835
-			},
-			{
-				"ProximityName": "Ola Cabs Office",
-				"Distance": "2.5 km",
-				"Duration": "12 min",
-				"Latitude": 12.9728,
-				"Longitude": 80.2319
+				"Longitude": 80.2075,
+				"Category":"theme-park"
 			},
 			{
 				"ProximityName": "HCL Technologies",
 				"Distance": "3.2 km",
 				"Duration": "16 min",
 				"Latitude": 12.9647,
-				"Longitude": 80.2313
+				"Longitude": 80.2313,
+				"Category":"it-park"
 			},
 			{
 				"ProximityName": "Tidel Park",
 				"Distance": "4.5 km",
 				"Duration": "22 min",
 				"Latitude": 12.9617,
-				"Longitude": 80.2707
+				"Longitude": 80.2707,
+				"Category":"it-park"
 			},
 			{
 				"ProximityName": "Apollo Hospitals",
 				"Distance": "5.3 km",
 				"Duration": "27 min",
 				"Latitude": 12.927,
-				"Longitude": 80.2308
+				"Longitude": 80.2308,
+				"Category":"hospital"
 			},
 			{
 				"ProximityName": "Deloitte",
 				"Distance": "6 km",
 				"Duration": "30 min",
 				"Latitude": 12.9226,
-				"Longitude": 80.2261
+				"Longitude": 80.2261,
+				"Category":"office"
 			}
 		],
 		"TopFiveReasons": [
@@ -443,70 +446,64 @@
 				"Distance": "5 km",
 				"Duration": "15 min",
 				"Latitude": 11.3734,
-				"Longitude": 76.7795
+				"Longitude": 76.7795,
+				"Category":"park"
 			},
 			{
 				"ProximityName": "Dolphin's Nose",
 				"Distance": "6 km",
 				"Duration": "20 min",
 				"Latitude": 11.3691,
-				"Longitude": 76.7822
+				"Longitude": 76.7822,
+				"Category":"view-point"
 			},
 			{
 				"ProximityName": "Lamb's Rock",
 				"Distance": "7 km",
 				"Duration": "25 min",
 				"Latitude": 11.3747,
-				"Longitude": 76.7708
+				"Longitude": 76.7708,
+				"Category":"view-point"
 			},
 			{
 				"ProximityName": "Coonoor Railway Station",
 				"Distance": "4 km",
 				"Duration": "12 min",
 				"Latitude": 11.371,
-				"Longitude": 76.779
-			},
-			{
-				"ProximityName": "Tea Estates",
-				"Distance": "5.5 km",
-				"Duration": "18 min",
-				"Latitude": 11.3698,
-				"Longitude": 76.7655
+				"Longitude": 76.779,
+				"Category":"railway-station"
 			},
 			{
 				"ProximityName": "St. Catherine Falls",
 				"Distance": "8 km",
 				"Duration": "30 min",
 				"Latitude": 11.3715,
-				"Longitude": 76.755
-			},
-			{
-				"ProximityName": "Lady Canning’s Seat",
-				"Distance": "6.5 km",
-				"Duration": "22 min",
-				"Latitude": 11.368,
-				"Longitude": 76.7625
+				"Longitude": 76.755,
+				"Category":"falls"
 			},
 			{
 				"ProximityName": "Nilgiri Mountain Railway",
 				"Distance": "7.5 km",
 				"Duration": "28 min",
 				"Latitude": 11.3728,
-				"Longitude": 76.7722
+				"Longitude": 76.7722,
+				"Category":"railway-station"
 			},
 			{
 				"ProximityName": "Hidden Valley",
 				"Distance": "5.8 km",
 				"Duration": "19 min",
 				"Latitude": 11.3741,
-				"Longitude": 76.769
+				"Longitude": 76.769,
+				"Category":"view-point"
 			},
 			{
 				"ProximityName": "Ketti Valley View",
 				"Distance": "6.2 km",
 				"Duration": "21 min",
 				"Latitude": 11.3706,
-				"Longitude": 76.773
+				"Longitude": 76.773,
+				"Category":"view-point"
 			}
 		],
 		"TopFiveReasons": [
@@ -635,63 +632,72 @@
 				"Distance": "23 km",
 				"Duration": "33 Min",
 				"Latitude": 10.010682293781145,
-				"Longitude": 77.49501109187932
+				"Longitude": 77.49501109187932,
+				"Category":"bus-stand"
 			},
 			{
 				"ProximityName": "Bodi Bus stand",
 				"Distance": "6.8 km",
 				"Duration": "12 Min",
 				"Latitude": 10.008542388292139,
-				"Longitude": 77.34941831937107
+				"Longitude": 77.34941831937107,
+				"Category":"bus-stand"
 			},
 			{
 				"ProximityName": "Bodi Railway Station",
 				"Distance": "5.3 km",
 				"Duration": "8 Min",
 				"Latitude": 10.019150675717402,
-				"Longitude": 77.34590096383862
+				"Longitude": 77.34590096383862,
+				"Category":"railway-station"
 			},
 			{
 				"ProximityName": "Bodi Govt Engg College",
 				"Distance": "8.5 Km",
 				"Duration": "15 Min",
 				"Latitude": 9.994882272434757,
-				"Longitude": 77.34943961140806
+				"Longitude": 77.34943961140806,
+				"Category":"college"
 			},
 			{
 				"ProximityName": "CPA College of Arts and Science",
 				"Distance": "3 Km",
 				"Duration": "4 Min",
 				"Latitude": 10.028987126594691,
-				"Longitude": 77.33110839518933
+				"Longitude": 77.33110839518933,
+				"Category":"college"
 			},
 			{
 				"ProximityName": "Bodi Govt Hospital",
 				"Distance": "5.7 km",
 				"Duration": "10 Min",
 				"Latitude": 10.016901818371247,
-				"Longitude": 77.35274648014287
+				"Longitude": 77.35274648014287,
+				"Category":"hospital"
 			},
 			{
 				"ProximityName": "Munnar",
 				"Distance": "63 Km",
 				"Duration": "01 Hr 40 Min",
 				"Latitude": 10.08554776673238,
-				"Longitude": 77.06070753264868
+				"Longitude": 77.06070753264868,
+				"Category":"hills"
 			},
 			{
 				"ProximityName": "Kurangani Falls",
 				"Distance": "10.6 Km",
 				"Duration": "17 Min",
 				"Latitude": 10.088076601273248,
-				"Longitude": 77.24629265189485
+				"Longitude": 77.24629265189485,
+				"Category":"falls"
 			},
 			{
 				"ProximityName": "Green Royal Resort, Bodi",
 				"Distance": "1 km",
 				"Duration": "2 Min",
 				"Latitude": 10.03982832652384,
-				"Longitude": 77.31960296723395
+				"Longitude": 77.31960296723395,
+				"Category":"resort"
 			}
 		],
 		"TopFiveReasons": [
