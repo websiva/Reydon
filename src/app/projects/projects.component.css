@@ -5,6 +5,16 @@
     flex-direction: column;
 }
 
+.banner-section{
+    width: 100%;
+    height: 500px;
+}
+.banner-section img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
 .filter-section-large {
     width: 100%;
     display: flex;
