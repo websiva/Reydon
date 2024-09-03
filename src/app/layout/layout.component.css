@@ -236,11 +236,15 @@
     height: 60px;
     display: flex;
     justify-content: flex-start;
-    align-items: center;
+    align-items: start;
     margin: 10px;
 }
 .promity-card .content{
     margin: 0 0 0 8px;
+}
+.promity-card img{
+    width: 35px;
+    height: auto;
 }
 .content p:nth-child(1){
     font-size: 16px;

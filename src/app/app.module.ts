@@ -44,6 +44,7 @@ import { BuildingComponent } from './building/building.component';
 import { ProximityMapComponent } from './proximity-map/proximity-map.component';
 import { ExploreByCitiesComponent } from './explore-by-cities/explore-by-cities.component';
 import { HomeProjectsComponent } from './home-projects/home-projects.component';
+import { ProximityGoogleMapComponent } from './proximity-google-map/proximity-google-map.component';
 
 register();
 
@@ -80,7 +81,8 @@ register();
     BuildingComponent,
     ProximityMapComponent,
     ExploreByCitiesComponent,
-    HomeProjectsComponent
+    HomeProjectsComponent,
+    ProximityGoogleMapComponent
   ],
   imports: [
     BrowserModule,

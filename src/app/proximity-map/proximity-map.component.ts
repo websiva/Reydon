@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, OnInit,Input, OnChanges,SimpleChanges } from '@angular/core';
+import { AfterViewInit, Component, OnInit, Input, OnChanges, SimpleChanges } from '@angular/core';
 import * as L from 'leaflet';
 import { LatLngLiteral } from 'leaflet';
 import { Proximity } from '../models/layout-proximity';
@@ -6,7 +6,7 @@ import { Proximity } from '../models/layout-proximity';
 @Component({
   selector: 'app-proximity-map',
   templateUrl: './proximity-map.component.html',
-  styleUrl: './proximity-map.component.css'
+  styleUrls: ['./proximity-map.component.css']
 })
 export class ProximityMapComponent implements AfterViewInit, OnChanges {
   @Input() mainLocation: { Latitude: number, Longitude: number } | null = null;
@@ -16,7 +16,7 @@ export class ProximityMapComponent implements AfterViewInit, OnChanges {
   zoom = 12;
 
   projectLocation: L.LatLngLiteral = { lat: 12.9716, lng: 77.5946 }; // Default project location
-  proximities: { lat: number, lng: number, name: string ,distance:string,duration:string}[] = [];
+  proximities: { lat: number, lng: number, name: string, distance: string, duration: string }[] = [];
 
   map: L.Map | undefined;
   dataLoaded = false; // Flag to ensure all data is loaded
@@ -26,11 +26,9 @@ export class ProximityMapComponent implements AfterViewInit, OnChanges {
   }
 
   ngOnChanges(changes: SimpleChanges): void {
-    if (changes['mainLocation']) {
+    if (changes['mainLocation'] || changes['proximityLocations']) {
+      this.checkDataAndInitializeMap();
     }
-    if (changes['proximityLocations']) {
-    }
-    this.checkDataAndInitializeMap();
   }
 
   checkDataAndInitializeMap(): void {
@@ -56,8 +54,8 @@ export class ProximityMapComponent implements AfterViewInit, OnChanges {
       lat: location.Latitude,
       lng: location.Longitude,
       name: location.ProximityName,
-      distance:location.Distance,
-      duration:location.Duration
+      distance: location.Distance,
+      duration: location.Duration
     }));
 
     console.log('updateMapData - proximities:', this.proximities);
@@ -81,28 +79,56 @@ export class ProximityMapComponent implements AfterViewInit, OnChanges {
   updateMapMarkers(): void {
     const bounds = L.latLngBounds([]);
 
-    L.marker(this.projectLocation, {
-      icon: L.icon({
-        iconUrl: 'project-marker.svg',
-        iconSize: [32, 32],
-        iconAnchor: [16, 32]
-      })
-    }).addTo(this.map!)
-      .bindPopup(`<b>Project Location</b>`);
+    // Project location marker with label
+    this.addMarkerWithLabel(this.projectLocation.lng, this.projectLocation.lat, 'Project Location');
 
     this.proximities.forEach(proximity => {
-      const marker = L.marker([proximity.lat, proximity.lng], {
-        icon: L.icon({
-          iconUrl: 'proximity-marker.svg',
-          iconSize: [32, 32],
-          iconAnchor: [16, 32]
-        })
-      }).addTo(this.map!)
-        .bindPopup(`<b>${proximity.name}</b><br><span>${proximity.distance} (${proximity.duration})`);
-
-      bounds.extend(marker.getLatLng());
+      this.addMarkerWithLabel(proximity.lng, proximity.lat, `${proximity.name}`, {
+        textOnly: false,
+        customStyle: {
+          color: 'blue',
+          fontSize: '14px',
+          fontWeight: 'bold',
+          textAlign: 'center'
+        }
+      });
+      bounds.extend([proximity.lat, proximity.lng]);
     });
 
     this.map!.fitBounds(bounds);
+  }
+
+  private addMarkerWithLabel(
+    lng: number,
+    lat: number,
+    labelText: string,
+    options: { textOnly?: boolean, textSize?: string, customStyle?: any } = {}
+  ): void {
+    const marker = L.marker([lat, lng]).addTo(this.map!);
+
+    const labelOptions: L.PopupOptions = {
+      className: options.textOnly ? 'leaflet-text-only' : '',
+    };
+
+    if (options.customStyle) {
+      labelOptions.className += ' custom-label-style';
+    }
+
+    marker.bindPopup(labelText, labelOptions).openPopup();
+
+    if (options.textSize) {
+      // Customize text size via CSS
+      marker.getPopup()?.getElement()?.style.setProperty('font-size', options.textSize);
+    }
+
+    if (options.customStyle) {
+      const popupElement = marker.getPopup()?.getElement();
+      if (popupElement) {
+        for (const [key, value] of Object.entries(options.customStyle)) {
+
+          popupElement.style.setProperty(key, value as string);
+        }
+      }
+    }
   }
 }

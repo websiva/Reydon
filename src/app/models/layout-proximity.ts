@@ -3,5 +3,6 @@ export interface Proximity {
     Distance: string,
     Duration: string,
     Latitude: number,
-    Longitude: number
+    Longitude: number,
+    Category:string
 }

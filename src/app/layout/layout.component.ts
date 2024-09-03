@@ -128,7 +128,8 @@ export class LayoutComponent implements OnInit {
         Distance: location.Distance,
         Duration: location.Duration,
         Latitude: location.Latitude,
-        Longitude: location.Longitude
+        Longitude: location.Longitude,
+        Category:location.Category
       }));
       console.log('Proximity Locations:', this.proximityLocations);
     } else {
@@ -221,6 +222,16 @@ export class LayoutComponent implements OnInit {
         return 'Others.svg'; // Default icon for other amenities
       default:
         return 'DefaultIcon.svg'; // Fallback for unknown amenities
+    }
+  }
+
+  //selecting proximity icon
+  proximityIcon(proximity:string):string{
+    switch(proximity){
+      case 'bus-stand':
+        return "";
+        default:
+          return 'DefaultIcon.svg';
     }
   }
 

@@ -1,0 +1,20 @@
+.custom-marker-label {
+  display: inline-block;
+  text-align: center;
+  background-color: white; /* Background color for the label */
+  padding: 5px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+  line-height: 1; /* Ensure proper line height */
+}
+
+.custom-marker-label .label-text {
+  font-size: 12px;
+  color: #FF0000; /* Label text color */
+  display: block; /* Ensure block-level element for proper alignment */
+}
+
+.leaflet-marker-icon.custom-marker-label {
+  transform: translate(-50%, -100%); /* Center the label horizontally and position it above the marker */
+}

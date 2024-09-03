@@ -50,7 +50,7 @@
         </div>
         <div class="banner-section">
             <div class="banner-image">
-                <img [src]="'plots/'+project.ProjectName+'/heritageBanner3.png'" alt="">
+                <img [src]="'plots/'+project.ProjectName+'/image3.png'" alt="">
             </div>
         </div>
         <div class="main-detail-section">
@@ -160,20 +160,19 @@
         <div class="Near-By-Proximity-section">
             <div class="row">
                 <h6 class="section-title w-100">Near By Proximity </h6>
-                <!--<div class="proximity-card-container d-flex flex-wrap justify-content-center align-items-center">
+                <div class="proximity-card-container d-flex flex-wrap justify-content-center align-items-center">
                     <div class="promity-card" *ngFor="let proximity of project.NearByProximity">
-                        <img src="Proximity/Bus.svg" alt="">
+                        <img [src]="'Proximity/'+proximity.Category+'.svg'" alt="">
                         <div class="content">
                             <p class="proximity-name m-0">{{proximity.ProximityName}}</p>
-                            <p><span class="proximity-distance">{{proximity.Distance}} km </span><span
-                                    class="promity-duration">({{proximity.Duration}}
-                                    Min)</span>
+                            <p><span class="proximity-distance">{{proximity.Distance}} </span><span
+                                    class="promity-duration">({{proximity.Duration}})</span>
                             </p>
                         </div>
                     </div>
-                </div>-->
-                <app-proximity-map [mainLocation]="mainLocation"
-                [proximityLocations]="proximityLocations"></app-proximity-map>
+                </div>
+                <!--<app-proximity-map [mainLocation]="mainLocation"
+                [proximityLocations]="proximityLocations"></app-proximity-map>-->
             </div>
         </div>
         <div class="top-5-reasons-section">
