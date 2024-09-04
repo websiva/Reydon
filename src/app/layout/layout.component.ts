@@ -247,7 +247,11 @@ export class LayoutComponent implements OnInit,OnDestroy {
     this.router.navigate([], { fragment: sectionId }).then(() => {
       const element = document.getElementById(sectionId);
       if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
+        // Scroll to the element with a slight offset
+        window.scrollTo({
+          top: element.getBoundingClientRect().top + window.scrollY - 50, // Adjust the offset as needed
+          behavior: 'smooth'
+        });
       }
     });
   }
@@ -265,7 +269,16 @@ export class LayoutComponent implements OnInit,OnDestroy {
     },4000);
   }
 
+  downloadDocument(){
+    this.downloadFile('heritage-avenue-brochure.pdf', 'application/pdf');
+  }
 
+  downloadFile(fileName: string, fileType: string) {
+    const link = document.createElement('a');
+    link.href = `/brochures/${fileName}`;
+    link.download = fileName;
+    link.click();
+  }
 
 
   ngOnDestroy(): void {

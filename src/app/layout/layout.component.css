@@ -392,7 +392,6 @@
 /********************************Amenities-section*********************/
 .Amenities-section{
     width: 100%;
-    background-color: #F7F8FA;
     padding: 40px 0;
     display: flex;
     justify-content: center;
@@ -431,9 +430,16 @@
 
 /*****************************Near-By-Proximity-section*******************/
 
-.Near-By-Proximity-section{
+.proximity-section{
     width: 100%;
-    margin: 40px 0;
+    padding: 40px 0;
+    display: flex;
+    justify-content: center;
+    background-color: #F7F8FA;
+}
+.proximity{
+    width: 100%;
+    max-width: 1400px;
 }
 .promity-card{
     width: 100%;
@@ -535,15 +541,17 @@
     margin: 30px 0;
     display: flex;
     justify-content: center;
+    background-color: #F7F8FA;
 }
 .layout-map-details{
     width: 100%;
     max-width: 1400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.layout-map-details-section img{
-    width: 100%;
-    height: auto;
-    object-fit: cover;
+.layout-map-details table{
+    margin: 20px 0;
 }
 .vertical-table{
     display: none;
@@ -552,6 +560,12 @@
 .top-5-reasons-section{
     width: 100%;
     padding: 40px 0;
+    display: flex;
+    justify-content: center;
+}
+.reasons{
+    width: 100%;
+    max-width: 1400px;
 }
 .reason-card{
     width: 300px;
