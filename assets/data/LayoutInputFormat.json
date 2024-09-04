@@ -11,10 +11,10 @@
 		"ProjectLaunchDate": "2024-08-30",
 		"PricePerSqFt": 3500,
 		"BannerImagesNames": [
-			"heritageBanner1.png",
-			"heritageBanner2.png",
-			"heritageBanner3.png",
-			"heritageBanner4.png"
+			"image1.png",
+			"image2.png",
+			"image3.png",
+			"image4.png"
 		],
 		"CardImage": "RES005001.jpeg",
 		"TotalArea": 10,
@@ -79,7 +79,7 @@
 				"Duration": "33 Min",
 				"Latitude": 10.010682293781145,
 				"Longitude": 77.49501109187932,
-				"Category":"bus-stand"
+				"Category": "bus-stand"
 			},
 			{
 				"ProximityName": "Bodi Bus stand",
@@ -87,7 +87,7 @@
 				"Duration": "12 Min",
 				"Latitude": 10.008542388292139,
 				"Longitude": 77.34941831937107,
-				"Category":"bus-stand"
+				"Category": "bus-stand"
 			},
 			{
 				"ProximityName": "Bodi Railway Station",
@@ -95,7 +95,7 @@
 				"Duration": "8 Min",
 				"Latitude": 10.019150675717402,
 				"Longitude": 77.34590096383862,
-				"Category":"railway-station"
+				"Category": "railway-station"
 			},
 			{
 				"ProximityName": "Bodi Govt Engg College",
@@ -103,7 +103,7 @@
 				"Duration": "15 Min",
 				"Latitude": 9.994882272434757,
 				"Longitude": 77.34943961140806,
-				"Category":"college"
+				"Category": "college"
 			},
 			{
 				"ProximityName": "CPA College of Arts and Science",
@@ -111,7 +111,7 @@
 				"Duration": "4 Min",
 				"Latitude": 10.028987126594691,
 				"Longitude": 77.33110839518933,
-				"Category":"college"
+				"Category": "college"
 			},
 			{
 				"ProximityName": "Bodi Govt Hospital",
@@ -119,7 +119,7 @@
 				"Duration": "10 Min",
 				"Latitude": 10.016901818371247,
 				"Longitude": 77.35274648014287,
-				"Category":"hospital"
+				"Category": "hospital"
 			},
 			{
 				"ProximityName": "Munnar",
@@ -127,7 +127,7 @@
 				"Duration": "01 Hr 40 Min",
 				"Latitude": 10.08554776673238,
 				"Longitude": 77.06070753264868,
-				"Category":"hills"
+				"Category": "hills"
 			},
 			{
 				"ProximityName": "Kurangani Falls",
@@ -135,7 +135,7 @@
 				"Duration": "17 Min",
 				"Latitude": 10.088076601273248,
 				"Longitude": 77.24629265189485,
-				"Category":"falls"
+				"Category": "falls"
 			},
 			{
 				"ProximityName": "Green Royal Resort, Bodi",
@@ -143,7 +143,7 @@
 				"Duration": "2 Min",
 				"Latitude": 10.03982832652384,
 				"Longitude": 77.31960296723395,
-				"Category":"resort"
+				"Category": "resort"
 			}
 		],
 		"TopFiveReasons": [
@@ -192,6 +192,248 @@
 			"AXIS",
 			"ICICI",
 			"KVB"
+		],
+		"plots": [
+			{
+				"plotNo": 1,
+				"facing": "North",
+				"sizeSqFt": 1000,
+				"sizeCent": 10
+			},
+			{
+				"plotNo": 2,
+				"facing": "East",
+				"sizeSqFt": 1200,
+				"sizeCent": 12
+			},
+			{
+				"plotNo": 3,
+				"facing": "South",
+				"sizeSqFt": 950,
+				"sizeCent": 9.5
+			},
+			{
+				"plotNo": 4,
+				"facing": "West",
+				"sizeSqFt": 1100,
+				"sizeCent": 11
+			},
+			{
+				"plotNo": 5,
+				"facing": "North",
+				"sizeSqFt": 1300,
+				"sizeCent": 13
+			},
+			{
+				"plotNo": 6,
+				"facing": "East",
+				"sizeSqFt": 1400,
+				"sizeCent": 14
+			},
+			{
+				"plotNo": 7,
+				"facing": "South",
+				"sizeSqFt": 1000,
+				"sizeCent": 10
+			},
+			{
+				"plotNo": 8,
+				"facing": "West",
+				"sizeSqFt": 1250,
+				"sizeCent": 12.5
+			},
+			{
+				"plotNo": 9,
+				"facing": "North",
+				"sizeSqFt": 1050,
+				"sizeCent": 10.5
+			},
+			{
+				"plotNo": 10,
+				"facing": "East",
+				"sizeSqFt": 1150,
+				"sizeCent": 11.5
+			},
+			{
+				"plotNo": 11,
+				"facing": "South",
+				"sizeSqFt": 980,
+				"sizeCent": 9.8
+			},
+			{
+				"plotNo": 12,
+				"facing": "West",
+				"sizeSqFt": 1200,
+				"sizeCent": 12
+			},
+			{
+				"plotNo": 13,
+				"facing": "North",
+				"sizeSqFt": 1400,
+				"sizeCent": 14
+			},
+			{
+				"plotNo": 14,
+				"facing": "East",
+				"sizeSqFt": 1300,
+				"sizeCent": 13
+			},
+			{
+				"plotNo": 15,
+				"facing": "South",
+				"sizeSqFt": 1100,
+				"sizeCent": 11
+			},
+			{
+				"plotNo": 16,
+				"facing": "West",
+				"sizeSqFt": 950,
+				"sizeCent": 9.5
+			},
+			{
+				"plotNo": 17,
+				"facing": "North",
+				"sizeSqFt": 1000,
+				"sizeCent": 10
+			},
+			{
+				"plotNo": 18,
+				"facing": "East",
+				"sizeSqFt": 1200,
+				"sizeCent": 12
+			},
+			{
+				"plotNo": 19,
+				"facing": "South",
+				"sizeSqFt": 1300,
+				"sizeCent": 13
+			},
+			{
+				"plotNo": 20,
+				"facing": "West",
+				"sizeSqFt": 1150,
+				"sizeCent": 11.5
+			},
+			{
+				"plotNo": 21,
+				"facing": "North",
+				"sizeSqFt": 1050,
+				"sizeCent": 10.5
+			},
+			{
+				"plotNo": 22,
+				"facing": "East",
+				"sizeSqFt": 1400,
+				"sizeCent": 14
+			},
+			{
+				"plotNo": 23,
+				"facing": "South",
+				"sizeSqFt": 950,
+				"sizeCent": 9.5
+			},
+			{
+				"plotNo": 24,
+				"facing": "West",
+				"sizeSqFt": 1000,
+				"sizeCent": 10
+			},
+			{
+				"plotNo": 25,
+				"facing": "North",
+				"sizeSqFt": 1300,
+				"sizeCent": 13
+			},
+			{
+				"plotNo": 26,
+				"facing": "East",
+				"sizeSqFt": 1100,
+				"sizeCent": 11
+			},
+			{
+				"plotNo": 27,
+				"facing": "South",
+				"sizeSqFt": 1200,
+				"sizeCent": 12
+			},
+			{
+				"plotNo": 28,
+				"facing": "West",
+				"sizeSqFt": 1250,
+				"sizeCent": 12.5
+			},
+			{
+				"plotNo": 29,
+				"facing": "North",
+				"sizeSqFt": 1400,
+				"sizeCent": 14
+			},
+			{
+				"plotNo": 30,
+				"facing": "East",
+				"sizeSqFt": 1300,
+				"sizeCent": 13
+			},
+			{
+				"plotNo": 31,
+				"facing": "South",
+				"sizeSqFt": 1150,
+				"sizeCent": 11.5
+			},
+			{
+				"plotNo": 32,
+				"facing": "West",
+				"sizeSqFt": 1050,
+				"sizeCent": 10.5
+			},
+			{
+				"plotNo": 33,
+				"facing": "North",
+				"sizeSqFt": 1000,
+				"sizeCent": 10
+			},
+			{
+				"plotNo": 34,
+				"facing": "East",
+				"sizeSqFt": 1200,
+				"sizeCent": 12
+			},
+			{
+				"plotNo": 35,
+				"facing": "South",
+				"sizeSqFt": 1300,
+				"sizeCent": 13
+			},
+			{
+				"plotNo": 36,
+				"facing": "West",
+				"sizeSqFt": 1100,
+				"sizeCent": 11
+			},
+			{
+				"plotNo": 37,
+				"facing": "North",
+				"sizeSqFt": 1050,
+				"sizeCent": 10.5
+			},
+			{
+				"plotNo": 38,
+				"facing": "East",
+				"sizeSqFt": 1400,
+				"sizeCent": 14
+			},
+			{
+				"plotNo": 39,
+				"facing": "South",
+				"sizeSqFt": 950,
+				"sizeCent": 9.5
+			},
+			{
+				"plotNo": 40,
+				"facing": "West",
+				"sizeSqFt": 1200,
+				"sizeCent": 12
+			}
 		]
 	},
 	{
@@ -206,8 +448,10 @@
 		"ProjectLaunchDate": "2024-05-30",
 		"PricePerSqFt": 8500,
 		"BannerImagesNames": [
-			"sunshine1.png",
-			"sunshine2.png"
+			"image1.png",
+			"image2.png",
+			"image3.png",
+			"image4.png"
 		],
 		"CardImage": "RES005001.jpeg",
 		"TotalArea": 20,
@@ -268,7 +512,7 @@
 				"Duration": "5 min",
 				"Latitude": 12.9763,
 				"Longitude": 80.2436,
-				"Category":"it-park"				
+				"Category": "it-park"
 			},
 			{
 				"ProximityName": "Sholinganallur Bus Stop",
@@ -276,7 +520,7 @@
 				"Duration": "7 min",
 				"Latitude": 12.9775,
 				"Longitude": 80.2381,
-				"Category":"bus-stand"
+				"Category": "bus-stand"
 			},
 			{
 				"ProximityName": "St. Thomas Mount Railway Station",
@@ -284,7 +528,7 @@
 				"Duration": "15 min",
 				"Latitude": 12.9864,
 				"Longitude": 80.2128,
-				"Category":"railway-station"
+				"Category": "railway-station"
 			},
 			{
 				"ProximityName": "VGP Universal Kingdom",
@@ -292,7 +536,7 @@
 				"Duration": "20 min",
 				"Latitude": 12.9835,
 				"Longitude": 80.2075,
-				"Category":"theme-park"
+				"Category": "theme-park"
 			},
 			{
 				"ProximityName": "HCL Technologies",
@@ -300,7 +544,7 @@
 				"Duration": "16 min",
 				"Latitude": 12.9647,
 				"Longitude": 80.2313,
-				"Category":"it-park"
+				"Category": "it-park"
 			},
 			{
 				"ProximityName": "Tidel Park",
@@ -308,7 +552,7 @@
 				"Duration": "22 min",
 				"Latitude": 12.9617,
 				"Longitude": 80.2707,
-				"Category":"it-park"
+				"Category": "it-park"
 			},
 			{
 				"ProximityName": "Apollo Hospitals",
@@ -316,7 +560,7 @@
 				"Duration": "27 min",
 				"Latitude": 12.927,
 				"Longitude": 80.2308,
-				"Category":"hospital"
+				"Category": "hospital"
 			},
 			{
 				"ProximityName": "Deloitte",
@@ -324,7 +568,7 @@
 				"Duration": "30 min",
 				"Latitude": 12.9226,
 				"Longitude": 80.2261,
-				"Category":"office"
+				"Category": "office"
 			}
 		],
 		"TopFiveReasons": [
@@ -371,6 +615,248 @@
 			"ICICI",
 			"KVB",
 			"HDFC"
+		],
+		"plots": [
+			{
+				"plotNo": 1,
+				"facing": "North",
+				"sizeSqFt": 1000,
+				"sizeCent": 10
+			},
+			{
+				"plotNo": 2,
+				"facing": "East",
+				"sizeSqFt": 1200,
+				"sizeCent": 12
+			},
+			{
+				"plotNo": 3,
+				"facing": "South",
+				"sizeSqFt": 950,
+				"sizeCent": 9.5
+			},
+			{
+				"plotNo": 4,
+				"facing": "West",
+				"sizeSqFt": 1100,
+				"sizeCent": 11
+			},
+			{
+				"plotNo": 5,
+				"facing": "North",
+				"sizeSqFt": 1300,
+				"sizeCent": 13
+			},
+			{
+				"plotNo": 6,
+				"facing": "East",
+				"sizeSqFt": 1400,
+				"sizeCent": 14
+			},
+			{
+				"plotNo": 7,
+				"facing": "South",
+				"sizeSqFt": 1000,
+				"sizeCent": 10
+			},
+			{
+				"plotNo": 8,
+				"facing": "West",
+				"sizeSqFt": 1250,
+				"sizeCent": 12.5
+			},
+			{
+				"plotNo": 9,
+				"facing": "North",
+				"sizeSqFt": 1050,
+				"sizeCent": 10.5
+			},
+			{
+				"plotNo": 10,
+				"facing": "East",
+				"sizeSqFt": 1150,
+				"sizeCent": 11.5
+			},
+			{
+				"plotNo": 11,
+				"facing": "South",
+				"sizeSqFt": 980,
+				"sizeCent": 9.8
+			},
+			{
+				"plotNo": 12,
+				"facing": "West",
+				"sizeSqFt": 1200,
+				"sizeCent": 12
+			},
+			{
+				"plotNo": 13,
+				"facing": "North",
+				"sizeSqFt": 1400,
+				"sizeCent": 14
+			},
+			{
+				"plotNo": 14,
+				"facing": "East",
+				"sizeSqFt": 1300,
+				"sizeCent": 13
+			},
+			{
+				"plotNo": 15,
+				"facing": "South",
+				"sizeSqFt": 1100,
+				"sizeCent": 11
+			},
+			{
+				"plotNo": 16,
+				"facing": "West",
+				"sizeSqFt": 950,
+				"sizeCent": 9.5
+			},
+			{
+				"plotNo": 17,
+				"facing": "North",
+				"sizeSqFt": 1000,
+				"sizeCent": 10
+			},
+			{
+				"plotNo": 18,
+				"facing": "East",
+				"sizeSqFt": 1200,
+				"sizeCent": 12
+			},
+			{
+				"plotNo": 19,
+				"facing": "South",
+				"sizeSqFt": 1300,
+				"sizeCent": 13
+			},
+			{
+				"plotNo": 20,
+				"facing": "West",
+				"sizeSqFt": 1150,
+				"sizeCent": 11.5
+			},
+			{
+				"plotNo": 21,
+				"facing": "North",
+				"sizeSqFt": 1050,
+				"sizeCent": 10.5
+			},
+			{
+				"plotNo": 22,
+				"facing": "East",
+				"sizeSqFt": 1400,
+				"sizeCent": 14
+			},
+			{
+				"plotNo": 23,
+				"facing": "South",
+				"sizeSqFt": 950,
+				"sizeCent": 9.5
+			},
+			{
+				"plotNo": 24,
+				"facing": "West",
+				"sizeSqFt": 1000,
+				"sizeCent": 10
+			},
+			{
+				"plotNo": 25,
+				"facing": "North",
+				"sizeSqFt": 1300,
+				"sizeCent": 13
+			},
+			{
+				"plotNo": 26,
+				"facing": "East",
+				"sizeSqFt": 1100,
+				"sizeCent": 11
+			},
+			{
+				"plotNo": 27,
+				"facing": "South",
+				"sizeSqFt": 1200,
+				"sizeCent": 12
+			},
+			{
+				"plotNo": 28,
+				"facing": "West",
+				"sizeSqFt": 1250,
+				"sizeCent": 12.5
+			},
+			{
+				"plotNo": 29,
+				"facing": "North",
+				"sizeSqFt": 1400,
+				"sizeCent": 14
+			},
+			{
+				"plotNo": 30,
+				"facing": "East",
+				"sizeSqFt": 1300,
+				"sizeCent": 13
+			},
+			{
+				"plotNo": 31,
+				"facing": "South",
+				"sizeSqFt": 1150,
+				"sizeCent": 11.5
+			},
+			{
+				"plotNo": 32,
+				"facing": "West",
+				"sizeSqFt": 1050,
+				"sizeCent": 10.5
+			},
+			{
+				"plotNo": 33,
+				"facing": "North",
+				"sizeSqFt": 1000,
+				"sizeCent": 10
+			},
+			{
+				"plotNo": 34,
+				"facing": "East",
+				"sizeSqFt": 1200,
+				"sizeCent": 12
+			},
+			{
+				"plotNo": 35,
+				"facing": "South",
+				"sizeSqFt": 1300,
+				"sizeCent": 13
+			},
+			{
+				"plotNo": 36,
+				"facing": "West",
+				"sizeSqFt": 1100,
+				"sizeCent": 11
+			},
+			{
+				"plotNo": 37,
+				"facing": "North",
+				"sizeSqFt": 1050,
+				"sizeCent": 10.5
+			},
+			{
+				"plotNo": 38,
+				"facing": "East",
+				"sizeSqFt": 1400,
+				"sizeCent": 14
+			},
+			{
+				"plotNo": 39,
+				"facing": "South",
+				"sizeSqFt": 950,
+				"sizeCent": 9.5
+			},
+			{
+				"plotNo": 40,
+				"facing": "West",
+				"sizeSqFt": 1200,
+				"sizeCent": 12
+			}
 		]
 	},
 	{
@@ -383,11 +869,11 @@
 		"RERAApproved": true,
 		"VerifiedByReydon": true,
 		"ProjectLaunchDate": "2024-02-30",
-		"PricePerSqFt": 1500,
 		"BannerImagesNames": [
-			"meadows1.png",
-			"meadows2.png",
-			"meadows3.png"
+			"image1.png",
+			"image2.png",
+			"image3.png",
+			"image4.png"
 		],
 		"CardImage": "RES005001.jpeg",
 		"TotalArea": 50,
@@ -447,7 +933,7 @@
 				"Duration": "15 min",
 				"Latitude": 11.3734,
 				"Longitude": 76.7795,
-				"Category":"park"
+				"Category": "park"
 			},
 			{
 				"ProximityName": "Dolphin's Nose",
@@ -455,7 +941,7 @@
 				"Duration": "20 min",
 				"Latitude": 11.3691,
 				"Longitude": 76.7822,
-				"Category":"view-point"
+				"Category": "view-point"
 			},
 			{
 				"ProximityName": "Lamb's Rock",
@@ -463,7 +949,7 @@
 				"Duration": "25 min",
 				"Latitude": 11.3747,
 				"Longitude": 76.7708,
-				"Category":"view-point"
+				"Category": "view-point"
 			},
 			{
 				"ProximityName": "Coonoor Railway Station",
@@ -471,7 +957,7 @@
 				"Duration": "12 min",
 				"Latitude": 11.371,
 				"Longitude": 76.779,
-				"Category":"railway-station"
+				"Category": "railway-station"
 			},
 			{
 				"ProximityName": "St. Catherine Falls",
@@ -479,7 +965,7 @@
 				"Duration": "30 min",
 				"Latitude": 11.3715,
 				"Longitude": 76.755,
-				"Category":"falls"
+				"Category": "falls"
 			},
 			{
 				"ProximityName": "Nilgiri Mountain Railway",
@@ -487,7 +973,7 @@
 				"Duration": "28 min",
 				"Latitude": 11.3728,
 				"Longitude": 76.7722,
-				"Category":"railway-station"
+				"Category": "railway-station"
 			},
 			{
 				"ProximityName": "Hidden Valley",
@@ -495,7 +981,7 @@
 				"Duration": "19 min",
 				"Latitude": 11.3741,
 				"Longitude": 76.769,
-				"Category":"view-point"
+				"Category": "view-point"
 			},
 			{
 				"ProximityName": "Ketti Valley View",
@@ -503,7 +989,7 @@
 				"Duration": "21 min",
 				"Latitude": 11.3706,
 				"Longitude": 76.773,
-				"Category":"view-point"
+				"Category": "view-point"
 			}
 		],
 		"TopFiveReasons": [
@@ -551,6 +1037,248 @@
 			"ICICI",
 			"KVB",
 			"HDFC"
+		],
+		"plots": [
+			{
+				"plotNo": 1,
+				"facing": "North",
+				"sizeSqFt": 1000,
+				"sizeCent": 10
+			},
+			{
+				"plotNo": 2,
+				"facing": "East",
+				"sizeSqFt": 1200,
+				"sizeCent": 12
+			},
+			{
+				"plotNo": 3,
+				"facing": "South",
+				"sizeSqFt": 950,
+				"sizeCent": 9.5
+			},
+			{
+				"plotNo": 4,
+				"facing": "West",
+				"sizeSqFt": 1100,
+				"sizeCent": 11
+			},
+			{
+				"plotNo": 5,
+				"facing": "North",
+				"sizeSqFt": 1300,
+				"sizeCent": 13
+			},
+			{
+				"plotNo": 6,
+				"facing": "East",
+				"sizeSqFt": 1400,
+				"sizeCent": 14
+			},
+			{
+				"plotNo": 7,
+				"facing": "South",
+				"sizeSqFt": 1000,
+				"sizeCent": 10
+			},
+			{
+				"plotNo": 8,
+				"facing": "West",
+				"sizeSqFt": 1250,
+				"sizeCent": 12.5
+			},
+			{
+				"plotNo": 9,
+				"facing": "North",
+				"sizeSqFt": 1050,
+				"sizeCent": 10.5
+			},
+			{
+				"plotNo": 10,
+				"facing": "East",
+				"sizeSqFt": 1150,
+				"sizeCent": 11.5
+			},
+			{
+				"plotNo": 11,
+				"facing": "South",
+				"sizeSqFt": 980,
+				"sizeCent": 9.8
+			},
+			{
+				"plotNo": 12,
+				"facing": "West",
+				"sizeSqFt": 1200,
+				"sizeCent": 12
+			},
+			{
+				"plotNo": 13,
+				"facing": "North",
+				"sizeSqFt": 1400,
+				"sizeCent": 14
+			},
+			{
+				"plotNo": 14,
+				"facing": "East",
+				"sizeSqFt": 1300,
+				"sizeCent": 13
+			},
+			{
+				"plotNo": 15,
+				"facing": "South",
+				"sizeSqFt": 1100,
+				"sizeCent": 11
+			},
+			{
+				"plotNo": 16,
+				"facing": "West",
+				"sizeSqFt": 950,
+				"sizeCent": 9.5
+			},
+			{
+				"plotNo": 17,
+				"facing": "North",
+				"sizeSqFt": 1000,
+				"sizeCent": 10
+			},
+			{
+				"plotNo": 18,
+				"facing": "East",
+				"sizeSqFt": 1200,
+				"sizeCent": 12
+			},
+			{
+				"plotNo": 19,
+				"facing": "South",
+				"sizeSqFt": 1300,
+				"sizeCent": 13
+			},
+			{
+				"plotNo": 20,
+				"facing": "West",
+				"sizeSqFt": 1150,
+				"sizeCent": 11.5
+			},
+			{
+				"plotNo": 21,
+				"facing": "North",
+				"sizeSqFt": 1050,
+				"sizeCent": 10.5
+			},
+			{
+				"plotNo": 22,
+				"facing": "East",
+				"sizeSqFt": 1400,
+				"sizeCent": 14
+			},
+			{
+				"plotNo": 23,
+				"facing": "South",
+				"sizeSqFt": 950,
+				"sizeCent": 9.5
+			},
+			{
+				"plotNo": 24,
+				"facing": "West",
+				"sizeSqFt": 1000,
+				"sizeCent": 10
+			},
+			{
+				"plotNo": 25,
+				"facing": "North",
+				"sizeSqFt": 1300,
+				"sizeCent": 13
+			},
+			{
+				"plotNo": 26,
+				"facing": "East",
+				"sizeSqFt": 1100,
+				"sizeCent": 11
+			},
+			{
+				"plotNo": 27,
+				"facing": "South",
+				"sizeSqFt": 1200,
+				"sizeCent": 12
+			},
+			{
+				"plotNo": 28,
+				"facing": "West",
+				"sizeSqFt": 1250,
+				"sizeCent": 12.5
+			},
+			{
+				"plotNo": 29,
+				"facing": "North",
+				"sizeSqFt": 1400,
+				"sizeCent": 14
+			},
+			{
+				"plotNo": 30,
+				"facing": "East",
+				"sizeSqFt": 1300,
+				"sizeCent": 13
+			},
+			{
+				"plotNo": 31,
+				"facing": "South",
+				"sizeSqFt": 1150,
+				"sizeCent": 11.5
+			},
+			{
+				"plotNo": 32,
+				"facing": "West",
+				"sizeSqFt": 1050,
+				"sizeCent": 10.5
+			},
+			{
+				"plotNo": 33,
+				"facing": "North",
+				"sizeSqFt": 1000,
+				"sizeCent": 10
+			},
+			{
+				"plotNo": 34,
+				"facing": "East",
+				"sizeSqFt": 1200,
+				"sizeCent": 12
+			},
+			{
+				"plotNo": 35,
+				"facing": "South",
+				"sizeSqFt": 1300,
+				"sizeCent": 13
+			},
+			{
+				"plotNo": 36,
+				"facing": "West",
+				"sizeSqFt": 1100,
+				"sizeCent": 11
+			},
+			{
+				"plotNo": 37,
+				"facing": "North",
+				"sizeSqFt": 1050,
+				"sizeCent": 10.5
+			},
+			{
+				"plotNo": 38,
+				"facing": "East",
+				"sizeSqFt": 1400,
+				"sizeCent": 14
+			},
+			{
+				"plotNo": 39,
+				"facing": "South",
+				"sizeSqFt": 950,
+				"sizeCent": 9.5
+			},
+			{
+				"plotNo": 40,
+				"facing": "West",
+				"sizeSqFt": 1200,
+				"sizeCent": 12
+			}
 		]
 	},
 	{
@@ -565,10 +1293,10 @@
 		"ProjectLaunchDate": "2024-08-30",
 		"PricePerSqFt": 3500,
 		"BannerImagesNames": [
-			"heritageBanner1.png",
-			"heritageBanner2.png",
-			"heritageBanner3.png",
-			"heritageBanner4.png"
+			"image1.png",
+			"image2.png",
+			"image3.png",
+			"image4.png"
 		],
 		"CardImage": "RES005001.jpeg",
 		"TotalArea": 10,
@@ -633,7 +1361,7 @@
 				"Duration": "33 Min",
 				"Latitude": 10.010682293781145,
 				"Longitude": 77.49501109187932,
-				"Category":"bus-stand"
+				"Category": "bus-stand"
 			},
 			{
 				"ProximityName": "Bodi Bus stand",
@@ -641,7 +1369,7 @@
 				"Duration": "12 Min",
 				"Latitude": 10.008542388292139,
 				"Longitude": 77.34941831937107,
-				"Category":"bus-stand"
+				"Category": "bus-stand"
 			},
 			{
 				"ProximityName": "Bodi Railway Station",
@@ -649,7 +1377,7 @@
 				"Duration": "8 Min",
 				"Latitude": 10.019150675717402,
 				"Longitude": 77.34590096383862,
-				"Category":"railway-station"
+				"Category": "railway-station"
 			},
 			{
 				"ProximityName": "Bodi Govt Engg College",
@@ -657,7 +1385,7 @@
 				"Duration": "15 Min",
 				"Latitude": 9.994882272434757,
 				"Longitude": 77.34943961140806,
-				"Category":"college"
+				"Category": "college"
 			},
 			{
 				"ProximityName": "CPA College of Arts and Science",
@@ -665,7 +1393,7 @@
 				"Duration": "4 Min",
 				"Latitude": 10.028987126594691,
 				"Longitude": 77.33110839518933,
-				"Category":"college"
+				"Category": "college"
 			},
 			{
 				"ProximityName": "Bodi Govt Hospital",
@@ -673,7 +1401,7 @@
 				"Duration": "10 Min",
 				"Latitude": 10.016901818371247,
 				"Longitude": 77.35274648014287,
-				"Category":"hospital"
+				"Category": "hospital"
 			},
 			{
 				"ProximityName": "Munnar",
@@ -681,7 +1409,7 @@
 				"Duration": "01 Hr 40 Min",
 				"Latitude": 10.08554776673238,
 				"Longitude": 77.06070753264868,
-				"Category":"hills"
+				"Category": "hills"
 			},
 			{
 				"ProximityName": "Kurangani Falls",
@@ -689,7 +1417,7 @@
 				"Duration": "17 Min",
 				"Latitude": 10.088076601273248,
 				"Longitude": 77.24629265189485,
-				"Category":"falls"
+				"Category": "falls"
 			},
 			{
 				"ProximityName": "Green Royal Resort, Bodi",
@@ -697,7 +1425,7 @@
 				"Duration": "2 Min",
 				"Latitude": 10.03982832652384,
 				"Longitude": 77.31960296723395,
-				"Category":"resort"
+				"Category": "resort"
 			}
 		],
 		"TopFiveReasons": [
@@ -746,6 +1474,248 @@
 			"AXIS",
 			"ICICI",
 			"KVB"
+		],
+		"plots": [
+			{
+				"plotNo": 1,
+				"facing": "North",
+				"sizeSqFt": 1000,
+				"sizeCent": 10
+			},
+			{
+				"plotNo": 2,
+				"facing": "East",
+				"sizeSqFt": 1200,
+				"sizeCent": 12
+			},
+			{
+				"plotNo": 3,
+				"facing": "South",
+				"sizeSqFt": 950,
+				"sizeCent": 9.5
+			},
+			{
+				"plotNo": 4,
+				"facing": "West",
+				"sizeSqFt": 1100,
+				"sizeCent": 11
+			},
+			{
+				"plotNo": 5,
+				"facing": "North",
+				"sizeSqFt": 1300,
+				"sizeCent": 13
+			},
+			{
+				"plotNo": 6,
+				"facing": "East",
+				"sizeSqFt": 1400,
+				"sizeCent": 14
+			},
+			{
+				"plotNo": 7,
+				"facing": "South",
+				"sizeSqFt": 1000,
+				"sizeCent": 10
+			},
+			{
+				"plotNo": 8,
+				"facing": "West",
+				"sizeSqFt": 1250,
+				"sizeCent": 12.5
+			},
+			{
+				"plotNo": 9,
+				"facing": "North",
+				"sizeSqFt": 1050,
+				"sizeCent": 10.5
+			},
+			{
+				"plotNo": 10,
+				"facing": "East",
+				"sizeSqFt": 1150,
+				"sizeCent": 11.5
+			},
+			{
+				"plotNo": 11,
+				"facing": "South",
+				"sizeSqFt": 980,
+				"sizeCent": 9.8
+			},
+			{
+				"plotNo": 12,
+				"facing": "West",
+				"sizeSqFt": 1200,
+				"sizeCent": 12
+			},
+			{
+				"plotNo": 13,
+				"facing": "North",
+				"sizeSqFt": 1400,
+				"sizeCent": 14
+			},
+			{
+				"plotNo": 14,
+				"facing": "East",
+				"sizeSqFt": 1300,
+				"sizeCent": 13
+			},
+			{
+				"plotNo": 15,
+				"facing": "South",
+				"sizeSqFt": 1100,
+				"sizeCent": 11
+			},
+			{
+				"plotNo": 16,
+				"facing": "West",
+				"sizeSqFt": 950,
+				"sizeCent": 9.5
+			},
+			{
+				"plotNo": 17,
+				"facing": "North",
+				"sizeSqFt": 1000,
+				"sizeCent": 10
+			},
+			{
+				"plotNo": 18,
+				"facing": "East",
+				"sizeSqFt": 1200,
+				"sizeCent": 12
+			},
+			{
+				"plotNo": 19,
+				"facing": "South",
+				"sizeSqFt": 1300,
+				"sizeCent": 13
+			},
+			{
+				"plotNo": 20,
+				"facing": "West",
+				"sizeSqFt": 1150,
+				"sizeCent": 11.5
+			},
+			{
+				"plotNo": 21,
+				"facing": "North",
+				"sizeSqFt": 1050,
+				"sizeCent": 10.5
+			},
+			{
+				"plotNo": 22,
+				"facing": "East",
+				"sizeSqFt": 1400,
+				"sizeCent": 14
+			},
+			{
+				"plotNo": 23,
+				"facing": "South",
+				"sizeSqFt": 950,
+				"sizeCent": 9.5
+			},
+			{
+				"plotNo": 24,
+				"facing": "West",
+				"sizeSqFt": 1000,
+				"sizeCent": 10
+			},
+			{
+				"plotNo": 25,
+				"facing": "North",
+				"sizeSqFt": 1300,
+				"sizeCent": 13
+			},
+			{
+				"plotNo": 26,
+				"facing": "East",
+				"sizeSqFt": 1100,
+				"sizeCent": 11
+			},
+			{
+				"plotNo": 27,
+				"facing": "South",
+				"sizeSqFt": 1200,
+				"sizeCent": 12
+			},
+			{
+				"plotNo": 28,
+				"facing": "West",
+				"sizeSqFt": 1250,
+				"sizeCent": 12.5
+			},
+			{
+				"plotNo": 29,
+				"facing": "North",
+				"sizeSqFt": 1400,
+				"sizeCent": 14
+			},
+			{
+				"plotNo": 30,
+				"facing": "East",
+				"sizeSqFt": 1300,
+				"sizeCent": 13
+			},
+			{
+				"plotNo": 31,
+				"facing": "South",
+				"sizeSqFt": 1150,
+				"sizeCent": 11.5
+			},
+			{
+				"plotNo": 32,
+				"facing": "West",
+				"sizeSqFt": 1050,
+				"sizeCent": 10.5
+			},
+			{
+				"plotNo": 33,
+				"facing": "North",
+				"sizeSqFt": 1000,
+				"sizeCent": 10
+			},
+			{
+				"plotNo": 34,
+				"facing": "East",
+				"sizeSqFt": 1200,
+				"sizeCent": 12
+			},
+			{
+				"plotNo": 35,
+				"facing": "South",
+				"sizeSqFt": 1300,
+				"sizeCent": 13
+			},
+			{
+				"plotNo": 36,
+				"facing": "West",
+				"sizeSqFt": 1100,
+				"sizeCent": 11
+			},
+			{
+				"plotNo": 37,
+				"facing": "North",
+				"sizeSqFt": 1050,
+				"sizeCent": 10.5
+			},
+			{
+				"plotNo": 38,
+				"facing": "East",
+				"sizeSqFt": 1400,
+				"sizeCent": 14
+			},
+			{
+				"plotNo": 39,
+				"facing": "South",
+				"sizeSqFt": 950,
+				"sizeCent": 9.5
+			},
+			{
+				"plotNo": 40,
+				"facing": "West",
+				"sizeSqFt": 1200,
+				"sizeCent": 12
+			}
 		]
 	}
 ]
