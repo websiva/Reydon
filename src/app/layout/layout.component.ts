@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { PropertyDataService } from '../angular-service/property-data.service';
@@ -9,7 +9,7 @@ import { Proximity } from '../models/layout-proximity';
   templateUrl: './layout.component.html',
   styleUrl: './layout.component.css'
 })
-export class LayoutComponent implements OnInit {
+export class LayoutComponent implements OnInit,OnDestroy {
   contactForm: FormGroup;
   ProjectName: string = '';
   ProjectId: string = '';
@@ -22,6 +22,10 @@ export class LayoutComponent implements OnInit {
     Longitude: 0
   };
   proximityLocations:Proximity[]=[];
+  FirstTwentyPlots:any[]=[];
+  BannerImages:string[]=[];
+  interval:any;
+  currentIndex:number=0;
 
   constructor(private formBuilder: FormBuilder, private activeroute: ActivatedRoute, private propertyDataService: PropertyDataService, private router: Router) {
     this.contactForm = this.formBuilder.group({
@@ -30,6 +34,7 @@ export class LayoutComponent implements OnInit {
       phone: ['', [Validators.required]],
       message: ['', [Validators.required]],
     })
+    
   }
 
   ngOnInit(): void {
@@ -50,6 +55,9 @@ export class LayoutComponent implements OnInit {
       console.log(this.ProjectData);
       this.GettingObjectValues();
       this.CollectingLocationsFromMainData();
+      this.firsttwentyPlots();
+      this.BannerImages=this.ProjectData[0].BannerImagesNames;
+      this.startSlider();
     });
     this.propertyDataService.getAllData().subscribe(data => {
       this.RelatedProjects = data.filter(project => project.AddressDetails.Zone === this.ProjectZone && project.Category === this.ProjectCategory);
@@ -233,6 +241,35 @@ export class LayoutComponent implements OnInit {
         default:
           return 'DefaultIcon.svg';
     }
+  }
+
+  scrollToSection(sectionId: string) {
+    this.router.navigate([], { fragment: sectionId }).then(() => {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  }
+
+  //get first 20 plot details
+  firsttwentyPlots(){
+    this.FirstTwentyPlots=this.ProjectData[0].plots.slice(0,20);
+    console.log(this.FirstTwentyPlots);
+  }
+
+  //Interval for banner images
+  startSlider(){
+    this.interval = setInterval(()=>{
+      this.currentIndex = (this.currentIndex+1)%this.BannerImages.length;
+    },4000);
+  }
+
+
+
+
+  ngOnDestroy(): void {
+    clearInterval(this.interval);
   }
 
 }
