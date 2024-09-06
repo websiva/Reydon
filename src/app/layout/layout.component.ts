@@ -222,7 +222,7 @@ export class LayoutComponent implements OnInit, OnDestroy {
         return 'EVChargingStation.svg';
       case 'High-Speed Internet':
         return 'HighSpeedInternet.svg';
-      case 'Elevators / Lift':
+      case 'Elevators':
         return 'Elevators.svg';
       case 'Waste Management System (STP)':
         return 'WasteManagement.svg';
