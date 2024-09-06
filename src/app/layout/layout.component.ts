@@ -275,7 +275,8 @@ export class LayoutComponent implements OnInit,OnDestroy {
 
   downloadFile(fileName: string, fileType: string) {
     const link = document.createElement('a');
-    link.href = `/brochures/${fileName}`;
+    link.href = `${window.location.origin}/brochures/${fileName}`;
+    alert(link.href);
     link.download = fileName;
     link.click();
   }

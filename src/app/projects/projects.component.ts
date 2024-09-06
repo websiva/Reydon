@@ -156,25 +156,6 @@ export class ProjectsComponent implements OnInit {
     });
   }
 
-
-  /*filterProjects() {
-    // First, filter by dropdown options
-    this.FilteredProjects = this.LayoutData.filter(project => {
-      const matchesZone = this.selectedZone === 'All' || project.AddressDetails.Zone === this.selectedZone;
-      const matchesCity = this.selectedCity === 'All' || project.AddressDetails.Taluk === this.selectedCity;
-      const matchesType = this.selectedType === 'All' || project.Type === this.selectedType;
-      const matchesProperty = this.selectedProperty === 'All' || project.Category === this.selectedProperty;
-  
-      return matchesZone && matchesCity && matchesType && matchesProperty;
-    });
-    // Update dropdown values based on the newly filtered projects
-    this.updateDropdownValues();
-  
-    // Detect changes if necessary
-    this.cdr.detectChanges();
-  }*/
-
-
   filterProjectsBasedonPrice() {
     this.FilteredProjects = this.FilterProject2.filter(project => {
       let projectPrice = project.PricePerSqFt;
