@@ -107,8 +107,6 @@ export class ProjectsComponent implements OnInit {
       this.Maxprice = Math.round((this.Maxprice * 435.60)/10)*10; // Convert Sq Ft to Cent
       this.pricePerUnit = this.Maxprice;
     }
-
-    console.log(this.Maxprice);
     // Trigger change detection if needed
     this.cdr.detectChanges();
   }
@@ -181,7 +179,7 @@ export class ProjectsComponent implements OnInit {
     this.updateDropdownValues();
     this.FilterProject2 = this.FilteredProjects;
 
-    alert(this.Maxprice);
+    //alert(this.Maxprice);
   }
 
   toggleFilters() {

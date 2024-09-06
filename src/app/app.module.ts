@@ -16,6 +16,7 @@ import { SkeletonLoaderComponent } from './skeleton-loader/skeleton-loader.compo
 import {MatIconModule} from '@angular/material/icon';
 import { BreadCrumbComponent } from './bread-crumb/bread-crumb.component';
 import {GoogleMapsModule} from '@angular/google-maps';
+import { YouTubePlayerModule } from '@angular/youtube-player';
 
 import { register } from 'swiper/element/bundle';
 import { FooterComponent } from './footer/footer.component';
@@ -45,6 +46,7 @@ import { ProximityMapComponent } from './proximity-map/proximity-map.component';
 import { ExploreByCitiesComponent } from './explore-by-cities/explore-by-cities.component';
 import { HomeProjectsComponent } from './home-projects/home-projects.component';
 import { ProximityGoogleMapComponent } from './proximity-google-map/proximity-google-map.component';
+import { CareersComponent } from './careers/careers.component';
 
 register();
 
@@ -82,7 +84,8 @@ register();
     ProximityMapComponent,
     ExploreByCitiesComponent,
     HomeProjectsComponent,
-    ProximityGoogleMapComponent
+    ProximityGoogleMapComponent,
+    CareersComponent
   ],
   imports: [
     BrowserModule,
@@ -90,7 +93,8 @@ register();
     MatIconModule,
     FormsModule,
     ReactiveFormsModule,
-    GoogleMapsModule
+    GoogleMapsModule,
+    YouTubePlayerModule
   ],
   providers: [provideHttpClient(), provideAnimationsAsync(),PropertyService,PropertyResolverService,PropertyDataService],
   bootstrap: [AppComponent],

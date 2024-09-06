@@ -15,6 +15,7 @@ export class CommercialComponent implements OnInit {
   Zones: string[] = [];
   Types: string[] = [];
   FilteredProjects: any[] = [];
+  FilterProject2: any[] = [];
   selectedType: string = "All";
   selectedProperty: string = "All";
   selectedCity: string = "All";
@@ -25,6 +26,7 @@ export class CommercialComponent implements OnInit {
   Maxprice: number = 0;
   pricePerUnit: number = 0;
   selectedUnit: string = 'Sq Ft';
+  activeFilter: string = '';
 
   constructor(private propertyDataService: PropertyDataService, private cdr: ChangeDetectorRef, private router: Router) {
 
@@ -37,17 +39,26 @@ export class CommercialComponent implements OnInit {
   //Getting full object from service
   loaddata() {
     this.propertyDataService.getAllData().subscribe(data => {
-      this.LayoutData = data.filter(project => project.Type === 'Commercial');
+      this.LayoutData = data.filter(project=>project.Type === 'Commercial');
       this.FilteredProjects = this.LayoutData;
-      this.updateDropdownValues();
+      this.FilterProject2 = this.FilteredProjects;
+      this.updateInitialDropdownValues();
     })
+  }
+  updateInitialDropdownValues() {
+    this.GettingZones();
+    this.GettingCities();
+    this.GettingTypes();
+    this.GetingCategories();
+    this.getMaximumPricePerSqFt();
+    this.cdr.detectChanges();
   }
 
   updateDropdownValues() {
-    this.GetingCategories();
-    this.GettingCities();
-    this.GettingZones();
-    this.GettingTypes();
+    if (this.activeFilter !== 'zone') this.GettingZones();
+    if (this.activeFilter !== 'city') this.GettingCities();
+    if (this.activeFilter !== 'type') this.GettingTypes();
+    if (this.activeFilter !== 'property') this.GetingCategories();
     this.getMaximumPricePerSqFt();
     this.cdr.detectChanges();
   }
@@ -85,7 +96,7 @@ export class CommercialComponent implements OnInit {
   onUnitChange(event: any) {
     this.selectedUnit = event.target.value;
     this.updateMaxPrice();
-    this.filterProjects();
+    this.filterProjectsBasedonPrice();
   }
 
   updateMaxPrice() {
@@ -94,11 +105,9 @@ export class CommercialComponent implements OnInit {
       this.getMaximumPricePerSqFt(); // Reset to original value
     } else if (this.selectedUnit === 'Cent') {
       this.getMaximumPricePerSqFt();
-      this.Maxprice = this.Maxprice * 435.60; // Convert Sq Ft to Cent
+      this.Maxprice = Math.round((this.Maxprice * 435.60)/10)*10; // Convert Sq Ft to Cent
       this.pricePerUnit = this.Maxprice;
     }
-
-    console.log(this.Maxprice);
     // Trigger change detection if needed
     this.cdr.detectChanges();
   }
@@ -134,6 +143,7 @@ export class CommercialComponent implements OnInit {
     }
   }
 
+
   filterProjects() {
     this.FilteredProjects = this.LayoutData.filter(project => {
       const matchesZone = this.selectedZone === 'All' || project.AddressDetails.Zone === this.selectedZone;
@@ -141,21 +151,36 @@ export class CommercialComponent implements OnInit {
       const matchesType = this.selectedType === 'All' || project.Type === this.selectedType;
       const matchesProperty = this.selectedProperty === 'All' || project.Category === this.selectedProperty;
 
-      // Convert project price to Cent if needed
-      let projectPrice = project.PricePerSqFt;
-      if (this.selectedUnit === 'Cent') {
-        projectPrice *= 435.60; // Convert Sq Ft to Cent
-      }
-
-      // Filter based on price
-      const matchesPrice = projectPrice <= this.pricePerUnit;
-
-      return matchesZone && matchesCity && matchesType && matchesProperty && matchesPrice;
+      return matchesZone && matchesCity && matchesType && matchesProperty;
     });
   }
 
-  onFilterChange() {
+  filterProjectsBasedonPrice() {
+    this.FilteredProjects = this.FilterProject2.filter(project => {
+      let projectPrice = project.PricePerSqFt;
+
+      // Convert Cent to Sq Ft if necessary
+      if (this.selectedUnit === 'Cent') {
+        projectPrice *= 435.60; // Convert from Cent to Sq Ft
+        projectPrice = roundToNearestTen(projectPrice);
+      }
+
+      function roundToNearestTen(value: number) {
+        return Math.round(value / 10) * 10;
+      }
+
+      // Compare project price with maxPrice
+      return projectPrice <= this.pricePerUnit;
+    });
+  }
+
+  onFilterChange(filterName: string) {
+    this.activeFilter = filterName;  // Set active filter
     this.filterProjects();
+    this.updateDropdownValues();
+    this.FilterProject2 = this.FilteredProjects;
+
+    //alert(this.Maxprice);
   }
 
   toggleFilters() {
@@ -170,20 +195,24 @@ export class CommercialComponent implements OnInit {
 
   onPriceChange(event: any): void {
     this.pricePerUnit = event.target.value;
-    console.log(`Selected price per sq ft: ${this.pricePerUnit}`);
-    this.filterProjects();
+    //console.log(`Selected price per sq ft: ${this.pricePerUnit}`);
+    this.filterProjectsBasedonPrice();
   }
 
   resetFilter() {
     this.FilteredProjects = this.LayoutData;
+    this.FilterProject2=this.FilteredProjects;
     this.selectedType = "All";
     this.selectedProperty = "All";
     this.selectedCity = "All";
     this.selectedZone = "All";
+    this.selectedUnit= 'Sq Ft';
+    this.updateInitialDropdownValues();
   }
 
-  goingDetailPage(category:string,projectName:string,projectId:string){
+  goingDetailPage(category: string, projectName: string, projectId: string) {
     const formattedProjectName = projectName.replace(/\s+/g, '-').toLowerCase();
-    this.router.navigate(["/"+category,formattedProjectName],{queryParams:{id:projectId}});
+    this.router.navigate(["/" + category, formattedProjectName], { queryParams: { id: projectId } });
   }
+
 }

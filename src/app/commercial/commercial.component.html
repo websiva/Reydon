@@ -8,7 +8,7 @@
             <div class="col-2">
                 <label for="zone" class="form-label required">Zone:</label>
                 <select id="zone" class="form-select" aria-label="Default select example" [(ngModel)]="selectedZone"
-                    (ngModelChange)="onFilterChange()">
+                    (ngModelChange)="onFilterChange('zone')">
                     <option *ngFor="let Zone of Zones" [value]="Zone">{{Zone}}</option>
                 </select>
             </div>
@@ -16,7 +16,7 @@
             <div class="col-2">
                 <label for="city" class="form-label required">City:</label>
                 <select id="city" class="form-select" aria-label="Default select example" [(ngModel)]="selectedCity"
-                    (ngModelChange)="onFilterChange()">
+                    (ngModelChange)="onFilterChange('city')">
                     <option *ngFor="let city of ProjectCities" [value]="city">{{city}}</option>
                 </select>
             </div>
@@ -24,7 +24,7 @@
             <div class="col-2">
                 <label for="propertyType" class="form-label required">Property Type:</label>
                 <select id="propertyType" class="form-select" aria-label="Default select example"
-                    [(ngModel)]="selectedProperty" (ngModelChange)="onFilterChange()">
+                    [(ngModel)]="selectedProperty" (ngModelChange)="onFilterChange('property')">
                     <option *ngFor="let category of Categories" [value]="category">{{category}}</option>
                 </select>
             </div>
@@ -52,7 +52,7 @@
                 <div class="col-4">
                     <label for="zone" class="form-label required">Zone:</label>
                     <select id="zone" class="form-select" aria-label="Default select example" [(ngModel)]="selectedZone"
-                        (ngModelChange)="onFilterChange()">
+                        (ngModelChange)="onFilterChange('zone')">
                         <option *ngFor="let Zone of Zones" [value]="Zone">{{Zone}}</option>
                     </select>
                 </div>
@@ -60,7 +60,7 @@
                 <div class="col-4">
                     <label for="city" class="form-label required">City:</label>
                     <select id="city" class="form-select" aria-label="Default select example" [(ngModel)]="selectedCity"
-                        (ngModelChange)="onFilterChange()">
+                        (ngModelChange)="onFilterChange('city')">
                         <option *ngFor="let city of ProjectCities" [value]="city">{{city}}</option>
                     </select>
                 </div>
@@ -68,7 +68,7 @@
                 <div class="col-4">
                     <label for="propertyType" class="form-label required">Property Type:</label>
                     <select id="propertyType" class="form-select" aria-label="Default select example"
-                        [(ngModel)]="selectedProperty" (ngModelChange)="onFilterChange()">
+                        [(ngModel)]="selectedProperty" (ngModelChange)="onFilterChange('property')">
                         <option *ngFor="let category of Categories" [value]="category">{{category}}</option>
                     </select>
                 </div>
@@ -103,7 +103,7 @@
                     <div class="col-12">
                         <label for="zone" class="form-label required">Zone:</label>
                         <select id="zone" class="form-select" aria-label="Default select example"
-                            [(ngModel)]="selectedZone" (ngModelChange)="onFilterChange()">
+                            [(ngModel)]="selectedZone" (ngModelChange)="onFilterChange('zone')">
                             <option *ngFor="let Zone of Zones" [value]="Zone">{{Zone}}</option>
                         </select>
                     </div>
@@ -113,7 +113,7 @@
                     <div class="col-12">
                         <label for="city" class="form-label required">City:</label>
                         <select id="city" class="form-select" aria-label="Default select example"
-                            [(ngModel)]="selectedCity" (ngModelChange)="onFilterChange()">
+                            [(ngModel)]="selectedCity" (ngModelChange)="onFilterChange('city')">
                             <option *ngFor="let city of ProjectCities" [value]="city">{{city}}</option>
                         </select>
                     </div>
@@ -123,7 +123,7 @@
                     <div class="col-12">
                         <label for="propertyType" class="form-label required">Property Type:</label>
                         <select id="propertyType" class="form-select" aria-label="Default select example"
-                            [(ngModel)]="selectedProperty" (ngModelChange)="onFilterChange()">
+                            [(ngModel)]="selectedProperty" (ngModelChange)="onFilterChange('property')">
                             <option *ngFor="let category of Categories" [value]="category">{{category}}</option>
                         </select>
                     </div>

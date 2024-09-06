@@ -16,6 +16,7 @@ import { FinancialPlanningComponent } from './financial-planning/financial-plann
 import { ProductsComponent } from './products/products.component';
 import { LayoutComponent } from './layout/layout.component';
 import { ProximityMapComponent } from './proximity-map/proximity-map.component';
+import { CareersComponent } from './careers/careers.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -32,13 +33,14 @@ const routes: Routes = [
   { path: 'property-management', component: PropertyManagementComponent },
   { path: 'financial-planning', component: FinancialPlanningComponent },
   { path: 'products', component: ProductsComponent },
-  {path:'Layout/:projectName',component:LayoutComponent},
-  {path:'proximity-map',component:ProximityMapComponent},
+  { path: 'Layout/:projectName', component: LayoutComponent },
+  { path: 'proximity-map', component: ProximityMapComponent },
+  { path: 'careers', component: CareersComponent },
   { path: '**', redirectTo: '/home' },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes,{useHash:true})],
+  imports: [RouterModule.forRoot(routes, { useHash: true })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

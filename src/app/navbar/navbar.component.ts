@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -7,11 +8,18 @@ import { Component } from '@angular/core';
 })
 export class NavbarComponent {
 
+  constructor(private router:Router){}
+
   collapseNavbar(): void {
     const navbarCollapse = document.getElementById('navbarSupportedContent');
     if (navbarCollapse) {
       navbarCollapse.classList.remove('show');
     }
+  }
+
+  gotoProjectsPage(type:string){
+    this.router.navigate(['projects'],{queryParams:{projectCategory:type}});
+    this.collapseNavbar();
   }
   
 }

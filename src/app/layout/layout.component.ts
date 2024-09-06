@@ -3,50 +3,61 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { PropertyDataService } from '../angular-service/property-data.service';
 import { Proximity } from '../models/layout-proximity';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-layout',
   templateUrl: './layout.component.html',
   styleUrl: './layout.component.css'
 })
-export class LayoutComponent implements OnInit,OnDestroy {
+export class LayoutComponent implements OnInit, OnDestroy {
   contactForm: FormGroup;
+  fileDownloadForm: FormGroup;
   ProjectName: string = '';
   ProjectId: string = '';
   ProjectData: any[] = [];
   RelatedProjects: any[] = [];
   ProjectZone: string = '';
   ProjectCategory: string = '';
-  mainLocation:{ Latitude: number, Longitude: number }={
+  mainLocation: { Latitude: number, Longitude: number } = {
     Latitude: 0,
     Longitude: 0
   };
-  proximityLocations:Proximity[]=[];
-  FirstTwentyPlots:any[]=[];
-  BannerImages:string[]=[];
-  interval:any;
-  currentIndex:number=0;
+  proximityLocations: Proximity[] = [];
+  FirstTwentyPlots: any[] = [];
+  BannerImages: string[] = [];
+  interval: any;
+  currentIndex: number = 0;
 
-  constructor(private formBuilder: FormBuilder, private activeroute: ActivatedRoute, private propertyDataService: PropertyDataService, private router: Router) {
+  YoutubeLink: string = '';
+  safeYoutubeUrl!: SafeResourceUrl;
+  safeMapLink!: SafeResourceUrl;
+
+  constructor(private formBuilder: FormBuilder, private activeroute: ActivatedRoute, private propertyDataService: PropertyDataService, private router: Router,
+    private sanitizer: DomSanitizer) {
     this.contactForm = this.formBuilder.group({
       name: ["", [Validators.required]],
       email: ['', [Validators.required, Validators.email]],
       phone: ['', [Validators.required]],
       message: ['', [Validators.required]],
-    })
-    
+    });
+    this.fileDownloadForm = this.formBuilder.group({
+      name: ["", [Validators.required]],
+      email: ['', [Validators.required, Validators.email]],
+      phone: ['', [Validators.required]]
+    });
   }
 
-  ngOnInit(): void {
-    this.activeroute.queryParams.subscribe((data) => {
+  async ngOnInit() {
+    this.activeroute.queryParams.subscribe(async (data) => {
       this.ProjectId = data['id'];
       console.log(this.ProjectId);
     });
-    this.activeroute.params.subscribe((data) => {
+    this.activeroute.params.subscribe(async (data) => {
       this.ProjectName = data['projectName'];
       console.log(this.ProjectName);
     })
-    this.loadPropertyData(this.ProjectId);
+    await this.loadPropertyData(this.ProjectId);
   }
 
   loadPropertyData(projectId: string) {
@@ -56,23 +67,38 @@ export class LayoutComponent implements OnInit,OnDestroy {
       this.GettingObjectValues();
       this.CollectingLocationsFromMainData();
       this.firsttwentyPlots();
-      this.BannerImages=this.ProjectData[0].BannerImagesNames;
       this.startSlider();
+      this.bypasslinkSafety();
+      //this.youtubeVideoId = this.extractVideoId(this.YoutubeLink);
     });
     this.propertyDataService.getAllData().subscribe(data => {
-      this.RelatedProjects = data.filter(project => project.AddressDetails.Zone === this.ProjectZone && project.Category === this.ProjectCategory);
+      this.RelatedProjects = data.filter(project => project.AddressDetails.Zone === this.ProjectZone && project.Category === this.ProjectCategory && project.ProjectId !== this.ProjectId);
     });
+  }
+
+  bypasslinkSafety() {
+    // converting normal youtube url to safe url
+    this.safeYoutubeUrl = this.sanitizer.bypassSecurityTrustResourceUrl(this.YoutubeLink);
+    //converting normal google map location url to safe url
+    const mapLink = `https://www.google.com/maps/embed/v1/place?key=AIzaSyB-05IYBDNd81n3uNbcfrCriwnq-ZWJ8ag&q=${this.mainLocation.Latitude},${this.mainLocation.Longitude}&maptype=satellite`;
+    this.safeMapLink = this.sanitizer.bypassSecurityTrustResourceUrl(mapLink);
   }
 
   GettingObjectValues() {
     this.ProjectZone = this.ProjectData[0].AddressDetails?.Zone;
     this.ProjectCategory = this.ProjectData[0].Category;
+    this.BannerImages = this.ProjectData[0].BannerImagesNames;
+    this.YoutubeLink = this.ProjectData[0].YoutubeLink;
   }
 
   ngSubmit() {
     console.log(this.contactForm.value);
-    localStorage.removeItem('email');
     this.contactForm.reset();
+  }
+
+  ngSubmitFileDownloadform() {
+    console.log(this.contactForm.value);
+    this.fileDownloadForm.reset();
   }
 
   //background color for card labels
@@ -127,9 +153,9 @@ export class LayoutComponent implements OnInit,OnDestroy {
       Longitude: this.ProjectData[0].AddressDetails.Longitude
     }
 
-    
+
     const nearByProximity = this.ProjectData[0].NearByProximity;
-    
+
     if (nearByProximity && nearByProximity.length > 0) {
       this.proximityLocations = nearByProximity.map((location: Proximity) => ({
         ProximityName: location.ProximityName,
@@ -137,7 +163,7 @@ export class LayoutComponent implements OnInit,OnDestroy {
         Duration: location.Duration,
         Latitude: location.Latitude,
         Longitude: location.Longitude,
-        Category:location.Category
+        Category: location.Category
       }));
       console.log('Proximity Locations:', this.proximityLocations);
     } else {
@@ -174,7 +200,7 @@ export class LayoutComponent implements OnInit,OnDestroy {
         return 'Security.svg';
       case 'Power Backup':
         return 'PoweBackup.svg';
-      case '24x7 CCTV / Surveillance cameras':
+      case '24x7 CCTV Surveillance':
         return 'CCTV.svg';
       case 'Children\'s Play Area':
         return 'PlayArea.svg';
@@ -186,11 +212,11 @@ export class LayoutComponent implements OnInit,OnDestroy {
         return 'ClubHouse.svg';
       case 'Convention center':
         return 'ConventionCenter.svg';
-      case 'Jogging/Walking Track':
+      case 'Jogging Track':
         return 'JoggingWalkingTrack.svg';
-      case 'Temple/Religious activity places':
+      case 'Religious activity places':
         return 'Temple.svg';
-      case 'Sports Area (Tennis court, Basketball court, etc)':
+      case 'Sports Area':
         return 'SportsArea.svg';
       case 'EV Charging station':
         return 'EVChargingStation.svg';
@@ -234,12 +260,12 @@ export class LayoutComponent implements OnInit,OnDestroy {
   }
 
   //selecting proximity icon
-  proximityIcon(proximity:string):string{
-    switch(proximity){
+  proximityIcon(proximity: string): string {
+    switch (proximity) {
       case 'bus-stand':
         return "";
-        default:
-          return 'DefaultIcon.svg';
+      default:
+        return 'DefaultIcon.svg';
     }
   }
 
@@ -257,19 +283,19 @@ export class LayoutComponent implements OnInit,OnDestroy {
   }
 
   //get first 20 plot details
-  firsttwentyPlots(){
-    this.FirstTwentyPlots=this.ProjectData[0].plots.slice(0,20);
+  firsttwentyPlots() {
+    this.FirstTwentyPlots = this.ProjectData[0].plots.slice(0, 20);
     console.log(this.FirstTwentyPlots);
   }
 
   //Interval for banner images
-  startSlider(){
-    this.interval = setInterval(()=>{
-      this.currentIndex = (this.currentIndex+1)%this.BannerImages.length;
-    },4000);
+  startSlider() {
+    this.interval = setInterval(() => {
+      this.currentIndex = (this.currentIndex + 1) % this.BannerImages.length;
+    }, 4000);
   }
 
-  downloadDocument(){
+  downloadDocument() {
     this.downloadFile('heritage-avenue-brochure.pdf', 'application/pdf');
   }
 

@@ -1,5 +1,5 @@
 <div class="container-fluid w-100 p-0">
-    <div class="full-section w-100" *ngFor="let project of ProjectData">        
+    <div class="full-section w-100" *ngFor="let project of ProjectData">
         <div class="banner-section">
             <div class="banner-image">
                 <img class="slider-image" [src]="'plots/'+project.ProjectName+'/'+image"
@@ -12,7 +12,8 @@
                     *ngIf="project.DTCPApproved===false&&project.RERAApproved===true">
                 <img src="RERA-DTCP-Approved.png" alt="" class="dtcp-rera-approved-image"
                     *ngIf="project.DTCPApproved===true&&project.RERAApproved===true">
-                <img src="verified.png" style="background-color: white;border-radius: 50%;" alt="" class="verified-image" *ngIf="project.VerifiedByReydon===true">
+                <img src="verified.png" style="background-color: white;border-radius: 50%;" alt=""
+                    class="verified-image" *ngIf="project.VerifiedByReydon===true">
             </div>
         </div>
         <div class="navigation-section sticky-top">
@@ -88,7 +89,7 @@
                                             stroke-linecap="round"></path>
                                     </g>
                                 </svg>
-                                <span>Layout</span></button>
+                                <span>Layout details</span></button>
                             <button class="btn">Enquire Now</button>
 
                             <!-- Modal -->
@@ -346,6 +347,9 @@
                             </tr>
                         </tbody>
                     </table>
+                    <div class="see-all-property-details w-100 d-flex justify-content-center">
+                        <button class="btn">See all layout details</button>
+                    </div>
                 </div>
             </div>
         </section>
@@ -474,6 +478,14 @@
                 </div>
             </div>
         </section>
+        <section id="youtube-video">
+            <div class="youtube-video-section w-100">
+                <div class="youtube-video">
+                    <iframe [src]="safeYoutubeUrl" frameborder="0" allowfullscreen
+                        allow="autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
+                </div>
+            </div>
+        </section>
         <section id="property-address">
             <div class="property-address-details-section w-100">
                 <div class="address-details">
@@ -524,7 +536,7 @@
                         <div class="row address p-0 m-0 map-section">
                             <iframe width="100%" height="450" style="border:0" loading="lazy" allowfullscreen
                                 referrerpolicy="no-referrer-when-downgrade"
-                                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyB-05IYBDNd81n3uNbcfrCriwnq-ZWJ8ag&q=10.047981747106626,77.31411692305962&maptype=satellite">
+                                [src]="safeMapLink">
                             </iframe>
 
                         </div>
@@ -663,7 +675,7 @@
                 </div>
             </div>
         </div>
-        <div class="related-projects-section">
+        <div *ngIf="RelatedProjects.length>0" class="related-projects-section">
             <div class="related-projects">
                 <div class="row m-0">
                     <div class="section-header">
@@ -807,7 +819,7 @@
             <div class="modal-body" style="padding: 0;">
                 <div class="contact-form" style="padding: 0; margin: 0;">
                     <div class="form">
-                        <form [formGroup]="contactForm" (ngSubmit)="ngSubmit()" style="padding: 0;">
+                        <form [formGroup]="fileDownloadForm" (ngSubmit)="ngSubmitFileDownloadform()" style="padding: 0;">
                             <div class="row m-0 w-100">
                                 <div class="col-12 mb-3 p-0">
                                     <label for="name" class="form-label required">Name</label>
@@ -853,7 +865,8 @@
                             </div>
                             <div class="row">
                                 <div class="col-md-12">
-                                    <button type="submit" data-bs-dismiss="modal" class="btn send-button w-100" (click)="downloadDocument()">Download</button>
+                                    <button type="submit" data-bs-dismiss="modal" class="btn send-button w-100"
+                                    [disabled]="fileDownloadForm.invalid" (click)="downloadDocument()">Download</button>
                                 </div>
                             </div>
                         </form>
