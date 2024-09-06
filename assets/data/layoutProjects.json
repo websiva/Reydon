@@ -17,6 +17,7 @@
 			"heritageBanner4.png"
 		],
 		"CardImage": "heritageBanner2.png",
+		"YoutubeLink":"https://www.youtube.com/embed/VLSZVWVFKAg",
 		"TotalArea": 10,
 		"TotalPlots": 154,
 		"AvailablePlots": 148,
@@ -452,6 +453,7 @@
 			"sunshine2.png"
 		],
 		"CardImage": "sunshine1.png",
+		"YoutubeLink":"https://www.youtube.com/embed/VLSZVWVFKAg",
 		"TotalArea": 20,
 		"TotalPlots": 250,
 		"AvailablePlots": 100,
@@ -484,15 +486,15 @@
 		},
 		"Amenities": [
 			"Power Backup",
-			"24x7 CCTV / Surveillance cameras",
+			"24x7 CCTV Surveillance",
 			"Children's Play Area",
 			"Swimming Pool",
 			"Gymnasiums",
 			"Club House",
 			"Convention center",
-			"Jogging/Walking Track",
-			"Temple/Religious activity places",
-			"Sports Area (Tennis court, Basketball court, etc)",
+			"Jogging Track",
+			"Religious activity places",
+			"Sports Area",
 			"EV Charging station",
 			"High-Speed Internet"
 		],
@@ -613,6 +615,248 @@
 			"ICICI",
 			"KVB",
 			"HDFC"
+		],
+		"plots": [
+			{
+				"plotNo": 1,
+				"facing": "North",
+				"sizeSqFt": 1000,
+				"sizeCent": 10
+			},
+			{
+				"plotNo": 2,
+				"facing": "East",
+				"sizeSqFt": 1200,
+				"sizeCent": 12
+			},
+			{
+				"plotNo": 3,
+				"facing": "South",
+				"sizeSqFt": 950,
+				"sizeCent": 9.5
+			},
+			{
+				"plotNo": 4,
+				"facing": "West",
+				"sizeSqFt": 1100,
+				"sizeCent": 11
+			},
+			{
+				"plotNo": 5,
+				"facing": "North",
+				"sizeSqFt": 1300,
+				"sizeCent": 13
+			},
+			{
+				"plotNo": 6,
+				"facing": "East",
+				"sizeSqFt": 1400,
+				"sizeCent": 14
+			},
+			{
+				"plotNo": 7,
+				"facing": "South",
+				"sizeSqFt": 1000,
+				"sizeCent": 10
+			},
+			{
+				"plotNo": 8,
+				"facing": "West",
+				"sizeSqFt": 1250,
+				"sizeCent": 12.5
+			},
+			{
+				"plotNo": 9,
+				"facing": "North",
+				"sizeSqFt": 1050,
+				"sizeCent": 10.5
+			},
+			{
+				"plotNo": 10,
+				"facing": "East",
+				"sizeSqFt": 1150,
+				"sizeCent": 11.5
+			},
+			{
+				"plotNo": 11,
+				"facing": "South",
+				"sizeSqFt": 980,
+				"sizeCent": 9.8
+			},
+			{
+				"plotNo": 12,
+				"facing": "West",
+				"sizeSqFt": 1200,
+				"sizeCent": 12
+			},
+			{
+				"plotNo": 13,
+				"facing": "North",
+				"sizeSqFt": 1400,
+				"sizeCent": 14
+			},
+			{
+				"plotNo": 14,
+				"facing": "East",
+				"sizeSqFt": 1300,
+				"sizeCent": 13
+			},
+			{
+				"plotNo": 15,
+				"facing": "South",
+				"sizeSqFt": 1100,
+				"sizeCent": 11
+			},
+			{
+				"plotNo": 16,
+				"facing": "West",
+				"sizeSqFt": 950,
+				"sizeCent": 9.5
+			},
+			{
+				"plotNo": 17,
+				"facing": "North",
+				"sizeSqFt": 1000,
+				"sizeCent": 10
+			},
+			{
+				"plotNo": 18,
+				"facing": "East",
+				"sizeSqFt": 1200,
+				"sizeCent": 12
+			},
+			{
+				"plotNo": 19,
+				"facing": "South",
+				"sizeSqFt": 1300,
+				"sizeCent": 13
+			},
+			{
+				"plotNo": 20,
+				"facing": "West",
+				"sizeSqFt": 1150,
+				"sizeCent": 11.5
+			},
+			{
+				"plotNo": 21,
+				"facing": "North",
+				"sizeSqFt": 1050,
+				"sizeCent": 10.5
+			},
+			{
+				"plotNo": 22,
+				"facing": "East",
+				"sizeSqFt": 1400,
+				"sizeCent": 14
+			},
+			{
+				"plotNo": 23,
+				"facing": "South",
+				"sizeSqFt": 950,
+				"sizeCent": 9.5
+			},
+			{
+				"plotNo": 24,
+				"facing": "West",
+				"sizeSqFt": 1000,
+				"sizeCent": 10
+			},
+			{
+				"plotNo": 25,
+				"facing": "North",
+				"sizeSqFt": 1300,
+				"sizeCent": 13
+			},
+			{
+				"plotNo": 26,
+				"facing": "East",
+				"sizeSqFt": 1100,
+				"sizeCent": 11
+			},
+			{
+				"plotNo": 27,
+				"facing": "South",
+				"sizeSqFt": 1200,
+				"sizeCent": 12
+			},
+			{
+				"plotNo": 28,
+				"facing": "West",
+				"sizeSqFt": 1250,
+				"sizeCent": 12.5
+			},
+			{
+				"plotNo": 29,
+				"facing": "North",
+				"sizeSqFt": 1400,
+				"sizeCent": 14
+			},
+			{
+				"plotNo": 30,
+				"facing": "East",
+				"sizeSqFt": 1300,
+				"sizeCent": 13
+			},
+			{
+				"plotNo": 31,
+				"facing": "South",
+				"sizeSqFt": 1150,
+				"sizeCent": 11.5
+			},
+			{
+				"plotNo": 32,
+				"facing": "West",
+				"sizeSqFt": 1050,
+				"sizeCent": 10.5
+			},
+			{
+				"plotNo": 33,
+				"facing": "North",
+				"sizeSqFt": 1000,
+				"sizeCent": 10
+			},
+			{
+				"plotNo": 34,
+				"facing": "East",
+				"sizeSqFt": 1200,
+				"sizeCent": 12
+			},
+			{
+				"plotNo": 35,
+				"facing": "South",
+				"sizeSqFt": 1300,
+				"sizeCent": 13
+			},
+			{
+				"plotNo": 36,
+				"facing": "West",
+				"sizeSqFt": 1100,
+				"sizeCent": 11
+			},
+			{
+				"plotNo": 37,
+				"facing": "North",
+				"sizeSqFt": 1050,
+				"sizeCent": 10.5
+			},
+			{
+				"plotNo": 38,
+				"facing": "East",
+				"sizeSqFt": 1400,
+				"sizeCent": 14
+			},
+			{
+				"plotNo": 39,
+				"facing": "South",
+				"sizeSqFt": 950,
+				"sizeCent": 9.5
+			},
+			{
+				"plotNo": 40,
+				"facing": "West",
+				"sizeSqFt": 1200,
+				"sizeCent": 12
+			}
 		]
 	},
 	{
@@ -632,6 +876,7 @@
 			"meadows3.png"
 		],
 		"CardImage": "meadows1.png",
+		"YoutubeLink":"https://www.youtube.com/embed/VLSZVWVFKAg",
 		"TotalArea": 50,
 		"TotalPlots": 30,
 		"AvailablePlots": 15,
@@ -995,6 +1240,7 @@
 			"OnePulseSmartCity4.png"
 		],
 		"CardImage": "OnePulseSmartCity2.png",
+		"YoutubeLink":"https://www.youtube.com/embed/VLSZVWVFKAg",
 		"TotalArea": 10,
 		"TotalPlots": 154,
 		"AvailablePlots": 148,
@@ -1430,6 +1676,7 @@
 			"srilakshmi2.png"
 		],
 		"CardImage": "srilakshmi1.png",
+		"YoutubeLink":"https://www.youtube.com/embed/VLSZVWVFKAg",
 		"TotalArea": 20,
 		"TotalPlots": 250,
 		"AvailablePlots": 100,
@@ -1843,6 +2090,7 @@
 			"maheswari2.png"
 		],
 		"CardImage": "maheswari1.png",
+		"YoutubeLink":"https://www.youtube.com/embed/VLSZVWVFKAg",
 		"TotalArea": 20,
 		"TotalPlots": 250,
 		"AvailablePlots": 100,
@@ -2256,6 +2504,7 @@
 			"greencity2.png"
 		],
 		"CardImage": "greencity1.png",
+		"YoutubeLink":"https://www.youtube.com/embed/VLSZVWVFKAg",
 		"TotalArea": 20,
 		"TotalPlots": 250,
 		"AvailablePlots": 100,
@@ -2671,6 +2920,7 @@
 			"SriRamNagar4.png"
 		],
 		"CardImage": "SriRamNagar1.png",
+		"YoutubeLink":"https://www.youtube.com/embed/VLSZVWVFKAg",
 		"TotalArea": 20,
 		"TotalPlots": 250,
 		"AvailablePlots": 100,
@@ -3086,6 +3336,7 @@
 			"SmartCity4.png"
 		],
 		"CardImage": "SmartCity2.png",
+		"YoutubeLink":"https://www.youtube.com/embed/VLSZVWVFKAg",
 		"TotalArea": 10,
 		"TotalPlots": 83,
 		"AvailablePlots": 79,
