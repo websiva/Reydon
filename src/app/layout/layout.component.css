@@ -672,52 +672,9 @@
     z-index: 2;
 }
 .reasons-container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.reasons-container .col-md-6{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 0 20px;
-}
-.reason{
-    margin: 30px 0;
+    display: none;
 }
 
-.reson-header h6{
-    font-size: 32px;
-    font-weight: 300;
-    color: white; 
-    line-height: 49px;
-}
-.count{
-    font-size: 40px;
-    font-weight: 300;
-    font-family: 'Times New Roman', Times, serif;
-    margin: 0 0 20px 0;
-    color: white; 
-}
-.reason-heading{
-    font-size: 25px;
-    font-weight: 300;
-    color: white; 
-}
-.reason-justification{
-    font-weight: 16px;
-    font-weight: 300;
-    color: rgba(255, 255, 255, 0.63);
-}
-.line{
-    content: "";
-    width: 100px;
-    height: 1px;
-    background-color: rgba(255, 255, 255, 0.63);
-    margin: 30px 0 0 0;
-}
 .contact-information-section .contact img{
     width: 100%;
     height: auto;
@@ -944,6 +901,15 @@ form{
     margin: 0;
 }
 
+@media (min-width:1200px){
+    .reasons-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
 
 /* Media query for medium screens */
 @media (max-width: 1200px) {
@@ -1015,6 +981,12 @@ form{
     .horizontal-table{
         display: none;
     }
+    form{
+        padding: 20px;
+    }
+    .form{
+        margin: 10px 30px;
+    }
 }
 
 /* Media query for small screens  */
@@ -1044,8 +1016,12 @@ form{
         margin-left: 0; /* Remove margin for mobile view */
         margin-bottom: 10px; /* Add bottom margin for spacing */
     }
-
-
+    form{
+        padding: 20px;
+    }
+    .form{
+        margin: 10px 15px;
+    }
     .main-detail-box{
         margin-bottom: 20px;
     }

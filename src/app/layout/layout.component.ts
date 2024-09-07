@@ -190,7 +190,7 @@ export class LayoutComponent implements OnInit, OnDestroy {
         return 'DrainageClosed.svg';
       case 'Entrance Arch':
         return 'Entrance.svg';
-      case 'Compound wall/Gated community':
+      case 'Gated community':
         return 'GatedCommunity.svg';
       case 'Landscaped Garden':
         return 'Garden.svg';

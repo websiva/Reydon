@@ -1,6 +1,6 @@
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { PropertyDataService } from '../angular-service/property-data.service';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-projects',
@@ -19,6 +19,8 @@ export class ProjectsComponent implements OnInit {
   selectedProperty: string = "All";
   selectedCity: string = "All";
   selectedZone = "All";
+  queryZone:string="";
+  gotZoneFromQuery:boolean=false;
   dateValue: string = "";
   filterVisible = false;
   filterButtonContent = "Show Filters";
@@ -27,11 +29,22 @@ export class ProjectsComponent implements OnInit {
   selectedUnit: string = 'Sq Ft';
   activeFilter: string = '';
 
-  constructor(private propertyDataService: PropertyDataService, private cdr: ChangeDetectorRef, private router: Router) {
+  constructor(private propertyDataService: PropertyDataService, private cdr: ChangeDetectorRef, private router: Router,
+    private activeRoute:ActivatedRoute) {
 
   }
 
   ngOnInit() {
+    this.activeRoute.queryParams.subscribe(data=>{
+      const city=data['city'];
+      if(city){
+        this.queryZone=city;
+        this.gotZoneFromQuery=true;
+      }
+      else{
+        this.resetFilter();
+      }
+    });
     this.loaddata();
   }
 
@@ -42,7 +55,7 @@ export class ProjectsComponent implements OnInit {
       this.FilteredProjects = this.LayoutData;
       this.FilterProject2 = this.FilteredProjects;
       this.updateInitialDropdownValues();
-    })
+    });
   }
   updateInitialDropdownValues() {
     this.GettingZones();
@@ -51,6 +64,15 @@ export class ProjectsComponent implements OnInit {
     this.GetingCategories();
     this.getMaximumPricePerSqFt();
     this.cdr.detectChanges();
+    if(this.gotZoneFromQuery){
+      this.selectedZone=this.queryZone;
+      this.activeFilter='zone';
+    }
+    if (this.selectedZone !== 'All') {
+      this.filterProjects();
+      this.updateDropdownValues();
+      this.FilterProject2 = this.FilteredProjects;
+    }
   }
 
   updateDropdownValues() {

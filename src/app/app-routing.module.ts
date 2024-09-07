@@ -17,6 +17,7 @@ import { ProductsComponent } from './products/products.component';
 import { LayoutComponent } from './layout/layout.component';
 import { ProximityMapComponent } from './proximity-map/proximity-map.component';
 import { CareersComponent } from './careers/careers.component';
+import { AdminLoginComponent } from './admin-login/admin-login.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -36,6 +37,7 @@ const routes: Routes = [
   { path: 'Layout/:projectName', component: LayoutComponent },
   { path: 'proximity-map', component: ProximityMapComponent },
   { path: 'careers', component: CareersComponent },
+  { path: 'admin', component: AdminLoginComponent },
   { path: '**', redirectTo: '/home' },
 ];
 
