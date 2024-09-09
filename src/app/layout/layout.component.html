@@ -417,11 +417,13 @@
                                 <i aria-hidden="true" class="fa fa-quote-left fa-1x"></i>
                                 <h6>0{{i+1}}</h6>
                             </div>
-                            <div class="card-image">
-                                {{reason.ImageUrl}}
+                            <div class="reason-card-image">
+                                <img [src]="'reasons/'+reason.Title+'.svg'" alt="">
+                            </div>
+                            <div class="reason-card-title">
+                                <h6 class="card-title">{{reason.Title}}</h6>
                             </div>
                             <div class="card-content">
-                                <h6 class="card-title">{{reason.Title}}</h6>
                                 <p class="card-description">{{reason.Description}}</p>
                             </div>
                         </div>
@@ -548,7 +550,7 @@
                 style="background: url(contact.jpg);background-position: center;background-attachment: fixed;background-size: cover;background-repeat: no-repeat;">
                 <div class="overlay"></div>
                 <div class="row contact m-0">
-                    <div class="col-xl-7 reasons-container">
+                    <!--<div class="col-xl-7 reasons-container">
                         <div class="row m-0 p-0 w-100">
                             <h6 style="font-size: 24px;margin: 0 0 20px 0; color: white;">Frequently Asked Questions? (FAQ)</h6>
                             <div class="accordion w-100" id="accordionFlushExample">
@@ -623,8 +625,8 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-xl-5 contact-form">
+                    </div>-->
+                    <div class="col-12 contact-form">
                         <div class="form">
                             <form [formGroup]="contactForm" (ngSubmit)="ngSubmit()">
                                 <h6>Contact Form</h6>
@@ -661,9 +663,11 @@
                                             formControlName="email" />
                                         <div *ngIf="contactForm.controls['email'].invalid && contactForm.controls['email'].touched"
                                             class="text-danger">
-                                            <small *ngIf="contactForm.controls['email'].errors?.['required']">Email is
+                                            <small *ngIf="contactForm.controls['email'].errors?.['required']">Email
+                                                is
                                                 required.</small>
-                                            <small *ngIf="contactForm.controls['email'].errors?.['email']">Please enter
+                                            <small *ngIf="contactForm.controls['email'].errors?.['email']">Please
+                                                enter
                                                 a
                                                 valid
                                                 email

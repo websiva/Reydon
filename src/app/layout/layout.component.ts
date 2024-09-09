@@ -57,23 +57,34 @@ export class LayoutComponent implements OnInit, OnDestroy {
       this.ProjectName = data['projectName'];
       console.log(this.ProjectName);
     })
-    await this.loadPropertyData(this.ProjectId);
+    try {
+      await this.loadPropertyData(this.ProjectId);
+    } catch (error) {
+      console.error(error);
+    }
+
   }
 
-  loadPropertyData(projectId: string) {
-    this.propertyDataService.getAllData().subscribe(data => {
-      this.ProjectData = data.filter(project => project.ProjectId === projectId);
-      console.log(this.ProjectData);
-      this.GettingObjectValues();
-      this.CollectingLocationsFromMainData();
-      this.firsttwentyPlots();
-      this.startSlider();
-      this.bypasslinkSafety();
-      //this.youtubeVideoId = this.extractVideoId(this.YoutubeLink);
-    });
-    this.propertyDataService.getAllData().subscribe(data => {
-      this.RelatedProjects = data.filter(project => project.AddressDetails.Zone === this.ProjectZone && project.Category === this.ProjectCategory && project.ProjectId !== this.ProjectId);
-    });
+  async loadPropertyData(projectId: string): Promise<void> {
+    try {
+      this.propertyDataService.getAllData().subscribe(data => {
+        this.ProjectData = data.filter(project => project.ProjectId === projectId);
+        console.log(this.ProjectData);
+        this.GettingObjectValues();
+        this.CollectingLocationsFromMainData();
+        this.firsttwentyPlots();
+        this.startSlider();
+        this.bypasslinkSafety();
+        //this.youtubeVideoId = this.extractVideoId(this.YoutubeLink);
+      });
+      this.propertyDataService.getAllData().subscribe(data => {
+        this.RelatedProjects = data.filter(project => project.AddressDetails.Zone === this.ProjectZone && project.Category === this.ProjectCategory && project.ProjectId !== this.ProjectId);
+      });
+
+    } catch (error) {
+      console.error(error);
+    }
+
   }
 
   bypasslinkSafety() {
@@ -270,17 +281,16 @@ export class LayoutComponent implements OnInit, OnDestroy {
   }
 
   scrollToSection(sectionId: string) {
-    this.router.navigate([], { fragment: sectionId }).then(() => {
-      const element = document.getElementById(sectionId);
-      if (element) {
-        // Scroll to the element with a slight offset
-        window.scrollTo({
-          top: element.getBoundingClientRect().top + window.scrollY - 50, // Adjust the offset as needed
-          behavior: 'smooth'
-        });
-      }
-    });
+    const element = document.getElementById(sectionId);
+    if (element) {
+      // Scroll to the element with a slight offset
+      window.scrollTo({
+        top: element.getBoundingClientRect().top + window.scrollY - 50, // Adjust the offset as needed
+        behavior: 'smooth'
+      });
+    }
   }
+
 
   //get first 20 plot details
   firsttwentyPlots() {
