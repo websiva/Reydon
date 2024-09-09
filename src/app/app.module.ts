@@ -48,6 +48,9 @@ import { HomeProjectsComponent } from './home-projects/home-projects.component';
 import { ProximityGoogleMapComponent } from './proximity-google-map/proximity-google-map.component';
 import { CareersComponent } from './careers/careers.component';
 import { AdminLoginComponent } from './admin-login/admin-login.component';
+import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
+import { TermsOfUseComponent } from './terms-of-use/terms-of-use.component';
+import { FAQComponent } from './faq/faq.component';
 
 register();
 
@@ -87,7 +90,10 @@ register();
     HomeProjectsComponent,
     ProximityGoogleMapComponent,
     CareersComponent,
-    AdminLoginComponent
+    AdminLoginComponent,
+    PrivacyPolicyComponent,
+    TermsOfUseComponent,
+    FAQComponent
   ],
   imports: [
     BrowserModule,

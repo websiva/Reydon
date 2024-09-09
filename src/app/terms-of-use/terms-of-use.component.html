@@ -1,0 +1,18 @@
+<div class="container-fluid banner p-0">
+    <div class="row">
+        <h2 class="banner-title">Terms of Service Agreement</h2>
+    </div>
+</div>
+<div class="container-fluid w-100 privacy-policy-content">
+    <div class="content-section">
+        <div class="row p-0 m-0 w-100">
+            <h6 class="effective-date">Effective Date: 15th July 2024</h6>
+            <div class="section" *ngFor="let section of termsAndConditions;let i=index">
+                <h6 class="title">{{i+1}}. {{section.title }}</h6>
+                <ul>
+                    <li *ngFor="let item of section.content">{{ item }}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

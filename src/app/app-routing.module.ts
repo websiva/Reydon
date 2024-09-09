@@ -18,6 +18,9 @@ import { LayoutComponent } from './layout/layout.component';
 import { ProximityMapComponent } from './proximity-map/proximity-map.component';
 import { CareersComponent } from './careers/careers.component';
 import { AdminLoginComponent } from './admin-login/admin-login.component';
+import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
+import { TermsOfUseComponent } from './terms-of-use/terms-of-use.component';
+import { FAQComponent } from './faq/faq.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -38,6 +41,9 @@ const routes: Routes = [
   { path: 'proximity-map', component: ProximityMapComponent },
   { path: 'careers', component: CareersComponent },
   { path: 'admin', component: AdminLoginComponent },
+  { path: 'privacy-policy', component: PrivacyPolicyComponent },
+  { path: 'terms-of-use', component: TermsOfUseComponent },
+  { path: 'FAQ', component: FAQComponent },
   { path: '**', redirectTo: '/home' },
 ];
 

@@ -1,0 +1,67 @@
+.banner{
+    width: 100%;
+}
+
+
+.banner-title{
+    color:var(--primary-color);
+    font-size: 35px;
+    font-weight: 400;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.privacy-policy-content{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.content-section{
+    width: 100%;
+    max-width: 1050px;
+    margin: 0 0 20px 0;
+}
+
+
+.title{
+    font-size: 18px;
+    font-weight: 500;
+    padding: 0;
+    text-decoration: underline;
+    color: var(--primary-color);
+}
+.description{
+    font-size: 16px;
+    font-weight: 400;
+    padding: 0;
+    text-align: justify;
+}
+.section{
+    margin: 10px 0;
+}
+
+
+
+
+
+
+
+/* Media query for medium screens (e.g., tablets) */
+@media (max-width: 768px) {
+    .overlay {
+        height: 300px;
+    }
+    .banner-title{
+        font-size: 28px;
+    }
+}
+
+/* Media query for small screens (e.g., mobile devices) */
+@media (max-width: 480px) {
+    .overlay {
+        height: 275px;
+    }
+    .banner-title{
+        font-size: 28px;
+    }
+}

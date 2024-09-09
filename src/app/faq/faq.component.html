@@ -1,0 +1,44 @@
+<div class="container-fluid banner p-0">
+    <div class="row">
+        <h2 class="banner-title">Frequently Asked Questions (FAQs)?</h2>
+    </div>
+</div>
+<div class="container-fluid w-100 privacy-policy-content">
+    <div class="content-section">
+        <div class="row p-0 m-0 w-100">
+            <section class="first-section">
+                <header class="section-header">Reydon Resources Private Limited aims to provide innovative and
+                    constructive solutions to fulfil all your dream homes inspire with a touch of AI technology!
+                </header>
+                <div class="section-content" *ngFor="let item of mainDetails;let i=index">
+                    <h6 class="title">{{i+1}}. {{item.MainTitle}}</h6>
+                    <ul>
+                        <li *ngFor="let question of item.SectionQuestions">
+                            <h6 class="inner-question">{{question.Question}}</h6>
+                            <p class="inner-description">{{question.SectionDescription}}</p>
+                            <ul>
+                                <li class="services" *ngFor="let services of question.Services">
+                                    <span class="services-title">{{services.Title}} </span>{{services.Description}}
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="second-section">
+                <header class="section-header">
+                    Awareness for our Valued Customers
+                </header>
+                <div class="section-content" *ngFor="let item of awarness">
+                    <h6 class="title">{{item.MainTitle}}</h6>
+                    <ul>
+                        <li *ngFor="let question of item.SectionQuestions">
+                            <h6 class="inner-question">Q. {{question.Question}}</h6>
+                            <p>{{question.Answer}}</p>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>

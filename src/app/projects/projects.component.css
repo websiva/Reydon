@@ -137,6 +137,9 @@
 .category-label{
     width: 100%;
     margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .category-label ul{
     display: flex;
@@ -204,13 +207,14 @@
 
 .divider{
     padding: 0;
-    margin: 8px 0 0 0;
+    margin: 0 0 0 0;
 }
 
 .amenities-section{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 4px 0;
 }
 .amenities img{
     width: 20px;
