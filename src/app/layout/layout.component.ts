@@ -28,6 +28,7 @@ export class LayoutComponent implements OnInit, OnDestroy {
   BannerImages: string[] = [];
   interval: any;
   currentIndex: number = 0;
+  downloadFormId:string='';
 
   YoutubeLink: string = '';
   safeYoutubeUrl!: SafeResourceUrl;
@@ -317,6 +318,9 @@ export class LayoutComponent implements OnInit, OnDestroy {
     link.click();
   }
 
+  setDownloadFormId(value:string){
+    this.downloadFormId=value;
+  }
 
   ngOnDestroy(): void {
     clearInterval(this.interval);
