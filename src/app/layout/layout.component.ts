@@ -29,6 +29,7 @@ export class LayoutComponent implements OnInit, OnDestroy {
   interval: any;
   currentIndex: number = 0;
   downloadFormId:string='';
+  modalImageUrl: string = '';
 
   YoutubeLink: string = '';
   safeYoutubeUrl!: SafeResourceUrl;
@@ -320,6 +321,11 @@ export class LayoutComponent implements OnInit, OnDestroy {
 
   setDownloadFormId(value:string){
     this.downloadFormId=value;
+  }
+
+  openBannerImages(image:string){
+    this.modalImageUrl=image;
+    console.log(image);
   }
 
   ngOnDestroy(): void {

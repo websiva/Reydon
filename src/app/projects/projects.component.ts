@@ -36,7 +36,7 @@ export class ProjectsComponent implements OnInit {
 
   ngOnInit() {
     this.activeRoute.queryParams.subscribe(data=>{
-      const city=data['city'];
+      const city=data['zone'];
       if(city){
         this.queryZone=city;
         this.gotZoneFromQuery=true;
@@ -226,14 +226,27 @@ export class ProjectsComponent implements OnInit {
     this.selectedType = "All";
     this.selectedProperty = "All";
     this.selectedCity = "All";
-    this.selectedZone = "All";
+    this.queryZone="All";
     this.selectedUnit= 'Sq Ft';
+    this.changeZoneQueryFromUrl("zone","All");
     this.updateInitialDropdownValues();
   }
 
   goingDetailPage(category: string, projectName: string, projectId: string) {
     const formattedProjectName = projectName.replace(/\s+/g, '-').toLowerCase();
     this.router.navigate(["/" + category, formattedProjectName], { queryParams: { id: projectId } });
+  }
+
+  changeZoneQueryFromUrl(paramkey:string,paramValue:string){
+    //getting all the query params from activeroute
+    const allQueryParams = {...this.activeRoute.snapshot.queryParams};
+
+    //deleting queryparam on the acive route
+    allQueryParams[paramkey]=paramValue;
+
+    this.router.navigate([],{relativeTo:this.activeRoute,queryParams:allQueryParams,queryParamsHandling:'merge'});
+
+
   }
 
 

@@ -12,6 +12,6 @@ export class ExploreByCitiesComponent {
   constructor(private router:Router){}
 
   gotoProjects(city:string){
-    this.router.navigate(['projects'],{queryParams:{city:city}});
+    this.router.navigate(['projects'],{queryParams:{zone:city}});
   }
 }

@@ -220,6 +220,7 @@
     transition: opacity 1s ease-in-out;
     /* Smooth transition effect */
     opacity: 0;
+    cursor: pointer;
 }
 
 .slider-image.active {
