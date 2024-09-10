@@ -25,6 +25,7 @@ export class ProjectsComponent implements OnInit {
   filterVisible = false;
   filterButtonContent = "Show Filters";
   Maxprice: number = 0;
+  MinPrice:number=0;
   pricePerUnit: number = 0;
   selectedUnit: string = 'Sq Ft';
   activeFilter: string = '';
@@ -111,13 +112,14 @@ export class ProjectsComponent implements OnInit {
   //Getting maximum price
   getMaximumPricePerSqFt() {
     this.Maxprice = this.FilteredProjects.reduce((max, item) => item.PricePerSqFt > max ? item.PricePerSqFt : max, 0);
+    this.MinPrice=this.FilteredProjects.reduce((min, item) => item.PricePerSqFt < min ? item.PricePerSqFt : min, this.Maxprice);
     this.pricePerUnit = this.Maxprice;
   }
 
   onUnitChange(event: any) {
     this.selectedUnit = event.target.value;
     this.updateMaxPrice();
-    this.filterProjectsBasedonPrice();
+    //this.filterProjectsBasedonPrice();
   }
 
   updateMaxPrice() {

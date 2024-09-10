@@ -51,6 +51,7 @@ import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
 import { TermsOfUseComponent } from './terms-of-use/terms-of-use.component';
 import { FAQComponent } from './faq/faq.component';
+import { NumberAnimationComponent } from './number-animation/number-animation.component';
 
 register();
 
@@ -93,7 +94,8 @@ register();
     AdminLoginComponent,
     PrivacyPolicyComponent,
     TermsOfUseComponent,
-    FAQComponent
+    FAQComponent,
+    NumberAnimationComponent
   ],
   imports: [
     BrowserModule,

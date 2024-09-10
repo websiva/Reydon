@@ -1,0 +1,29 @@
+.stats-section {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 0;
+    background: #ffffff;
+    flex-wrap: wrap;
+  }
+  .stat-container{
+    width: 100%;
+    max-width: 1450px;
+  }
+  .stat-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px 0;
+  }
+
+  .count{
+    font-size: 30px;
+
+  }
+  .text{
+    font-size: 22px;
+  }
+
+  
