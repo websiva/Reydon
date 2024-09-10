@@ -155,7 +155,7 @@ export class LayoutComponent implements OnInit, OnDestroy {
     if (diffInMonths < 1) {
       return 'Just now';
     } else {
-      return `${diffInMonths} months ago`;
+      return `${diffInMonths} months`;
     }
   }
 

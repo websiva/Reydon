@@ -50,6 +50,16 @@
                             </svg>
                             <span>{{project.HeaderLocation}}</span>
                         </div>
+                        <div class="category-label my-2">
+                            <ul>
+                                <li [ngStyle]="{'background-color':getLabelBackgroundColor(project.Type)}">
+                                    {{project.Type}}
+                                </li>
+                                <li [ngStyle]="{'background-color':getLabelBackgroundColor(project.Category)}">
+                                    {{project.Category}}</li>
+                            </ul>
+                        </div>
+                        <h6 class="my-auto fs-6">Age of property: {{calculateRelativeTime(project.ProjectLaunchDate)}}</h6>
                         <div class="download-section">
                             <button type="button" class="btn" data-bs-toggle="modal"
                                 data-bs-target="#download-contact-form" (click)="setDownloadFormId('brochure')">
@@ -91,7 +101,7 @@
                                     </g>
                                 </svg>
                                 <span>Layout details</span></button>
-                            <button class="btn">Enquire Now</button>
+                            <button class="btn" (click)="scrollToSection('property-contact')">Enquire Now</button>
 
                             <!-- Modal -->
                             <div class="modal fade" id="#download-contact-form" tabindex="-1"
