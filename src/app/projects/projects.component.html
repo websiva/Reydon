@@ -185,43 +185,23 @@
                 <div class="content-section">
                     <div class="category-label">
                         <ul>
-                            <li [ngStyle]="{'background-color':getLabelBackgroundColor(project.Type)}">{{project.Type}}
+                            <li [ngStyle]="{'background-color':getLabelBackgroundColor(project.Type)}">
+                                {{project.Type}}
                             </li>
                             <li [ngStyle]="{'background-color':getLabelBackgroundColor(project.Category)}">
                                 {{project.Category}}</li>
                         </ul>
-                        <div class="project-updated-date">
-                            <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fill="#767F86">
-                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                                <g id="SVGRepo_iconCarrier">
-                                    <title>time-history</title>
-                                    <g id="Layer_2" data-name="Layer 2">
-                                        <g id="invisible_box" data-name="invisible box">
-                                            <rect width="48" height="48" fill="none"></rect>
-                                        </g>
-                                        <g id="icons_Q2" data-name="icons Q2">
-                                            <path
-                                                d="M46,24A22,22,0,0,1,4.3,33.7a2,2,0,0,1,.5-2.6,2,2,0,0,1,3,.7A18,18,0,1,0,10.6,12h5.3A2.1,2.1,0,0,1,18,13.7,2,2,0,0,1,16,16H6a2,2,0,0,1-2-2V4.1A2.1,2.1,0,0,1,5.7,2,2,2,0,0,1,8,4V8.9A22,22,0,0,1,46,24Z">
-                                            </path>
-                                            <path
-                                                d="M34,32a1.7,1.7,0,0,1-1-.3L22,25.1V14a2,2,0,0,1,4,0v8.9l9,5.4a1.9,1.9,0,0,1,.7,2.7A1.9,1.9,0,0,1,34,32Z">
-                                            </path>
-                                        </g>
-                                    </g>
-                                </g>
-                            </svg>
-                            <h6 class="m-0 p-0">{{calculateRelativeTime(project.ProjectLaunchDate)}}</h6>
-                        </div>
                     </div>
                     <div class="title-section">
                         <h6 class="m-0">{{project.ProjectName}}</h6>
                     </div>
                     <div class="location-section">
                         <svg fill="#000000" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                            xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24" xml:space="preserve">
+                            xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24"
+                            xml:space="preserve">
                             <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round">
+                            </g>
                             <g id="SVGRepo_iconCarrier">
                                 <style type="text/css">
                                     .st0 {
@@ -238,11 +218,21 @@
                     </div>
                     <div class="knowmore-btn-section">
                         <span class="plots-count">Total no of plots: {{project.TotalPlots}}</span>
-
-                        <!--<div class="project-updated-date">
+                        <button class="know-more-btn mb-1"
+                            (click)="goingDetailPage(project.Category,project.ProjectName,project.ProjectId)">Know
+                            more</button>
+                    </div>
+                    <hr class="divider">
+                    <div class="amenities-section">
+                        <div class="amenities">
+                            <img *ngFor="let aminity of project.CardAmenities"
+                                [src]="'aminities/'+aminity+'.svg'" alt="aminity">
+                        </div>
+                        <div class="project-updated-date">
                             <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fill="#767F86">
                                 <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round"
+                                    stroke-linejoin="round"></g>
                                 <g id="SVGRepo_iconCarrier">
                                     <title>time-history</title>
                                     <g id="Layer_2" data-name="Layer 2">
@@ -260,18 +250,8 @@
                                     </g>
                                 </g>
                             </svg>
-                            <h6 class="my-0">{{calculateRelativeTime(project.ProjectLaunchDate)}}</h6>
-                        </div>-->
-                    </div>
-                    <hr class="divider">
-                    <div class="amenities-section">
-                        <div class="amenities">
-                            <img *ngFor="let aminity of project.CardAmenities" [src]="'aminities/'+aminity+'.svg'"
-                                alt="aminity">
+                            <h6 class="my-auto">{{calculateRelativeTime(project.ProjectLaunchDate)}}</h6>
                         </div>
-                        <button class="know-more-btn"
-                            (click)="goingDetailPage(project.Category,project.ProjectName,project.ProjectId)">Know
-                            more</button>
                     </div>
                 </div>
             </div>

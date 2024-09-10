@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, HostListener, OnDestroy, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { PropertyDataService } from '../angular-service/property-data.service';
@@ -34,6 +34,7 @@ export class LayoutComponent implements OnInit, OnDestroy {
   YoutubeLink: string = '';
   safeYoutubeUrl!: SafeResourceUrl;
   safeMapLink!: SafeResourceUrl;
+  scrollToTopBtn:boolean=false;
 
   constructor(private formBuilder: FormBuilder, private activeroute: ActivatedRoute, private propertyDataService: PropertyDataService, private router: Router,
     private sanitizer: DomSanitizer) {
@@ -326,6 +327,25 @@ export class LayoutComponent implements OnInit, OnDestroy {
   openBannerImages(image:string){
     this.modalImageUrl=image;
     console.log(image);
+  }
+
+  //scroll to top button functionalities
+  @HostListener("window:scroll",[])
+  onWindowScroll(){
+    const scrollPosition = window.pageYOffset||document.documentElement.scrollTop||document.body.scrollTop;
+    if(scrollPosition>100){
+      this.scrollToTopBtn=true;
+    }
+    else{
+      this.scrollToTopBtn=false;
+    }
+  }
+
+  scrollToTop(){
+    window.scrollTo({
+      top:0,
+      behavior:'smooth'
+    });
   }
 
   ngOnDestroy(): void {

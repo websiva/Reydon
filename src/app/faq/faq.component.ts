@@ -134,22 +134,50 @@ export class FAQComponent {
       ]
     }
   ]
-  awarness = [
+  extraAwraness=[
     {
       MainTitle: "Premium Plots",
       SectionQuestions: [
         {
-          Question: "What are premium plots?",
-          Answer: "Premium plots are high-value parcels of land located in prime areas, often offering better amenities, views, and proximity to important locations like business hubs and recreational facilities."
-        },
-        {
-          Question: "What factors should I consider when buying a premium plot?",
+          Question: "What factors should I consider when buying a plot?",
           Answer: "Consider location, infrastructure, legal clearances, future development plans, and proximity to essential services."
         },
         {
           Question: "How is the price of a premium plot determined?",
           Answer: "Prices are influenced by location, plot size, amenities, demand, and future development prospects."
-        }
+        },
+        {
+          Question: "Can I get financing for a commercial plot purchase?",
+          Answer: "Yes, many banks and financial institutions offer loans for purchasing commercial plots, subject to eligibility and documentation."
+        },
+        {
+          Question: "What are premium plots?",
+          Answer: "Premium plots are high-value parcels of land located in prime areas, often offering better amenities, views, and proximity to important locations like business hubs and recreational facilities."
+        },
+        {
+          Question: "What are commercial plots?",
+          Answer: "Commercial plots are land parcels designated for business activities like offices, shops, and other commercial establishments."
+        },
+        {
+          Question: "What are service apartments?",
+          Answer: "Service apartments are fully furnished apartments available for short or long-term stays, providing hotel-like amenities and services."
+        },
+        {
+          Question: "What is a resort?",
+          Answer: "A resort is a commercial establishment offering lodging, entertainment, and recreational facilities."
+        },
+        {
+          Question: "Are resorts profitable?",
+          Answer: "They can be profitable if well-managed and located in a popular tourist destination."
+        },
+        {
+          Question: "What is a farm house?",
+          Answer: "A farm house is a residential property located on agricultural land, often used as a second home or vacation retreat."
+        },
+        {
+          Question: "What are the uses of farm land?",
+          Answer: "Uses include agriculture, horticulture, livestock farming, and sometimes agro-tourism."
+        },
       ]
     },
     {
@@ -259,6 +287,70 @@ export class FAQComponent {
         {
           Question: "Are solar panels a good investment for farms?",
           Answer: "Yes, they can significantly reduce energy costs and provide a reliable power source for agricultural operations."
+        }
+      ]
+    }
+  ]
+  awarness = [
+    {
+      MainTitle: "",
+      SectionQuestions: [
+        {
+          Question: "What factors should I consider when buying a plot?",
+          Answer: "Consider location, infrastructure, legal clearances, future development plans, and proximity to essential services."
+        },
+        {
+          Question: "How is the price of a premium plot determined?",
+          Answer: "Prices are influenced by location, plot size, amenities, demand, and future development prospects."
+        },
+        {
+          Question: "Can I get financing for a commercial plot purchase?",
+          Answer: "Yes, many banks and financial institutions offer loans for purchasing commercial plots, subject to eligibility and documentation."
+        },
+        {
+          Question: "What are premium plots?",
+          Answer: "Premium plots are high-value parcels of land located in prime areas, often offering better amenities, views, and proximity to important locations like business hubs and recreational facilities."
+        },
+        {
+          Question: "What are commercial plots?",
+          Answer: "Commercial plots are land parcels designated for business activities like offices, shops, and other commercial establishments."
+        },
+        {
+          Question: "What are service apartments?",
+          Answer: "Service apartments are fully furnished apartments available for short or long-term stays, providing hotel-like amenities and services."
+        },
+        {
+          Question: "What is a resort?",
+          Answer: "A resort is a commercial establishment offering lodging, entertainment, and recreational facilities."
+        },
+        {
+          Question: "Are resorts profitable?",
+          Answer: "They can be profitable if well-managed and located in a popular tourist destination."
+        },
+        {
+          Question: "What is a farm house?",
+          Answer: "A farm house is a residential property located on agricultural land, often used as a second home or vacation retreat."
+        },
+        {
+          Question: "What are the uses of farm land?",
+          Answer: "Uses include agriculture, horticulture, livestock farming, and sometimes agro-tourism."
+        },
+      ]
+    },
+    {
+      MainTitle: "Lithium Battery Inverters",
+      SectionQuestions: [
+        {
+          Question: "What are lithium battery inverters?",
+          Answer: "Lithium battery inverters are devices that store energy in lithium batteries and convert it to electricity for home or business use during power outages."
+        },
+        {
+          Question: "What are the benefits of lithium battery inverters?",
+          Answer: "Benefits include longer lifespan, higher efficiency, lower maintenance, and faster charging compared to traditional batteries."
+        },
+        {
+          Question: "How do I choose the right lithium battery inverter?",
+          Answer: "Consider your energy needs, budget, brand reputation, warranty, and after-sales support."
         }
       ]
     }

@@ -1,1 +1,151 @@
-<app-comming-soon></app-comming-soon>
+<div class="container-fluid banner p-0">
+    <div class="row">
+        <div class="col-12">
+            <div class="overlay">
+                <img src="contactpage.jpg" alt="">
+                <h2 class="banner-title">Careers</h2>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid job-cards-section">
+    <!--<div class="headline">
+        <div class="row">
+            <h2>Apply for a Job</h2>
+            <p>Creating a friendly, independent and remote culture is essential to our work and we are always looking for the best professionals.
+                You may need to complete an application form. Be sure to you are applicable for Essential Eligibility & Skills needed by the
+                company when submitting your profile.</p>
+        </div>
+    </div>-->
+    <div class="job-cards">
+        <h6 class="section-heading">Opening Positions</h6>
+        <div class="jobs-card-container">
+            <div class="job-card" *ngFor="let job of jobList">
+                <h6 class="job-title">{{job.jobTitle}}</h6>
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="first-row-section">
+                            <div class="experience">
+                                <i class="bi bi-suitcase-lg me-3"></i>
+                                <span class="experience">{{job.cardExperience}}</span>
+                            </div>
+                            <div class="divider"></div>
+                            <div class="salary-section">
+                                <i class="bi bi-currency-rupee me-2"></i>
+                                <span class="salary">Not disclosed</span>
+                            </div>
+                            <div class="divider"></div>
+                            <div class="location-section">
+                                <i class="bi bi-geo-alt me-2"></i>
+                                <span class="location">{{job.location}}</span>
+                            </div>
+                        </div>
+                        <div class="description-section">
+                            <i class="bi bi-file-earmark-text me-2"></i>
+                            <span class="description">{{job.jobShortDescription}}</span>
+                        </div>
+                        <div class="job-type-section">
+                            <i class="bi bi-clock-history me-3"></i>
+                            <span class="job-type">{{job.jobType}}</span>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="view-job-button-section">
+                            <button class="btn" data-bs-toggle="modal"
+                            data-bs-target="#full-job-details" (click)="viewJobDetails(job.jobCode)">View Job details</button>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="full-job-details" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" style="width:100%;max-width: 1000px;">
+        <div class="modal-content" *ngFor="let job of currentProject">
+            <div class="modal-header">
+                <h6 class="my-auto">{{job.jobTitle}}</h6>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" style="padding: 0;">
+                <div class="job-details" style="padding: 0; margin: 0;">
+                    <div class="job-card">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div class="first-row-section">
+                                    <div class="experience">
+                                        <i class="bi bi-suitcase-lg me-3"></i>
+                                        <span class="experience">{{job.cardExperience}}</span>
+                                    </div>
+                                    <div class="divider"></div>
+                                    <div class="salary-section">
+                                        <i class="bi bi-currency-rupee me-2"></i>
+                                        <span class="salary">Not disclosed</span>
+                                    </div>
+                                    <div class="divider"></div>
+                                    <div class="location-section">
+                                        <i class="bi bi-geo-alt me-2"></i>
+                                        <span class="location">{{job.location}}</span>
+                                    </div>
+                                </div>
+                                <div class="description-section">
+                                    <i class="bi bi-file-earmark-text me-2"></i>
+                                    <span class="description">{{job.jobShortDescription}}</span>
+                                </div>
+                                <div class="job-type-section">
+                                    <i class="bi bi-clock-history me-3"></i>
+                                    <span class="job-type">{{job.jobType}}</span>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="view-job-button-section">
+                                    <button class="btn" data-bs-toggle="modal"
+                                    data-bs-target="#full-job-details" (click)="ApplyJob(job.jobCode)">Apply now</button>
+                                </div>
+                            </div>
+                        </div>                        
+                    </div>
+                    <div class="qualification-skills-section mx-3">
+                        <h6 class="section-title">Qualification & Skill Requirements</h6>
+                        <ul>
+                            <li class="qualification-points" *ngFor="let skills of job.qualificationSkillRequirements">{{skills}}</li>
+                        </ul>
+                    </div>
+                    <div class="Experience-section mx-3">
+                        <h6 class="section-title">Experience</h6>
+                        <p class="experience">{{job.experience}}</p>
+                    </div>
+                    <div class="key-respnsibilities-section mx-3">
+                        <h6 class="section-title">Key Resposibilities</h6>
+                        <ul>
+                            <li class="keyResponsibilities" *ngFor="let responsibilities of job.keyResponsibilities">{{responsibilities}}</li>
+                        </ul>
+                    </div>
+                    <div class="Perks-Benefits mx-3">
+                        <h6 class="section-title">Perks & Benefits</h6>
+                        <ul>
+                            <li class="keyResponsibilities" *ngFor="let benifits of job.perksBenefits">{{benifits}}</li>
+                        </ul>
+                    </div>
+                    <div class="vechile-related-section mx-3">
+                        <p><strong>Valid Driving License - </strong><span>{{job.validDrivingLicense}}</span></p>
+                        <p><strong>Own Vehicle - </strong><span>{{job.ownVehicle}}</span></p>
+                    </div>
+                    <div class="deadline-section mx-3">
+                        <p><strong>Last date to apply - {{job.deadline}}</strong></p>
+                    </div>
+                    <div class="contact-information-section mx-3">
+                        <p><strong>Contact - {{job.contactInformation.name}}, {{job.contactInformation.phone}}</strong></p>
+                    </div>
+                    <div class="apply-now-btn-section">
+                        <button class="btn">Apply now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -20,10 +20,11 @@
             <nav class="navigation">
                 <ul>
                     <li><a (click)="scrollToSection('project-overview')">Project Overview</a></li>
+                    <li><a (click)="scrollToSection('property-layout')">Layout</a></li>
                     <li><a (click)="scrollToSection('aminities')">Aminities</a></li>
                     <li><a (click)="scrollToSection('proximity')">Proximities</a></li>
                     <li><a (click)="scrollToSection('legal-finaancial')">Legal & Financial</a></li>
-                    <li><a (click)="scrollToSection('property-layout')">Layout</a></li>
+                    <li><a (click)="scrollToSection('youtube-video')">Photos & Videos</a></li>
                     <li><a (click)="scrollToSection('property-address')">Location</a></li>
                     <li><a (click)="scrollToSection('property-contact')">Contact</a></li>
                 </ul>
@@ -364,7 +365,7 @@
                                 <h6 class="section-title w-100">Amenities</h6>
                                 <div class="divider"></div>
                             </div>
-                            <div class="amenities-container d-flex flex-wrap justify-content-center align-items-center">
+                            <div class="amenities-container d-flex flex-wrap justify-content-start align-items-center">
                                 <div class="aminities-card" *ngFor="let aminity of project.Amenities"
                                     style="width: 315px;">
                                     <div class="icon">
@@ -388,7 +389,7 @@
                                 <div class="divider"></div>
                             </div>
                             <div
-                                class="proximity-card-container d-flex flex-wrap justify-content-center align-items-center">
+                                class="proximity-card-container d-flex flex-wrap justify-content-start align-items-center">
                                 <div class="promity-card" *ngFor="let proximity of project.NearByProximity">
                                     <img [src]="'Proximity/'+proximity.Category+'.svg'" alt="">
                                     <div class="content">
@@ -705,10 +706,10 @@
         </section>
         <div class="bank-partners-section">
             <div class="row m-0 bank-partners">
-                <!--<div class="section-header">
-                    <h6 class="section-title w-100">Banks</h6>
+                <div class="section-header">
+                    <h6 class="section-title w-100">Banking Partner</h6>
                     <div class="divider"></div>
-                </div>-->
+                </div>
                 <div class="row m-0 banks">
                     <img *ngFor="let bank of project.BankPartners" [src]="'Banks/' + bank + '.png'"
                         [alt]="bank + ' logo'" class="bank-logo">
@@ -846,6 +847,27 @@
                 </g>
             </svg>
         </div>
+    </div>
+    <div class="scroll-to-top-btn">
+        <button class="btn" *ngIf="scrollToTopBtn" (click)="scrollToTop()">
+            <svg fill="#000000" viewBox="0 0 24 24" id="top-circle" data-name="Line Color"
+                xmlns="http://www.w3.org/2000/svg" class="icon line-color">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                    <line id="secondary" x1="12" y1="16" x2="12" y2="8"
+                        style="fill: none; stroke: #2ca9bc; stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;">
+                    </line>
+                    <polyline id="secondary-2" data-name="secondary" points="9.5 10.5 12 8 14.5 10.5"
+                        style="fill: none; stroke: #2ca9bc; stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;">
+                    </polyline>
+                    <circle id="primary" cx="12" cy="12" r="9"
+                        style="fill: none; stroke: #000000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;">
+                    </circle>
+                </g>
+            </svg>
+            Scroll To Top
+        </button>
     </div>
 </div>
 
