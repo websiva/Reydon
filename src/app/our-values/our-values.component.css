@@ -23,7 +23,7 @@ h2{
 .section{
     width: 100%;
     max-width: 500px;
-    height: 200px;
+    height: 175px;
     display: flex;
     justify-content: center;
     align-items: center; 

@@ -21,7 +21,8 @@
         <h6 class="section-heading">Opening Positions</h6>
         <div class="jobs-card-container">
             <div class="job-card" *ngFor="let job of jobList">
-                <h6 class="job-title">{{job.jobTitle}}</h6>
+                <h6 class="job-title m-0">{{job.jobTitle}}</h6>
+                <p class="job-department p-0 mt-1">{{job.department}}</p>
                 <div class="row">
                     <div class="col-md-8">
                         <div class="first-row-section">
@@ -75,7 +76,7 @@
                 <div class="job-details" style="padding: 0; margin: 0;">
                     <div class="job-card">
                         <div class="row">
-                            <div class="col-md-8">
+                            <div class="col-12">
                                 <div class="first-row-section">
                                     <div class="experience">
                                         <i class="bi bi-suitcase-lg me-3"></i>
@@ -101,13 +102,15 @@
                                     <span class="job-type">{{job.jobType}}</span>
                                 </div>
                             </div>
-                            <div class="col-md-4">
+                        </div>  
+                        <div class="row">
+                            <div class="col-12">
                                 <div class="view-job-button-section">
                                     <button class="btn" data-bs-toggle="modal"
                                     data-bs-target="#full-job-details" (click)="ApplyJob(job.jobCode)">Apply now</button>
                                 </div>
                             </div>
-                        </div>                        
+                        </div>                      
                     </div>
                     <div class="qualification-skills-section mx-3">
                         <h6 class="section-title">Qualification & Skill Requirements</h6>

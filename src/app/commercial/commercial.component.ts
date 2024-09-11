@@ -23,6 +23,7 @@ export class CommercialComponent implements OnInit {
   dateValue: string = "";
   filterVisible = false;
   filterButtonContent = "Show Filters";
+  MinPrice:number=0;
   Maxprice: number = 0;
   pricePerUnit: number = 0;
   selectedUnit: string = 'Sq Ft';
@@ -90,10 +91,12 @@ export class CommercialComponent implements OnInit {
   //Getting maximum price
   getMaximumPricePerSqFt() {
     this.Maxprice = this.FilteredProjects.reduce((max, item) => item.PricePerSqFt > max ? item.PricePerSqFt : max, 0);
+    this.MinPrice=this.FilteredProjects.reduce((min, item) => item.PricePerSqFt < min ? item.PricePerSqFt : min, this.Maxprice);
     this.pricePerUnit = this.Maxprice;
   }
 
   onUnitChange(event: any) {
+    this.resetFilter();
     this.selectedUnit = event.target.value;
     this.updateMaxPrice();
     this.filterProjectsBasedonPrice();
@@ -106,6 +109,7 @@ export class CommercialComponent implements OnInit {
     } else if (this.selectedUnit === 'Cent') {
       this.getMaximumPricePerSqFt();
       this.Maxprice = Math.round((this.Maxprice * 435.60)/10)*10; // Convert Sq Ft to Cent
+      this.MinPrice = Math.round((this.MinPrice * 435.60)/10)*10;
       this.pricePerUnit = this.Maxprice;
     }
     // Trigger change detection if needed

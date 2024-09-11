@@ -18,7 +18,7 @@ export class NavbarComponent {
   }
 
   gotoProjectsPage(type:string){
-    this.router.navigate(['projects'],{queryParams:{projectCategory:type}});
+    this.router.navigate(['projects'],{queryParams:{projectType:type}});
     this.collapseNavbar();
   }
   

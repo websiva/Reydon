@@ -12,7 +12,7 @@ export class CareersComponent {
     {
       jobCode: 'JC01',
       segmentType: 'Real Estate',
-      jobTitle: 'Sales Executive',
+      jobTitle: 'Sales Executive - (Real Estate)',
       location: ['Tanjavore, Trichy, Karur, Madurai, Theni'],
       department: 'Sales & Marketing',
       cardExperience:'2-3 Yrs',
@@ -46,7 +46,7 @@ export class CareersComponent {
     {
       jobCode: 'JC02',
       segmentType: 'Sales & Service',
-      jobTitle: 'Sales Executive',
+      jobTitle: 'Sales Executive - (Product Sales and Service)',
       location: ['Chennai, Trichy, Madurai, Coimbatore, Salem, Tirunelveli, Kerala'],
       department: 'Sales & Marketing',
       cardExperience:'2-3 Yrs',

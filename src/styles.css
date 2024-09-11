@@ -1,42 +1,97 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @import "bootstrap-icons/font/bootstrap-icons.css";
-body{
+
+body {
     width: 100%;
     min-height: 100vh;
 }
 
-html, body { height: 100%; 
+html,
+body {
+    height: 100%;
     /*scrollbar-width: none;*/
     scroll-behavior: smooth;
 }
-body { margin: 0; font-family: "Roboto", sans-serif; }
 
-:root{
+/* For WebKit browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+    width: 8px;
+    /* Set the width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    /* Background of the scrollbar track */
+    border-radius: 10px;
+    /* Optional: rounded corners */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #d5d5d5;
+    /* Color of the scroll thumb */
+    border-radius: 10px;
+    /* Optional: rounded corners */
+    border: 2px solid #f1f1f1;
+    /* Optional: adds padding inside the thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #d5d5d5;
+    /* Change color on hover */
+}
+
+/* For Firefox */
+html {
+    scrollbar-width: thin;
+    /* Reduces scrollbar width */
+    scrollbar-color: #b5b5b5 #f1f1f1;
+    /* thumb color and track color */
+}
+
+body {
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+:root {
     /* Colors*/
-    --primary-color:#004274;
-    --logo-color:#F68712;
-    --button-color:#00adef;
-    --button-hover:#00abefde;
-    
+    --primary-color: #004274;
+    --logo-color: #F68712;
+    --button-color: #00adef;
+    --button-hover: #00abefde;
 
-    --button-shade1:#E5F7FF;
-    --button-shade2:#CCEFFF;
-    --button-shade3:#B2E7FF;
-    --button-shade4:#99DFFF;
-    --button-shade5:#66CEFF;
-    --button-shade6:#33BEFF;
 
-    --background-color:#f7f8fa;
-    --background-color2:#ffffff;
+    --button-shade1: #E5F7FF;
+    --button-shade2: #CCEFFF;
+    --button-shade3: #B2E7FF;
+    --button-shade4: #99DFFF;
+    --button-shade5: #66CEFF;
+    --button-shade6: #33BEFF;
+
+    --background-color: #f7f8fa;
+    --background-color2: #ffffff;
 
 
 }
 
-.company-name{
+.company-name {
     font-weight: 600;
     color: var(--primary-color);
 }
 
-p,h1,h2,h3,h4,h5,h6,span,button,td,th,li,a,div{
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+button,
+td,
+th,
+li,
+a,
+div {
     user-select: none;
 }

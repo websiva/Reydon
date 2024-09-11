@@ -19,8 +19,8 @@ export class ProjectsComponent implements OnInit {
   selectedProperty: string = "All";
   selectedCity: string = "All";
   selectedZone = "All";
-  queryZone:string="";
-  gotZoneFromQuery:boolean=false;
+  queryZone:string="All";
+  queryType:string="All";
   dateValue: string = "";
   filterVisible = false;
   filterButtonContent = "Show Filters";
@@ -36,17 +36,15 @@ export class ProjectsComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.activeRoute.queryParams.subscribe(data=>{
-      const city=data['zone'];
-      if(city){
-        this.queryZone=city;
-        this.gotZoneFromQuery=true;
-      }
-      else{
-        this.resetFilter();
-      }
+    this.activeRoute.queryParams.subscribe(params => {
+      const city = params['zone'];
+      const type = params['projectType'];
+  
+      this.queryZone = city || 'All'; // Default to 'All' if no parameter is provided
+      this.queryType = type || 'All'; // Default to 'All' if no parameter is provided
+  
+      this.loaddata(); // Reload data and apply filters
     });
-    this.loaddata();
   }
 
   //Getting full object from service
@@ -56,6 +54,7 @@ export class ProjectsComponent implements OnInit {
       this.FilteredProjects = this.LayoutData;
       this.FilterProject2 = this.FilteredProjects;
       this.updateInitialDropdownValues();
+      this.filterProjects();
     });
   }
   updateInitialDropdownValues() {
@@ -65,11 +64,15 @@ export class ProjectsComponent implements OnInit {
     this.GetingCategories();
     this.getMaximumPricePerSqFt();
     this.cdr.detectChanges();
-    if(this.gotZoneFromQuery){
-      this.selectedZone=this.queryZone;
+    this.selectedZone=this.queryZone;
+    this.selectedType=this.queryType;
+    if(this.queryZone!=="All"){
       this.activeFilter='zone';
     }
-    if (this.selectedZone !== 'All') {
+    if(this.queryType!=="All"){
+      this.activeFilter="type";
+    }
+    if (this.selectedZone !== 'All'||this.selectedType!=="All") {
       this.filterProjects();
       this.updateDropdownValues();
       this.FilterProject2 = this.FilteredProjects;
@@ -109,14 +112,8 @@ export class ProjectsComponent implements OnInit {
     this.Zones = ['All', ...[...new Set(zones)]];
   }
 
-  //Getting maximum price
-  getMaximumPricePerSqFt() {
-    this.Maxprice = this.FilteredProjects.reduce((max, item) => item.PricePerSqFt > max ? item.PricePerSqFt : max, 0);
-    this.MinPrice=this.FilteredProjects.reduce((min, item) => item.PricePerSqFt < min ? item.PricePerSqFt : min, this.Maxprice);
-    this.pricePerUnit = this.Maxprice;
-  }
-
   onUnitChange(event: any) {
+    this.resetFilter();
     this.selectedUnit = event.target.value;
     this.updateMaxPrice();
     //this.filterProjectsBasedonPrice();
@@ -129,11 +126,19 @@ export class ProjectsComponent implements OnInit {
     } else if (this.selectedUnit === 'Cent') {
       this.getMaximumPricePerSqFt();
       this.Maxprice = Math.round((this.Maxprice * 435.60)/10)*10; // Convert Sq Ft to Cent
+      this.MinPrice = Math.round((this.MinPrice * 435.60)/10)*10;
       this.pricePerUnit = this.Maxprice;
     }
     // Trigger change detection if needed
     this.cdr.detectChanges();
   }
+
+    //Getting maximum price
+    getMaximumPricePerSqFt() {
+      this.Maxprice = this.FilteredProjects.reduce((max, item) => item.PricePerSqFt > max ? item.PricePerSqFt : max, 0);
+      this.MinPrice=this.FilteredProjects.reduce((min, item) => item.PricePerSqFt < min ? item.PricePerSqFt : min, this.Maxprice);
+      this.pricePerUnit = this.Maxprice;
+    }
 
   //background color for card labels
   getLabelBackgroundColor(type: string): string {
@@ -231,6 +236,7 @@ export class ProjectsComponent implements OnInit {
     this.queryZone="All";
     this.selectedUnit= 'Sq Ft';
     this.changeZoneQueryFromUrl("zone","All");
+    this.changeZoneQueryFromUrl("projectType","All");
     this.updateInitialDropdownValues();
   }
 

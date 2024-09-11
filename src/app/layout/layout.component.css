@@ -130,13 +130,12 @@
     color: var(--primary-color);
     font-weight: 300;
     padding: 0;
-    margin: 0 0 30px 0;
+    margin: 0 0 20px 0;
 }
 
 .divider {
     border: none;
-    border-top: 1px solid #ccc;
-    /* Adjust the color as needed */
+    border-top: 1px solid #e5e4e4;
     width: 100%;
 }
 
@@ -556,7 +555,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: start;
-    margin: 10px;
+    margin: 15px 10px;
 }
 
 .promity-card .content {
@@ -586,6 +585,7 @@
     display: flex;
     justify-content: center;
     /*background-color: #F7F8FA;*/
+    background-color: #F7F8FA;
 }
 
 .Legal-Financial {
@@ -697,7 +697,6 @@
     padding: 40px 0;
     display: flex;
     justify-content: center;
-    background-color: #F7F8FA;
 }
 
 .reasons {
@@ -956,12 +955,12 @@ form {
 
 .project-card {
     width: 300px;
-    height: 350px;
-    border-radius: 12px;
+    height: 375px;
+    /*border-radius: 12px;*/
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     background-color: #ffffff;
     padding: 0;
-    margin: 10px;
+    margin: 10px 20px;
 }
 
 .image-section {
@@ -973,12 +972,12 @@ form {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 8px 8px 0 0px;
+    /*border-radius: 8px 8px 0 0px;*/
 }
 
 .content-section {
     width: 100%;
-    height: 170px;
+    height: 195px;
     padding: 10px;
     display: flex;
     flex-direction: column;

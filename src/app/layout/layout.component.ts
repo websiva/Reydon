@@ -28,13 +28,13 @@ export class LayoutComponent implements OnInit, OnDestroy {
   BannerImages: string[] = [];
   interval: any;
   currentIndex: number = 0;
-  downloadFormId:string='';
+  downloadFormId: string = '';
   modalImageUrl: string = '';
 
   YoutubeLink: string = '';
   safeYoutubeUrl!: SafeResourceUrl;
   safeMapLink!: SafeResourceUrl;
-  scrollToTopBtn:boolean=false;
+  scrollToTopBtn: boolean = false;
 
   constructor(private formBuilder: FormBuilder, private activeroute: ActivatedRoute, private propertyDataService: PropertyDataService, private router: Router,
     private sanitizer: DomSanitizer) {
@@ -52,16 +52,17 @@ export class LayoutComponent implements OnInit, OnDestroy {
   }
 
   async ngOnInit() {
-    this.activeroute.queryParams.subscribe(async (data) => {
-      this.ProjectId = data['id'];
-      console.log(this.ProjectId);
-    });
-    this.activeroute.params.subscribe(async (data) => {
-      this.ProjectName = data['projectName'];
-      console.log(this.ProjectName);
-    })
     try {
-      await this.loadPropertyData(this.ProjectId);
+      this.activeroute.queryParams.subscribe(async (data) => {
+        this.ProjectId = data['id'];
+        console.log(this.ProjectId);
+        await this.loadPropertyData(this.ProjectId);
+      });
+      this.activeroute.params.subscribe(async (data) => {
+        this.ProjectName = data['projectName'];
+        console.log(this.ProjectName);
+        await this.loadPropertyData(this.ProjectId);
+      })
     } catch (error) {
       console.error(error);
     }
@@ -320,31 +321,31 @@ export class LayoutComponent implements OnInit, OnDestroy {
     link.click();
   }
 
-  setDownloadFormId(value:string){
-    this.downloadFormId=value;
+  setDownloadFormId(value: string) {
+    this.downloadFormId = value;
   }
 
-  openBannerImages(image:string){
-    this.modalImageUrl=image;
+  openBannerImages(image: string) {
+    this.modalImageUrl = image;
     console.log(image);
   }
 
   //scroll to top button functionalities
-  @HostListener("window:scroll",[])
-  onWindowScroll(){
-    const scrollPosition = window.pageYOffset||document.documentElement.scrollTop||document.body.scrollTop;
-    if(scrollPosition>100){
-      this.scrollToTopBtn=true;
+  @HostListener("window:scroll", [])
+  onWindowScroll() {
+    const scrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+    if (scrollPosition > 100) {
+      this.scrollToTopBtn = true;
     }
-    else{
-      this.scrollToTopBtn=false;
+    else {
+      this.scrollToTopBtn = false;
     }
   }
 
-  scrollToTop(){
+  scrollToTop() {
     window.scrollTo({
-      top:0,
-      behavior:'smooth'
+      top: 0,
+      behavior: 'smooth'
     });
   }
 

@@ -101,7 +101,6 @@
                                     </g>
                                 </svg>
                                 <span>Layout details</span></button>
-                            <button class="btn" (click)="scrollToSection('property-contact')">Enquire Now</button>
 
                             <!-- Modal -->
                             <div class="modal fade" id="#download-contact-form" tabindex="-1"
@@ -824,7 +823,7 @@
         </div>
     </div>
     <div class="enquirey-now-button">
-        <button routerLink="/contact">Enquire Now</button>
+        <button (click)="scrollToSection('property-contact')">Enquire Now</button>
     </div>
     <div class="contact-buttons">
         <div class="phone-icon-container">

@@ -17,10 +17,10 @@
                     </li>
                     <li class="nav-item mx-2 dropdown">
                         <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false" routerLink="/projects" routerLinkActive="active" >Projects</a>
+                            aria-expanded="false" routerLinkActive="active" (click)="gotoProjectsPage('All')">Projects</a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" routerLink="/residencial" (click)="collapseNavbar()">Residential</a></li>
-                            <li><a class="dropdown-item" routerLink="/commercial" (click)="collapseNavbar()">Commercial</a></li>
+                            <li><a class="dropdown-item" (click)="collapseNavbar();gotoProjectsPage('Residential')">Residential</a></li>
+                            <li><a class="dropdown-item" (click)="collapseNavbar();gotoProjectsPage('Commercial')">Commercial</a></li>
                             <li><a class="dropdown-item" routerLink="/upcoming-projects" (click)="collapseNavbar()">Upcoming Projects</a></li>
                         </ul>
                     </li>

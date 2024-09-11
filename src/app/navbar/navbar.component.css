@@ -15,6 +15,9 @@
     margin-top: 0; /* Ensure it aligns with the parent item */
 }
 
+.dropdown-menu{
+    border: none;
+}
 .dropdown-item:hover{
     color: #ffffff; 
     background-color: var(--button-color);

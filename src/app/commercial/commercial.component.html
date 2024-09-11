@@ -31,7 +31,7 @@
             <!--Price filter button-->
             <div class="col-3 d-flex flex-column justify-content-evenly">
                 <label for="priceRange" class="form-label required">Price:</label>
-                <input type="range" id="priceRange" min="0" [max]="Maxprice" step="100" [(ngModel)]="pricePerUnit"
+                <input type="range" id="priceRange" [min]="MinPrice" [max]="Maxprice" step="100" [(ngModel)]="pricePerUnit"
                     (input)="onPriceChange($event)" />
                 <div style="display: flex; align-items: center;margin-top: 5px;">
                     <span style="color: white; margin-right: 8px;">{{ pricePerUnit | currency: 'INR' }} /</span>
@@ -77,7 +77,7 @@
                 <!--Price filter button-->
                 <div class="col-6 d-flex flex-column justify-content-evenly">
                     <label for="priceRange" class="form-label required">Price:</label>
-                    <input type="range" id="priceRange" min="0" [max]="Maxprice" step="100" [(ngModel)]="pricePerUnit"
+                    <input type="range" id="priceRange" [min]="MinPrice" [max]="Maxprice" step="100" [(ngModel)]="pricePerUnit"
                         (input)="onPriceChange($event)" />
                     <div style="display: flex; align-items: center;margin-top: 5px;">
                         <span style="color: white; margin-right: 8px;">{{ pricePerUnit | currency: 'INR' }} /</span>
@@ -132,7 +132,7 @@
                 <div class="row w-100">
                     <div class="col-12 d-flex flex-column justify-content-evenly">
                         <label for="priceRange" class="form-label required">Price:</label>
-                        <input type="range" id="priceRange" min="0" [max]="Maxprice" step="100"
+                        <input type="range" id="priceRange" [min]="MinPrice" [max]="Maxprice" step="100"
                             [(ngModel)]="pricePerUnit" (input)="onPriceChange($event)" />
                         <div style="display: flex; align-items: center;margin-top: 5px;">
                             <span style="color: white; margin-right: 8px;">{{ pricePerUnit | currency: 'INR' }} /</span>

@@ -66,6 +66,9 @@
     padding: 20px;
     margin: 20px;
 }
+.job-department{
+    color: gray;
+}
 .first-row-section{
     display: flex;
     justify-content: flex-start;
