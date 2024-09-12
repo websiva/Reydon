@@ -23,7 +23,7 @@ export class AppComponent {
   @HostListener("window:scroll", [])
   onWindowScroll() {
     const scrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
-    if (scrollPosition > 100) {
+    if (scrollPosition > 500) {
       this.scrollToTopBtn = true;
     }
     else {
