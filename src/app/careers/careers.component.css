@@ -149,4 +149,10 @@ p,li{
     .view-job-button-section{
         margin: 20px 0 0 0;
     }
+    .divider{
+        display: none;
+    }
+    .location-section{
+        margin-top: 8px;
+    }
 }

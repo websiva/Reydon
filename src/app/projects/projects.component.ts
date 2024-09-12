@@ -266,4 +266,47 @@ export class ProjectsComponent implements OnInit {
         return `${diffInMonths} months ago`;
       }
     }
+
+    zoneTableData = [
+      {
+        zone: 'Zone 1', zoneName: 'Coimbatore', districts: [
+          'Coimbatore, The Nilgiris, Erode, Tiruppur, Karur, Salem and Namakkal'
+        ], count: 7
+      },
+      {
+        zone: 'Zone 2', zoneName: 'Dharmapuri', districts: [
+          'Dharmapuri, Vellore, Thirupathur, Ranipet and Krishnagiri'
+        ], count: 5
+      },
+      {
+        zone: 'Zone 3', zoneName: 'Villupuram', districts: [
+          'Villupuram, Thiruvannamalai, Cuddalore and Kallakurichi'
+        ], count: 4
+      },
+      {
+        zone: 'Zone 4', zoneName: 'Trichy', districts: [
+          'Nagapattinam, Thiruvarur, Thanjavur, Trichy, Ariyalur, Perambalur, Mayiladurai and Pudukottai'
+        ], count: 8
+      },
+      {
+        zone: 'Zone 5', zoneName: 'Madurai', districts: [
+          'Dindigul, Madurai, Theni, Virudhunagar, Sivaganga and Ramanathapuram'
+        ], count: 6
+      },
+      {
+        zone: 'Zone 6', zoneName: 'Tirunelveli', districts: [
+          'Tirunelveli, Thoothukudi, Kanyakumari and Tenkasi'
+        ], count: 4
+      },
+      {
+        zone: 'Zone 7', zoneName: 'Chengalpattu', districts: [
+          'Chengalpattu, Kancheepuram and Thiruvallur'
+        ], count: 3
+      },
+      {
+        zone: 'Zone 8', zoneName: 'Chennai', districts: [
+          'Chennai and surroundings'
+        ], count: 3
+      }
+    ];
 }

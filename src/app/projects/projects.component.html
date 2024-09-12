@@ -9,7 +9,7 @@
             <!--Zone filter-->
             <div class="col-2">
                 <label for="zone" class="form-label required">Zone:</label>
-                <a class="" (click)="gotoFAQ('zone')" style="cursor: pointer;"><img src="information.svg" alt="zone information" style="width: 20px;height: 20px;margin-left: 10px;"></a>
+                <a class="" data-bs-toggle="modal" data-bs-target="#zoneModal" style="cursor: pointer;"><img src="information.svg" alt="zone information" style="width: 20px;height: 20px;margin-left: 10px;"></a>
                 <select id="zone" class="form-select" aria-label="Default select example" [(ngModel)]="selectedZone"
                     (ngModelChange)="onFilterChange('zone')">
                     <option *ngFor="let Zone of Zones" [value]="Zone">{{Zone}}</option>
@@ -62,8 +62,7 @@
                 <!--Zone filter-->
                 <div class="col-4">
                     <label for="zone" class="form-label required">Zone:</label>
-                    <a class="" data-bs-toggle="modal"
-                data-bs-target="#zoneModal" style="cursor: pointer;"><img src="information.svg" alt="zone information" style="width: 20px;height: 20px;margin-left: 10px;"></a>
+                    <a class="" data-bs-toggle="modal" data-bs-target="#zoneModal" style="cursor: pointer;"><img src="information.svg" alt="zone information" style="width: 20px;height: 20px;margin-left: 10px;"></a>
                     <select id="zone" class="form-select" aria-label="Default select example" [(ngModel)]="selectedZone"
                         (ngModelChange)="onFilterChange('zone')">
                         <option *ngFor="let Zone of Zones" [value]="Zone">{{Zone}}</option>
@@ -121,8 +120,7 @@
                 <div class="row w-100">
                     <div class="col-12">
                         <label for="zone" class="form-label required">Zone:</label>
-                        <a class="" data-bs-toggle="modal"
-                data-bs-target="#zoneModal" style="cursor: pointer;"><img src="information.svg" alt="zone information" style="width: 20px;height: 20px;margin-left: 10px;"></a>
+                        <a class="" data-bs-toggle="modal" data-bs-target="#zoneModal" style="cursor: pointer;"><img src="information.svg" alt="zone information" style="width: 20px;height: 20px;margin-left: 10px;"></a>
                         <select id="zone" class="form-select" aria-label="Default select example"
                             [(ngModel)]="selectedZone" (ngModelChange)="onFilterChange('zone')">
                             <option *ngFor="let Zone of Zones" [value]="Zone">{{Zone}}</option>
@@ -272,28 +270,36 @@
 
 <!-- image Modal -->
 <div class="modal fade" id="zoneModal" tabindex="-1" aria-labelledby="zoneModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-md">
+    <div class="modal-dialog modal-md" style="width: 95%;max-width: 1050px;">
         <div class="modal-content">
             <div class="modal-header">
                 <h6 class="modal-title p-0 m-0" id="imageModalLabel">Zone details</h6>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body text-center">
-               <table class="table table-bordered">
-                <thead>
-                    <tr>
-                        <th>Trichy</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Karur</td>
-                    </tr>
-                    <tr>
-                        <td>Ariyalur</td>
-                    </tr>
-                </tbody>
-               </table>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Zone  -- Zone Name -- Districts</th>
+                            <th>Count</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <ng-container *ngFor="let zone of zoneTableData">
+                            <tr class="zone-name">
+                                <td class="zone-name-title">{{zone.zone}} - {{zone.zoneName}}</td>
+                                <td rowspan="2" class="text-center">{{zone.count}}</td>
+                            </tr>
+                            <tr>
+                                <td>{{zone.districts}}</td>
+                            </tr>
+                        </ng-container>
+                        <tr>
+                            <th>Total District</th>
+                            <th class="text-center">38</th>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>

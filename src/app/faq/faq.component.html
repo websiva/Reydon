@@ -104,36 +104,23 @@
                         <table class="table table-bordered">
                             <thead>
                                 <tr>
-                                    <th>Zone</th>
-                                    <th>Zone Name</th>
-                                    <th>Districts</th>
+                                    <th>Zone  -- Zone Name -- Districts</th>
                                     <th>Count</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <ng-container *ngFor="let zone of zoneTableData">
-                                    <tr>
-                                        <td [attr.rowspan]="zone.districts.length > 1 ? zone.districts.length+1 : 1">
-                                            {{zone.zone}}</td>
-                                        <td [attr.rowspan]="zone.districts.length > 1 ? zone.districts.length+1 : 1">
-                                            {{zone.zoneName}}</td>
-                                        <td>{{zone.districts[0]}}</td>
-                                        <td [attr.rowspan]="zone.districts.length > 1 ? zone.districts.length+1 : 1"
-                                            class="text-center">{{zone.count}}</td>
+                                    <tr class="zone-name">
+                                        <td class="zone-name-title">{{zone.zone}} - {{zone.zoneName}}</td>
+                                        <td rowspan="2" class="text-center">{{zone.count}}</td>
                                     </tr>
-                                    <tr *ngFor="let district of zone.districts">
-                                        <td>{{district}}</td>
+                                    <tr>
+                                        <td>{{zone.districts}}</td>
                                     </tr>
                                 </ng-container>
                                 <tr>
-                                    <td>Zone 8</td>
-                                    <td>Chennai</td>
-                                    <td>Chennai and surroundings.</td>
-                                    <td>1</td>
-                                </tr>
-                                <tr>
-                                    <th colspan="3">Total District</th>
-                                    <th>38</th>
+                                    <th>Total District</th>
+                                    <th class="text-center">38</th>
                                 </tr>
                             </tbody>
                         </table>

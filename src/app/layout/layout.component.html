@@ -21,7 +21,7 @@
                 <ul>
                     <li><a (click)="scrollToSection('project-overview')">Project Overview</a></li>
                     <li><a (click)="scrollToSection('property-layout')">Layout</a></li>
-                    <li><a (click)="scrollToSection('aminities')">Aminities</a></li>
+                    <li><a (click)="scrollToSection('aminities')">Amenities</a></li>
                     <li><a (click)="scrollToSection('proximity')">Proximities</a></li>
                     <li><a (click)="scrollToSection('legal-finaancial')">Legal & Financial</a></li>
                     <li><a (click)="scrollToSection('youtube-video')">Photos & Videos</a></li>
@@ -359,7 +359,7 @@
                     </table>
                     <div class="see-all-property-details w-100 d-flex justify-content-center">
                         <button class="btn" data-bs-toggle="modal" data-bs-target="#download-contact-form"
-                            (click)="setDownloadFormId('see-more-layout-details')">See all
+                            (click)="setDownloadFormId('see-more-layout-details')">View all
                             layout details</button>
                     </div>
                 </div>
@@ -508,7 +508,7 @@
                             <h6 class="section-title w-100">Location Map</h6>
                             <div class="divider"></div>
                         </div>
-                        <div class="address-section w-100">
+                        <div class="address-section">
                             <div class="address">
                                 <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -526,7 +526,7 @@
                                             fill="#7e7e7e"></path>
                                     </g>
                                 </svg>
-                                <p class="m-0">Address: {{project.AddressDetails.Address}},
+                                <p class="m-0"><strong>Address: </strong>{{project.AddressDetails.Address}},
                                     {{project.AddressDetails.Taluk}},
                                     {{project.AddressDetails.District}}</p>
                             </div>
@@ -544,7 +544,7 @@
                                             fill="#7e7e7e"></path>
                                     </g>
                                 </svg>
-                                <p class="m-0">Landmark: {{project.AddressDetails.Landmark}}</p>
+                                <p class="m-0"><strong>Landmark: </strong>{{project.AddressDetails.Landmark}}</p>
                             </div>
                         </div>
                         <div class="row address p-0 m-0 map-section">
@@ -856,27 +856,6 @@
                 </g>
             </svg>
         </div>
-    </div>
-    <div class="scroll-to-top-btn">
-        <button class="btn" *ngIf="scrollToTopBtn" (click)="scrollToTop()">
-            <svg fill="#000000" viewBox="0 0 24 24" id="top-circle" data-name="Line Color"
-                xmlns="http://www.w3.org/2000/svg" class="icon line-color">
-                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                <g id="SVGRepo_iconCarrier">
-                    <line id="secondary" x1="12" y1="16" x2="12" y2="8"
-                        style="fill: none; stroke: #2ca9bc; stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;">
-                    </line>
-                    <polyline id="secondary-2" data-name="secondary" points="9.5 10.5 12 8 14.5 10.5"
-                        style="fill: none; stroke: #2ca9bc; stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;">
-                    </polyline>
-                    <circle id="primary" cx="12" cy="12" r="9"
-                        style="fill: none; stroke: #000000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;">
-                    </circle>
-                </g>
-            </svg>
-            Scroll To Top
-        </button>
     </div>
 </div>
 

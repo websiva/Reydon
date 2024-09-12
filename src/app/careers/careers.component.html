@@ -31,19 +31,19 @@
                                 <span class="experience">{{job.cardExperience}}</span>
                             </div>
                             <div class="divider"></div>
-                            <div class="salary-section">
+                            <!--<div class="salary-section">
                                 <i class="bi bi-currency-rupee me-2"></i>
                                 <span class="salary">Not disclosed</span>
                             </div>
-                            <div class="divider"></div>
-                            <div class="location-section">
+                            <div class="divider"></div>-->
+                            <div class="location-section d-flex justify-content-start align-items-center">
                                 <i class="bi bi-geo-alt me-2"></i>
-                                <span class="location">{{job.location}}</span>
+                                <p class="location m-0">{{job.location}}</p>
                             </div>
                         </div>
-                        <div class="description-section">
+                        <div class="description-section d-flex justify-content-start align-items-start">
                             <i class="bi bi-file-earmark-text me-2"></i>
-                            <span class="description">{{job.jobShortDescription}}</span>
+                            <p class="description m-0">{{job.jobShortDescription}}</p>
                         </div>
                         <div class="job-type-section">
                             <i class="bi bi-clock-history me-3"></i>
@@ -65,7 +65,7 @@
 
 <!-- Modal -->
 <div class="modal fade" id="full-job-details" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" style="width:100%;max-width: 1000px;">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" style="width:95%;max-width: 1000px;">
         <div class="modal-content" *ngFor="let job of currentProject">
             <div class="modal-header">
                 <h6 class="my-auto">{{job.jobTitle}}</h6>
@@ -81,11 +81,11 @@
                                         <i class="bi bi-suitcase-lg me-3"></i>
                                         <span class="experience">{{job.cardExperience}}</span>
                                     </div>
-                                    <div class="divider"></div>
+                                    <!--<div class="divider"></div>
                                     <div class="salary-section">
                                         <i class="bi bi-currency-rupee me-2"></i>
                                         <span class="salary">Not disclosed</span>
-                                    </div>
+                                    </div>-->
                                     <div class="divider"></div>
                                     <div class="location-section">
                                         <i class="bi bi-geo-alt me-2"></i>
@@ -111,36 +111,44 @@
                             </div>
                         </div>                      
                     </div>
-                    <div class="qualification-skills-section mx-3">
+                    <div class="qualification-skills-section px-3">
                         <h6 class="section-title">Qualification & Skill Requirements</h6>
                         <ul>
                             <li class="qualification-points" *ngFor="let skills of job.qualificationSkillRequirements">{{skills}}</li>
                         </ul>
                     </div>
-                    <div class="Experience-section mx-3">
+                    <div class="Experience-section px-3">
                         <h6 class="section-title">Experience</h6>
                         <p class="experience">{{job.experience}}</p>
                     </div>
-                    <div class="key-respnsibilities-section mx-3">
+                    <div class="salary-section px-3">
+                        <h6 class="section-title">Salary</h6>
+                        <p class="experience">{{job.salary}}</p>
+                    </div>
+                    <div class="key-respnsibilities-section px-3">
                         <h6 class="section-title">Key Resposibilities</h6>
                         <ul>
                             <li class="keyResponsibilities" *ngFor="let responsibilities of job.keyResponsibilities">{{responsibilities}}</li>
                         </ul>
                     </div>
-                    <div class="Perks-Benefits mx-3">
+                    <div class="Perks-Benefits px-3">
                         <h6 class="section-title">Perks & Benefits</h6>
                         <ul>
                             <li class="keyResponsibilities" *ngFor="let benifits of job.perksBenefits">{{benifits}}</li>
                         </ul>
                     </div>
-                    <div class="vechile-related-section mx-3">
+                    <div class="application-process-section px-3">
+                        <h6 class="section-title">Application Process</h6>
+                        <p class="experience">{{job.applicationProcess}}</p>
+                    </div>
+                    <div class="vechile-related-section px-3">
                         <p><strong>Valid Driving License - </strong><span>{{job.validDrivingLicense}}</span></p>
                         <p><strong>Own Vehicle - </strong><span>{{job.ownVehicle}}</span></p>
                     </div>
-                    <div class="deadline-section mx-3">
+                    <div class="deadline-section px-3">
                         <p><strong>Last date to apply - {{job.deadline}}</strong></p>
                     </div>
-                    <div class="contact-information-section mx-3">
+                    <div class="contact-information-section px-3">
                         <p><strong>Contact - {{job.contactInformation.name}}, {{job.contactInformation.phone}}</strong></p>
                     </div>
                     <div class="apply-now-btn-section">

@@ -1,0 +1,37 @@
+.scroll-to-top-btn{
+    position: fixed;
+    bottom: 5%;
+    right: 2%;
+    z-index: 1000;
+}
+.scroll-to-top-btn button{
+    font-size: 18px;
+    color: black;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    animation: bounce 1s infinite ;
+    transition: transform 0.3s;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+}
+.scroll-to-top-btn button svg{
+    width: 40px;
+    height: 40px;
+}
+
+.scroll-to-top-btn button:hover{
+    transform: scale(1.2);
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-10px);
+    }
+    60% {
+      transform: translateY(-5px);
+    }
+  }

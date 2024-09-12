@@ -74,13 +74,24 @@
 .section{
     margin: 10px 0;
 }
-.zone-classification table th,td{
+/*.zone-classification table th,td{
     vertical-align: middle;
-    text-align: center;
-}
-.carpet-area table th,td{
+    text-align: left;
+}*/
+.carpet-area table th{
     vertical-align: middle;
     text-align: center;  
+}
+.carpet-area table td{
+    vertical-align: middle;
+    text-align: center;  
+}
+.zone-name-title{
+    color: var(--primary-color);
+    font-weight: 500;
+}
+.zone-name{
+    border-bottom: 0!important;
 }
 
 

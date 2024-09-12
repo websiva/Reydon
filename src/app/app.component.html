@@ -1,4 +1,27 @@
-<app-topbar></app-topbar>
-<app-navbar></app-navbar>
-<router-outlet />
-<app-footer></app-footer>
+<ng-container style="position: relative;">
+    <app-topbar></app-topbar>
+    <app-navbar></app-navbar>
+    <router-outlet />
+    <div class="scroll-to-top-btn">
+        <button class="btn" *ngIf="scrollToTopBtn" (click)="scrollToTop()">
+            <svg fill="#000000" viewBox="0 0 24 24" id="top-circle" data-name="Line Color"
+                xmlns="http://www.w3.org/2000/svg" class="icon line-color">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                    <line id="secondary" x1="12" y1="16" x2="12" y2="8"
+                        style="fill: none; stroke: #2ca9bc; stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;">
+                    </line>
+                    <polyline id="secondary-2" data-name="secondary" points="9.5 10.5 12 8 14.5 10.5"
+                        style="fill: none; stroke: #2ca9bc; stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;">
+                    </polyline>
+                    <circle id="primary" cx="12" cy="12" r="9"
+                        style="fill: none; stroke: #000000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;">
+                    </circle>
+                </g>
+            </svg>
+            Scroll To Top
+        </button>
+    </div>
+    <app-footer></app-footer>
+</ng-container>

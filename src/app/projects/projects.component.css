@@ -240,6 +240,20 @@
     margin: 0;
 }
 
+/****************************zone modal*****************/
+.zone-name-title{
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+#zoneModal td{
+    vertical-align: middle;
+    text-align: left;
+}
+#zoneModal th{
+    vertical-align: middle;
+    text-align: center;
+}
 
 /* Media query for medium screens */
 @media (max-width: 1200px) {

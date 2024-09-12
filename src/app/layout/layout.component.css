@@ -473,6 +473,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .address {
@@ -1202,6 +1203,9 @@ form {
     .form {
         margin: 10px 30px;
     }
+    .address {
+        margin: 0 0 20px 0;
+    }
 }
 
 /* Media query for small screens  */
@@ -1301,5 +1305,8 @@ form {
 
     .horizontal-table {
         display: none;
+    }
+    .address {
+        margin: 0 0 20px 0;
     }
 }
