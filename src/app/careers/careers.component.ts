@@ -18,24 +18,26 @@ export class CareersComponent {
       cardExperience:'2-3 Yrs',
       jobType: ['Full Time, Part Time'],
       jobShortDescription: 'We are seeking a motivated and dynamic Real Estate Sales Executive to join our team.',
-      qualificationSkillRequirements: ['School Passed, Any Degree or Diploma,',' Having Valid RERA License is Preferable'],
+      qualificationSkillRequirements: ['School Passed, Any Degree or Diploma,',' Having Valid RERA License is Preferable',
+      'Strong understandings of Sales & Marketting  and logistics services.','Ability to travel as required.'],
       keyResponsibilities: [
         'Identifying and pursuing new sales opportunities.',
         'Building and maintaining relationships with clients.',
-        'Conducting property viewings and providing detailed information to potential buyers.',
-        'Negotiating sales agreements and closing deals.',
-        'Staying updated on market trends and property values.',
+        'Arrange for Projects Site Visit & Provide detailed information to potential buyers.',
+        'Negotiate the transaction and close the deals.',
+        'It is essential to continuously update information about market trends and the latest technology',
         'Strong communication and negotiation skills.'
       ],
       experience: 'Minimum two years experience in real estate sales in Residential, Commercial Layout & Buildings',
+       salary: 'Variable Pay Incentive Based on Performance',
       perksBenefits: [
         'Competitive, with performance-based incentives more than industry standard',
         'Comprehensive training and career growth opportunities',
         'Benefits of package including health insurance, conveyance allowance, and more.'
       ],
       validDrivingLicense: 'Should have Valid Driving License for Motor Cycle or Car (MCWG, LMV)',
-      ownVehicle: 'Minimum one should have owned two-wheeler',
-      applicationProcess: 'Submit your resume through our website (reydonrpl.in) & Email: reydonrpl@gmail.com',
+      ownVehicle: 'Should have Owned Two wheeler',
+      applicationProcess: 'Submit your resume thru our website - carrier (reydonrpl.in) & Email id : reydonrpl@gmail.com',
       awarenessSource: 'Social Media',
       deadline: '10/30/2024',
       contactInformation: {
@@ -53,7 +55,7 @@ export class CareersComponent {
       jobType: ['Full Time, Part Time'],
       jobShortDescription: 'We are seeking a motivated and dynamic young Sales Executive to join our team.',
       qualificationSkillRequirements: [
-        'Bachelor’s degree in Business, Marketing, or a related field.',
+        'Bachelor’s degree or Diploma / ITI in Electrical / Electronics is preferable.',
         'Minimum of 2-3 years of experience in sales, preferably in Inverter, UPS, and battery sales and service.',
         'Proven track record of achieving sales targets and growing revenue.',
         'Strong understanding of Sales & Marketing and logistics services.',
@@ -62,20 +64,21 @@ export class CareersComponent {
       keyResponsibilities: [
         'Identifying and pursuing new sales opportunities.',
         'Building and maintaining relationships with clients.',
-        'Conducting property viewings and providing detailed information to potential buyers.',
-        'Negotiating sales agreements and closing deals.',
-        'Staying updated on market trends and property values.',
+        'Conducting Demo Presentation, Participate in Trade Exibitions, Run Sales Compaigns.',
+        'Negotiate the transaction and close the deals.',
+        ' It is essential to continuously update information about market trends and latest technology',
         'Strong communication and negotiation skills.'
       ],
       experience: 'Minimum two to three years experience in electronic product sales, especially UPS, inverter, and battery sales and service.',
+      salary: 'As per Industry Standard',
       perksBenefits: [
         'Salary with performance-based incentive structure.',
         'Comprehensive training and career growth opportunities.',
         'Benefits of package including health insurance, conveyance allowance, and more.'
       ],
       validDrivingLicense: 'Should have Valid Driving License for Motor Cycle or Car (MCWG, LMV)',
-      ownVehicle: 'Minimum one should have owned two-wheeler',
-      applicationProcess: 'Submit your resume through our website (reydonrpl.in) & Email: reydonrpl@gmail.com',
+      ownVehicle: 'Should have Owned Two wheeler',
+      applicationProcess: 'Submit your resume thru our website - carrier (reydonrpl.in) & Email id : reydonrpl@gmail.com',
       awarenessSource: 'Friends',
       deadline: '10/30/2024',
       contactInformation: {

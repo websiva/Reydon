@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<div class="container-fluid p-0">
     <!--<div class="banner-section">
         <img src="project-banner/smart-city-banner.jpeg" alt="">
     </div>-->
@@ -9,17 +9,18 @@
             <!--Zone filter-->
             <div class="col-2">
                 <label for="zone" class="form-label required">Zone:</label>
+                <a class="" (click)="gotoFAQ('zone')" style="cursor: pointer;"><img src="information.svg" alt="zone information" style="width: 20px;height: 20px;margin-left: 10px;"></a>
                 <select id="zone" class="form-select" aria-label="Default select example" [(ngModel)]="selectedZone"
                     (ngModelChange)="onFilterChange('zone')">
                     <option *ngFor="let Zone of Zones" [value]="Zone">{{Zone}}</option>
                 </select>
             </div>
-            <!--city filter-->
+            <!--District filter-->
             <div class="col-2">
-                <label for="city" class="form-label required">City:</label>
-                <select id="city" class="form-select" aria-label="Default select example" [(ngModel)]="selectedCity"
-                    (ngModelChange)="onFilterChange('city')">
-                    <option *ngFor="let city of ProjectCities" [value]="city">{{city}}</option>
+                <label for="city" class="form-label required">District:</label>
+                <select id="city" class="form-select" aria-label="Default select example" [(ngModel)]="selectedDistrict"
+                    (ngModelChange)="onFilterChange('district')">
+                    <option *ngFor="let district of ProjectCities" [value]="district">{{district}}</option>
                 </select>
             </div>
             <!--Residencial / Commercial filter-->
@@ -61,6 +62,8 @@
                 <!--Zone filter-->
                 <div class="col-4">
                     <label for="zone" class="form-label required">Zone:</label>
+                    <a class="" data-bs-toggle="modal"
+                data-bs-target="#zoneModal" style="cursor: pointer;"><img src="information.svg" alt="zone information" style="width: 20px;height: 20px;margin-left: 10px;"></a>
                     <select id="zone" class="form-select" aria-label="Default select example" [(ngModel)]="selectedZone"
                         (ngModelChange)="onFilterChange('zone')">
                         <option *ngFor="let Zone of Zones" [value]="Zone">{{Zone}}</option>
@@ -68,10 +71,10 @@
                 </div>
                 <!--city filter-->
                 <div class="col-4">
-                    <label for="city" class="form-label required">City:</label>
-                    <select id="city" class="form-select" aria-label="Default select example" [(ngModel)]="selectedCity"
+                    <label for="city" class="form-label required">District:</label>
+                    <select id="city" class="form-select" aria-label="Default select example" [(ngModel)]="selectedDistrict"
                         (ngModelChange)="onFilterChange('city')">
-                        <option *ngFor="let city of ProjectCities" [value]="city">{{city}}</option>
+                        <option *ngFor="let district of ProjectCities" [value]="district">{{district}}</option>
                     </select>
                 </div>
                 <!--Residencial / Commercial filter-->
@@ -118,6 +121,8 @@
                 <div class="row w-100">
                     <div class="col-12">
                         <label for="zone" class="form-label required">Zone:</label>
+                        <a class="" data-bs-toggle="modal"
+                data-bs-target="#zoneModal" style="cursor: pointer;"><img src="information.svg" alt="zone information" style="width: 20px;height: 20px;margin-left: 10px;"></a>
                         <select id="zone" class="form-select" aria-label="Default select example"
                             [(ngModel)]="selectedZone" (ngModelChange)="onFilterChange('zone')">
                             <option *ngFor="let Zone of Zones" [value]="Zone">{{Zone}}</option>
@@ -127,10 +132,10 @@
                 <!--city filter-->
                 <div class="row w-100">
                     <div class="col-12">
-                        <label for="city" class="form-label required">City:</label>
+                        <label for="city" class="form-label required">District:</label>
                         <select id="city" class="form-select" aria-label="Default select example"
-                            [(ngModel)]="selectedCity" (ngModelChange)="onFilterChange('city')">
-                            <option *ngFor="let city of ProjectCities" [value]="city">{{city}}</option>
+                            [(ngModel)]="selectedDistrict" (ngModelChange)="onFilterChange('district')">
+                            <option *ngFor="let district of ProjectCities" [value]="district">{{district}}</option>
                         </select>
                     </div>
                 </div>
@@ -261,5 +266,35 @@
     <!--No matching found-->
     <div class="container-fluid" *ngIf="FilteredProjects.length==0">
         <h6>No matching Found</h6>
+    </div>
+</div>
+
+
+<!-- image Modal -->
+<div class="modal fade" id="zoneModal" tabindex="-1" aria-labelledby="zoneModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h6 class="modal-title p-0 m-0" id="imageModalLabel">Zone details</h6>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+               <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Trichy</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Karur</td>
+                    </tr>
+                    <tr>
+                        <td>Ariyalur</td>
+                    </tr>
+                </tbody>
+               </table>
+            </div>
+        </div>
     </div>
 </div>

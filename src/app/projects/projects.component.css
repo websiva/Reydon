@@ -252,6 +252,15 @@
     .filter-section-large .mobile {
         display: none;
     }
+    .cards-container .row{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .project-card{
+        margin: 30px;
+    }
 }
 
 /* Media query for medium screens  */
@@ -265,6 +274,15 @@
     .filter-section-large .mobile {
         display: none;
     }
+    .cards-container .row{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .project-card{
+        margin: 30px;
+    }
 }
 
 /* Media query for medium screens  */
@@ -277,6 +295,15 @@
     }
     .filter-section-large .mobile {
         display: none;
+    }
+    .cards-container .row{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .project-card{
+        margin: 30px;
     }
 }
 

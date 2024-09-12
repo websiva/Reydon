@@ -6,7 +6,7 @@
 <div class="container-fluid w-100 privacy-policy-content">
     <div class="content-section">
         <div class="row p-0 m-0 w-100">
-            <section class="first-section">
+            <section class="first-section" id="first-section">
                 <header class="section-header">Reydon Resources Private Limited aims to provide innovative and
                     constructive solutions to fulfil all your dream homes inspire with a touch of AI technology!
                 </header>
@@ -25,7 +25,7 @@
                     </ul>
                 </div>
             </section>
-            <section class="second-section">
+            <section class="second-section" id="second-section">
                 <header class="section-header">
                     Awareness for our Valued Customers
                 </header>
@@ -38,8 +38,109 @@
                         </li>
                     </ul>
                 </div>
-                <p class="mt-2 fs-5">EV Charging Units  - Coming Soon…</p>
             </section>
+            <section class="third-section" id="third-section">
+                <h6 class="title">Carpet area, Built up area and Super built up area in Indian Real Estate</h6>
+                <ul>
+                    <li>
+                        <h6 class="inner-question">Q.What is Carpet Area?</h6>
+                        <p>A carpet area is an area that can be covered by carpet, or a net usable area is called a
+                            carpet
+                            area. The carpet area is the distance between the inner walls. </p>
+                    </li>
+                    <li>
+                        <h6 class="inner-question">Q. What is Build up Area?</h6>
+                        <p>The built-up area in a flat is its carpet area, plus the space taken by the walls. The
+                            build-up
+                            area in a flat also includes other unusable areas like balcony, terrace etc..</p>
+                        <p class="fw-medium">Built-up area = Carpet area + area of walls + area of balcony</p>
+                    </li>
+                    <li>
+                        <h6 class="inner-question">Q. What is Super Build up Area?</h6>
+                        <p>Super built-up area is the built-up area of the property, along with the proportionate area
+                            of
+                            the common facilities in the housing project. These facilities may include the lobby, the
+                            lift
+                            shaft, the stairs, the swimming pool, the garden, the park and clubhouse, etc.</p>
+                        <p class="fw-medium">Super built-up area = Built-up area + proportionate common area</p>
+                    </li>
+                </ul>
+            </section>
+            <section class="carpet-area my-3" id="carpet-area">
+                <ul>
+                    <li>
+                        <h6 class="inner-question">Q. Describe the details of covered and Not covered area’s for carpet,
+                            Buildup and Super Buildup area?</h6>
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th style="background-color: var(--primary-color);color: white;font-weight: 400;" class="fs-6" colspan="4">Carpet area, built up area and super built up area in
+                                        Indian real estate</th>
+                                </tr>
+                                <tr>
+                                    <th>Type of Elements</th>
+                                    <th>Carpet Area</th>
+                                    <th>Built-up Area</th>
+                                    <th>Super built-up Area</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let data of carpetAreaTableData">
+                                    <td style="text-align: left;">{{data.element}}</td>
+                                    <td>{{data.carpetArea}}</td>
+                                    <td>{{data.builtUpArea}}</td>
+                                    <td>{{data.superBuiltUpArea}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </li>
+                </ul>
+            </section>
+            <section class="zone-classification" id="zone">
+                <h6 class="title">Zone Clarification</h6>
+                <ul>
+                    <li>
+                        <h6 class="inner-question">Q. How TN districts are classified under Zones?</h6>
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Zone</th>
+                                    <th>Zone Name</th>
+                                    <th>Districts</th>
+                                    <th>Count</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <ng-container *ngFor="let zone of zoneTableData">
+                                    <tr>
+                                        <td [attr.rowspan]="zone.districts.length > 1 ? zone.districts.length+1 : 1">
+                                            {{zone.zone}}</td>
+                                        <td [attr.rowspan]="zone.districts.length > 1 ? zone.districts.length+1 : 1">
+                                            {{zone.zoneName}}</td>
+                                        <td>{{zone.districts[0]}}</td>
+                                        <td [attr.rowspan]="zone.districts.length > 1 ? zone.districts.length+1 : 1"
+                                            class="text-center">{{zone.count}}</td>
+                                    </tr>
+                                    <tr *ngFor="let district of zone.districts">
+                                        <td>{{district}}</td>
+                                    </tr>
+                                </ng-container>
+                                <tr>
+                                    <td>Zone 8</td>
+                                    <td>Chennai</td>
+                                    <td>Chennai and surroundings.</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <th colspan="3">Total District</th>
+                                    <th>38</th>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </li>
+                </ul>
+            </section>
+            <p class="mt-2 fs-5">EV Charging Units - Coming Soon…</p>
         </div>
     </div>
 </div>

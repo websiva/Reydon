@@ -74,7 +74,14 @@
 .section{
     margin: 10px 0;
 }
-
+.zone-classification table th,td{
+    vertical-align: middle;
+    text-align: center;
+}
+.carpet-area table th,td{
+    vertical-align: middle;
+    text-align: center;  
+}
 
 
 
@@ -98,5 +105,11 @@
     }
     .banner-title{
         font-size: 28px;
+    }
+    .carpet-area ul{
+        padding: 0;
+    }
+    .zone-classification ul{
+        padding: 0;
     }
 }

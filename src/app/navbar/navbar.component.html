@@ -15,7 +15,11 @@
                         <a class="nav-link" aria-current="page" routerLink="/home" routerLinkActive="active"
                             (click)="collapseNavbar()">Home</a>
                     </li>
-                    <li class="nav-item mx-2 dropdown">
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" aria-current="page" routerLinkActive="active"
+                            (click)="collapseNavbar();gotoProjectsPage('All')">Projects</a>
+                    </li>
+                    <!--<li class="nav-item mx-2 dropdown">
                         <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false" routerLinkActive="active" (click)="gotoProjectsPage('All')">Projects</a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -23,7 +27,7 @@
                             <li><a class="dropdown-item" (click)="collapseNavbar();gotoProjectsPage('Commercial')">Commercial</a></li>
                             <li><a class="dropdown-item" routerLink="/upcoming-projects" (click)="collapseNavbar()">Upcoming Projects</a></li>
                         </ul>
-                    </li>
+                    </li>-->
                     <!--<li class="nav-item mx-2">
                         <a class="nav-link" routerLink="/properties" routerLinkActive="active" (click)="collapseNavbar()">Products</a>
                     </li>-->

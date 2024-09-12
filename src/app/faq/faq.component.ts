@@ -1,11 +1,37 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-faq',
   templateUrl: './faq.component.html',
   styleUrl: './faq.component.css'
 })
-export class FAQComponent {
+export class FAQComponent implements OnInit, AfterViewInit {
+sectionName:string="";
+  constructor(private activeRoute:ActivatedRoute){}
+
+
+  ngOnInit(): void {
+    this.activeRoute.queryParams.subscribe(data => {
+      this.sectionName = data['sectionName'];
+    });
+  }
+
+  ngAfterViewInit() {
+    this.scrollToSection(this.sectionName);
+  }
+
+scrollToSection(sectionName:string){
+  const element = document.getElementById(sectionName);
+  if(element){
+    const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+
+    window.scrollTo({
+      top: elementPosition, // Use the correct position relative to the document
+      behavior: 'smooth'    // Enable smooth scrolling
+    });
+  }
+}
 
   mainDetails = [
     {
@@ -355,5 +381,61 @@ export class FAQComponent {
       ]
     }
   ];
-  
+  zoneTableData = [
+    {
+      zone: 'Zone 1', zoneName: 'Coimbatore', districts: [
+        'Coimbatore', 'The Nilgiris', 'Erode', 'Tiruppur', 'Karur', 'Salem', 'Namakkal'
+      ], count: 7
+    },
+    {
+      zone: 'Zone 2', zoneName: 'Dharmapuri', districts: [
+        'Dharmapuri', 'Vellore', 'Thirupathur', 'Ranipet', 'Krishnagiri'
+      ], count: 5
+    },
+    {
+      zone: 'Zone 3', zoneName: 'Villupuram', districts: [
+        'Villupuram', 'Thiruvannamalai', 'Cuddalore', 'Kallakurichi'
+      ], count: 4
+    },
+    {
+      zone: 'Zone 4', zoneName: 'Trichy', districts: [
+        'Nagapattinam', 'Thiruvarur', 'Thanjavur', 'Trichy', 'Ariyalur', 'Perambalur', 'Mayiladurai', 'Pudukottai'
+      ], count: 8
+    },
+    {
+      zone: 'Zone 5', zoneName: 'Madurai', districts: [
+        'Dindigul', 'Madurai', 'Theni', 'Virudhunagar', 'Sivaganga', 'Ramanathapuram'
+      ], count: 6
+    },
+    {
+      zone: 'Zone 6', zoneName: 'Tirunelveli', districts: [
+        'Tirunelveli', 'Thoothukudi', 'Kanyakumari', 'Tenkasi'
+      ], count: 4
+    },
+    {
+      zone: 'Zone 7', zoneName: 'Chengalpattu', districts: [
+        'Chengalpattu', 'Kancheepuram', 'Thiruvallur'
+      ], count: 3
+    }
+  ];
+  carpetAreaTableData = [
+    { element: 'Living room/Hall', carpetArea: 'Yes', builtUpArea: 'Yes', superBuiltUpArea: 'Yes' },
+    { element: 'Bedroom', carpetArea: 'Yes', builtUpArea: 'Yes', superBuiltUpArea: 'Yes' },
+    { element: 'Dining room', carpetArea: 'Yes', builtUpArea: 'Yes', superBuiltUpArea: 'Yes' },
+    { element: 'Kitchen', carpetArea: 'Yes', builtUpArea: 'Yes', superBuiltUpArea: 'Yes' },
+    { element: 'Bathroom', carpetArea: 'Yes', builtUpArea: 'Yes', superBuiltUpArea: 'Yes' },
+    { element: 'Pooja room', carpetArea: 'Yes', builtUpArea: 'Yes', superBuiltUpArea: 'Yes' },
+    { element: 'Study room & Guest room', carpetArea: 'Yes', builtUpArea: 'Yes', superBuiltUpArea: 'Yes' },
+    { element: 'Home Theater/ GYM', carpetArea: 'Yes', builtUpArea: 'Yes', superBuiltUpArea: 'Yes' },
+    { element: 'Utility areas', carpetArea: 'Yes', builtUpArea: 'Yes', superBuiltUpArea: 'Yes' },
+    { element: 'Staircase (inside the house)', carpetArea: 'Yes', builtUpArea: 'Yes', superBuiltUpArea: 'Yes' },
+    { element: 'Balcony', carpetArea: 'No', builtUpArea: 'Yes', superBuiltUpArea: 'Yes' },
+    { element: 'Staircase (outside the house)', carpetArea: 'No', builtUpArea: 'Yes', superBuiltUpArea: 'Yes' },
+    { element: 'Terrace', carpetArea: 'No', builtUpArea: 'Yes', superBuiltUpArea: 'Yes' },
+    { element: 'Verandah / Portico', carpetArea: 'No', builtUpArea: 'Yes', superBuiltUpArea: 'Yes' },
+    { element: 'Lift', carpetArea: 'No', builtUpArea: 'No', superBuiltUpArea: 'Yes' },
+    { element: 'Lobby', carpetArea: 'No', builtUpArea: 'No', superBuiltUpArea: 'Yes' },
+    { element: 'Garden / Walking Track', carpetArea: 'No', builtUpArea: 'No', superBuiltUpArea: 'Yes' },
+    { element: 'Swimming pool', carpetArea: 'No', builtUpArea: 'No', superBuiltUpArea: 'Yes' }
+  ];
 }

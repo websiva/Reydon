@@ -14,10 +14,11 @@ export class ProjectsComponent implements OnInit {
   Zones: string[] = [];
   Types: string[] = [];
   FilteredProjects: any[] = [];
-  FilterProject2: any[] = [];
+  priceFilterProjects: any[] = [];
+  dropDownFilterProjects:any[]=[];
   selectedType: string = "All";
   selectedProperty: string = "All";
-  selectedCity: string = "All";
+  selectedDistrict: string = "All";
   selectedZone = "All";
   queryZone:string="All";
   queryType:string="All";
@@ -36,13 +37,13 @@ export class ProjectsComponent implements OnInit {
   }
 
   ngOnInit() {
+    //this.resetFilter();
     this.activeRoute.queryParams.subscribe(params => {
-      const city = params['zone'];
+      const zone = params['zone'];
       const type = params['projectType'];
   
-      this.queryZone = city || 'All'; // Default to 'All' if no parameter is provided
+      this.queryZone = zone || 'All'; // Default to 'All' if no parameter is provided
       this.queryType = type || 'All'; // Default to 'All' if no parameter is provided
-  
       this.loaddata(); // Reload data and apply filters
     });
   }
@@ -52,14 +53,15 @@ export class ProjectsComponent implements OnInit {
     this.propertyDataService.getAllData().subscribe(data => {
       this.LayoutData = data;
       this.FilteredProjects = this.LayoutData;
-      this.FilterProject2 = this.FilteredProjects;
+      this.priceFilterProjects = this.FilteredProjects;
+      this.dropDownFilterProjects=this.FilteredProjects;
       this.updateInitialDropdownValues();
       this.filterProjects();
     });
   }
   updateInitialDropdownValues() {
     this.GettingZones();
-    this.GettingCities();
+    this.GettingDistricts();
     this.GettingTypes();
     this.GetingCategories();
     this.getMaximumPricePerSqFt();
@@ -75,13 +77,13 @@ export class ProjectsComponent implements OnInit {
     if (this.selectedZone !== 'All'||this.selectedType!=="All") {
       this.filterProjects();
       this.updateDropdownValues();
-      this.FilterProject2 = this.FilteredProjects;
+      //this.FilterProject2 = this.FilteredProjects;
     }
   }
 
   updateDropdownValues() {
     if (this.activeFilter !== 'zone') this.GettingZones();
-    if (this.activeFilter !== 'city') this.GettingCities();
+    if (this.activeFilter !== 'district') this.GettingDistricts();
     if (this.activeFilter !== 'type') this.GettingTypes();
     if (this.activeFilter !== 'property') this.GetingCategories();
     this.getMaximumPricePerSqFt();
@@ -101,8 +103,8 @@ export class ProjectsComponent implements OnInit {
   }
 
   //Getting unique cities from service
-  GettingCities() {
-    const cities = this.FilteredProjects.map(item => item.AddressDetails.Taluk);
+  GettingDistricts() {
+    const cities = this.FilteredProjects.map(item => item.AddressDetails.District);
     this.ProjectCities = ['All', ...[...new Set(cities)]];
   }
 
@@ -113,10 +115,15 @@ export class ProjectsComponent implements OnInit {
   }
 
   onUnitChange(event: any) {
-    this.resetFilter();
+    //this.resetFilter();
+    this.FilteredProjects=this.dropDownFilterProjects;
     this.selectedUnit = event.target.value;
+    //alert(this.selectedUnit);
     this.updateMaxPrice();
-    //this.filterProjectsBasedonPrice();
+  }
+
+  resetWhenunitChange(){
+
   }
 
   updateMaxPrice() {
@@ -140,42 +147,13 @@ export class ProjectsComponent implements OnInit {
       this.pricePerUnit = this.Maxprice;
     }
 
-  //background color for card labels
-  getLabelBackgroundColor(type: string): string {
-    switch (type) {
-      case 'Residential':
-        return '#7BC42B';
-      case 'Commercial':
-        return '#F68712';
-      case 'Layout':
-        return '#5A5C5B';
-      case 'Building':
-        return '#004274';
-      case 'Farm Lands':
-        return '#00B0FF';
-      default:
-        return 'transparent';
-    }
-  }
 
-  calculateRelativeTime(date: string | Date): string {
-    const now = new Date();
-    const projectDate = new Date(date);
-    const diffInMilliseconds = now.getTime() - projectDate.getTime();
-    const diffInMonths = Math.floor(diffInMilliseconds / (1000 * 60 * 60 * 24 * 30)); // Approximate month length
-
-    if (diffInMonths < 1) {
-      return 'Just now';
-    } else {
-      return `${diffInMonths} months ago`;
-    }
-  }
 
 
   filterProjects() {
-    this.FilteredProjects = this.LayoutData.filter(project => {
+    this.dropDownFilterProjects = this.LayoutData.filter(project => {
       const matchesZone = this.selectedZone === 'All' || project.AddressDetails.Zone === this.selectedZone;
-      const matchesCity = this.selectedCity === 'All' || project.AddressDetails.Taluk === this.selectedCity;
+      const matchesCity = this.selectedDistrict === 'All' || project.AddressDetails.District === this.selectedDistrict;
       const matchesType = this.selectedType === 'All' || project.Type === this.selectedType;
       const matchesProperty = this.selectedProperty === 'All' || project.Category === this.selectedProperty;
 
@@ -184,7 +162,7 @@ export class ProjectsComponent implements OnInit {
   }
 
   filterProjectsBasedonPrice() {
-    this.FilteredProjects = this.FilterProject2.filter(project => {
+    this.FilteredProjects = this.priceFilterProjects.filter(project => {
       let projectPrice = project.PricePerSqFt;
 
       // Convert Cent to Sq Ft if necessary
@@ -203,38 +181,28 @@ export class ProjectsComponent implements OnInit {
   }
 
   onFilterChange(filterName: string) {
+    this.selectedUnit="Sq Ft";
     this.activeFilter = filterName;  // Set active filter
     this.filterProjects();
+    this.FilteredProjects=this.dropDownFilterProjects;
+    this.priceFilterProjects = this.FilteredProjects;
     this.updateDropdownValues();
-    this.FilterProject2 = this.FilteredProjects;
-
-    //alert(this.Maxprice);
-  }
-
-  toggleFilters() {
-    this.filterVisible = !this.filterVisible;
-    if (!this.filterVisible) {
-      this.filterButtonContent = "Show filters";
-    }
-    else {
-      this.filterButtonContent = "Hide filters";
-    }
   }
 
   onPriceChange(event: any): void {
     this.pricePerUnit = event.target.value;
-    console.log(`Selected price per sq ft: ${this.pricePerUnit}`);
+    //console.log(`Selected price per sq ft: ${this.pricePerUnit}`);
     this.filterProjectsBasedonPrice();
   }
 
   resetFilter() {
     this.FilteredProjects = this.LayoutData;
-    this.FilterProject2=this.FilteredProjects;
+    //this.FilterProject2=this.FilteredProjects;
     this.selectedType = "All";
     this.selectedProperty = "All";
-    this.selectedCity = "All";
+    this.selectedDistrict = "All";
     this.queryZone="All";
-    this.selectedUnit= 'Sq Ft';
+    //this.selectedUnit= 'Sq Ft';
     this.changeZoneQueryFromUrl("zone","All");
     this.changeZoneQueryFromUrl("projectType","All");
     this.updateInitialDropdownValues();
@@ -249,13 +217,53 @@ export class ProjectsComponent implements OnInit {
     //getting all the query params from activeroute
     const allQueryParams = {...this.activeRoute.snapshot.queryParams};
 
-    //deleting queryparam on the acive route
+    //change queryparam value on the acive route
     allQueryParams[paramkey]=paramValue;
 
     this.router.navigate([],{relativeTo:this.activeRoute,queryParams:allQueryParams,queryParamsHandling:'merge'});
-
-
   }
 
+  gotoFAQ(sectionName:string){
+    this.router.navigate(['FAQ'],{queryParams:{sectionName:sectionName}});
+  }
 
+  toggleFilters() {
+    this.filterVisible = !this.filterVisible;
+    if (!this.filterVisible) {
+      this.filterButtonContent = "Show filters";
+    }
+    else {
+      this.filterButtonContent = "Hide filters";
+    }
+  }
+    //background color for card labels
+    getLabelBackgroundColor(type: string): string {
+      switch (type) {
+        case 'Residential':
+          return '#7BC42B';
+        case 'Commercial':
+          return '#F68712';
+        case 'Layout':
+          return '#5A5C5B';
+        case 'Building':
+          return '#004274';
+        case 'Farm Lands':
+          return '#00B0FF';
+        default:
+          return 'transparent';
+      }
+    }
+  
+    calculateRelativeTime(date: string | Date): string {
+      const now = new Date();
+      const projectDate = new Date(date);
+      const diffInMilliseconds = now.getTime() - projectDate.getTime();
+      const diffInMonths = Math.floor(diffInMilliseconds / (1000 * 60 * 60 * 24 * 30)); // Approximate month length
+  
+      if (diffInMonths < 1) {
+        return 'Just now';
+      } else {
+        return `${diffInMonths} months ago`;
+      }
+    }
 }

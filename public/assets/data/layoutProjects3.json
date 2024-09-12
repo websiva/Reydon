@@ -9,7 +9,7 @@
 		"RERAApproved": true,
 		"VerifiedByReydon": true,
 		"ProjectLaunchDate": "2024-08-30",
-		"PricePerSqFt": 1433,
+		"PricePerSqFt": 1430,
 		"BannerImagesNames": [
 			"heritageBanner1.png",
 			"heritageBanner2.png",
@@ -1371,7 +1371,7 @@
 				"Duration": "12 Min",
 				"Latitude": 10.008542388292139,
 				"Longitude": 77.34941831937107,
-				"Category": "Company"
+				"Category": "company"
 			},
 			{
 				"ProximityName": "Singaperumal kovil",
@@ -1379,7 +1379,7 @@
 				"Duration": "31 Min",
 				"Latitude": 10.019150675717402,
 				"Longitude": 77.34590096383862,
-				"Category": "railway-station"
+				"Category": "temple"
 			},
 			{
 				"ProximityName": "Vandalur",
@@ -1387,7 +1387,7 @@
 				"Duration": "35 Min",
 				"Latitude": 9.994882272434757,
 				"Longitude": 77.34943961140806,
-				"Category": "railway-station"
+				"Category": "zoo"
 			},
 			{
 				"ProximityName": " College of Arts and Science",
@@ -1427,7 +1427,7 @@
 				"Duration": "15 Min",
 				"Latitude": 10.03982832652384,
 				"Longitude": 77.31960296723395,
-				"Category": "industrial"
+				"Category": "industry"
 			}
 		],
 		"TopFiveReasons": [
@@ -2645,7 +2645,7 @@
 			},
 			{
 				"ProximityName": "Modakurichi Panchayat Union Primary School ",
-				"Distance": "o.65 km",
+				"Distance": "0.65 km",
 				"Duration": "2 min",
 				"Latitude": 12.9835,
 				"Longitude": 80.2075,
