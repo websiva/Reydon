@@ -40,10 +40,10 @@ export class ProjectsComponent implements OnInit {
     //this.resetFilter();
     this.activeRoute.queryParams.subscribe(params => {
       const zone = params['zone'];
-      const type = params['projectType'];
+      //const type = params['projectType'];
   
       this.queryZone = zone || 'All'; // Default to 'All' if no parameter is provided
-      this.queryType = type || 'All'; // Default to 'All' if no parameter is provided
+      //this.queryType = type || 'All'; // Default to 'All' if no parameter is provided
       this.loaddata(); // Reload data and apply filters
     });
   }
@@ -76,6 +76,8 @@ export class ProjectsComponent implements OnInit {
     }
     if (this.selectedZone !== 'All'||this.selectedType!=="All") {
       this.filterProjects();
+      this.FilteredProjects=this.dropDownFilterProjects;
+      this.priceFilterProjects = this.FilteredProjects;
       this.updateDropdownValues();
       //this.FilterProject2 = this.FilteredProjects;
     }
@@ -204,7 +206,7 @@ export class ProjectsComponent implements OnInit {
     this.queryZone="All";
     //this.selectedUnit= 'Sq Ft';
     this.changeZoneQueryFromUrl("zone","All");
-    this.changeZoneQueryFromUrl("projectType","All");
+    //this.changeZoneQueryFromUrl("projectType","All");
     this.updateInitialDropdownValues();
   }
 
