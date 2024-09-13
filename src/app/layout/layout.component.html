@@ -2,7 +2,7 @@
     <div class="full-section w-100" *ngFor="let project of ProjectData">
         <div class="banner-section">
             <div class="banner-image">
-                <img class="slider-image" [src]="'plots/'+project.ProjectName+'/'+image"
+                <img class="slider-image" [src]="image"
                     *ngFor="let image of BannerImages;let i=index" [class.active]="i===currentIndex" alt="">
             </div>
             <div class="header-images">
@@ -312,7 +312,7 @@
         <section id="property-layout">
             <div class="layout-map-section">
                 <div class="layout-map">
-                    <img [src]="'plots/'+project.ProjectName+'/layout-map.png'" alt="">
+                    <img [src]="project.LayoutImage" alt="">
                 </div>
             </div>
             <div class="layout-map-details-section">

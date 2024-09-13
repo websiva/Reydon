@@ -25,11 +25,11 @@ export class CareersComponent {
         'Building and maintaining relationships with clients.',
         'Arrange for Projects Site Visit & Provide detailed information to potential buyers.',
         'Negotiate the transaction and close the deals.',
-        'It is essential to continuously update information about market trends and the latest technology',
+        'Staying update in current market trends and latest technology.',
         'Strong communication and negotiation skills.'
       ],
       experience: 'Minimum two years experience in real estate sales in Residential, Commercial Layout & Buildings',
-       salary: 'Variable Pay Incentive Based on Performance',
+      salary: 'Variable Pay Incentive Based on Performance',
       perksBenefits: [
         'Competitive, with performance-based incentives more than industry standard',
         'Comprehensive training and career growth opportunities',
@@ -66,7 +66,7 @@ export class CareersComponent {
         'Building and maintaining relationships with clients.',
         'Conducting Demo Presentation, Participate in Trade Exibitions, Run Sales Compaigns.',
         'Negotiate the transaction and close the deals.',
-        ' It is essential to continuously update information about market trends and latest technology',
+        'Staying update in current market trends and latest technology.',
         'Strong communication and negotiation skills.'
       ],
       experience: 'Minimum two to three years experience in electronic product sales, especially UPS, inverter, and battery sales and service.',
