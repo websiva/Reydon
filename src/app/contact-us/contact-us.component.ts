@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Params } from '@angular/router';
+import { PostFormDataService } from '../angular-service/post-form-data.service';
 
 @Component({
   selector: 'app-contact-us',
@@ -8,9 +9,15 @@ import { ActivatedRoute, Params } from '@angular/router';
   styleUrl: './contact-us.component.css'
 })
 export class ContactUsComponent implements OnInit {
+  name:string="";
+  email:string="";
+  phone:string="";
+  location:string="";
+  message:string="";
+  subject:string="";
   contactForm:FormGroup;
 
-  constructor(private route:ActivatedRoute,private formBuilder:FormBuilder){
+  constructor(private route:ActivatedRoute,private formBuilder:FormBuilder,private googleSheetservice:PostFormDataService){
     this.contactForm=this.formBuilder.group({
       name:["",[Validators.required]],
       email:['',[Validators.required,Validators.email]],
@@ -22,17 +29,26 @@ export class ContactUsComponent implements OnInit {
   }
 
   ngOnInit(): void {
-
-    const email=localStorage.getItem('email');
-      
-    if(email){
-      this.contactForm.controls['email'].setValue(email);
-    }
   }
 
   ngSubmit(){
-    console.log(this.contactForm.value);
-    localStorage.removeItem('email');
+
+    const sheetData={
+      Name:this.name,
+      Email:this.email,
+      PhoneNumber:this.phone,
+      Location:this.location,
+      Subject:this.subject,
+      Message:this.message
+    };
+    this.googleSheetservice.StoreContactUsPageFormData(sheetData).subscribe((response:any)=>{
+      if(response&&response.success!==false){
+        alert("Data submitted successfully");
+      }
+    },error=>{
+      alert("Data submission failure, Please try again!")
+    })
+
     this.contactForm.reset();
   }
 

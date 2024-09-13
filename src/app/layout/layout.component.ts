@@ -4,6 +4,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { PropertyDataService } from '../angular-service/property-data.service';
 import { Proximity } from '../models/layout-proximity';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+import { PostFormDataService } from '../angular-service/post-form-data.service';
 
 @Component({
   selector: 'app-layout',
@@ -12,6 +13,12 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 })
 export class LayoutComponent implements OnInit, OnDestroy {
   contactForm: FormGroup;
+  contcatFormName: string = '';
+  contactFormEmail: string = "";
+  contactFormPhoneNumber: string = "";
+  contactFormMessage: string = "";
+  contactFormProject: string = "";
+  contactFormDownloadType: string = "";
   fileDownloadForm: FormGroup;
   ProjectName: string = '';
   ProjectId: string = '';
@@ -29,7 +36,7 @@ export class LayoutComponent implements OnInit, OnDestroy {
   interval: any;
   currentIndex: number = 0;
   downloadFormId: string = '';
-  downloadDocumentLink:string="";
+  downloadDocumentLink: string = "";
   modalImageUrl: string = '';
 
   YoutubeLink: string = '';
@@ -38,7 +45,7 @@ export class LayoutComponent implements OnInit, OnDestroy {
   scrollToTopBtn: boolean = false;
 
   constructor(private formBuilder: FormBuilder, private activeroute: ActivatedRoute, private propertyDataService: PropertyDataService, private router: Router,
-    private sanitizer: DomSanitizer) {
+    private sanitizer: DomSanitizer, private googleFormDataSercice: PostFormDataService) {
     this.contactForm = this.formBuilder.group({
       name: ["", [Validators.required]],
       email: ['', [Validators.required, Validators.email]],
@@ -107,16 +114,6 @@ export class LayoutComponent implements OnInit, OnDestroy {
     this.YoutubeLink = this.ProjectData[0].YoutubeLink;
   }
 
-  ngSubmit() {
-    console.log(this.contactForm.value);
-    this.contactForm.reset();
-  }
-
-  ngSubmitFileDownloadform() {
-    console.log(this.contactForm.value);
-    this.fileDownloadForm.reset();
-  }
-
   //background color for card labels
   getLabelBackgroundColor(type: string): string {
     switch (type) {
@@ -167,23 +164,6 @@ export class LayoutComponent implements OnInit, OnDestroy {
     this.mainLocation = {
       Latitude: this.ProjectData[0].AddressDetails.Latitude,
       Longitude: this.ProjectData[0].AddressDetails.Longitude
-    }
-
-
-    const nearByProximity = this.ProjectData[0].NearByProximity;
-
-    if (nearByProximity && nearByProximity.length > 0) {
-      this.proximityLocations = nearByProximity.map((location: Proximity) => ({
-        ProximityName: location.ProximityName,
-        Distance: location.Distance,
-        Duration: location.Duration,
-        Latitude: location.Latitude,
-        Longitude: location.Longitude,
-        Category: location.Category
-      }));
-      console.log('Proximity Locations:', this.proximityLocations);
-    } else {
-      console.warn('NearByProximity array is empty or undefined.');
     }
   }
 
@@ -310,20 +290,69 @@ export class LayoutComponent implements OnInit, OnDestroy {
     }, 4000);
   }
 
+  ngSubmitFileDownloadform() {
+    console.log(this.contactForm.value);
+    this.fileDownloadForm.reset();
+  }
 
+  //submitting project contact form data to google sheet
+  ngContactFormSubmit(projectName:string) {
+    this.contactFormProject=projectName
+;    const sheetData = {
+      Name: this.contcatFormName,
+      Email: this.contactFormEmail,
+      PhoneNumber: this.contactFormPhoneNumber,
+      Message:this.contactFormMessage,
+      ProjectName: this.contactFormProject
+    };
 
-  setDownloadFormId(value: string,fileLink:string) {
+    this.googleFormDataSercice.StoreProjectContactUsPageFormData(sheetData).subscribe((response: any) => {
+      if (response && response.sucess !== false) {
+        alert("Data submitted successfully!")
+      }
+      else {
+        alert('Failed to submit data. Please try again.');
+      }
+    }, error => {
+      alert('Failed to submit data. Please try again.');
+    });
+    this.contactForm.reset();
+  }
+
+  setDownloadFormId(projectName: string, value: string, fileLink: string) {
+    this.contactFormProject = projectName;
+    this.contactFormDownloadType = value;
     this.downloadFormId = value;
-    this.downloadDocumentLink=fileLink;
+    this.downloadDocumentLink = fileLink;
   }
 
+  //downloading file and submitting data to google sheet
   downloadFile() {
-    const link = document.createElement('a');
-    link.href = `${this.downloadDocumentLink}`;
-    //alert(link.href);
-    link.download = this.downloadFormId;
-    link.click();
+    const sheetData = {
+      Name: this.contcatFormName,
+      PhoneNumber: this.contactFormPhoneNumber,
+      Email: this.contactFormEmail,
+      ProjectName: this.contactFormProject,
+      DocumentType: this.contactFormDownloadType
+    };
+
+    this.googleFormDataSercice.StoreDownloadFormDataInGoogleSheet(sheetData).subscribe((response: any) => {
+      if (response && response.sucess !== false) {
+        const link = document.createElement('a');
+        link.href = `${this.downloadDocumentLink}`;
+        //alert(link.href);
+        link.download = this.downloadFormId;
+        link.click();
+      }
+      else {
+        alert('Failed to submit data. Please try again.');
+      }
+    }, error => {
+      alert('Failed to submit data. Please try again.');
+    });
   }
+
+
 
   openBannerImages(image: string) {
     this.modalImageUrl = image;
@@ -349,24 +378,24 @@ export class LayoutComponent implements OnInit, OnDestroy {
     });
   }
 
-  gettingBankIconUrl(bankName:string):string{
-      switch(bankName){
-        case "SBI":
-          return "https://res.cloudinary.com/dbzme4gd3/image/upload/v1726207782/SBI_smdxe4.png";
-        case "ICICI":
-          return "https://res.cloudinary.com/dbzme4gd3/image/upload/v1726207781/ICICI_racnzb.png";
-        case "KVB":
-          return "https://res.cloudinary.com/dbzme4gd3/image/upload/v1726207782/KVB_l9e66q.png";
-        case "HDFC":
-          return "https://res.cloudinary.com/dbzme4gd3/image/upload/v1726207781/HDFC_haiang.png";
-        case "AXIS":
-          return "https://res.cloudinary.com/dbzme4gd3/image/upload/v1726207780/AXIS_hycydv.png";
-        default:
-          return "icon not available";
-      }
+  gettingBankIconUrl(bankName: string): string {
+    switch (bankName) {
+      case "SBI":
+        return "https://res.cloudinary.com/dbzme4gd3/image/upload/v1726207782/SBI_smdxe4.png";
+      case "ICICI":
+        return "https://res.cloudinary.com/dbzme4gd3/image/upload/v1726207781/ICICI_racnzb.png";
+      case "KVB":
+        return "https://res.cloudinary.com/dbzme4gd3/image/upload/v1726207782/KVB_l9e66q.png";
+      case "HDFC":
+        return "https://res.cloudinary.com/dbzme4gd3/image/upload/v1726207781/HDFC_haiang.png";
+      case "AXIS":
+        return "https://res.cloudinary.com/dbzme4gd3/image/upload/v1726207780/AXIS_hycydv.png";
+      default:
+        return "icon not available";
+    }
   }
 
-  
+
 
   ngOnDestroy(): void {
     clearInterval(this.interval);
