@@ -9,13 +9,15 @@ import { Router } from '@angular/router';
 export class HomeHeroSectionComponent implements OnInit {
 
   email:string='';
+  interval: any;
+  currentIndex: number = 0;
   constructor(private router:Router){}
 
   bannerImages:string[]=[
-    "home-banner/home-her-banner-1.jpg",
-    "home-banner/home-her-banner-2.jpg",
-    "home-banner/home-her-banner-3.jpg",
-    "home-banner/home-her-banner-4.jpg",
+    "https://res.cloudinary.com/dbzme4gd3/image/upload/v1726208002/home-her-banner-4_hdommi.jpg",
+    "https://res.cloudinary.com/dbzme4gd3/image/upload/v1726208001/home-her-banner-3_zobnty.jpg",
+    "https://res.cloudinary.com/dbzme4gd3/image/upload/v1726208001/home-her-banner-2_r2ankx.jpg",
+    "https://res.cloudinary.com/dbzme4gd3/image/upload/v1726207999/home-her-banner-1_fi4mjr.jpg"
   ]
 
   titles:string[]=[
@@ -30,44 +32,18 @@ export class HomeHeroSectionComponent implements OnInit {
     "Provide exceptional real estate services that exceed expectations"
   ]
 
-  images:string[]=[
-    "https://res.cloudinary.com/dbzme4gd3/image/upload/v1726208002/home-her-banner-4_hdommi.jpg",
-    "https://res.cloudinary.com/dbzme4gd3/image/upload/v1726208001/home-her-banner-3_zobnty.jpg",
-    "https://res.cloudinary.com/dbzme4gd3/image/upload/v1726208001/home-her-banner-2_r2ankx.jpg",
-    "https://res.cloudinary.com/dbzme4gd3/image/upload/v1726207999/home-her-banner-1_fi4mjr.jpg"
-  ]
 
-  index:number=0;
-  currentBackground:string=this.bannerImages[this.index];
-  isFadingIn:boolean=true;
 
   ngOnInit(): void {
-    //this.changeContent();
-    this.changeBannerImages();
+    this.startSlider();
   }
 
-  /*changeContent():void{
-    setInterval(()=>{
-      this.index=(this.index+1)%this.titles.length;
-      this.title=this.titles[this.index];
-      this.paragraphText=this.paragraphs[this.index];
-      this.imageAddress=this.images[this.index];
-    },6000)
-  }*/
 
-  changeBannerImages():void{
-    setInterval(()=>{
-      this.isFadingIn=false;
-      setTimeout(()=>{
-        this.index=(this.index+1)%this.bannerImages.length;
-        this.currentBackground=this.bannerImages[this.index];
-        this.isFadingIn=true;
-      },2000);
-    },10000);
-  }
+    startSlider() {
+      this.interval = setInterval(() => {
+        this.currentIndex = (this.currentIndex + 1) % this.bannerImages.length;
+      }, 5000);
+    }
 
-  SendEmail(){
-    localStorage.setItem('email',this.email);
-    this.router.navigate(['/contact']);
-  }
+ 
 }

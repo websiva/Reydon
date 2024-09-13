@@ -33,6 +33,35 @@
     text-align: start;
 }
 
+
+/************************Banner section  ***********/
+.banner-section {
+    width: 100%;
+    position: relative;
+}
+
+.banner-image {
+    height: 575px;
+    position: relative;
+    overflow: hidden;
+}
+
+.slider-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 1s ease-in-out;
+    /* Smooth transition effect */
+    opacity: 0;
+    cursor: pointer;
+}
+
+.slider-image.active {
+    opacity: 1;
+}
+
+
 .fade-in {
     animation: fadeIn 2s forwards;
   }
