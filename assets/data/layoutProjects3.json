@@ -11,16 +11,17 @@
 		"ProjectLaunchDate": "2024-08-30",
 		"PricePerSqFt": 1430,
 		"BannerImagesNames": [
-			"heritageBanner1.png",
-			"heritageBanner2.png",
-			"heritageBanner3.png",
-			"heritageBanner4.png"
+			"https://res.cloudinary.com/dbzme4gd3/image/upload/v1726199938/heritageBanner3_tbkchv.png",
+			"https://res.cloudinary.com/dbzme4gd3/image/upload/v1726199911/heritageBanner4_gngyxa.png",
+			"https://res.cloudinary.com/dbzme4gd3/image/upload/v1726199907/heritageBanner1_iunlnt.png",
+			"https://res.cloudinary.com/dbzme4gd3/image/upload/v1726199905/heritageBanner2_suwkvb.png"
 		],
-		"CardImage": "heritageBanner2.png",
+		"CardImage": "https://res.cloudinary.com/dbzme4gd3/image/upload/v1726199911/heritageBanner4_gngyxa.png",
 		"YoutubeLink":"https://www.youtube.com/embed/VLSZVWVFKAg",
 		"TotalArea": 10,
 		"TotalPlots": 154,
 		"AvailablePlots": 148,
+		"LayoutImage":"https://res.cloudinary.com/dbzme4gd3/image/upload/v1726199914/layout-map_r8oyvd.png",
 		"Phases": {
 			"NoOfPhases": 3,
 			"PhasesDetails": [
@@ -448,16 +449,17 @@
 		"ProjectLaunchDate": "2024-05-30",
 		"PricePerSqFt": 3500,
 		"BannerImagesNames": [
-			"golden1.png",
-			"golden2.png",
-			"golden3.png",
-			"golden4.png"
+			"https://res.cloudinary.com/dbzme4gd3/image/upload/v1726199904/golden2_fw1p5l.png",
+			"https://res.cloudinary.com/dbzme4gd3/image/upload/v1726199896/golden4_ndxtrc.png",
+			"https://res.cloudinary.com/dbzme4gd3/image/upload/v1726199896/golden3_hr0l3d.png",
+			"https://res.cloudinary.com/dbzme4gd3/image/upload/v1726199895/golden1_zz4n6l.png"
 		],
-		"CardImage": "golden1.png",
+		"CardImage": "https://res.cloudinary.com/dbzme4gd3/image/upload/v1726199895/golden1_zz4n6l.png",
 		"YoutubeLink":"https://www.youtube.com/embed/VLSZVWVFKAg",
 		"TotalArea": 20,
 		"TotalPlots": 250,
 		"AvailablePlots": 100,
+		"LayoutImage":"https://res.cloudinary.com/dbzme4gd3/image/upload/v1726199901/layout-map_gwpurz.png",
 		"Phases": {
 			"NoOfPhases": 2,
 			"PhasesDetails": [
@@ -872,15 +874,16 @@
 		"ProjectLaunchDate": "2024-02-30",
 		"PricePerSqFt": 5500,
 		"BannerImagesNames": [
-			"meadows1.png",
-			"meadows2.png",
-			"meadows3.png"
+			"https://res.cloudinary.com/dbzme4gd3/image/upload/v1726199903/meadows2_ft6mxh.png",
+			"https://res.cloudinary.com/dbzme4gd3/image/upload/v1726199929/meadows1_abwvan.png",
+			"https://res.cloudinary.com/dbzme4gd3/image/upload/v1726199910/meadows3_hd3xw2.png"
 		],
-		"CardImage": "meadows1.png",
+		"CardImage": "https://res.cloudinary.com/dbzme4gd3/image/upload/v1726199903/meadows2_ft6mxh.png",
 		"YoutubeLink":"https://www.youtube.com/embed/VLSZVWVFKAg",
 		"TotalArea": 50,
 		"TotalPlots": 30,
 		"AvailablePlots": 15,
+		"LayoutImage":"https://res.cloudinary.com/dbzme4gd3/image/upload/v1726199904/layout-map_wunvsh.png",
 		"Phases": {
 			"NoOfPhases": 1,
 			"PhasesDetails": [
@@ -1295,16 +1298,17 @@
 		"ProjectLaunchDate": "2024-09-05",
 		"PricePerSqFt": 2250,
 		"BannerImagesNames": [
-			"OnePulseBanner1.png",
-			"OnePulseBanner2.jpg",
-			"OnePulseBanner3.jpg",
-			"OnePulseBanner4.jpg"
+			"https://res.cloudinary.com/dbzme4gd3/image/upload/v1726199922/OnePulseBanner1_dx8vkx.png",
+			"https://res.cloudinary.com/dbzme4gd3/image/upload/v1726199918/OnePulseBanner2_yjqidp.jpg",
+			"https://res.cloudinary.com/dbzme4gd3/image/upload/v1726199919/OnePulseBanner3_vlnntc.jpg",
+			"https://res.cloudinary.com/dbzme4gd3/image/upload/v1726199920/OnePulseBanner4_rfsqon.jpg"
 		],
-		"CardImage": "OnePulseBanner4.jpg",
+		"CardImage": "https://res.cloudinary.com/dbzme4gd3/image/upload/v1726199920/OnePulseBanner4_rfsqon.jpg",
 		"YoutubeLink":"https://www.youtube.com/embed/VLSZVWVFKAg",
 		"TotalArea": 10,
 		"TotalPlots": 154,
 		"AvailablePlots": 148,
+		"LayoutImage":"https://res.cloudinary.com/dbzme4gd3/image/upload/v1726199916/layout-map_tq7fwr.png",
 		"Phases": {
 			"NoOfPhases": 3,
 			"PhasesDetails": [
@@ -1732,14 +1736,15 @@
 		"ProjectLaunchDate": "2024-06-02",
 		"PricePerSqFt": 1500,
 		"BannerImagesNames": [
-			"srilakshmi1.png",
-			"srilakshmi2.png"
+			"https://res.cloudinary.com/dbzme4gd3/image/upload/v1726199930/srilakshmi2_np2lgo.jpg",
+			"https://res.cloudinary.com/dbzme4gd3/image/upload/v1726199928/srilakshmi1_vojftp.jpg"
 		],
-		"CardImage": "srilakshmi2.png",
+		"CardImage": "https://res.cloudinary.com/dbzme4gd3/image/upload/v1726199930/srilakshmi2_np2lgo.jpg",
 		"YoutubeLink":"https://www.youtube.com/embed/VLSZVWVFKAg",
 		"TotalArea": 20,
 		"TotalPlots": 250,
 		"AvailablePlots": 100,
+		"LayoutImage":"https://res.cloudinary.com/dbzme4gd3/image/upload/v1726199931/layout-map_yd8ebb.png",
 		"Phases": {
 			"NoOfPhases": 2,
 			"PhasesDetails": [
@@ -2146,14 +2151,16 @@
 		"ProjectLaunchDate": "2024-04-10",
 		"PricePerSqFt": 8500,
 		"BannerImagesNames": [
-			"maheswari1.png",
-			"maheswari2.png"
+			"https://res.cloudinary.com/dbzme4gd3/image/upload/v1726199915/maheswari1_moy2yi.png",
+			"https://res.cloudinary.com/dbzme4gd3/image/upload/v1726199918/maheswari2_nfll3g.png",
+			"https://res.cloudinary.com/dbzme4gd3/image/upload/v1726199915/maheswari1_moy2yi.png"
 		],
-		"CardImage": "maheswari2.png",
+		"CardImage": "https://res.cloudinary.com/dbzme4gd3/image/upload/v1726199918/maheswari2_nfll3g.png",
 		"YoutubeLink":"https://www.youtube.com/embed/VLSZVWVFKAg",
 		"TotalArea": 20,
 		"TotalPlots": 250,
 		"AvailablePlots": 100,
+		"LayoutImage":"https://res.cloudinary.com/dbzme4gd3/image/upload/v1726199916/layout-map_p0xekh.png",
 		"Phases": {
 			"NoOfPhases": 2,
 			"PhasesDetails": [
@@ -2560,16 +2567,17 @@
 		"ProjectLaunchDate": "2024-07-30",
 		"PricePerSqFt": 850,
 		"BannerImagesNames": [
-			"greencity1.png",
-			"greencity2.png",
-			"greencity3.png",
-			"greencity4.png"
+			"https://res.cloudinary.com/dbzme4gd3/image/upload/v1726199900/greencity4_sdfayk.png",
+			"https://res.cloudinary.com/dbzme4gd3/image/upload/v1726199946/greencity2_pyhudv.png",
+			"https://res.cloudinary.com/dbzme4gd3/image/upload/v1726199911/greencity1_xn7y0m.png",
+			"https://res.cloudinary.com/dbzme4gd3/image/upload/v1726199900/greencity3_iq0ss7.png"
 		],
-		"CardImage": "greencity2.png",
+		"CardImage": "https://res.cloudinary.com/dbzme4gd3/image/upload/v1726199946/greencity2_pyhudv.png",
 		"YoutubeLink":"https://www.youtube.com/embed/VLSZVWVFKAg",
 		"TotalArea": 20,
 		"TotalPlots": 250,
 		"AvailablePlots": 100,
+		"LayoutImage":"https://res.cloudinary.com/dbzme4gd3/image/upload/v1726199900/greencity4_sdfayk.png",
 		"Phases": {
 			"NoOfPhases": 2,
 			"PhasesDetails": [
@@ -2976,16 +2984,17 @@
 		"ProjectLaunchDate": "2024-08-12",
 		"PricePerSqFt": 1320,
 		"BannerImagesNames": [
-			"sriram1.png",
-			"sriram2.png",
-			"sriram3.png",
-			"sriram4.png"
+			"https://res.cloudinary.com/dbzme4gd3/image/upload/v1726199946/sriram1_jbys8i.png",
+			"https://res.cloudinary.com/dbzme4gd3/image/upload/v1726199940/sriram4_mi5kcu.png",
+			"https://res.cloudinary.com/dbzme4gd3/image/upload/v1726199933/sriram3_o2enh5.png",
+			"https://res.cloudinary.com/dbzme4gd3/image/upload/v1726199931/sriram2_g9gx7m.png"
 		],
-		"CardImage": "sriram1.png",
+		"CardImage": "https://res.cloudinary.com/dbzme4gd3/image/upload/v1726199931/sriram2_g9gx7m.png",
 		"YoutubeLink":"https://www.youtube.com/embed/VLSZVWVFKAg",
 		"TotalArea": 20,
 		"TotalPlots": 250,
 		"AvailablePlots": 100,
+		"LayoutImage":"https://res.cloudinary.com/dbzme4gd3/image/upload/v1726199937/layout-map_y1zdk0.png",
 		"Phases": {
 			"NoOfPhases": 2,
 			"PhasesDetails": [
@@ -3392,16 +3401,17 @@
 		"ProjectLaunchDate": "2024-08-12",
 		"PricePerSqFt": 850,
 		"BannerImagesNames": [
-			"SmartCity1.png",
-			"SmartCity2.png",
-			"SmartCity3.png",
-			"SmartCity4.png"
+			"https://res.cloudinary.com/dbzme4gd3/image/upload/v1726199927/SmartCity4_anaspy.png",
+			"https://res.cloudinary.com/dbzme4gd3/image/upload/v1726199929/SmartCity2_niagn9.png",
+			"https://res.cloudinary.com/dbzme4gd3/image/upload/v1726199926/SmartCity1_f4r7z3.png",
+			"https://res.cloudinary.com/dbzme4gd3/image/upload/v1726199925/SmartCity3_tet1jb.png"
 		],
-		"CardImage": "SmartCity1.png",
+		"CardImage": "https://res.cloudinary.com/dbzme4gd3/image/upload/v1726199925/SmartCity3_tet1jb.png",
 		"YoutubeLink":"https://www.youtube.com/embed/VLSZVWVFKAg",
 		"TotalArea": 10,
 		"TotalPlots": 83,
 		"AvailablePlots": 79,
+		"LayoutImage":"https://res.cloudinary.com/dbzme4gd3/image/upload/v1726199922/layout-map_purwi7.png",
 		"Phases": {
 			"NoOfPhases": 2,
 			"PhasesDetails": [
