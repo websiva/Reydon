@@ -320,7 +320,7 @@ export class LayoutComponent implements OnInit, OnDestroy {
   downloadFile() {
     const link = document.createElement('a');
     link.href = `${this.downloadDocumentLink}`;
-    alert(link.href);
+    //alert(link.href);
     link.download = this.downloadFormId;
     link.click();
   }
