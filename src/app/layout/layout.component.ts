@@ -29,6 +29,7 @@ export class LayoutComponent implements OnInit, OnDestroy {
   interval: any;
   currentIndex: number = 0;
   downloadFormId: string = '';
+  downloadDocumentLink:string="";
   modalImageUrl: string = '';
 
   YoutubeLink: string = '';
@@ -309,20 +310,19 @@ export class LayoutComponent implements OnInit, OnDestroy {
     }, 4000);
   }
 
-  downloadDocument() {
-    this.downloadFile('heritage-avenue-brochure.pdf', 'application/pdf');
-  }
 
-  downloadFile(fileName: string, fileType: string) {
-    const link = document.createElement('a');
-    link.href = `${window.location.origin}/brochures/${fileName}`;
-    alert(link.href);
-    link.download = fileName;
-    link.click();
-  }
 
-  setDownloadFormId(value: string) {
+  setDownloadFormId(value: string,fileLink:string) {
     this.downloadFormId = value;
+    this.downloadDocumentLink=fileLink;
+  }
+
+  downloadFile() {
+    const link = document.createElement('a');
+    link.href = `${this.downloadDocumentLink}`;
+    alert(link.href);
+    link.download = this.downloadFormId;
+    link.click();
   }
 
   openBannerImages(image: string) {
