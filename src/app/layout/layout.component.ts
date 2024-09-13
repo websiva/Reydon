@@ -349,6 +349,25 @@ export class LayoutComponent implements OnInit, OnDestroy {
     });
   }
 
+  gettingBankIconUrl(bankName:string):string{
+      switch(bankName){
+        case "SBI":
+          return "https://res.cloudinary.com/dbzme4gd3/image/upload/v1726207782/SBI_smdxe4.png";
+        case "ICICI":
+          return "https://res.cloudinary.com/dbzme4gd3/image/upload/v1726207781/ICICI_racnzb.png";
+        case "KVB":
+          return "https://res.cloudinary.com/dbzme4gd3/image/upload/v1726207782/KVB_l9e66q.png";
+        case "HDFC":
+          return "https://res.cloudinary.com/dbzme4gd3/image/upload/v1726207781/HDFC_haiang.png";
+        case "AXIS":
+          return "https://res.cloudinary.com/dbzme4gd3/image/upload/v1726207780/AXIS_hycydv.png";
+        default:
+          return "icon not available";
+      }
+  }
+
+  
+
   ngOnDestroy(): void {
     clearInterval(this.interval);
   }

@@ -15,7 +15,7 @@ export class OurTeamComponent {
       instagram:'',
       facebook:'',
       twitter:'',
-      image:'team/team-member-3.jpg'
+      image:'https://res.cloudinary.com/dbzme4gd3/image/upload/v1726207997/team-member-3_mpisan.jpg'
     },
     {
       id:'2',
@@ -25,7 +25,7 @@ export class OurTeamComponent {
       instagram:'',
       facebook:'',
       twitter:'',
-      image:'team/team-member-2.jpg'
+      image:'https://res.cloudinary.com/dbzme4gd3/image/upload/v1726207997/team-member-2_ervmhm.jpg'
     },
     {
       id:'3',
@@ -35,7 +35,7 @@ export class OurTeamComponent {
       instagram:'',
       facebook:'',
       twitter:'',
-      image:'team/team-member-4.jpg'
+      image:'https://res.cloudinary.com/dbzme4gd3/image/upload/v1726207999/team-member-4_my7o9a.jpg'
     },
     {
       id:'4',
@@ -45,7 +45,7 @@ export class OurTeamComponent {
       instagram:'',
       facebook:'',
       twitter:'',
-      image:'team/team-member-1.jpg'
+      image:'https://res.cloudinary.com/dbzme4gd3/image/upload/v1726207996/team-member-1_y9ziyg.jpg'
     },
   ]
 }

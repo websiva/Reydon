@@ -45,4 +45,19 @@ export class ExploreByCitiesComponent implements OnInit {
     }, {});
   }
 
+  gettingCityIconsUrl(city:string):string{
+    switch(city){
+      case "Chennai":
+        return "https://res.cloudinary.com/dbzme4gd3/image/upload/v1726207779/Chennai_a5tuug.jpg";
+      case "Coimbatore":
+        return "https://res.cloudinary.com/dbzme4gd3/image/upload/v1726207779/Coimbatore_ww9aal.jpg";
+      case "Madurai":
+        return "https://res.cloudinary.com/dbzme4gd3/image/upload/v1726207780/Madurai_q4pjg4.jpg";
+      case "Trichy":
+        return "https://res.cloudinary.com/dbzme4gd3/image/upload/v1726207780/Trichy_fjb1iq.jpg";
+      default:
+        return "https://res.cloudinary.com/dbzme4gd3/image/upload/v1726207779/Chennai_a5tuug.jpg"
+    }
+  }
+
 }

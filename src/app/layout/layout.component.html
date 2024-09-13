@@ -6,13 +6,13 @@
                     *ngFor="let image of BannerImages;let i=index" [class.active]="i===currentIndex" alt="">
             </div>
             <div class="header-images">
-                <img src="DTCP.png" alt="" class="dtcp-approved-image"
+                <img src="https://res.cloudinary.com/dbzme4gd3/image/upload/v1726207991/DTCP_zulxsb.png" alt="" class="dtcp-approved-image"
                     *ngIf="project.DTCPApproved===true&&project.RERAApproved===false">
-                <img src="RERA.png" alt="" class="dtcp-approved-image"
+                <img src="https://res.cloudinary.com/dbzme4gd3/image/upload/v1726207994/RERA_a6whco.png" alt="" class="dtcp-approved-image"
                     *ngIf="project.DTCPApproved===false&&project.RERAApproved===true">
-                <img src="RERA-DTCP-Approved.png" alt="" class="dtcp-rera-approved-image"
+                <img src="https://res.cloudinary.com/dbzme4gd3/image/upload/v1726207993/RERA-DTCP-Approved_ij2dc0.png" alt="" class="dtcp-rera-approved-image"
                     *ngIf="project.DTCPApproved===true&&project.RERAApproved===true">
-                <img src="verified.png" style="background-color: white;border-radius: 50%;" alt=""
+                <img src="https://res.cloudinary.com/dbzme4gd3/image/upload/v1726207995/verified_mnspvg.png" style="background-color: white;border-radius: 50%;" alt=""
                     class="verified-image" *ngIf="project.VerifiedByReydon===true">
             </div>
         </div>
@@ -720,7 +720,7 @@
                     <div class="divider"></div>
                 </div>
                 <div class="row m-0 banks">
-                    <img *ngFor="let bank of project.BankPartners" [src]="'Banks/' + bank + '.png'"
+                    <img *ngFor="let bank of project.BankPartners" [src]="gettingBankIconUrl(bank)"
                         [alt]="bank + ' logo'" class="bank-logo">
                 </div>
             </div>
@@ -736,7 +736,7 @@
                         <div class="row">
                             <div class="project-card" *ngFor="let project of RelatedProjects">
                                 <div class="image-section">
-                                    <img [src]="'plots/' + project.ProjectName + '/' + project.CardImage"
+                                    <img [src]="project.CardImage"
                                         alt="{{ project.ProjectName }}">
                                 </div>
                                 <div class="content-section">

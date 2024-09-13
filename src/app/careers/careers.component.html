@@ -152,7 +152,7 @@
                         <p><strong>Contact - {{job.contactInformation.name}}, {{job.contactInformation.phone}}</strong></p>
                     </div>
                     <div class="apply-now-btn-section">
-                        <button class="btn">Apply now</button>
+                        <button class="btn" (click)="ApplyJob(job.jobCode)">Apply now</button>
                     </div>
                 </div>
             </div>

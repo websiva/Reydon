@@ -93,6 +93,8 @@ export class CareersComponent {
     console.log(this.currentProject);
   }
   ApplyJob(jobcode:string){
+    const googleFormLink="https://docs.google.com/forms/d/e/1FAIpQLScdtvgzOU1ZEd1tJh41wBat25o3zATZlfNfFHZdXRDFoTWoog/viewform?usp=sf_link";
 
+    window.open(googleFormLink,'_blank');
   }
 }

@@ -9,7 +9,7 @@
         </div>
         <div class="column" *ngFor="let city of cities">
             <div (click)="gotoProjects(city)" class="card-content" [ngStyle]="{
-                'background': 'linear-gradient(to top, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.15)), url(\'city/' + city + '.jpg\')',
+                'background': 'linear-gradient(to top, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.15)), url('+gettingCityIconsUrl(city)+')',
                 'background-size': 'cover',
                 'background-repeat': 'no-repeat',
                 'background-position': 'center'

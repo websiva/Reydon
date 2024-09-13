@@ -31,10 +31,10 @@ export class HomeHeroSectionComponent implements OnInit {
   ]
 
   images:string[]=[
-    "slide1.jpg",
-    "slide-4.jpg",
-    "slide3.jpg",
-    "slide2.jpg"
+    "https://res.cloudinary.com/dbzme4gd3/image/upload/v1726208002/home-her-banner-4_hdommi.jpg",
+    "https://res.cloudinary.com/dbzme4gd3/image/upload/v1726208001/home-her-banner-3_zobnty.jpg",
+    "https://res.cloudinary.com/dbzme4gd3/image/upload/v1726208001/home-her-banner-2_r2ankx.jpg",
+    "https://res.cloudinary.com/dbzme4gd3/image/upload/v1726207999/home-her-banner-1_fi4mjr.jpg"
   ]
 
   index:number=0;

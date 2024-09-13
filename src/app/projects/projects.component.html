@@ -111,7 +111,7 @@
                 <div class="col-2"></div>
             </div>
         </div>
-        <div class="mobile">
+        <div class="mobile px-3">
             <div class="filter-button d-flex justify-content-end align-content-center">
                 <button class="btn d-block d-md-none" (click)="toggleFilters()">{{filterButtonContent}}</button>
             </div>
@@ -270,37 +270,41 @@
 
 <!-- image Modal -->
 <div class="modal fade" id="zoneModal" tabindex="-1" aria-labelledby="zoneModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-md" style="width: 95%;max-width: 1050px;">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h6 class="modal-title p-0 m-0" id="imageModalLabel">Zone details</h6>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body text-center">
-                <table class="table table-bordered">
-                    <thead>
-                        <tr>
-                            <th>Zone  -- Zone Name -- Districts</th>
-                            <th>Count</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <ng-container *ngFor="let zone of zoneTableData">
-                            <tr class="zone-name">
-                                <td class="zone-name-title">{{zone.zone}} - {{zone.zoneName}}</td>
-                                <td rowspan="2" class="text-center">{{zone.count}}</td>
-                            </tr>
-                            <tr>
-                                <td>{{zone.districts}}</td>
-                            </tr>
-                        </ng-container>
-                        <tr>
-                            <th>Total District</th>
-                            <th class="text-center">38</th>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+    <div class="modal-dialog modal-md" style="width: 95%; max-width: 1050px;">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h6 class="modal-title p-0 m-0" id="imageModalLabel">Zone details</h6>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
+        <div class="modal-body text-center">
+          <!-- Wrapping table inside a scrollable container -->
+          <div class="table-responsive" style="overflow-x: auto;">
+            <table class="table table-bordered w-100">
+              <thead>
+                <tr>
+                  <th>Zone</th>
+                  <th>Zone Name</th>
+                  <th>Districts</th>
+                  <th>Count</th>
+                </tr>
+              </thead>
+              <tbody>
+                <ng-container *ngFor="let zone of zoneTableData">
+                  <tr class="zone-name">
+                    <td class="zone-name-title">{{zone.zone}}</td>
+                    <td>{{zone.zoneName}}</td>
+                    <td>{{zone.districts}}</td>
+                    <td class="text-center">{{zone.count}}</td>
+                  </tr>
+                </ng-container>
+                <tr>
+                  <th colspan="3">Total District</th>
+                  <th class="text-center">38</th>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
     </div>
-</div>
+  </div>
