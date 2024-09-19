@@ -52,6 +52,10 @@ import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.componen
 import { TermsOfUseComponent } from './terms-of-use/terms-of-use.component';
 import { FAQComponent } from './faq/faq.component';
 import { NumberAnimationComponent } from './number-animation/number-animation.component';
+import { VillaDetailsComponent } from './villa-details/villa-details.component';
+import { ApartmentDetailsComponent } from './apartment-details/apartment-details.component';
+import { CommercialBuildingDetailsComponent } from './commercial-building-details/commercial-building-details.component';
+import { RelatedProjectsComponent } from './related-projects/related-projects.component';
 
 register();
 
@@ -95,7 +99,11 @@ register();
     PrivacyPolicyComponent,
     TermsOfUseComponent,
     FAQComponent,
-    NumberAnimationComponent
+    NumberAnimationComponent,
+    VillaDetailsComponent,
+    ApartmentDetailsComponent,
+    CommercialBuildingDetailsComponent,
+    RelatedProjectsComponent
   ],
   imports: [
     BrowserModule,

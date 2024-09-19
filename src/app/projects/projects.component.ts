@@ -189,6 +189,7 @@ export class ProjectsComponent implements OnInit {
     this.FilteredProjects=this.dropDownFilterProjects;
     this.priceFilterProjects = this.FilteredProjects;
     this.updateDropdownValues();
+    
   }
 
   onPriceChange(event: any): void {
@@ -212,7 +213,19 @@ export class ProjectsComponent implements OnInit {
 
   goingDetailPage(category: string, projectName: string, projectId: string) {
     const formattedProjectName = projectName.replace(/\s+/g, '-').toLowerCase();
-    this.router.navigate(["/" + category, formattedProjectName], { queryParams: { id: projectId } });
+    //alert(category);
+    if(category==="Apartment"){
+      this.router.navigate(["/apartment",formattedProjectName],{queryParams:{id:projectId}});
+    }
+    else if(category==="Layout"){
+      this.router.navigate(["/Layout", formattedProjectName], { queryParams: { id: projectId } });
+    }
+    else if(category==="Villa"){
+      this.router.navigate(["/villa",formattedProjectName],{queryParams:{id:projectId}});
+    }
+    else if(category==="Building"){
+      this.router.navigate(["/building",formattedProjectName],{queryParams:{id:projectId}});
+    }
   }
 
   changeZoneQueryFromUrl(paramkey:string,paramValue:string){
@@ -249,7 +262,7 @@ export class ProjectsComponent implements OnInit {
           return '#5A5C5B';
         case 'Building':
           return '#004274';
-        case 'Farm Lands':
+        case 'Apartment':
           return '#00B0FF';
         default:
           return 'transparent';

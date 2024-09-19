@@ -21,6 +21,9 @@ import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
 import { TermsOfUseComponent } from './terms-of-use/terms-of-use.component';
 import { FAQComponent } from './faq/faq.component';
+import { VillaDetailsComponent } from './villa-details/villa-details.component';
+import { ApartmentDetailsComponent } from './apartment-details/apartment-details.component';
+import { CommercialBuildingDetailsComponent } from './commercial-building-details/commercial-building-details.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -44,6 +47,9 @@ const routes: Routes = [
   { path: 'privacy-policy', component: PrivacyPolicyComponent },
   { path: 'terms-of-use', component: TermsOfUseComponent },
   { path: 'FAQ', component: FAQComponent },
+  { path: 'villa/:projectName', component: VillaDetailsComponent },
+  { path: 'apartment/:projectName', component: ApartmentDetailsComponent },
+  { path: 'building/:projectName', component: CommercialBuildingDetailsComponent },
   { path: '**', redirectTo: '/home' },
 ];
 
