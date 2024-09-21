@@ -3832,6 +3832,7 @@
 		"DTCPApproved": true,
 		"RERAApproved": false,
 		"VerifiedByReydon": false,
+		"ProjectLaunchDate": "2024-08-12",
 		"AgeOfBuilding": "15 Years , 04 Months",
 		"AgeOfResiding": "08 Years , 03 Months",
 		"PricePerSqFt": 850,
@@ -3858,7 +3859,14 @@
 			"Latitude": 9.51126495,
 			"Longitude": 78.10621885
 		},
-		"apartmentHomeaddress":"H Block , 7th Floor , 132",
+		"TotalBedrooms":"3",
+		"TotalBathrooms":"3",
+		"TotalParking":"1",
+		"NoofBlocksAvailable":"03",
+		"NoofFloors":"09",
+		"NoofOwners":"02",
+		"apartmentAddress":"H Block , 7th Floor , 132",
+		"TotalArea":"2,486",
 		"SizeDetails": [
 			{
 				"name": "Bedroom 1",
@@ -3923,24 +3931,6 @@
 				"name": "UDS area",
 				"sqft": "236",
 				"cents": "0.541"
-			}
-		],
-		"AdditionalInfo":[
-			{
-				"name":"No of Blocks Available",
-				"value":"03"
-			},
-			{
-				"name":"No of Floors",
-				"value":"09"
-			},
-			{
-				"name":"Block No & Floor No & Door No.",
-				"value":"H Block , 7th Floor , 132"
-			},
-			{
-				"name":"No of Owners",
-				"value":"02"
 			}
 		],
 		"Features": [

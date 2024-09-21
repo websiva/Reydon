@@ -9,7 +9,9 @@
             <!--Zone filter-->
             <div class="col-2">
                 <label for="zone" class="form-label required">Zone:</label>
-                <a class="" data-bs-toggle="modal" data-bs-target="#zoneModal" style="cursor: pointer;"><img src="information.svg" alt="zone information" style="width: 20px;height: 20px;margin-left: 10px;"></a>
+                <a class="" data-bs-toggle="modal" data-bs-target="#zoneModal" style="cursor: pointer;"><img
+                        src="information.svg" alt="zone information"
+                        style="width: 20px;height: 20px;margin-left: 10px;"></a>
                 <select id="zone" class="form-select" aria-label="Default select example" [(ngModel)]="selectedZone"
                     (ngModelChange)="onFilterChange('zone')">
                     <option *ngFor="let Zone of Zones" [value]="Zone">{{Zone}}</option>
@@ -42,8 +44,8 @@
             <!--Price filter button-->
             <div class="col-3 d-flex flex-column justify-content-evenly">
                 <label for="priceRange" class="form-label required">Price:</label>
-                <input type="range" id="priceRange" [min]="MinPrice" [max]="Maxprice" step="10" [(ngModel)]="pricePerUnit"
-                    (input)="onPriceChange($event)" />
+                <input type="range" id="priceRange" [min]="MinPrice" [max]="Maxprice" step="10"
+                    [(ngModel)]="pricePerUnit" (input)="onPriceChange($event)" />
                 <div style="display: flex; align-items: center;margin-top: 5px;">
                     <span style="color: white; margin-right: 8px;">{{ pricePerUnit | currency: 'INR' }} /</span>
                     <select [ngModel]="selectedUnit" name="" id="" style="display: inline-block;"
@@ -62,7 +64,9 @@
                 <!--Zone filter-->
                 <div class="col-4">
                     <label for="zone" class="form-label required">Zone:</label>
-                    <a class="" data-bs-toggle="modal" data-bs-target="#zoneModal" style="cursor: pointer;"><img src="information.svg" alt="zone information" style="width: 20px;height: 20px;margin-left: 10px;"></a>
+                    <a class="" data-bs-toggle="modal" data-bs-target="#zoneModal" style="cursor: pointer;"><img
+                            src="information.svg" alt="zone information"
+                            style="width: 20px;height: 20px;margin-left: 10px;"></a>
                     <select id="zone" class="form-select" aria-label="Default select example" [(ngModel)]="selectedZone"
                         (ngModelChange)="onFilterChange('zone')">
                         <option *ngFor="let Zone of Zones" [value]="Zone">{{Zone}}</option>
@@ -71,8 +75,8 @@
                 <!--city filter-->
                 <div class="col-4">
                     <label for="city" class="form-label required">District:</label>
-                    <select id="city" class="form-select" aria-label="Default select example" [(ngModel)]="selectedDistrict"
-                        (ngModelChange)="onFilterChange('city')">
+                    <select id="city" class="form-select" aria-label="Default select example"
+                        [(ngModel)]="selectedDistrict" (ngModelChange)="onFilterChange('city')">
                         <option *ngFor="let district of ProjectCities" [value]="district">{{district}}</option>
                     </select>
                 </div>
@@ -120,7 +124,9 @@
                 <div class="row w-100">
                     <div class="col-12">
                         <label for="zone" class="form-label required">Zone:</label>
-                        <a class="" data-bs-toggle="modal" data-bs-target="#zoneModal" style="cursor: pointer;"><img src="information.svg" alt="zone information" style="width: 20px;height: 20px;margin-left: 10px;"></a>
+                        <a class="" data-bs-toggle="modal" data-bs-target="#zoneModal" style="cursor: pointer;"><img
+                                src="information.svg" alt="zone information"
+                                style="width: 20px;height: 20px;margin-left: 10px;"></a>
                         <select id="zone" class="form-select" aria-label="Default select example"
                             [(ngModel)]="selectedZone" (ngModelChange)="onFilterChange('zone')">
                             <option *ngFor="let Zone of Zones" [value]="Zone">{{Zone}}</option>
@@ -182,8 +188,7 @@
         <div class="row">
             <div class="project-card" *ngFor="let project of FilteredProjects">
                 <div class="image-section">
-                    <img [src]="project.CardImage"
-                        alt="{{ project.ProjectName }}">
+                    <img [src]="project.CardImage" alt="{{ project.ProjectName }}">
                 </div>
                 <div class="content-section">
                     <div class="category-label">
@@ -200,8 +205,7 @@
                     </div>
                     <div class="location-section">
                         <svg fill="#000000" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                            xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24"
-                            xml:space="preserve">
+                            xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24" xml:space="preserve">
                             <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                             <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round">
                             </g>
@@ -228,14 +232,23 @@
                     <hr class="divider">
                     <div class="amenities-section">
                         <div class="amenities">
-                            <img *ngFor="let aminity of project.CardAmenities"
-                                [src]="'aminities/'+aminity+'.svg'" alt="aminity">
+                            <div class="layout" *ngIf="project.Category==='Layout'">
+                                <img *ngFor="let aminity of project.CardAmenities" [src]="'aminities/'+aminity+'.svg'"
+                                    alt="aminity">
+                            </div>
+                            <div class="apartment" *ngIf="project.Category==='Apartment'">
+                                <i class="fas fa-bed"></i>
+                                <span class="ms-1">{{project.TotalBedrooms}}</span>
+                                <i class="fas fa-bathtub ms-2"></i>
+                                <span class="ms-1">{{project.TotalBathrooms}}</span>
+                                <i class="fas fa-car ms-2"></i>
+                                <span class="ms-1">{{project.TotalParking}}</span>
+                            </div>
                         </div>
                         <div class="project-updated-date">
                             <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fill="#767F86">
                                 <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round"
-                                    stroke-linejoin="round"></g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
                                 <g id="SVGRepo_iconCarrier">
                                     <title>time-history</title>
                                     <g id="Layer_2" data-name="Layer 2">
@@ -271,40 +284,40 @@
 <!-- image Modal -->
 <div class="modal fade" id="zoneModal" tabindex="-1" aria-labelledby="zoneModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-md" style="width: 95%; max-width: 1050px;">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h6 class="modal-title p-0 m-0" id="imageModalLabel">Zone details</h6>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h6 class="modal-title p-0 m-0" id="imageModalLabel">Zone details</h6>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+                <!-- Wrapping table inside a scrollable container -->
+                <div class="table-responsive" style="overflow-x: auto;">
+                    <table class="table table-bordered w-100">
+                        <thead>
+                            <tr>
+                                <th>Zone</th>
+                                <th>Zone Name</th>
+                                <th>Districts</th>
+                                <th>Count</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <ng-container *ngFor="let zone of zoneTableData">
+                                <tr class="zone-name">
+                                    <td class="zone-name-title">{{zone.zone}}</td>
+                                    <td>{{zone.zoneName}}</td>
+                                    <td>{{zone.districts}}</td>
+                                    <td class="text-center">{{zone.count}}</td>
+                                </tr>
+                            </ng-container>
+                            <tr>
+                                <th colspan="3">Total District</th>
+                                <th class="text-center">38</th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
-        <div class="modal-body text-center">
-          <!-- Wrapping table inside a scrollable container -->
-          <div class="table-responsive" style="overflow-x: auto;">
-            <table class="table table-bordered w-100">
-              <thead>
-                <tr>
-                  <th>Zone</th>
-                  <th>Zone Name</th>
-                  <th>Districts</th>
-                  <th>Count</th>
-                </tr>
-              </thead>
-              <tbody>
-                <ng-container *ngFor="let zone of zoneTableData">
-                  <tr class="zone-name">
-                    <td class="zone-name-title">{{zone.zone}}</td>
-                    <td>{{zone.zoneName}}</td>
-                    <td>{{zone.districts}}</td>
-                    <td class="text-center">{{zone.count}}</td>
-                  </tr>
-                </ng-container>
-                <tr>
-                  <th colspan="3">Total District</th>
-                  <th class="text-center">38</th>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
     </div>
-  </div>
+</div>
