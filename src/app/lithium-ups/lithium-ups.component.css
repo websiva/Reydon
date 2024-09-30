@@ -1,0 +1,519 @@
+section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 40px 0;
+}
+
+section>.row {
+    width: 100%;
+    max-width: 1400px;
+}
+
+.section-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-title h6 {
+    font-size: 28px;
+    margin: 20px 0;
+    width: 100%;
+    text-align: left;
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+/*********************************banner************/
+.banner {
+    padding: 0;
+}
+
+.banner-section {
+    width: 100%;
+    position: relative;
+}
+
+.carousel-item {
+    position: relative;
+}
+
+.carousel-item::before {
+    content: '';
+    /* Required for pseudo-element */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    /* Adjust colors as needed */
+    z-index: 1;
+    /* Ensure it is above the image but below the caption */
+}
+
+.carousel-item img {
+    height: 750px;
+    object-fit: cover;
+}
+
+.carousel-caption {
+    width: 50%;
+    height: 60%;
+    margin: 0 auto;
+    z-index: 10;
+}
+
+.content-box {
+    color: white;
+    border-radius: 10px;
+    /* Rounded corners */
+    padding: 20px;
+    /* Add some padding */
+}
+
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    /* Adjust size as per need */
+    height: 100px;
+    /* Adjust height as needed */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Dark overlay with transparency */
+    z-index: 1;
+    /* Below text */
+    border-radius: 10px;
+    /* Smooth corners for the overlay */
+}
+
+.text-container {
+    z-index: 2;
+    color: white;
+}
+
+.carousel-caption h5,
+.carousel-caption p {}
+
+.carousel-caption h5 {
+    font-size: 35px;
+    font-weight: 500;
+}
+/*********************product name***************/
+.product-name{
+    padding: 40px 0 0 0;
+}
+.product-name h3{
+    font-size: 35px;
+    font-weight: 500;
+    width: 100%;
+    text-align: left;
+    color:var(--primary-color);
+}
+
+/******************************About product***************/
+.about-product {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0 40px 20px;
+}
+
+.about-product .row {
+    width: 100%;
+    max-width: 1400px;
+}
+
+.about-product .image-container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-image .image-container img {
+    width: 80%;
+    height: auto;
+    object-fit: cover;
+}
+
+.product-about-content p {
+    font-size: 16px;
+    font-weight: 300;
+    text-align: justify;
+}
+
+/******************Certification slider************/
+.certification-slider {
+    width: 100%;
+    background-color: #f7f8fa;
+    padding: 20px 0;
+}
+
+.certification-slider .col-md-3 {
+    display: flex;
+    justify-content: center;
+}
+
+.certification-slider img {
+    width: auto;
+    height: 125px;
+    object-fit: cover;
+}
+
+/***************Features***************************/
+.features-container {
+    /*display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;*/
+}
+
+.feature {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.masonry-item {
+    padding: 20px;
+}
+
+.feature-box {
+    width: 100%;
+    background-color: #f1f1f1;
+    height: 150px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    border-radius: 8px;
+}
+
+.feature-title {
+    font-size: 18px;
+}
+
+.feature-box:hover {
+    background-color: #007bff;
+    color: white;
+    transform: translateY(-10px);
+}
+
+/**************************Hightlights****************/
+.highlights {
+    background-color: #f7f8fa;
+}
+
+.highlight {}
+
+.highlight-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    margin: 20px;
+    border-radius: 8px;
+    transition: 0.25s all ease-in-out;
+}
+
+.highlight-box:hover {
+    transform: scale(1.1);
+}
+
+.highlight img {
+    width: 75px;
+    height: 75px;
+    margin: 20px;
+    border-radius: 12px;
+}
+
+.highlight p {
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+/**********************Specifications****************/
+.specifications {
+    /* background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(0,66,116,0.5270483193277311) 100%);*/
+}
+
+.specifications table {
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
+}
+
+.specifications table td {
+    font-size: 16px;
+}
+
+.specifications table thead th {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.specifications table td strong {
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+/****************************Application*********************/
+
+.application-areas .section-content p {
+    font-size: 16px;
+    font-weight: 300;
+    text-align: justify;
+}
+
+.application-areas .areas-container .area {
+    padding: 20px;
+    height: 350px;
+}
+
+.application-box {
+    width: 100%;
+    height: 100%;
+}
+
+.application-areas .areas-container .area .application-box img {
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+}
+
+.application-areas .areas-container p {
+    text-align: center;
+    font-size: 18px;
+    color: var(--primary-color);
+    font-weight: 500;
+    margin-top: 20px;
+}
+
+/************************Product image slider***************/
+.product-slider-container {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    height: 900px;
+}
+
+.product-images {
+    display: flex;
+    transition: transform 0.4s ease;
+    width: 100%;
+}
+
+.product-slide {
+    width: 100%;
+    height: 100%;
+    display: none;
+    object-fit: contain;
+}
+
+.product-slide.active {
+    display: block;
+    object-fit: contain;
+}
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev {
+    left: 0;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+}
+
+/*******************Certificates****************/
+.certificates {
+    background-color: #f7f8fa;
+}
+
+.certificate {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+.certificates img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+}
+
+/************************For user ref********************/
+.load-details-section .table-title {
+    font-size: 22px;
+    font-weight: 400;
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+.load-details-section table td {
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.load-details-section table th {
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+    text-align: center;
+    background-color: var(--primary-color);
+}
+
+.troubleshooting {
+    margin: 0 30px;
+}
+
+.troubleshooting .title {
+    font-size: 22px;
+    font-weight: 400;
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+.troubleshoot-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.troubleshooting img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.troubleshoot-points-container li {
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+/**************************faq-section*****************/
+.faq-section{
+    background-color: #f7f8fa;
+}
+.faq-section .row {
+    width: 100%;
+    max-width: 1400px;
+}
+
+.accordion-item {
+    padding: 10px 0;
+    margin: 15px 0;
+    /*box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);*/
+}
+
+.accordion-header {
+    margin: 0;
+}
+
+.accordion-button {
+    height: 70px;
+}
+
+
+
+
+
+
+
+
+
+@media (min-width:1200px) {}
+
+
+/* Media query for medium screens */
+@media (max-width: 1200px) {}
+
+/* Media query for medium screens  */
+@media (max-width: 992px) {
+    .carousel-caption {
+        width: auto;
+        height: auto;
+        margin: auto 0;
+    }
+    .carousel-caption h5{
+        font-size: 28px;
+        font-weight: 400;
+    }
+}
+
+/* Media query for medium screens  */
+@media (max-width: 768px) {
+    .carousel-item img {
+        height: 400px;
+        object-fit: cover;
+    }
+
+    .certification-slider .col-md-3 {
+        margin: 20px 0;
+    }
+
+    .product-slider-container {
+        height: 400px;
+    }
+
+    .carousel-caption {
+        width: auto;
+        height: auto;
+        margin: auto 0;
+    }
+
+    .carousel-caption h5 {
+        font-size: 28px;
+        font-weight: 400;
+    }
+
+}
+
+/* Media query for small screens  */
+@media (max-width: 576px) {
+    .certification-slider .col-md-3 {
+        margin: 20px 0;
+    }
+
+    .product-slider-container {
+        height: 400px;
+    }
+
+    .carousel-caption {
+        width: auto;
+        height: auto;
+        margin: auto 0;
+    }
+
+    .carousel-caption h5 {
+        font-size: 28px;
+        font-weight: 400;
+    }
+}

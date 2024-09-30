@@ -92,6 +92,9 @@ h6{
     display: flex;
     justify-content: center;
 }
+.footer-icons li{
+    list-style-type: none;
+}
 .footer-icons ul i{
     font-size: 24px;
     margin: 0 10px;

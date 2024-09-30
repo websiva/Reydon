@@ -70,8 +70,8 @@
                         </h6>-->
                     </div>
                     <div class="col-md-6">
-                        <div class="apartment-location mt-2 w-100 text-end">
-                            <h6>{{project.apartmentHomeaddress}}</h6>
+                        <div class="header-location-section w-100 text-end me-2">
+                            <span class="me-3">Age of Property: {{project.AgeOfBuilding}}</span>
                         </div>
                         <div class="download-section">
                             <button type="button" class="btn" data-bs-toggle="modal"
@@ -150,45 +150,6 @@
         </section>
         <section id="building-details">
             <div class="building-details-section">
-                <div class="overview-section-container">
-                    <div class="row m-0">
-                        <div class="col-md-3 overview-section">
-                            <i class="fas fa-bed"></i>
-                            <span>{{project.TotalBedrooms}} Bedrooms</span>
-                        </div>
-                        <div class="col-md-3 overview-section">
-                            <i class="fas fa-bathtub"></i>
-                            <span>{{project.TotalBathrooms}} Bathrooms</span>
-                        </div>
-                        <div class="col-md-3 overview-section">
-                            <i class="fas fa-car"></i>
-                            <span>{{project.TotalParking}} Parking</span>
-                        </div>
-                        <div class="col-md-3 overview-section">
-                            <i class="fas fa-ruler-combined"></i>
-                            <span>{{project.TotalArea}} sqft</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="sizes-section">
-                    <div class="row m-0">
-                        <h6>Room Sizes:</h6>
-                        <div class="size-section-container">
-                            <div class="size-card" *ngFor="let size of project.SizeDetails">
-                                <p class="size-name">{{size.name}}</p>
-                                <div class="sizes">
-                                    <p *ngIf="size.length>0&&size.breadth>0" class="length-breath">
-                                        {{size.length}} x {{size.breadth}},</p>
-                                    <p class="area">{{size.area}} sqft</p>
-                                </div>
-                            </div>
-                            <div class="carpet-card" *ngFor="let carpetSize of project.carpetSizeDetails">
-                                <p class="carpet-name">{{carpetSize.name}}</p>
-                                <p class="carpet-sizes">{{carpetSize.sqft}} sqft, {{carpetSize.cents}} Cent</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
                 <div class="additional-info">
                     <div class="info-section-container">
                         <div class="row m-0">
@@ -309,6 +270,45 @@
                                         <p class="info-value">{{project.apartmentAddress}}</p>
                                     </div>
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="overview-section-container">
+                    <div class="row m-0">
+                        <div class="col-md-3 overview-section">
+                            <i class="fas fa-bed"></i>
+                            <span>{{project.TotalBedrooms}} Bedrooms</span>
+                        </div>
+                        <div class="col-md-3 overview-section">
+                            <i class="fas fa-bathtub"></i>
+                            <span>{{project.TotalBathrooms}} Bathrooms</span>
+                        </div>
+                        <div class="col-md-3 overview-section">
+                            <i class="fas fa-car"></i>
+                            <span>{{project.TotalParking}} Parking</span>
+                        </div>
+                        <div class="col-md-3 overview-section">
+                            <i class="fas fa-ruler-combined"></i>
+                            <span>{{project.TotalArea}} sqft</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="sizes-section">
+                    <div class="row m-0">
+                        <h6>Room Sizes:</h6>
+                        <div class="size-section-container">
+                            <div class="size-card" *ngFor="let size of project.SizeDetails">
+                                <p class="size-name">{{size.name}}</p>
+                                <div class="sizes">
+                                    <p *ngIf="size.length>0&&size.breadth>0" class="length-breath">
+                                        {{size.length}} x {{size.breadth}},</p>
+                                    <p class="area">{{size.area}} sqft</p>
+                                </div>
+                            </div>
+                            <div class="carpet-card" *ngFor="let carpetSize of project.carpetSizeDetails">
+                                <p class="carpet-name">{{carpetSize.name}}</p>
+                                <p class="carpet-sizes">{{carpetSize.sqft}} sqft, {{carpetSize.cents}} Cent</p>
                             </div>
                         </div>
                     </div>

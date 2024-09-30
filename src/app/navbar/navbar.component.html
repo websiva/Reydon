@@ -28,27 +28,31 @@
                             <li><a class="dropdown-item" routerLink="/upcoming-projects" (click)="collapseNavbar()">Upcoming Projects</a></li>
                         </ul>
                     </li>-->
-                    <!--<li class="nav-item mx-2">
-                        <a class="nav-link" routerLink="/properties" routerLinkActive="active" (click)="collapseNavbar()">Products</a>
-                    </li>-->
                     <li class="nav-item mx-2 dropdown">
                         <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false" routerLink="/services" routerLinkActive="active">Services</a>
+                            aria-expanded="false"  routerLinkActive="active">Products</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" routerLink="/lithium-ups" (click)="collapseNavbar()">UPS/Inverter battery</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item mx-2 dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false" routerLinkActive="active">Services</a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item" routerLink="/real-estate" (click)="collapseNavbar()">Real Estate</a></li>
                             <li><a class="dropdown-item" routerLink="/property-management" (click)="collapseNavbar()">Property Management</a></li>
                             <li><a class="dropdown-item" routerLink="/financial-planning" (click)="collapseNavbar()">Financial Planning</a></li>
-                            <li><a class="dropdown-item" routerLink="/products" (click)="collapseNavbar()">Products</a></li>
+                            <!--<li><a class="dropdown-item" routerLink="/products" (click)="collapseNavbar()">Products</a></li>-->
                         </ul>
                     </li>
-                    <!--<li class="nav-item mx-2">
-                        <a class="nav-link" routerLink="/about" routerLinkActive="active" (click)="collapseNavbar()">About</a>
-                    </li>-->
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" routerLink="/about" routerLinkActive="active" (click)="collapseNavbar()">About Us</a>
+                    </li>
                     <li class="nav-item mx-2 dropdown">
                         <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false" routerLinkActive="active">Contact</a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" routerLink="/about" (click)="collapseNavbar()">About Us</a></li>
+                            <!--<li><a class="dropdown-item" routerLink="/about" (click)="collapseNavbar()">About Us</a></li>-->
                             <li><a class="dropdown-item" routerLink="/contact" (click)="collapseNavbar()">Contact Us</a></li>
                             <li><a class="dropdown-item" routerLink="/careers" (click)="collapseNavbar()">Careers</a></li>
                         </ul>
