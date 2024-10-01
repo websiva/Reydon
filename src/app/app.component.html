@@ -1,6 +1,8 @@
 <ng-container style="position: relative;">
-    <app-topbar></app-topbar>
-    <app-navbar></app-navbar>
+    <div class="sticky-top">
+        <app-topbar></app-topbar>
+        <app-navbar></app-navbar>
+    </div>
     <router-outlet />
     <div class="scroll-to-top-btn">
         <button class="btn" *ngIf="scrollToTopBtn" (click)="scrollToTop()">

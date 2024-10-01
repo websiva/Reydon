@@ -7,12 +7,13 @@
                     amenities to fit your lifestyle.</p>
             </div>
         </div>
-        <div class="column" *ngFor="let city of cities">
-            <div (click)="gotoProjects(city)" class="card-content" [ngStyle]="{
-                'background': 'linear-gradient(to top, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.15)), url('+gettingCityIconsUrl(city)+')',
+        <div class="column" *ngFor="let city of cities;let i=index">
+            <div (click)="gotoProjects(city)" class="card-content animate__animated animate__fadeInRight" [ngStyle]="{
+                'background': 'linear-gradient(to top, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.15)), url(' + gettingCityIconsUrl(city) + ')',
                 'background-size': 'cover',
                 'background-repeat': 'no-repeat',
-                'background-position': 'center'
+                'background-position': 'center',
+                'animation-delay': (i * 0.5) + 's'
               }">
                 <div class="header">
                     <p>{{propertyCountByZone[city]}} properties</p>
