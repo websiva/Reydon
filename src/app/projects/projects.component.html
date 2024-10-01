@@ -47,7 +47,7 @@
                 <input type="range" id="priceRange" [min]="MinPrice" [max]="Maxprice" step="10"
                     [(ngModel)]="pricePerUnit" (input)="onPriceChange($event)" />
                 <div style="display: flex; align-items: center;margin-top: 5px;">
-                    <span style="color: white; margin-right: 8px;">{{ pricePerUnit | currency: 'INR' }} /</span>
+                    <span style="color: white; margin-right: 8px;">{{ pricePerUnit | currency: 'INR':'symbol':'1.0-0' }} /</span>
                     <select [ngModel]="selectedUnit" name="" id="" style="display: inline-block;"
                         (change)="onUnitChange($event)">
                         <option value="Sq Ft">Sq Ft</option>
@@ -104,7 +104,7 @@
                     <input type="range" id="priceRange" min="0" [max]="Maxprice" step="100" [(ngModel)]="pricePerUnit"
                         (input)="onPriceChange($event)" />
                     <div style="display: flex; align-items: center;margin-top: 5px;">
-                        <span style="color: white; margin-right: 8px;">{{ pricePerUnit | currency: 'INR' }} /</span>
+                        <span style="color: white; margin-right: 8px;">{{ pricePerUnit | currency: 'INR':'symbol':'1.0-0' }} /</span>
                         <select [ngModel]="selectedUnit" name="" id="" style="display: inline-block;"
                             (change)="onUnitChange($event)">
                             <option value="Sq Ft">Sq Ft</option>
@@ -170,7 +170,7 @@
                         <input type="range" id="priceRange" min="0" [max]="Maxprice" step="100"
                             [(ngModel)]="pricePerUnit" (input)="onPriceChange($event)" />
                         <div style="display: flex; align-items: center;margin-top: 5px;">
-                            <span style="color: white; margin-right: 8px;">{{ pricePerUnit | currency: 'INR' }} /</span>
+                            <span style="color: white; margin-right: 8px;">{{ pricePerUnit | currency: 'INR':'symbol':'1.0-0' }} /</span>
                             <select [ngModel]="selectedUnit" name="" id="" style="display: inline-block;"
                                 (change)="onUnitChange($event)">
                                 <option value="Sq Ft">Sq Ft</option>

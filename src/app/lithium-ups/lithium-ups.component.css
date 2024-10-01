@@ -205,6 +205,9 @@ section>.row {
     /*display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;*/
 }
+.features{
+    background-color: #f1f1f1;
+}
 
 .feature {
     display: flex;
@@ -219,20 +222,28 @@ section>.row {
 
 .feature-box {
     width: 100%;
-    background-color: #f1f1f1;
     height: 150px;
     text-align: center;
     transition: all 0.3s ease-in-out;
     border-radius: 8px;
+    background-color: white;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.3);
+    padding: 0 15px;
+    cursor: pointer;
 }
-
+.feature-box img{
+    width: 90px;
+    height: 90px;
+    margin-right: 10px;
+}
 .feature-title {
     font-size: 18px;
+    padding: 0;
+    margin: 10px 0 0 0;
+    line-height: 20px;
 }
 
 .feature-box:hover {
-    background-color: #007bff;
-    color: white;
     transform: translateY(-10px);
 }
 
@@ -377,6 +388,13 @@ section>.row {
 .specifications table td {
     font-size: 16px;
 }
+.table-section-heading{
+    background-color: #0042742f;
+    color: black;
+}
+.table-section-heading strong{
+    color: white;
+}
 
 .specifications table thead th {
     background-color: var(--primary-color);
@@ -439,6 +457,7 @@ section>.row {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     transition: transform 0.4s ease;
     width: 100%;
 }
@@ -611,6 +630,9 @@ section>.row {
         background-color: white;
         box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
     }
+    .product-slider-container {
+        height: 500px;
+    }
 }
 
 /* Media query for medium screens  */
@@ -638,6 +660,9 @@ section>.row {
         background-color: white;
         box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
     }
+    .product-slider-container {
+        height: 500px;
+    }
 }
 
 /* Media query for medium screens  */
@@ -646,13 +671,12 @@ section>.row {
         height: 400px;
         object-fit: cover;
     }
+    .product-slider-container {
+        height: 900px;
+    }
 
     .certification-slider .col-md-3 {
         margin: 20px 0;
-    }
-
-    .product-slider-container {
-        height: 400px;
     }
 
     .carousel-caption {
@@ -718,9 +742,8 @@ section>.row {
     .certification-slider .col-md-3 {
         margin: 20px 0;
     }
-
     .product-slider-container {
-        height: 400px;
+        height: 900px;
     }
 
     .carousel-caption {

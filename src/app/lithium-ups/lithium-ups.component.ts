@@ -111,22 +111,22 @@ export class LithiumUPSComponent implements OnInit {
     }
   ];
 
-  lithiumBatteryFeatures: string[] = [
-    "DSP based Pure Sine Wave UPS",
-    "20 KHz Noiseless Operation",
-    "More Efficient & Reduce Human Error",
-    "Resettable Circuit Breaker",
-    "LCD with Audible Alarm",
-    "Build-in Thermal Sensor",
-    "For Computer & Home Appliances",
-    "No Protruding Wires",
-    "No Fumes",
-    "All-in-one Integrated Design",
-    "Battery Life up to 10 Years",
-    "Zero Maintenance",
-    "Rapid Charging",
-    "Superior Performance",
-    "Space-saving Compact Design"
+  lithiumBatteryFeatures = [
+    { feature: "DSP based Pure Sine Wave UPS", img: "DSP.png" },
+    { feature: "20 KHz Noiseless Operation", img: "20hz.png" },
+    { feature: "More Efficient & Reduce Human Error", img: "smd_design.png" }, 
+    { feature: "Resettable Circuit Breaker", img: "circuit_breaker.png" },
+    { feature: "LCD with Audible Alarm", img: "audible_alaram.png" },
+    { feature: "Build-in Thermal Sensor", img: "thermal_sensor.png" },
+    { feature: "For Computer & Home Appliances", img: "computer_home.png" },
+    { feature: "No Protruding Wires", img: "protruding_wires.png" },
+    { feature: "No Fumes", img: "no_fumes.png" },
+    { feature: "All-in-one Integrated Design", img: "integrated_design.png" },
+    { feature: "Battery Life up to 10 Years", img: "battery_life.png" },
+    { feature: "Zero Maintenance", img: "maintanance.png" },
+    { feature: "Rapid Charging", img: "rapid_charging.png" },
+    { feature: "Superior Performance", img: "superior_performence.png" },
+    { feature: "Space-saving Compact Design", img: "compact_design.png" }
   ];
 
   batteryHighlights: { name: string, svg: string }[] = [

@@ -230,8 +230,8 @@
             </div>
             <div class="section-content">
                 <div class="highlights-container row">
-                    <div class="highlight col-lg-3 col-md-4 col-sm-12" *ngFor="let feature of batteryHighlights">
-                        <div class="highlight-box">
+                    <div class="highlight col-lg-3 col-md-4 col-sm-12" *ngFor="let feature of batteryHighlights;let i=index" >
+                        <div class="highlight-box animate__animated animate__zoomIn" [ngStyle]="{'animation-delay': (i * 0.15) + 's'}">
                             <div class="image-container">
                                 <img [src]="feature.svg" alt="" class="highlight-logo">
                             </div>
@@ -247,12 +247,20 @@
             <div class="section-title">
                 <h6>Features</h6>
             </div>
+            <!-- <div class="image-container">
+                <img src="products/battery/battery.jpeg" alt="UPS" class="img-responsive"
+                    style="width: 100%;height: auto;">
+            </div>-->
             <div class="section-content">
                 <div class="features-container row">
                     <div class="masonry-item col-lg-3 col-md-4 col-sm-12"
-                        *ngFor="let feature of lithiumBatteryFeatures">
-                        <div class="feature-box d-flex justify-content-center align-items-center">
-                            <h3 class="feature-title">{{feature}}</h3>
+                        *ngFor="let feature of lithiumBatteryFeatures;let i=index">
+                        <div class="feature-box d-flex flex-column justify-content-center align-items-center animate__animated animate__zoomIn"
+                            [ngStyle]="{'animation-delay': (i * 0.15) + 's'}">
+                            <div class="image-container">
+                                <img [src]="'products/battery/features/'+feature.img" alt="" class="img-responsive">
+                            </div>
+                            <h3 class="feature-title">{{feature.feature}}</h3>
                         </div>
                     </div>
                 </div>
@@ -440,6 +448,9 @@
                             <td>{{ specifications[0].capacity }}</td>
                         </tr>
                         <tr>
+                            <td colspan="3" class="table-section-heading">INPUT</td>
+                        </tr>
+                        <tr>
                             <td><strong>Rated AC Voltage</strong></td>
                             <td>
                                 {{ specifications[1].input.ratedACVoltage }}
@@ -467,6 +478,9 @@
                             </td>
                         </tr>
                         <tr>
+                            <td colspan="3" class="table-section-heading">BATTERY</td>
+                        </tr>
+                        <tr>
                             <td><strong>Chemistry</strong></td>
                             <td>{{ specifications[1].battery.chemistry }}</td>
                             <td>{{ specifications[0].battery.chemistry }}</td>
@@ -490,6 +504,9 @@
                             <td><strong>Low Voltage Protection</strong></td>
                             <td>{{ specifications[1].battery.lowVoltageProtection }}</td>
                             <td>{{ specifications[0].battery.lowVoltageProtection }}</td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" class="table-section-heading">OUTPUT</td>
                         </tr>
                         <tr>
                             <td><strong>Rated Voltage</strong></td>
@@ -525,6 +542,9 @@
                             <td><strong>Overload</strong></td>
                             <td>{{ specifications[1].output.overload }}</td>
                             <td>{{ specifications[0].output.overload }}</td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" class="table-section-heading">SYSTEM FEATURES</td>
                         </tr>
                         <tr>
                             <td><strong>Display</strong></td>
@@ -598,13 +618,39 @@
                 <h6>Product Images</h6>
             </div>
             <div class="product-slider-container">
-                <button class="prev" (click)="prevSlide()">&#10094; Prev</button>
+                <button class="prev" (click)="prevSlide()">&#10094;</button>
 
                 <div class="product-images">
-                    <a ><img *ngFor="let image of productImages; let i = index" [src]="image.src" [alt]="image.alt"
-                        [class.active]="i === currentSlideIndex" class="product-slide"></a>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <img *ngFor="let image of productImages; let i = index" [src]="image.src" [alt]="image.alt"
+                                [class.active]="i === currentSlideIndex" class="product-slide">
+                        </div>
+                        <div class="col-md-4">
+                            <img *ngFor="let image of productImages; let i = index" [src]="image.src" [alt]="image.alt"
+                                [class.active]="i === currentSlideIndex+1" class="product-slide">
+                        </div>
+                        <div class="col-md-4">
+                            <img *ngFor="let image of productImages; let i = index" [src]="image.src" [alt]="image.alt"
+                                [class.active]="i === currentSlideIndex+2" class="product-slide">
+                        </div>
+                    </div>
+                    <div class="row d-none d-md-flex">
+                        <div class="col-md-4">
+                            <img *ngFor="let image of productImages; let i = index" [src]="image.src" [alt]="image.alt"
+                                [class.active]="i === currentSlideIndex+3" class="product-slide">
+                        </div>
+                        <div class="col-md-4">
+                            <img *ngFor="let image of productImages; let i = index" [src]="image.src" [alt]="image.alt"
+                                [class.active]="i === currentSlideIndex+4" class="product-slide">
+                        </div>
+                        <div class="col-md-4">
+                            <img *ngFor="let image of productImages; let i = index" [src]="image.src" [alt]="image.alt"
+                                [class.active]="i === currentSlideIndex+5" class="product-slide">
+                        </div>
+                    </div>
                 </div>
-                <button class="next" (click)="nextSlide()">Next &#10095;</button>
+                <button class="next" (click)="nextSlide()">&#10095;</button>
             </div>
             <!--<div class="additional-images row m-0">
                 <div class="col-xl-4 d-none d-xl-block">
