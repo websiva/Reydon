@@ -14,9 +14,34 @@
                         aria-label="Slide 4"></button>
                     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4"
                         aria-label="Slide 5"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="5"
+                        aria-label="Slide 6"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="6"
+                        aria-label="Slide 7"></button>
                 </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
+                        <img src="products/battery/slider-image/industrial_applications.jpg"
+                            class="d-block w-100 img-responsive" alt="...">
+                        <div class="carousel-caption">
+                            <div class="content-box">
+                                <h5>Industrial Applications</h5>
+                                <p class="d-none d-md-block">The next generation of electric vehicle batteries, with
+                                    greater range and improved safety!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="products/battery/slider-image/EV.jpg" class="d-block w-100 img-responsive" alt="...">
+                        <div class="carousel-caption">
+                            <div class="content-box">
+                                <h5>Electric Vehicle Battery</h5>
+                                <p class="d-none d-md-block">Driven by technological advances! Energy Storage for a
+                                    Better World</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
                         <img src="products/battery/slider-image/power_protection.jpg"
                             class="d-block w-100 img-responsive" alt="...">
                         <div class="carousel-caption">
@@ -131,8 +156,58 @@
             </div>
         </div>
     </section>
-
-    <section class="certification-slider">
+    <section class="about-section-card">
+        <div class="row cards-container">
+            <div class="about-card col-xl-4">
+                <div class="card-content">
+                    <div class="image-container">
+                        <img src="https://eeepvtltd.com/wp-content/uploads/2021/08/develop.jpg" alt="">
+                        <img src="" alt="" class="logo">
+                    </div>
+                    <div class="card-text-section">
+                        <h6 class="card-title">Develop</h6>
+                        <p class="card-description">We develop custom batteries which meet the needs of a wide range of
+                            devices.
+                            High safety and capacity are the strength of our batteries. We continue to develop better
+                            battery
+                            materials and provide efficient manufacturing processes to develop better battery control
+                            technology.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="about-card col-xl-4">
+                <div class="card-content">
+                    <div class="image-container">
+                        <img src="https://eeepvtltd.com/wp-content/uploads/2021/08/grow.jpg" alt="">
+                        <img src="" alt="" class="logo">
+                    </div>
+                    <div class="card-text-section">
+                        <h6 class="card-title">Grow</h6>
+                        <p class="card-description">We grow with technology! Our expert engineers can engineer a
+                            high-quality custom Li-ion and LiFePO4 battery pack that incorporates all the features that
+                            your
+                            application requires. </p>
+                    </div>
+                </div>
+            </div>
+            <div class="about-card col-xl-4">
+                <div class="card-content">
+                    <div class="image-container">
+                        <img src="https://eeepvtltd.com/wp-content/uploads/2021/08/exceed-1.jpg" alt="">
+                        <img src="" alt="" class="logo">
+                    </div>
+                    <div class="card-text-section">
+                        <h6 class="card-title">Exceed</h6>
+                        <p class="card-description">We provide in-depth battery application engineering expertise, with
+                            quality and product safety. We strive to work with you to develop the best performing
+                            battery
+                            with our long-standing commitment to customer service, exceeding your expectations.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--<section class="certification-slider">
         <div class="row">
             <div class="col-md-3">
                 <img src="products/battery/RoHS-Logo.png" alt="">
@@ -145,6 +220,25 @@
             </div>
             <div class="col-md-3">
                 <img src="products/battery/iso-14001-2015.png" alt="">
+            </div>
+        </div>
+    </section>-->
+    <section class="highlights">
+        <div class="row">
+            <div class="section-title">
+                <h6>Highlights</h6>
+            </div>
+            <div class="section-content">
+                <div class="highlights-container row">
+                    <div class="highlight col-lg-3 col-md-4 col-sm-12" *ngFor="let feature of batteryHighlights">
+                        <div class="highlight-box">
+                            <div class="image-container">
+                                <img [src]="feature.svg" alt="" class="highlight-logo">
+                            </div>
+                            <p class="highlight-name">{{feature.name}}</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -165,19 +259,162 @@
             </div>
         </div>
     </section>
-    <section class="highlights">
-        <div class="row">
-            <div class="section-title">
-                <h6>Highlights</h6>
-            </div>
-            <div class="section-content">
-                <div class="highlights-container row">
-                    <div class="highlight col-lg-3 col-md-4 col-sm-12" *ngFor="let feature of batteryHighlights">
-                        <div class="highlight-box">
-                            <img [src]="feature.svg" alt="" class="highlight-logo">
-                            <p class="highlight-name">{{feature.name}}</p>
+    <section class="user-review">
+        <div class="review-section">
+            <div id="userReview" class="carousel slide" data-bs-interval="6000" data-bs-ride="carousel">
+                <!-- Set the interval to 6000 ms (6 seconds) -->
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#userReview" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#userReview" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#userReview" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#userReview" data-bs-slide-to="3"
+                        aria-label="Slide 4"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="carousel-caption">
+                            <div class="content-box">
+                                <svg fill="#00adef" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 98.829 98.829"
+                                    xml:space="preserve">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier">
+                                        <g>
+                                            <g>
+                                                <path
+                                                    d="M96.76,41.603C91.511,22.831,78.562,9.204,65.975,9.204c-1.011,0-2.021,0.088-3.005,0.262 c-0.558,0.098-1.046,0.426-1.348,0.902c-0.301,0.479-0.386,1.061-0.233,1.605l2.591,9.268c0.25,0.895,1.113,1.5,2.01,1.459 l0.206-0.004c4.668,0,13.199,6.996,17.548,22.545c0.172,0.617,0.335,1.248,0.492,1.906c-4.882-2.416-10.706-2.975-15.98-1.506 C56.358,48.97,49.388,61.356,52.714,73.252c2.696,9.639,11.563,16.373,21.563,16.373c2.037,0,4.071-0.281,6.046-0.834 c7.846-2.193,13.745-8.707,16.611-18.338C99.521,61.764,99.456,51.249,96.76,41.603z">
+                                                </path>
+                                                <path
+                                                    d="M14.088,9.206c-1.009,0-2.02,0.086-3.003,0.26c-0.557,0.096-1.046,0.426-1.347,0.902 c-0.301,0.479-0.386,1.061-0.234,1.605l2.592,9.268c0.25,0.895,1.097,1.5,2.01,1.459l0.204-0.004 c4.668,0,13.2,6.996,17.549,22.545c0.173,0.621,0.336,1.252,0.492,1.906c-4.884-2.416-10.706-2.975-15.98-1.506 C4.475,48.97-2.497,61.356,0.831,73.252c2.696,9.639,11.563,16.373,21.563,16.373c2.037,0,4.071-0.281,6.047-0.834 c7.845-2.193,13.744-8.707,16.611-18.338c2.586-8.689,2.522-19.205-0.175-28.852C39.625,22.831,26.678,9.206,14.088,9.206z">
+                                                </path>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+                                <p>Our collaboration with EEE Energy Private Limited has greatly benefited our clients
+                                    in achieving their energy efficiency goals and ensuring reliable power backup
+                                    solutions for various applications. The remarkable battery packs and power backup
+                                    solutions we have sourced from EEE Energy Private Limited have not only demonstrated
+                                    exceptional A performance but have also proven to be highly adaptable to the unique
+                                    requirements of our clients.</p>
+                                <img src="https://eeepvtltd.com/wp-content/uploads/2021/08/7.jpeg" alt=""
+                                    class="company-logo">
+                                <h6 class="company-name">RA Energy Tech</h6>
+                            </div>
                         </div>
                     </div>
+                    <div class="carousel-item">
+                        <div class="carousel-caption">
+                            <div class="content-box">
+                                <svg fill="#00adef" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 98.829 98.829"
+                                    xml:space="preserve">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier">
+                                        <g>
+                                            <g>
+                                                <path
+                                                    d="M96.76,41.603C91.511,22.831,78.562,9.204,65.975,9.204c-1.011,0-2.021,0.088-3.005,0.262 c-0.558,0.098-1.046,0.426-1.348,0.902c-0.301,0.479-0.386,1.061-0.233,1.605l2.591,9.268c0.25,0.895,1.113,1.5,2.01,1.459 l0.206-0.004c4.668,0,13.199,6.996,17.548,22.545c0.172,0.617,0.335,1.248,0.492,1.906c-4.882-2.416-10.706-2.975-15.98-1.506 C56.358,48.97,49.388,61.356,52.714,73.252c2.696,9.639,11.563,16.373,21.563,16.373c2.037,0,4.071-0.281,6.046-0.834 c7.846-2.193,13.745-8.707,16.611-18.338C99.521,61.764,99.456,51.249,96.76,41.603z">
+                                                </path>
+                                                <path
+                                                    d="M14.088,9.206c-1.009,0-2.02,0.086-3.003,0.26c-0.557,0.096-1.046,0.426-1.347,0.902 c-0.301,0.479-0.386,1.061-0.234,1.605l2.592,9.268c0.25,0.895,1.097,1.5,2.01,1.459l0.204-0.004 c4.668,0,13.2,6.996,17.549,22.545c0.173,0.621,0.336,1.252,0.492,1.906c-4.884-2.416-10.706-2.975-15.98-1.506 C4.475,48.97-2.497,61.356,0.831,73.252c2.696,9.639,11.563,16.373,21.563,16.373c2.037,0,4.071-0.281,6.047-0.834 c7.845-2.193,13.744-8.707,16.611-18.338c2.586-8.689,2.522-19.205-0.175-28.852C39.625,22.831,26.678,9.206,14.088,9.206z">
+                                                </path>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+                                <p>The Lithium-Ion and Lithium Ferro Phosphate battery packs they offer are at the
+                                    forefront of cutting-edge energy solutions, providing our customers with reliable,
+                                    high- performance options for their diverse applications.</p>
+                                <img src="https://eeepvtltd.com/wp-content/uploads/2021/08/5.jpeg" alt=""
+                                    class="company-logo">
+                                <h6 class="company-name">Duro Power</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="carousel-caption">
+                            <div class="content-box">
+                                <svg fill="#00adef" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 98.829 98.829"
+                                    xml:space="preserve">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier">
+                                        <g>
+                                            <g>
+                                                <path
+                                                    d="M96.76,41.603C91.511,22.831,78.562,9.204,65.975,9.204c-1.011,0-2.021,0.088-3.005,0.262 c-0.558,0.098-1.046,0.426-1.348,0.902c-0.301,0.479-0.386,1.061-0.233,1.605l2.591,9.268c0.25,0.895,1.113,1.5,2.01,1.459 l0.206-0.004c4.668,0,13.199,6.996,17.548,22.545c0.172,0.617,0.335,1.248,0.492,1.906c-4.882-2.416-10.706-2.975-15.98-1.506 C56.358,48.97,49.388,61.356,52.714,73.252c2.696,9.639,11.563,16.373,21.563,16.373c2.037,0,4.071-0.281,6.046-0.834 c7.846-2.193,13.745-8.707,16.611-18.338C99.521,61.764,99.456,51.249,96.76,41.603z">
+                                                </path>
+                                                <path
+                                                    d="M14.088,9.206c-1.009,0-2.02,0.086-3.003,0.26c-0.557,0.096-1.046,0.426-1.347,0.902 c-0.301,0.479-0.386,1.061-0.234,1.605l2.592,9.268c0.25,0.895,1.097,1.5,2.01,1.459l0.204-0.004 c4.668,0,13.2,6.996,17.549,22.545c0.173,0.621,0.336,1.252,0.492,1.906c-4.884-2.416-10.706-2.975-15.98-1.506 C4.475,48.97-2.497,61.356,0.831,73.252c2.696,9.639,11.563,16.373,21.563,16.373c2.037,0,4.071-0.281,6.047-0.834 c7.845-2.193,13.744-8.707,16.611-18.338c2.586-8.689,2.522-19.205-0.175-28.852C39.625,22.831,26.678,9.206,14.088,9.206z">
+                                                </path>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+                                <p>The innovative battery packs and power backup solutions provided by EEE Energy
+                                    Private Limited have significantly enhanced the quality and competitiveness of our
+                                    electric vehicles.</p>
+                                <img src="https://eeepvtltd.com/wp-content/uploads/2021/08/8.jpeg" alt=""
+                                    class="company-logo">
+                                <h6 class="company-name">Maruthisan</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="carousel-caption">
+                            <div class="content-box">
+                                <svg fill="#00adef" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 98.829 98.829"
+                                    xml:space="preserve">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier">
+                                        <g>
+                                            <g>
+                                                <path
+                                                    d="M96.76,41.603C91.511,22.831,78.562,9.204,65.975,9.204c-1.011,0-2.021,0.088-3.005,0.262 c-0.558,0.098-1.046,0.426-1.348,0.902c-0.301,0.479-0.386,1.061-0.233,1.605l2.591,9.268c0.25,0.895,1.113,1.5,2.01,1.459 l0.206-0.004c4.668,0,13.199,6.996,17.548,22.545c0.172,0.617,0.335,1.248,0.492,1.906c-4.882-2.416-10.706-2.975-15.98-1.506 C56.358,48.97,49.388,61.356,52.714,73.252c2.696,9.639,11.563,16.373,21.563,16.373c2.037,0,4.071-0.281,6.046-0.834 c7.846-2.193,13.745-8.707,16.611-18.338C99.521,61.764,99.456,51.249,96.76,41.603z">
+                                                </path>
+                                                <path
+                                                    d="M14.088,9.206c-1.009,0-2.02,0.086-3.003,0.26c-0.557,0.096-1.046,0.426-1.347,0.902 c-0.301,0.479-0.386,1.061-0.234,1.605l2.592,9.268c0.25,0.895,1.097,1.5,2.01,1.459l0.204-0.004 c4.668,0,13.2,6.996,17.549,22.545c0.173,0.621,0.336,1.252,0.492,1.906c-4.884-2.416-10.706-2.975-15.98-1.506 C4.475,48.97-2.497,61.356,0.831,73.252c2.696,9.639,11.563,16.373,21.563,16.373c2.037,0,4.071-0.281,6.047-0.834 c7.845-2.193,13.744-8.707,16.611-18.338c2.586-8.689,2.522-19.205-0.175-28.852C39.625,22.831,26.678,9.206,14.088,9.206z">
+                                                </path>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+                                <p>EEE Energy Private Limited's pioneering battery technology and unwavering commitment
+                                    to innovation have played an instrumental role in our ability to provide Electric
+                                    Vehicles that excel in performance, efficiency, and reliability. The Lithium-Ion and
+                                    Lithium Ferro Phosphate battery packs they offer have consistently surpassed our
+                                    expectations, enabling us to deliver state-of-the-art Electric Vehicles to our
+                                    customers.</p>
+                                <img src="https://eeepvtltd.com/wp-content/uploads/2021/08/eco-dynaamic.jpeg" alt=""
+                                    class="company-logo">
+                                <h6 class="company-name">Eco Dynaamic</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="banner-content-1">
+        <div class="row">
+            <div class="content col-md-6">
+                <h4>Most trustworthy source of power to the world</h4>
+                <p>We are the industry leader in manufacturing Li-ion and LiFePO4 custom batteries for: solar power and
+                    renewable energy. Few of our batteries include UPS/Inverter battery, Energy Storage System
+                    batteries, Electric Vehicle Battery and Automotive Battery.</p>
+            </div>
+            <div class="image col-md-6">
+                <div class="image-container">
+                    <img src="https://eeepvtltd.com/wp-content/uploads/2021/08/adirath_high_v2_09-06-2-pdf.jpg" alt="">
                 </div>
             </div>
         </div>
@@ -202,11 +439,6 @@
                             <td>{{ specifications[1].capacity }}</td>
                             <td>{{ specifications[0].capacity }}</td>
                         </tr>
-
-                        <!-- Input Section -->
-                        <!--<tr>
-                            <td colspan="3"><strong class="table-section-header">Input</strong></td>
-                        </tr>-->
                         <tr>
                             <td><strong>Rated AC Voltage</strong></td>
                             <td>
@@ -234,11 +466,6 @@
                                 {{ specifications[0].input.frequencyRange }}
                             </td>
                         </tr>
-
-                        <!-- Battery Section -->
-                        <!--<tr>
-                            <td colspan="3"><strong class="table-section-header">Battery</strong></td>
-                        </tr>-->
                         <tr>
                             <td><strong>Chemistry</strong></td>
                             <td>{{ specifications[1].battery.chemistry }}</td>
@@ -264,11 +491,6 @@
                             <td>{{ specifications[1].battery.lowVoltageProtection }}</td>
                             <td>{{ specifications[0].battery.lowVoltageProtection }}</td>
                         </tr>
-
-                        <!-- Output Section -->
-                        <!--<tr>
-                            <td colspan="3"><strong class="table-section-header">Output</strong></td>
-                        </tr>-->
                         <tr>
                             <td><strong>Rated Voltage</strong></td>
                             <td>{{ specifications[1].output.ratedVoltage }}</td>
@@ -304,11 +526,6 @@
                             <td>{{ specifications[1].output.overload }}</td>
                             <td>{{ specifications[0].output.overload }}</td>
                         </tr>
-
-                        <!-- System Features Section -->
-                        <!--<tr>
-                            <td colspan="3"><strong class="table-section-header">System Features</strong></td>
-                        </tr>-->
                         <tr>
                             <td><strong>Display</strong></td>
                             <td>{{ specifications[1].systemFeatures.display }}</td>
@@ -384,12 +601,25 @@
                 <button class="prev" (click)="prevSlide()">&#10094; Prev</button>
 
                 <div class="product-images">
-                    <img *ngFor="let image of productImages; let i = index" [src]="image.src" [alt]="image.alt"
-                        [class.active]="i === currentSlideIndex" class="product-slide">
+                    <a ><img *ngFor="let image of productImages; let i = index" [src]="image.src" [alt]="image.alt"
+                        [class.active]="i === currentSlideIndex" class="product-slide"></a>
                 </div>
-
                 <button class="next" (click)="nextSlide()">Next &#10095;</button>
             </div>
+            <!--<div class="additional-images row m-0">
+                <div class="col-xl-4 d-none d-xl-block">
+                    <a><img *ngFor="let image of productImages; let i = index" [src]="image.src" [alt]="image.alt"
+                    [class.active]="i === currentSlideIndex+1" class="product-slide"></a>
+                </div>
+                <div class="col-xl-4 d-none d-xl-block">
+                    <a><img *ngFor="let image of productImages; let i = index" [src]="image.src" [alt]="image.alt"
+                    [class.active]="i === currentSlideIndex+2" class="product-slide"></a>
+                </div>
+                <div class="col-xl-4 d-none d-xl-block">
+                    <a (click)="changeImage(currentSlideIndex+3)"><img *ngFor="let image of productImages; let i = index" [src]="image.src" [alt]="image.alt"
+                    [class.active]="i === currentSlideIndex+3" class="product-slide"></a>
+                </div>
+            </div>-->
         </div>
     </section>
     <section class="certificates">

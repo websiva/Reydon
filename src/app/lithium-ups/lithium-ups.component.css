@@ -35,11 +35,11 @@ section>.row {
     position: relative;
 }
 
-.carousel-item {
+.banner .carousel-item {
     position: relative;
 }
 
-.carousel-item::before {
+.banner .carousel-item::before {
     content: '';
     /* Required for pseudo-element */
     position: absolute;
@@ -47,25 +47,25 @@ section>.row {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
     /* Adjust colors as needed */
     z-index: 1;
     /* Ensure it is above the image but below the caption */
 }
 
-.carousel-item img {
+.banner .carousel-item img {
     height: 750px;
     object-fit: cover;
 }
 
-.carousel-caption {
-    width: 50%;
+.banner .carousel-caption {
+    width: 70%;
     height: 60%;
     margin: 0 auto;
     z-index: 10;
 }
 
-.content-box {
+.banner .content-box {
     color: white;
     border-radius: 10px;
     /* Rounded corners */
@@ -73,45 +73,29 @@ section>.row {
     /* Add some padding */
 }
 
-.overlay {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 80%;
-    /* Adjust size as per need */
-    height: 100px;
-    /* Adjust height as needed */
-    background-color: rgba(0, 0, 0, 0.5);
-    /* Dark overlay with transparency */
-    z-index: 1;
-    /* Below text */
-    border-radius: 10px;
-    /* Smooth corners for the overlay */
-}
-
 .text-container {
     z-index: 2;
     color: white;
 }
 
-.carousel-caption h5,
-.carousel-caption p {}
-
-.carousel-caption h5 {
-    font-size: 35px;
+.banner .carousel-caption h5 {
+    font-size: 70px;
     font-weight: 500;
+    line-height: 80px;
 }
+
 /*********************product name***************/
-.product-name{
+.product-name {
     padding: 40px 0 0 0;
+    background-color: #f7f8fa;
 }
-.product-name h3{
+
+.product-name h3 {
     font-size: 35px;
     font-weight: 500;
     width: 100%;
     text-align: left;
-    color:var(--primary-color);
+    color: var(--primary-color);
 }
 
 /******************************About product***************/
@@ -119,7 +103,8 @@ section>.row {
     width: 100%;
     display: flex;
     justify-content: center;
-    padding: 20px 0 40px 20px;
+    padding: 20px 0 80px 20px;
+    background-color: #f7f8fa;
 }
 
 .about-product .row {
@@ -146,6 +131,57 @@ section>.row {
     text-align: justify;
 }
 
+/********************bout-section-card******************/
+.about-section-card{
+    padding: 0;
+    background-color: #f1f1f1;
+}
+.cards-container{
+    height: auto;
+}
+.about-section-card .about-card{
+    padding: 20px 60px;
+    position: relative;
+    height: 450px;
+}
+.about-section-card .about-card .card-content{
+    position: absolute;
+    top: -10%;
+    width: 350px;
+    height: 100%;
+    background-color: white;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+}
+.about-section-card .about-card .image-container{
+    width: 100%;
+    height: 200px;
+}
+.about-section-card .about-card .image-container img:nth-child(1){
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.about-section-card .about-card .image-container img:nth-child(2){
+    position: absolute;
+}
+.about-section-card .about-card .card-text-section{
+    width: 100%;
+    height: 250px;
+}
+.about-section-card .about-card .card-title{
+    padding: 5px 15px;
+    font-size: 26px;
+    color: var(--primary-color);
+    font-weight: 500;
+}
+.about-section-card .about-card .card-description{
+    padding:0 15px 5px 15px;
+    font-size: 16px;
+    font-weight: 300;
+    text-align: justify;
+}
 /******************Certification slider************/
 .certification-slider {
     width: 100%;
@@ -202,7 +238,7 @@ section>.row {
 
 /**************************Hightlights****************/
 .highlights {
-    background-color: #f7f8fa;
+    /*background-color: #f7f8fa;*/
 }
 
 .highlight {}
@@ -216,22 +252,117 @@ section>.row {
     margin: 20px;
     border-radius: 8px;
     transition: 0.25s all ease-in-out;
+    padding: 10px 0;
 }
 
 .highlight-box:hover {
     transform: scale(1.1);
 }
 
+.highlight-box .image-container {
+    width: 100px;
+    height: 100px;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 4px solid var(--button-color);
+}
+
 .highlight img {
-    width: 75px;
-    height: 75px;
-    margin: 20px;
-    border-radius: 12px;
+    width: 50px;
+    height: 50px;
 }
 
 .highlight p {
     font-size: 20px;
     margin-top: 20px;
+}
+
+/************************User review**************/
+.user-review {
+    padding: 0;
+}
+
+.review-section {
+    width: 100%;
+    position: relative;
+    background-color: black;
+    padding: 0 0 50px 0;
+}
+
+.user-review .carousel-item {
+    width: 100%;
+    height: 425px;
+}
+
+.review-section .carousel-caption {
+    height: 100%;
+    padding: auto 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.review-section .carousel-caption .content-box {}
+
+.review-section .carousel-caption svg {
+    width: 40px;
+    height: 40px;
+    margin: 0 0 30px 0;
+}
+
+.review-section .carousel-caption img {
+    width: 40px;
+    height: 40px;
+    margin: 5px 0;
+    border-radius: 50%;
+}
+
+.review-section .carousel-caption p {
+    color: white;
+    font-size: 18px;
+    font-family: "Poppins", system-ui;
+    font-weight: 300;
+    text-align: center;
+}
+
+.review-section .carousel-caption .company-name {
+    font-size: 22px;
+    color: white;
+    font-weight: 500;
+}
+
+/*************************banner-content-1***************/
+.banner-content-1 {
+    padding: 0;
+}
+
+.banner-content-1 .content {
+    padding: 40px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.banner-content-1 .content h4 {
+    color: var(--primary-color);
+}
+.banner-content-1 .content p {
+    text-align: justify;
+}
+.banner-content-1 .image-container {
+    position: relative;
+    height: 400px;
+}
+
+.banner-content-1 .image-container img {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    top: -8%;
 }
 
 /**********************Specifications****************/
@@ -290,6 +421,9 @@ section>.row {
 }
 
 /************************Product image slider***************/
+.product-images{
+    background-color: #f1f1f1;
+}
 .product-slider-container {
     position: relative;
     width: 100%;
@@ -298,10 +432,13 @@ section>.row {
     display: flex;
     align-items: center;
     height: 900px;
+    padding: 0;
 }
 
 .product-images {
     display: flex;
+    justify-content: center;
+    align-items: center;
     transition: transform 0.4s ease;
     width: 100%;
 }
@@ -348,7 +485,13 @@ section>.row {
     background-color: rgba(0, 0, 0, 0.8);
     color: white;
 }
+.additional-images{
+    padding: 0;
+}
 
+.additional-images .col-xl-4:not(:last-child){
+
+}
 /*******************Certificates****************/
 .certificates {
     background-color: #f7f8fa;
@@ -419,9 +562,10 @@ section>.row {
 }
 
 /**************************faq-section*****************/
-.faq-section{
+.faq-section {
     background-color: #f7f8fa;
 }
+
 .faq-section .row {
     width: 100%;
     max-width: 1400px;
@@ -453,7 +597,21 @@ section>.row {
 
 
 /* Media query for medium screens */
-@media (max-width: 1200px) {}
+@media (max-width: 1200px) {
+        .about-section-card .about-card{
+        padding: 20px;
+        position: relative;
+        height: 450px;
+    }
+    .about-section-card .about-card .card-content{
+        position: relative;
+        top: 0%;
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+    }
+}
 
 /* Media query for medium screens  */
 @media (max-width: 992px) {
@@ -462,9 +620,23 @@ section>.row {
         height: auto;
         margin: auto 0;
     }
-    .carousel-caption h5{
+
+    .carousel-caption h5 {
         font-size: 28px;
         font-weight: 400;
+    }
+    .about-section-card .about-card{
+        padding: 20px;
+        position: relative;
+        height: 450px;
+    }
+    .about-section-card .about-card .card-content{
+        position: relative;
+        top: 0%;
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
     }
 }
 
@@ -492,8 +664,53 @@ section>.row {
     .carousel-caption h5 {
         font-size: 28px;
         font-weight: 400;
+        line-height: 32px;
     }
 
+    .banner-content-1 .image-container img {
+        position: relative;
+        top: 0%;
+    }
+
+    .user-review .carousel-item {
+        width: 100%;
+        height: 650px;
+    }
+
+    .review-section .carousel-caption p {
+        color: white;
+        font-size: 16px;
+        font-family: "Poppins", system-ui;
+        font-weight: 300;
+        text-align: center;
+    }
+
+    .review-section .carousel-caption .company-name {
+        font-size: 20px;
+        color: white;
+    }
+    .banner-content-1 .content h4 {
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 28px;
+    }
+    .banner-content-1 .image-container {
+        position: relative;
+        height: auto;
+    }
+    .about-section-card .about-card{
+        padding: 20px;
+        position: relative;
+        height: 450px;
+    }
+    .about-section-card .about-card .card-content{
+        position: relative;
+        top: 0%;
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+    }
 }
 
 /* Media query for small screens  */
@@ -515,5 +732,50 @@ section>.row {
     .carousel-caption h5 {
         font-size: 28px;
         font-weight: 400;
+        line-height: 32px;
+    }
+
+    .banner-content-1 .image-container img {
+        position: relative;
+        top: 0%;
+    }
+    .user-review .carousel-item {
+        width: 100%;
+        height: 650px;
+    }
+
+    .review-section .carousel-caption p {
+        color: white;
+        font-size: 16px;
+        font-family: "Poppins", system-ui;
+        font-weight: 300;
+        text-align: center;
+    }
+
+    .review-section .carousel-caption .company-name {
+        font-size: 20px;
+        color: white;
+    }
+    .banner-content-1 .content h4 {
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 28px;
+    }
+    .banner-content-1 .image-container {
+        position: relative;
+        height: auto;
+    }
+    .about-section-card .about-card{
+        padding: 20px;
+        position: relative;
+        height: 450px;
+    }
+    .about-section-card .about-card .card-content{
+        position: relative;
+        top: 0%;
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
     }
 }
