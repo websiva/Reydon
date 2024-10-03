@@ -25,68 +25,82 @@ section>.row {
     font-weight: 500;
 }
 
-/*********************************banner************/
-.banner {
+/***********************************/
+/* Basic Swiper container styles */
+.swiper {
     padding: 0;
 }
 
-.banner-section {
+swiper-container {
     width: 100%;
-    position: relative;
+    height: 750px;
 }
 
-.banner .carousel-item {
+.swiper-slide {
+    height: 100%;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
-.banner .carousel-item::before {
-    content: '';
-    /* Required for pseudo-element */
+.slide-content {
+    height: 100%;
+}
+
+.bg-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Ensures the image covers the entire slide */
     position: absolute;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
-    /* Adjust colors as needed */
     z-index: 1;
-    /* Ensure it is above the image but below the caption */
+    /* Places the image in the background */
 }
 
-.banner .carousel-item img {
-    height: 750px;
-    object-fit: cover;
-}
-
-.banner .carousel-caption {
-    width: 70%;
-    height: 60%;
-    margin: 0 auto;
-    z-index: 10;
-}
-
-.banner .content-box {
-    color: white;
-    border-radius: 10px;
-    /* Rounded corners */
-    padding: 20px;
-    /* Add some padding */
-}
-
-.text-container {
+.swiper .overlay {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
     z-index: 2;
+    /* Ensures the text appears on top of the background */
     color: white;
 }
 
-.banner .carousel-caption h5 {
+
+.swiper .title {
+    width: 75%;
     font-size: 70px;
     font-weight: 500;
-    line-height: 80px;
+    margin-bottom: 20px;
+    letter-spacing: normal;
+    text-align: center;
 }
-.banner .carousel-caption p {
-    width: 65%;
-    margin: 0 auto;
-    font-size: 18px;
+
+.swiper .subtitle {
+    width: 40%;
+    font-size: 1.25rem;
+    font-weight: 300;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.blur-background {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+    z-index: 1;
+    /* Ensure it is above the image but below the caption */
 }
 
 /*********************product name***************/
@@ -135,19 +149,22 @@ section>.row {
 }
 
 /********************bout-section-card******************/
-.about-section-card{
+.about-section-card {
     padding: 0;
     background-color: #f1f1f1;
 }
-.cards-container{
+
+.cards-container {
     height: auto;
 }
-.about-section-card .about-card{
+
+.about-section-card .about-card {
     padding: 20px 60px;
     position: relative;
     height: 450px;
 }
-.about-section-card .about-card .card-content{
+
+.about-section-card .about-card .card-content {
     position: absolute;
     top: -10%;
     width: 350px;
@@ -155,36 +172,43 @@ section>.row {
     background-color: white;
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
 }
-.about-section-card .about-card .image-container{
+
+.about-section-card .about-card .image-container {
     width: 100%;
     height: 200px;
 }
-.about-section-card .about-card .image-container img:nth-child(1){
+
+.about-section-card .about-card .image-container img:nth-child(1) {
     position: relative;
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center;
 }
-.about-section-card .about-card .image-container img:nth-child(2){
+
+.about-section-card .about-card .image-container img:nth-child(2) {
     position: absolute;
 }
-.about-section-card .about-card .card-text-section{
+
+.about-section-card .about-card .card-text-section {
     width: 100%;
     height: 250px;
 }
-.about-section-card .about-card .card-title{
+
+.about-section-card .about-card .card-title {
     padding: 5px 15px;
     font-size: 26px;
     color: var(--primary-color);
     font-weight: 500;
 }
-.about-section-card .about-card .card-description{
-    padding:0 15px 5px 15px;
+
+.about-section-card .about-card .card-description {
+    padding: 0 15px 5px 15px;
     font-size: 16px;
     font-weight: 300;
     text-align: justify;
 }
+
 /******************Certification slider************/
 .certification-slider {
     width: 100%;
@@ -204,7 +228,7 @@ section>.row {
 }
 
 /***************Features***************************/
-.features{
+.features {
     background-color: #f1f1f1;
 }
 
@@ -230,15 +254,18 @@ section>.row {
     padding: 0 15px;
     cursor: pointer;
 }
-.feature-box .image-container{
+
+.feature-box .image-container {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.feature-box img{
+
+.feature-box img {
     width: 70px;
     height: 70px;
 }
+
 .feature-title {
     font-size: 18px;
     padding: 0;
@@ -353,12 +380,15 @@ section>.row {
     justify-content: center;
     align-items: flex-start;
 }
+
 .banner-content-1 .content h4 {
     color: var(--primary-color);
 }
+
 .banner-content-1 .content p {
     text-align: justify;
 }
+
 .banner-content-1 .image-container {
     position: relative;
     height: 400px;
@@ -381,11 +411,13 @@ section>.row {
 .specifications table td {
     font-size: 16px;
 }
-.table-section-heading{
+
+.table-section-heading {
     background-color: #0042742f;
     color: black;
 }
-.table-section-heading strong{
+
+.table-section-heading strong {
     color: white;
 }
 
@@ -440,9 +472,10 @@ section>.row {
 }
 
 /************************Product image slider***************/
-.product-images{
+.product-images {
     background-color: #f1f1f1;
 }
+
 .product-slider-container {
     position: relative;
     width: 100%;
@@ -463,10 +496,11 @@ section>.row {
     width: 100%;
 }
 
-.product-images .row{
+.product-images .row {
     width: 100%;
 }
-.product-images .image-container{
+
+.product-images .image-container {
     width: 100%;
     height: 400px;
     padding: 20px;
@@ -516,13 +550,13 @@ section>.row {
     background-color: rgba(0, 0, 0, 0.8);
     color: white;
 }
-.additional-images{
+
+.additional-images {
     padding: 0;
 }
 
-.additional-images .col-xl-4:not(:last-child){
+.additional-images .col-xl-4:not(:last-child) {}
 
-}
 /*******************Certificates****************/
 .certificates {
     background-color: #f7f8fa;
@@ -629,12 +663,13 @@ section>.row {
 
 /* Media query for medium screens */
 @media (max-width: 1200px) {
-        .about-section-card .about-card{
+    .about-section-card .about-card {
         padding: 20px;
         position: relative;
         height: 450px;
     }
-    .about-section-card .about-card .card-content{
+
+    .about-section-card .about-card .card-content {
         position: relative;
         top: 0%;
         width: 100%;
@@ -642,6 +677,7 @@ section>.row {
         background-color: white;
         box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
     }
+
     .product-slider-container {
         height: 500px;
     }
@@ -649,22 +685,29 @@ section>.row {
 
 /* Media query for medium screens  */
 @media (max-width: 992px) {
-    .carousel-caption {
-        width: auto;
-        height: auto;
-        margin: auto 0;
+    swiper-container {
+        width: 100%;
+        height: 350px;
     }
 
-    .carousel-caption h5 {
+    .swiper .title {
+        width: 80%;
         font-size: 28px;
         font-weight: 400;
+        line-height: 32px;
     }
-    .about-section-card .about-card{
+
+    .swiper .subtitle {
+        width: 60%;
+    }
+
+    .about-section-card .about-card {
         padding: 20px;
         position: relative;
         height: 450px;
     }
-    .about-section-card .about-card .card-content{
+
+    .about-section-card .about-card .card-content {
         position: relative;
         top: 0%;
         width: 100%;
@@ -672,6 +715,7 @@ section>.row {
         background-color: white;
         box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
     }
+
     .product-slider-container {
         height: 500px;
     }
@@ -679,25 +723,20 @@ section>.row {
 
 /* Media query for medium screens  */
 @media (max-width: 768px) {
-    .carousel-item img {
-        height: 400px;
-        object-fit: cover;
-    }
     .product-slider-container {
         height: 900px;
+    }
+
+    swiper-container {
+        width: 100%;
+        height: 400px;
     }
 
     .certification-slider .col-md-3 {
         margin: 20px 0;
     }
 
-    .carousel-caption {
-        width: auto;
-        height: auto;
-        margin: auto 0;
-    }
-
-    .carousel-caption h5 {
+    .swiper .title {
         font-size: 28px;
         font-weight: 400;
         line-height: 32px;
@@ -725,21 +764,25 @@ section>.row {
         font-size: 20px;
         color: white;
     }
+
     .banner-content-1 .content h4 {
         font-size: 24px;
         font-weight: 500;
         line-height: 28px;
     }
+
     .banner-content-1 .image-container {
         position: relative;
         height: auto;
     }
-    .about-section-card .about-card{
+
+    .about-section-card .about-card {
         padding: 20px;
         position: relative;
         height: 450px;
     }
-    .about-section-card .about-card .card-content{
+
+    .about-section-card .about-card .card-content {
         position: relative;
         top: 0%;
         width: 100%;
@@ -751,20 +794,17 @@ section>.row {
 
 /* Media query for small screens  */
 @media (max-width: 576px) {
-    .certification-slider .col-md-3 {
-        margin: 20px 0;
-    }
+
     .product-slider-container {
         height: 900px;
     }
 
-    .carousel-caption {
-        width: auto;
-        height: auto;
-        margin: auto 0;
+    swiper-container {
+        width: 100%;
+        height: 350px;
     }
 
-    .carousel-caption h5 {
+    .swiper .title {
         font-size: 28px;
         font-weight: 400;
         line-height: 32px;
@@ -774,6 +814,7 @@ section>.row {
         position: relative;
         top: 0%;
     }
+
     .user-review .carousel-item {
         width: 100%;
         height: 650px;
@@ -791,21 +832,25 @@ section>.row {
         font-size: 20px;
         color: white;
     }
+
     .banner-content-1 .content h4 {
         font-size: 24px;
         font-weight: 500;
         line-height: 28px;
     }
+
     .banner-content-1 .image-container {
         position: relative;
         height: auto;
     }
-    .about-section-card .about-card{
+
+    .about-section-card .about-card {
         padding: 20px;
         position: relative;
         height: 450px;
     }
-    .about-section-card .about-card .card-content{
+
+    .about-section-card .about-card .card-content {
         position: relative;
         top: 0%;
         width: 100%;

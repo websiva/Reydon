@@ -12,6 +12,14 @@ export class EnergyStorageSystemComponent implements OnInit {
   currentSlideIndex = 0;
   imagesPerSlide = 6;
 
+  activeIndex = 0; // To keep track of the active slide index
+
+  // This method is triggered when the slide changes
+  onSlideChange(event: any) {
+    const swiper = event.target.swiper; // Get the Swiper instance
+    this.activeIndex = swiper.activeIndex; // Update the active index
+  }
+
   @HostListener('window:resize',['$event'])
   onResize(event:any):void{
     this.setImagesPerSlide(window.innerWidth);
@@ -54,6 +62,43 @@ export class EnergyStorageSystemComponent implements OnInit {
 
 ];
 
+carouselSlides = [
+  {
+    imageUrl: 'products/battery/slider-image/EV.jpg',
+    heading: 'Electric Vehicle Battery',
+    description: 'Driven by technological advances! Energy Storage for a Better World.'
+  },
+  {
+    imageUrl: 'products/battery/slider-image/zero_maintanace.jpg',
+    heading: 'Worry-Free Power Solutions',
+    description: 'Enjoy hassle-free operation with our zero-maintenance lithium UPS systems, engineered for durability and long-lasting performance without the need for regular upkeep.'
+  },
+  {
+    imageUrl: 'products/battery/slider-image/power_protection.jpg',
+    heading: 'Shield Your Devices with Confidence',
+    description: 'Protect your critical equipment from unexpected power interruptions and surges with our advanced lithium UPS solutions designed for maximum reliability.'
+  },
+  {
+    imageUrl: 'products/battery/slider-image/rapid_charging.jpg',
+    heading: 'Get Back to Power in No Time',
+    description: 'Experience rapid charging capabilities with our lithium UPS systems, ensuring your devices are powered up and ready to go when you need them most.'
+  },
+  {
+    imageUrl: 'products/battery/slider-image/remote_monitoring.jpg',
+    heading: 'Stay Connected, Stay In Control',
+    description: 'Monitor and manage your UPS performance from anywhere with our intelligent remote monitoring system, providing real-time updates and alerts for your peace of mind.'
+  },
+  {
+    imageUrl: 'products/battery/slider-image/eco_friendly.jpg',
+    heading: 'Sustainable Energy for a Greener Future',
+    description: 'Our eco-friendly lithium UPS systems harness renewable energy, helping you reduce your carbon footprint while enjoying reliable power.'
+  },
+  {
+    imageUrl: 'products/battery/slider-image/industrial_applications.jpg',
+    heading: 'Industrial Applications',
+    description: 'The next generation of electric vehicle batteries, with greater range and improved safety!'
+  }
+];
   
   batteryHighlights: { name: string, svg: string }[] = [
     {

@@ -18,6 +18,7 @@ import { BreadCrumbComponent } from './bread-crumb/bread-crumb.component';
 import {GoogleMapsModule} from '@angular/google-maps';
 import { YouTubePlayerModule } from '@angular/youtube-player';
 
+
 import { register } from 'swiper/element/bundle';
 import { FooterComponent } from './footer/footer.component';
 import { PropertyResolverService } from './angular-service/Resolvers/property-resolver.service';
@@ -58,6 +59,7 @@ import { CommercialBuildingDetailsComponent } from './commercial-building-detail
 import { RelatedProjectsComponent } from './related-projects/related-projects.component';
 import { LithiumUPSComponent } from './lithium-ups/lithium-ups.component';
 import { EnergyStorageSystemComponent } from './energy-storage-system/energy-storage-system.component';
+
 
 register();
 
@@ -106,7 +108,6 @@ register();
     ApartmentDetailsComponent,
     CommercialBuildingDetailsComponent,
     RelatedProjectsComponent,
-    LithiumUPSComponent,
     EnergyStorageSystemComponent
   ],
   imports: [

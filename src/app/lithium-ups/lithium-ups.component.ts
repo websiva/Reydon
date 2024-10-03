@@ -1,17 +1,27 @@
-import { Component, OnInit,HostListener } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Component, OnInit,HostListener,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { RouterModule, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-lithium-ups',
+  standalone:true,
+  imports:[CommonModule,RouterModule,RouterOutlet],
   templateUrl: './lithium-ups.component.html',
-  styleUrl: './lithium-ups.component.css'
+  styleUrl: './lithium-ups.component.css',
+  schemas:[CUSTOM_ELEMENTS_SCHEMA]
 })
 export class LithiumUPSComponent implements OnInit {
-  currentIndex: number = 0;
-  interval: any;
-  currentSlide: number = 0;
   currentSlideIndex = 0;
 
   imagesPerSlide = 6;
+
+  activeIndex = 0; // To keep track of the active slide index
+
+  // This method is triggered when the slide changes
+  onSlideChange(event: any) {
+    const swiper = event.target.swiper; // Get the Swiper instance
+    this.activeIndex = swiper.activeIndex; // Update the active index
+  }
 
   @HostListener('window:resize',['$event'])
   onResize(event:any):void{
@@ -42,6 +52,8 @@ export class LithiumUPSComponent implements OnInit {
     }
   }
 
+
+
   productImages = [
     // Old images
     { src: 'products/battery/product_image/product1.jpg', alt: 'Product 1' },
@@ -57,34 +69,43 @@ export class LithiumUPSComponent implements OnInit {
     { src: 'https://eeepvtltd.com/wp-content/uploads/2022/12/IMG_20220616_172144-1280x958.jpg', alt: 'Battery IMG 20220616' }
 ];
 
-  // Slider Data
-  sliderData = [
-    {
-      image: 'products/battery/slider-image/eco_friendly.jpg',
-      heading: 'Sustainable Energy for a Greener Future',
-      description: 'Our eco-friendly lithium UPS systems harness renewable energy, helping you reduce your carbon footprint while enjoying reliable power.'
-    },
-    {
-      image: 'products/battery/slider-image/power_protection.jpg',
-      heading: 'Shield Your Devices with Confidence',
-      description: 'Protect your critical equipment from unexpected power interruptions and surges with our advanced lithium UPS solutions designed for maximum reliability.'
-    },
-    {
-      image: 'products/battery/slider-image/rapid_charging.jpg',
-      heading: 'Get Back to Power in No Time',
-      description: 'Experience rapid charging capabilities with our lithium UPS systems, ensuring your devices are powered up and ready to go when you need them most.'
-    },
-    {
-      image: 'products/battery/slider-image/remote_monitoring.jpg',
-      heading: 'Stay Connected, Stay In Control',
-      description: 'Monitor and manage your UPS performance from anywhere with our intelligent remote monitoring system, providing real-time updates and alerts for your peace of mind.'
-    },
-    {
-      image: 'products/battery/slider-image/zero_maintanace.jpg',
-      heading: 'Worry-Free Power Solutions',
-      description: 'Enjoy hassle-free operation with our zero-maintenance lithium UPS systems, engineered for durability and long-lasting performance without the need for regular upkeep.'
-    }
-  ];
+  carouselSlides = [
+  {
+    imageUrl: 'products/battery/slider-image/power_protection.jpg',
+    heading: 'Shield Your Devices with Confidence',
+    description: 'Protect your critical equipment from unexpected power interruptions and surges with our advanced lithium UPS solutions designed for maximum reliability.'
+  },
+  {
+    imageUrl: 'products/battery/slider-image/rapid_charging.jpg',
+    heading: 'Get Back to Power in No Time',
+    description: 'Experience rapid charging capabilities with our lithium UPS systems, ensuring your devices are powered up and ready to go when you need them most.'
+  },
+  {
+    imageUrl: 'products/battery/slider-image/remote_monitoring.jpg',
+    heading: 'Stay Connected, Stay In Control',
+    description: 'Monitor and manage your UPS performance from anywhere with our intelligent remote monitoring system, providing real-time updates and alerts for your peace of mind.'
+  },
+  {
+    imageUrl: 'products/battery/slider-image/EV.jpg',
+    heading: 'Electric Vehicle Battery',
+    description: 'Driven by technological advances! Energy Storage for a Better World.'
+  },
+  {
+    imageUrl: 'products/battery/slider-image/zero_maintanace.jpg',
+    heading: 'Worry-Free Power Solutions',
+    description: 'Enjoy hassle-free operation with our zero-maintenance lithium UPS systems, engineered for durability and long-lasting performance without the need for regular upkeep.'
+  },
+  {
+    imageUrl: 'products/battery/slider-image/eco_friendly.jpg',
+    heading: 'Sustainable Energy for a Greener Future',
+    description: 'Our eco-friendly lithium UPS systems harness renewable energy, helping you reduce your carbon footprint while enjoying reliable power.'
+  },
+  {
+    imageUrl: 'products/battery/slider-image/industrial_applications.jpg',
+    heading: 'Industrial Applications',
+    description: 'The next generation of electric vehicle batteries, with greater range and improved safety!'
+  }
+];
 
   lithiumBatteryFeatures = [
     { feature: "DSP based Pure Sine Wave UPS", img: "DSP.png" },
