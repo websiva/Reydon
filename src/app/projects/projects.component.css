@@ -131,13 +131,35 @@
 .image-section {
     width: 100%;
     height: 180px;
+    position: relative;
 }
 
 .image-section img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    /*border-radius: 8px 8px 0 0px;*/
+}
+.image-section .image-overlay {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    left: 0%;
+    right: 0%;
+    bottom: 0%;
+    background: linear-gradient(to bottom,rgba(0,0,0,0.3)20%,rgba(0,0,0,0)80%);
+    z-index: 5;
+    }
+.image-section .image-label {
+    position: absolute;
+    padding: 0px 8px;
+    color: white;
+    border-radius: 4px;
+    font-size: 12px;
+    top: 8%;
+    left: 4%;
+    z-index: 8;
 }
 
 .content-section {

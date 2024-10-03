@@ -4,6 +4,7 @@
 		"ProjectName": "Heritage Avenue",
 		"Type": "Residential",
 		"Category": "Layout",
+		"TransactionType":"Sale",
 		"HeaderLocation": "Bodi, Theni",
 		"DTCPApproved": true,
 		"RERAApproved": true,
@@ -443,6 +444,7 @@
 		"ProjectName": "Golden City",
 		"Type": "Commercial",
 		"Category": "Layout",
+		"TransactionType":"Sale",
 		"HeaderLocation": "OMR, Tambaram",
 		"DTCPApproved": true,
 		"RERAApproved": false,
@@ -869,6 +871,7 @@
 		"ProjectName": "Green Meadows",
 		"Type": "Residential",
 		"Category": "Layout",
+		"TransactionType":"Sale",
 		"HeaderLocation": "Coonoor",
 		"DTCPApproved": true,
 		"RERAApproved": true,
@@ -1294,6 +1297,7 @@
 		"ProjectName": "OnePulse Smart City",
 		"Type": "Residential",
 		"Category": "Layout",
+		"TransactionType":"Sale",
 		"HeaderLocation": "Oragadam, Kanchipuram ",
 		"DTCPApproved": true,
 		"RERAApproved": true,
@@ -1733,6 +1737,7 @@
 		"ProjectName": "Srilakshmi Nagar",
 		"Type": "Residential",
 		"Category": "Layout",
+		"TransactionType":"Sale",
 		"HeaderLocation": "Kondam, Thiruvannamalai",
 		"DTCPApproved": true,
 		"RERAApproved": false,
@@ -2149,6 +2154,7 @@
 		"ProjectName": "Maheswari Nagar",
 		"Type": "Commercial",
 		"Category": "Layout",
+		"TransactionType":"Sale",
 		"HeaderLocation": "Kondanagaram, Tirunelveli",
 		"DTCPApproved": true,
 		"RERAApproved": false,
@@ -2566,6 +2572,7 @@
 		"ProjectName": "Greens City",
 		"Type": "Residential",
 		"Category": "Layout",
+		"TransactionType":"Sale",
 		"HeaderLocation": "Modakurichi, Erode",
 		"DTCPApproved": true,
 		"RERAApproved": false,
@@ -2984,6 +2991,7 @@
 		"ProjectName": "SriRam nagar",
 		"Type": "Residential",
 		"Category": "Layout",
+		"TransactionType":"Sale",
 		"HeaderLocation": "Vayalpatti, Theni",
 		"DTCPApproved": true,
 		"RERAApproved": false,
@@ -3402,6 +3410,7 @@
 		"ProjectName": "Smart City",
 		"Type": "Residential",
 		"Category": "Layout",
+		"TransactionType":"Sale",
 		"HeaderLocation": "Vallam, Thanjavur",
 		"DTCPApproved": true,
 		"RERAApproved": false,
@@ -3828,6 +3837,7 @@
 		"ProjectName": "Sai Nagar",
 		"Type": "Residential",
 		"Category": "Apartment",
+		"TransactionType":"Rent",
 		"HeaderLocation": "Near MGR Circle, Aruppukottai",
 		"DTCPApproved": true,
 		"RERAApproved": false,
@@ -4088,6 +4098,285 @@
 			"LitigationProperty": "No",
 			"EncumberanceCertificateisClear": "Yes",
 			"PropertyisUnderHypothecationbyBank": "No"
+		},
+		"BankPartners": [
+			"ICICI",
+			"KVB",
+			"HDFC"
+		]
+	},
+	{
+		"ProjectId": "0011",
+		"ProjectName": "Balaji Nagar",
+		"Type": "Residential",
+		"Category": "Villa House",
+		"TransactionType":"Rent",
+		"HeaderLocation": "Chatrapatti, Oddanchatram",
+		"DTCPApproved": true,
+		"RERAApproved": true,
+		"VerifiedByReydon": true,
+		"ProjectLaunchDate": "2024-07-12",
+		"AgeOfBuilding": "25 Years , 08 Months",
+		"AgeOfResiding": "17 Years , 06 Months",
+		"PricePerSqFt": 3250,
+		"BannerImagesNames": [
+			"https://res.cloudinary.com/dbzme4gd3/image/upload/v1726748937/sai_nagar_2_qndeo9.jpg",
+			"https://res.cloudinary.com/dbzme4gd3/image/upload/v1726748937/sai_nagar_1_sme6cp.jpg",
+			"https://res.cloudinary.com/dbzme4gd3/image/upload/v1726748936/sai_nagar_3_iw3cvy.jpg",
+			"https://res.cloudinary.com/dbzme4gd3/image/upload/v1726748934/sai_nagar_4_lcrgct.jpg"
+		],
+		"CardImage": "https://res.cloudinary.com/dbzme4gd3/image/upload/v1727963886/villa-6482430_1280_r0yqcr.jpg",
+		"YoutubeLink": "https://www.youtube.com/embed/VLSZVWVFKAg",
+		"BrouchureLink": "https://res-console.cloudinary.com/dbzme4gd3/media_explorer_thumbnails/2e71aa637f88d616c1e7eb87148b2991/download",
+		"PropertyDescription": "SMART CITY, VALLAM is a premium plot development situated along the scenic Vallam-Sennampatty road in Vallam, Thanjavur, Tamil Nadu. Smart City amidst lush greenery and situated very calm and safe place, it offers an ideal setting for building a dream home or holiday retreat. With easy access to both Thanjavur & Trichy and the popular tourist stations of Thanjavur Big temple, Mariyamman koil, Kallanai Anaicut, Navagraha Temples, Trichy Malai kottai and etc., Smart City provides the perfect blend of tranquility and convenience, making it a great investment opportunity in one of the region's most picturesque locales",
+		"AddressDetails": {
+			"Address": "52, Gandhi Nagar",
+			"PostOffice": "Chatrapatti",
+			"Taluk": "Oddanchatram",
+			"PinCode": "624614",
+			"District": "Dindigul",
+			"Landmark": "Near Virupachi Farm House",
+			"Zone": "Madurai",
+			"Topography": "",
+			"GoogleMapLink": "",
+			"Latitude": 10.4682370,
+			"Longitude": 77.6499921
+		},
+		"TotalBedrooms":"4",
+		"TotalBathrooms":"6",
+		"TotalParking":"1",
+		"NoofFloors":"03",
+		"NoofOwners":"02",
+		"NoOfElectricityConnection":"02 (Two- Three PH)",
+		"villaAddress":"35-468B",
+		"TotalArea":"2,486",
+		"SizeDetails": [
+			{
+				"name": "Bedroom 1",
+				"length": 26,
+				"breadth": 16,
+				"area": 352
+			},
+			{
+				"name": "Bedroom 2",
+				"length": 22,
+				"breadth": 16,
+				"area": 416
+			},
+			{
+				"name": "Bedroom 3",
+				"length": 16,
+				"breadth": 16,
+				"area": 256
+			},
+			{
+				"name": "Bedroom 4",
+				"length": 16,
+				"breadth": 12,
+				"area": 192
+			},
+			{
+				"name": "Balcony",
+				"length": null,
+				"breadth": null,
+				"area": 468
+			},
+			{
+				"name": "Hall",
+				"length": 22,
+				"breadth": 16,
+				"area": 352
+			},
+			{
+				"name": "Kitchen",
+				"length": 12,
+				"breadth": 18,
+				"area": 216
+			},
+			{
+				"name": "Car Parking",
+				"length": 15,
+				"breadth": 12,
+				"area": 180
+			}
+		],
+		"carpetSizeDetails": [
+			{
+				"name": "Carpet Area",
+				"sqft": "2830",
+				"cents": "6.50"
+			},
+			{
+				"name": "Build up Area",
+				"sqft": "3380",
+				"cents": "7.75"
+			},
+			{
+				"name": "Super Build up Area",
+				"sqft": "3650",
+				"cents": "8.37"
+			},
+			{
+				"name": "UDS area",
+				"sqft": "236",
+				"cents": "0.541"
+			}
+		],
+		"Features": [
+			{
+				"featureName": "Semi-Furnished",
+				"imageUrl": "https://res.cloudinary.com/dbzme4gd3/image/upload/v1726756504/furnished_qt2w1r.jpg",
+				"description": "This apartment comes fully furnished, providing a hassle-free living experience."
+			},
+			{
+				"featureName": "Lift Facility",
+				"imageUrl": "https://res.cloudinary.com/dbzme4gd3/image/upload/v1726756504/elevator_utcaue.jpg",
+				"description": "The building is equipped with a state-of-the-art lift for your convenience."
+			},
+			{
+				"featureName": "Modular Kitchen",
+				"imageUrl": "https://res.cloudinary.com/dbzme4gd3/image/upload/v1726756504/modular-kitchen_scclin.jpg",
+				"description": "This apartment comes fully furnished, providing a hassle-free living experience."
+			},
+			{
+				"featureName": "Gated Community",
+				"imageUrl": "https://res.cloudinary.com/dbzme4gd3/image/upload/v1726756504/gated_community_jyqfji.jpg",
+				"description": "This apartment comes fully furnished, providing a hassle-free living experience."
+			},
+			{
+				"featureName": "Private Balcony",
+				"imageUrl": "https://res.cloudinary.com/dbzme4gd3/image/upload/v1726756937/balcony-4083928_1280_kho9ud.jpg",
+				"description": "This apartment comes fully furnished, providing a hassle-free living experience."
+			}
+		],
+		"Amenities": [
+			"Power Backup",
+			"24x7 CCTV Surveillance",
+			"Children's Play Area",
+			"Swimming Pool",
+			"Gymnasiums",
+			"Club House",
+			"Convention center",
+			"Jogging Track",
+			"Religious activity places",
+			"Sports Area",
+			"EV Charging station",
+			"High-Speed Internet"
+		],
+		"CardAmenities": [
+			"Street Light",
+			"Gated Community",
+			"Security",
+			"CCTV Surveillance",
+			"Water Pipeline Connection"
+		],
+		"NearByProximity": [
+			{
+				"ProximityName": "Vallam Bus stand",
+				"Distance": "2 km",
+				"Duration": "4 min",
+				"Latitude": 12.9763,
+				"Longitude": 80.2436,
+				"Category": "bus-stand"
+			},
+			{
+				"ProximityName": "Periyar Maniyammai Science & Technology",
+				"Distance": "4.4 km",
+				"Duration": "10 min",
+				"Latitude": 12.9775,
+				"Longitude": 80.2381,
+				"Category": "college"
+			},
+			{
+				"ProximityName": "Thanjavur Big Temple",
+				"Distance": "13.9 km",
+				"Duration": "27 min",
+				"Latitude": 12.9864,
+				"Longitude": 80.2128,
+				"Category": "temple"
+			},
+			{
+				"ProximityName": "Sastra Deemed University",
+				"Distance": "6.5 km",
+				"Duration": "10 min",
+				"Latitude": 12.9835,
+				"Longitude": 80.2075,
+				"Category": "college"
+			},
+			{
+				"ProximityName": "Adaikalamatha college",
+				"Distance": "2.7 km",
+				"Duration": "05 min",
+				"Latitude": 12.9835,
+				"Longitude": 80.2075,
+				"Category": "college"
+			},
+			{
+				"ProximityName": "Thanjavur Railway Station",
+				"Distance": "15.5 km",
+				"Duration": "25 min",
+				"Latitude": 12.9647,
+				"Longitude": 80.2313,
+				"Category": "college"
+			},
+			{
+				"ProximityName": "Thanjavur govt Hospital",
+				"Distance": "13 km",
+				"Duration": "20 min",
+				"Latitude": 12.927,
+				"Longitude": 80.2308,
+				"Category": "hospital"
+			},
+			{
+				"ProximityName": "Thanjavur New Bus stand",
+				"Distance": "9 km",
+				"Duration": "17 min",
+				"Latitude": 12.9763,
+				"Longitude": 80.2436,
+				"Category": "bus-stand"
+			}
+		],
+		"TopFiveReasons": [
+			{
+				"ReasonNo": 1,
+				"Title": "Scenic Location",
+				"Description": "Enjoy breathtaking views and serene surroundings, perfect for relaxation.",
+				"ImageUrl": ""
+			},
+			{
+				"ReasonNo": 2,
+				"Title": "Key Landmarks",
+				"Description": "Conveniently located near schools, hospitals, and popular attractions.",
+				"ImageUrl": ""
+			},
+			{
+				"ReasonNo": 3,
+				"Title": "Investment Potential",
+				"Description": "Secure your future in a rapidly growing real estate market.",
+				"ImageUrl": ""
+			},
+			{
+				"ReasonNo": 4,
+				"Title": "Excellent Connectivity",
+				"Description": "Well-connected to nearby towns and major destinations.",
+				"ImageUrl": ""
+			},
+			{
+				"ReasonNo": 5,
+				"Title": "Healthy Lifestyle",
+				"Description": "Live in a peaceful, pollution-free environment surrounded by nature.",
+				"ImageUrl": ""
+			}
+		],
+		"LegalAndFinancial": {
+			"DTCPApprovalNo": "DTCP SWC/12C-196/2021",
+			"RERAApprovalNo": "TNRERA / 5641/2022",
+			"BuildingApprovalNo": "DGL/KD/148/2016",
+			"TitdleDeedisClearDocument": "Yes",
+			"LocalBodyTaxesPaidAsOfNow": "Yes",
+			"LitigationProperty": "No",
+			"EncumberanceCertificateisClear": "Not Yet",
+			"PropertyisUnderHypothecationbyBank": "Yes"
 		},
 		"BankPartners": [
 			"ICICI",

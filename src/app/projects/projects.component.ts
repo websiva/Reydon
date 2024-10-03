@@ -15,24 +15,24 @@ export class ProjectsComponent implements OnInit {
   Types: string[] = [];
   FilteredProjects: any[] = [];
   priceFilterProjects: any[] = [];
-  dropDownFilterProjects:any[]=[];
+  dropDownFilterProjects: any[] = [];
   selectedType: string = "All";
   selectedProperty: string = "All";
   selectedDistrict: string = "All";
   selectedZone = "All";
-  queryZone:string="All";
-  queryType:string="All";
+  queryZone: string = "All";
+  queryType: string = "All";
   dateValue: string = "";
   filterVisible = false;
   filterButtonContent = "Show Filters";
   Maxprice: number = 0;
-  MinPrice:number=0;
+  MinPrice: number = 0;
   pricePerUnit: number = 0;
   selectedUnit: string = 'Sq Ft';
   activeFilter: string = '';
 
   constructor(private propertyDataService: PropertyDataService, private cdr: ChangeDetectorRef, private router: Router,
-    private activeRoute:ActivatedRoute) {
+    private activeRoute: ActivatedRoute) {
 
   }
 
@@ -41,7 +41,7 @@ export class ProjectsComponent implements OnInit {
     this.activeRoute.queryParams.subscribe(params => {
       const zone = params['zone'];
       //const type = params['projectType'];
-  
+
       this.queryZone = zone || 'All'; // Default to 'All' if no parameter is provided
       //this.queryType = type || 'All'; // Default to 'All' if no parameter is provided
       this.loaddata(); // Reload data and apply filters
@@ -54,7 +54,7 @@ export class ProjectsComponent implements OnInit {
       this.LayoutData = data;
       this.FilteredProjects = this.LayoutData;
       this.priceFilterProjects = this.FilteredProjects;
-      this.dropDownFilterProjects=this.FilteredProjects;
+      this.dropDownFilterProjects = this.FilteredProjects;
       this.updateInitialDropdownValues();
       this.filterProjects();
     });
@@ -66,17 +66,17 @@ export class ProjectsComponent implements OnInit {
     this.GetingCategories();
     this.getMaximumPricePerSqFt();
     this.cdr.detectChanges();
-    this.selectedZone=this.queryZone;
-    this.selectedType=this.queryType;
-    if(this.queryZone!=="All"){
-      this.activeFilter='zone';
+    this.selectedZone = this.queryZone;
+    this.selectedType = this.queryType;
+    if (this.queryZone !== "All") {
+      this.activeFilter = 'zone';
     }
-    if(this.queryType!=="All"){
-      this.activeFilter="type";
+    if (this.queryType !== "All") {
+      this.activeFilter = "type";
     }
-    if (this.selectedZone !== 'All'||this.selectedType!=="All") {
+    if (this.selectedZone !== 'All' || this.selectedType !== "All") {
       this.filterProjects();
-      this.FilteredProjects=this.dropDownFilterProjects;
+      this.FilteredProjects = this.dropDownFilterProjects;
       this.priceFilterProjects = this.FilteredProjects;
       this.updateDropdownValues();
       //this.FilterProject2 = this.FilteredProjects;
@@ -118,13 +118,13 @@ export class ProjectsComponent implements OnInit {
 
   onUnitChange(event: any) {
     //this.resetFilter();
-    this.FilteredProjects=this.dropDownFilterProjects;
+    this.FilteredProjects = this.dropDownFilterProjects;
     this.selectedUnit = event.target.value;
     //alert(this.selectedUnit);
     this.updateMaxPrice();
   }
 
-  resetWhenunitChange(){
+  resetWhenunitChange() {
 
   }
 
@@ -134,20 +134,20 @@ export class ProjectsComponent implements OnInit {
       this.getMaximumPricePerSqFt(); // Reset to original value
     } else if (this.selectedUnit === 'Cent') {
       this.getMaximumPricePerSqFt();
-      this.Maxprice = Math.round((this.Maxprice * 435.60)/10)*10; // Convert Sq Ft to Cent
-      this.MinPrice = Math.round((this.MinPrice * 435.60)/10)*10;
+      this.Maxprice = Math.round((this.Maxprice * 435.60) / 10) * 10; // Convert Sq Ft to Cent
+      this.MinPrice = Math.round((this.MinPrice * 435.60) / 10) * 10;
       this.pricePerUnit = this.Maxprice;
     }
     // Trigger change detection if needed
     this.cdr.detectChanges();
   }
 
-    //Getting maximum price
-    getMaximumPricePerSqFt() {
-      this.Maxprice = this.FilteredProjects.reduce((max, item) => item.PricePerSqFt > max ? item.PricePerSqFt : max, 0);
-      this.MinPrice=this.FilteredProjects.reduce((min, item) => item.PricePerSqFt < min ? item.PricePerSqFt : min, this.Maxprice);
-      this.pricePerUnit = this.Maxprice;
-    }
+  //Getting maximum price
+  getMaximumPricePerSqFt() {
+    this.Maxprice = this.FilteredProjects.reduce((max, item) => item.PricePerSqFt > max ? item.PricePerSqFt : max, 0);
+    this.MinPrice = this.FilteredProjects.reduce((min, item) => item.PricePerSqFt < min ? item.PricePerSqFt : min, this.Maxprice);
+    this.pricePerUnit = this.Maxprice;
+  }
 
 
 
@@ -183,13 +183,13 @@ export class ProjectsComponent implements OnInit {
   }
 
   onFilterChange(filterName: string) {
-    this.selectedUnit="Sq Ft";
+    this.selectedUnit = "Sq Ft";
     this.activeFilter = filterName;  // Set active filter
     this.filterProjects();
-    this.FilteredProjects=this.dropDownFilterProjects;
+    this.FilteredProjects = this.dropDownFilterProjects;
     this.priceFilterProjects = this.FilteredProjects;
     this.updateDropdownValues();
-    
+
   }
 
   onPriceChange(event: any): void {
@@ -204,9 +204,9 @@ export class ProjectsComponent implements OnInit {
     this.selectedType = "All";
     this.selectedProperty = "All";
     this.selectedDistrict = "All";
-    this.queryZone="All";
+    this.queryZone = "All";
     //this.selectedUnit= 'Sq Ft';
-    this.changeZoneQueryFromUrl("zone","All");
+    this.changeZoneQueryFromUrl("zone", "All");
     //this.changeZoneQueryFromUrl("projectType","All");
     this.updateInitialDropdownValues();
   }
@@ -214,32 +214,32 @@ export class ProjectsComponent implements OnInit {
   goingDetailPage(category: string, projectName: string, projectId: string) {
     const formattedProjectName = projectName.replace(/\s+/g, '-').toLowerCase();
     //alert(category);
-    if(category==="Apartment"){
-      this.router.navigate(["/apartment",formattedProjectName],{queryParams:{id:projectId}});
+    if (category === "Apartment") {
+      this.router.navigate(["/apartment", formattedProjectName], { queryParams: { id: projectId } });
     }
-    else if(category==="Layout"){
+    else if (category === "Layout") {
       this.router.navigate(["/Layout", formattedProjectName], { queryParams: { id: projectId } });
     }
-    else if(category==="Villa"){
-      this.router.navigate(["/villa",formattedProjectName],{queryParams:{id:projectId}});
+    else if (category === "Villa House") {
+      this.router.navigate(["/villa", formattedProjectName], { queryParams: { id: projectId } });
     }
-    else if(category==="Building"){
-      this.router.navigate(["/building",formattedProjectName],{queryParams:{id:projectId}});
+    else if (category === "Building") {
+      this.router.navigate(["/building", formattedProjectName], { queryParams: { id: projectId } });
     }
   }
 
-  changeZoneQueryFromUrl(paramkey:string,paramValue:string){
+  changeZoneQueryFromUrl(paramkey: string, paramValue: string) {
     //getting all the query params from activeroute
-    const allQueryParams = {...this.activeRoute.snapshot.queryParams};
+    const allQueryParams = { ...this.activeRoute.snapshot.queryParams };
 
     //change queryparam value on the acive route
-    allQueryParams[paramkey]=paramValue;
+    allQueryParams[paramkey] = paramValue;
 
-    this.router.navigate([],{relativeTo:this.activeRoute,queryParams:allQueryParams,queryParamsHandling:'merge'});
+    this.router.navigate([], { relativeTo: this.activeRoute, queryParams: allQueryParams, queryParamsHandling: 'merge' });
   }
 
-  gotoFAQ(sectionName:string){
-    this.router.navigate(['FAQ'],{queryParams:{sectionName:sectionName}});
+  gotoFAQ(sectionName: string) {
+    this.router.navigate(['FAQ'], { queryParams: { sectionName: sectionName } });
   }
 
   toggleFilters() {
@@ -251,77 +251,83 @@ export class ProjectsComponent implements OnInit {
       this.filterButtonContent = "Hide filters";
     }
   }
-    //background color for card labels
-    getLabelBackgroundColor(type: string): string {
-      switch (type) {
-        case 'Residential':
-          return '#7BC42B';
-        case 'Commercial':
-          return '#F68712';
-        case 'Layout':
-          return '#5A5C5B';
-        case 'Building':
-          return '#004274';
-        case 'Apartment':
-          return '#00B0FF';
-        default:
-          return 'transparent';
-      }
+  //background color for card labels
+  getLabelBackgroundColor(type: string): string {
+    switch (type) {
+      case 'Residential':
+        return '#7BC42B'; // Green for Residential
+      case 'Commercial':
+        return '#F68712'; // Orange for Commercial
+      case 'Layout':
+        return '#5A5C5B'; // Gray for Layout
+      case 'Building':
+        return '#004274'; // Dark Blue for Building
+      case 'Apartment':
+        return '#00B0FF'; // Light Blue for Apartment
+      case 'Villa House':
+        return '#FF6F61'; // Coral for Villa
+      case 'Sale':
+        return '#FF3D00'; // Red for Sale
+      case 'Rent':
+        return '#00796B'; // Teal for Rent
+      default:
+        return 'transparent'; // Default case
     }
-  
-    calculateRelativeTime(date: string | Date): string {
-      const now = new Date();
-      const projectDate = new Date(date);
-      const diffInMilliseconds = now.getTime() - projectDate.getTime();
-      const diffInMonths = Math.floor(diffInMilliseconds / (1000 * 60 * 60 * 24 * 30)); // Approximate month length
-  
-      if (diffInMonths < 1) {
-        return 'Just now';
-      } else {
-        return `${diffInMonths} months ago`;
-      }
-    }
+  }
 
-    zoneTableData = [
-      {
-        zone: 'Zone 1', zoneName: 'Coimbatore', districts: [
-          'Coimbatore, The Nilgiris, Erode, Tiruppur, Karur, Salem and Namakkal'
-        ], count: 7
-      },
-      {
-        zone: 'Zone 2', zoneName: 'Dharmapuri', districts: [
-          'Dharmapuri, Vellore, Thirupathur, Ranipet and Krishnagiri'
-        ], count: 5
-      },
-      {
-        zone: 'Zone 3', zoneName: 'Villupuram', districts: [
-          'Villupuram, Thiruvannamalai, Cuddalore and Kallakurichi'
-        ], count: 4
-      },
-      {
-        zone: 'Zone 4', zoneName: 'Trichy', districts: [
-          'Nagapattinam, Thiruvarur, Thanjavur, Trichy, Ariyalur, Perambalur, Mayiladurai and Pudukottai'
-        ], count: 8
-      },
-      {
-        zone: 'Zone 5', zoneName: 'Madurai', districts: [
-          'Dindigul, Madurai, Theni, Virudhunagar, Sivaganga and Ramanathapuram'
-        ], count: 6
-      },
-      {
-        zone: 'Zone 6', zoneName: 'Tirunelveli', districts: [
-          'Tirunelveli, Thoothukudi, Kanyakumari and Tenkasi'
-        ], count: 4
-      },
-      {
-        zone: 'Zone 7', zoneName: 'Chengalpattu', districts: [
-          'Chengalpattu, Kancheepuram and Thiruvallur'
-        ], count: 3
-      },
-      {
-        zone: 'Zone 8', zoneName: 'Chennai', districts: [
-          'Chennai and surroundings'
-        ], count: 3
-      }
-    ];
+  calculateRelativeTime(date: string | Date): string {
+    const now = new Date();
+    const projectDate = new Date(date);
+    const diffInMilliseconds = now.getTime() - projectDate.getTime();
+    const diffInMonths = Math.floor(diffInMilliseconds / (1000 * 60 * 60 * 24 * 30)); // Approximate month length
+
+    if (diffInMonths < 1) {
+      return 'Just now';
+    } else {
+      return `${diffInMonths} months ago`;
+    }
+  }
+
+  zoneTableData = [
+    {
+      zone: 'Zone 1', zoneName: 'Coimbatore', districts: [
+        'Coimbatore, The Nilgiris, Erode, Tiruppur, Karur, Salem and Namakkal'
+      ], count: 7
+    },
+    {
+      zone: 'Zone 2', zoneName: 'Dharmapuri', districts: [
+        'Dharmapuri, Vellore, Thirupathur, Ranipet and Krishnagiri'
+      ], count: 5
+    },
+    {
+      zone: 'Zone 3', zoneName: 'Villupuram', districts: [
+        'Villupuram, Thiruvannamalai, Cuddalore and Kallakurichi'
+      ], count: 4
+    },
+    {
+      zone: 'Zone 4', zoneName: 'Trichy', districts: [
+        'Nagapattinam, Thiruvarur, Thanjavur, Trichy, Ariyalur, Perambalur, Mayiladurai and Pudukottai'
+      ], count: 8
+    },
+    {
+      zone: 'Zone 5', zoneName: 'Madurai', districts: [
+        'Dindigul, Madurai, Theni, Virudhunagar, Sivaganga and Ramanathapuram'
+      ], count: 6
+    },
+    {
+      zone: 'Zone 6', zoneName: 'Tirunelveli', districts: [
+        'Tirunelveli, Thoothukudi, Kanyakumari and Tenkasi'
+      ], count: 4
+    },
+    {
+      zone: 'Zone 7', zoneName: 'Chengalpattu', districts: [
+        'Chengalpattu, Kancheepuram and Thiruvallur'
+      ], count: 3
+    },
+    {
+      zone: 'Zone 8', zoneName: 'Chennai', districts: [
+        'Chennai and surroundings'
+      ], count: 3
+    }
+  ];
 }

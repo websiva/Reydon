@@ -49,52 +49,51 @@ export class EnergyStorageSystemComponent implements OnInit {
     }
   }
 
-  productImages = [ 
-    { src: 'https://eeepvtltd.com/wp-content/uploads/2022/12/12v-80ah.png', alt: '12v 80Ah Battery' },
-    { src: 'https://eeepvtltd.com/wp-content/uploads/2022/12/96v96Ah2.jpg', alt: '96V 96Ah Battery 2' },
-    { src: 'https://eeepvtltd.com/wp-content/uploads/2022/12/4824-without-address-1280x1280.jpg', alt: '4824 Battery' },
-    { src: 'https://eeepvtltd.com/wp-content/uploads/2022/12/Bike-Batteries-copy.png', alt: 'Bike Battery' },
-    { src: 'https://eeepvtltd.com/wp-content/uploads/2022/12/Electric-Vehicle-Batteries-1280x1122.jpg', alt: 'Electric Vehicle Batteries' },
-    { src: 'https://eeepvtltd.com/wp-content/uploads/2022/12/ESS-Battery.jpg', alt: 'ESS Battery' },
-    { src: 'https://eeepvtltd.com/wp-content/uploads/2022/12/IMG_20220616_172144-1280x958.jpg', alt: 'Battery IMG 20220616' },
-    { src: 'https://eeepvtltd.com/wp-content/uploads/2022/12/Rickshaw-Battery.png', alt: 'Rickshaw Battery' },
-    { src: 'https://eeepvtltd.com/wp-content/uploads/2022/12/Robot-Battery-1280x1280.png', alt: 'Robot Battery' }
-
+  productImages = [
+    { src: 'https://res.cloudinary.com/dbzme4gd3/image/upload/v1727968553/12v-80ah_m3feiq.png', alt: '12v 80Ah Battery' },
+    { src: 'https://res.cloudinary.com/dbzme4gd3/image/upload/v1727968582/96v96Ah2_qlqc05.jpg', alt: '96V 96Ah Battery 2' },
+    { src: 'https://res.cloudinary.com/dbzme4gd3/image/upload/v1727968598/4824-without-address-1280x1280_ury0tj.jpg', alt: '4824 Battery' },
+    { src: 'https://res.cloudinary.com/dbzme4gd3/image/upload/v1727968615/adirath-UPS-1280x970_ovlfpl.jpg', alt: 'Adirath UPS' },
+    { src: 'https://res.cloudinary.com/dbzme4gd3/image/upload/v1727968632/Bike-Batteries-copy_hehbqk.png', alt: 'Bike Battery' },
+    { src: 'https://res.cloudinary.com/dbzme4gd3/image/upload/v1727968648/Electric-Vehicle-Batteries-1280x1122_wh5egs.jpg', alt: 'Electric Vehicle Batteries' },
+    { src: 'https://res.cloudinary.com/dbzme4gd3/image/upload/v1727968662/ESS-Battery_b3tn3h.jpg', alt: 'ESS Battery' },
+    { src: 'https://res.cloudinary.com/dbzme4gd3/image/upload/v1727969277/product1_ven0mt.jpg', alt: 'Product 3' },
+    { src: 'https://res.cloudinary.com/dbzme4gd3/image/upload/v1727968699/IMG_20220616_172144-1280x958_xsbahb.jpg', alt: 'Battery IMG 20220616' }
 ];
 
 carouselSlides = [
   {
-    imageUrl: 'products/battery/slider-image/EV.jpg',
+    imageUrl: 'https://res.cloudinary.com/dbzme4gd3/image/upload/v1727965877/EV_d13fxu.jpg',
     heading: 'Electric Vehicle Battery',
     description: 'Driven by technological advances! Energy Storage for a Better World.'
   },
   {
-    imageUrl: 'products/battery/slider-image/zero_maintanace.jpg',
+    imageUrl: 'https://res.cloudinary.com/dbzme4gd3/image/upload/v1727965885/zero_maintanace_y1axmp.jpg',
     heading: 'Worry-Free Power Solutions',
     description: 'Enjoy hassle-free operation with our zero-maintenance lithium UPS systems, engineered for durability and long-lasting performance without the need for regular upkeep.'
   },
   {
-    imageUrl: 'products/battery/slider-image/power_protection.jpg',
+    imageUrl: 'https://res.cloudinary.com/dbzme4gd3/image/upload/v1727965879/power_protection_p5boxa.jpg',
     heading: 'Shield Your Devices with Confidence',
     description: 'Protect your critical equipment from unexpected power interruptions and surges with our advanced lithium UPS solutions designed for maximum reliability.'
   },
   {
-    imageUrl: 'products/battery/slider-image/rapid_charging.jpg',
+    imageUrl: 'https://res.cloudinary.com/dbzme4gd3/image/upload/v1727965880/rapid_charging_dm7rqn.webp',
     heading: 'Get Back to Power in No Time',
     description: 'Experience rapid charging capabilities with our lithium UPS systems, ensuring your devices are powered up and ready to go when you need them most.'
   },
   {
-    imageUrl: 'products/battery/slider-image/remote_monitoring.jpg',
+    imageUrl: 'https://res.cloudinary.com/dbzme4gd3/image/upload/v1727965881/remote_monitoring_xen2wu.jpg',
     heading: 'Stay Connected, Stay In Control',
     description: 'Monitor and manage your UPS performance from anywhere with our intelligent remote monitoring system, providing real-time updates and alerts for your peace of mind.'
   },
   {
-    imageUrl: 'products/battery/slider-image/eco_friendly.jpg',
+    imageUrl: 'https://res.cloudinary.com/dbzme4gd3/image/upload/v1727965875/eco_friendly_gyrpug.jpg',
     heading: 'Sustainable Energy for a Greener Future',
     description: 'Our eco-friendly lithium UPS systems harness renewable energy, helping you reduce your carbon footprint while enjoying reliable power.'
   },
   {
-    imageUrl: 'products/battery/slider-image/industrial_applications.jpg',
+    imageUrl: 'phttps://res.cloudinary.com/dbzme4gd3/image/upload/v1727965878/industrial_applications_ox4n51.jpg',
     heading: 'Industrial Applications',
     description: 'The next generation of electric vehicle batteries, with greater range and improved safety!'
   }
@@ -103,147 +102,49 @@ carouselSlides = [
   batteryHighlights: { name: string, svg: string }[] = [
     {
       name: "Battery back-up system",
-      svg: "Battery.svg"
+      svg: "https://res.cloudinary.com/dbzme4gd3/image/upload/v1727966060/Battery_aioakt.svg"
     },
     {
       name: "Durability",
-      svg: "Durability.svg"
+      svg: "https://res.cloudinary.com/dbzme4gd3/image/upload/v1727966062/Durability_leiapn.svg"
     },
     {
       name: "Increased stability",
-      svg: "Stability.svg"
+      svg: "https://res.cloudinary.com/dbzme4gd3/image/upload/v1727966070/Stability_myvb9w.svg"
     },
     {
       name: "Environmental-friendly",
-      svg: "Eco friendly.svg" // You may need to provide this SVG file path if it exists
+      svg: "https://res.cloudinary.com/dbzme4gd3/image/upload/v1727966063/Eco_friendly_qbkzp8.svg" // You may need to provide this SVG file path if it exists
     },
     {
       name: "Economical",
-      svg: "Economical.svg"
+      svg: "https://res.cloudinary.com/dbzme4gd3/image/upload/v1727966064/Economical_yyzl6q.svg"
     },
     {
       name: "Better life cycle",
-      svg: "Lifecycle.svg"
+      svg: "https://res.cloudinary.com/dbzme4gd3/image/upload/v1727966067/Lifecycle_liuqyf.svg"
     },
     {
       name: "Low maintenance",
-      svg: "Low maintenance.svg"
+      svg: "https://res.cloudinary.com/dbzme4gd3/image/upload/v1727966068/Low_maintenance_qisgb7.svg"
     },
     {
       name: "High safety level",
-      svg: "High Safety.svg"
+      svg: "https://res.cloudinary.com/dbzme4gd3/image/upload/v1727966066/High_Safety_pvqdrz.svg"
     }
   ];
 
   batteryApplicationAreas = [
-    { name: "Telecom Energy Storage System", image: "Telecom.jpg" },
-    { name: "EV Charging stations", image: "ev.jpg" },
-    { name: "Petrol Bunk", image: "petrol-bunk.jpg" },
-    { name: "Wind Power Plants", image: "windpower.jpg" },
-    { name: "Farm House", image: "form_house.jpg" },
-    { name: "Remote area Buildings", image: "remote-area.jpg" },
-    { name: "Solar Street Lights", image: "solar-strret-lighty.jpg" }
+    { name: "Telecom Energy Storage System", image: "https://res.cloudinary.com/dbzme4gd3/image/upload/v1727966112/Telecom_fsxrh2.jpg" },
+    { name: "EV Charging stations", image: "https://res.cloudinary.com/dbzme4gd3/image/upload/v1727966104/ev_lqcc71.jpg" },
+    { name: "Petrol Bunk", image: "https://res.cloudinary.com/dbzme4gd3/image/upload/v1727966108/petrol-bunk_its8mt.jpg" },
+    { name: "Wind Power Plants", image: "https://res.cloudinary.com/dbzme4gd3/image/upload/v1727966113/windpower_focrgt.jpg" },
+    { name: "Farm House", image: "https://res.cloudinary.com/dbzme4gd3/image/upload/v1727966106/form_house_wdj45t.jpg" },
+    { name: "Remote area Buildings", image: "https://res.cloudinary.com/dbzme4gd3/image/upload/v1727966109/remote-area_mislgf.jpg" },
+    { name: "Solar Street Lights", image: "https://res.cloudinary.com/dbzme4gd3/image/upload/v1727966110/solar-strret-lighty_mcjrmd.jpg" }
   ];
 
-  inverterTroubleshooting: string[] = [
-    "No output in Inverter, check the ON/OFF switch.",
-    "No Output with Long buzzer sound during mains, check the MCB.",
-    "There is no battery charging indication, check the input voltage.",
-    "Call Technical Assistance."
-  ];
-
-  specifications = [
-    {
-      model: 'EEE2500',
-      capacity: '2KVA',
-      input: {
-        ratedACVoltage: '230VAC (1Ph + N + PE)',
-        voltageRange: 'Inverter mode 100 - 280VAC * 5VAC UPS Mode 180 - 270VAC ± 5VAC',
-        frequencyRange: '50 Hz ±0.5 Hz',
-      },
-      battery: {
-        chemistry: 'LiFePO4',
-        voltage: '25.6VDC',
-        capacity: '1.9kW',
-        chargingCurrentMax: '0.25C at 100% load(configurable)',
-        lowVoltageProtection: '20.8± 0.2VDC'
-      },
-      output: {
-        ratedVoltage: '230VAC (1Ph + N)',
-        frequencyRange: '50 Hz ±0.5 Hz',
-        voltageRegulation: '± 1%',
-        harmonicDistortion: '<3%',
-        CrestFactor: '3:1/5 milliseconds (UPS Mode)',
-        efficiency: '98% UPS Mode',
-        overload: '≤100% 50 Min'
-      },
-      systemFeatures: {
-        display: 'LCD Display',
-        ipRating: 'IP40',
-        alarmProtection: 'Short Circuit, Input Under/Over Voltage, Over Temperature, Over Load',
-        audibleAlarms: 'Low battery, Overload, Fuse Blown',
-        ledIndications: 'Mains on, Charging on, UPS on',
-        lcdDisplayInformation: 'AC mains input voltage, AC output voltage, AC mains ON/OFF, Output Load percentage, Battery voltage, UPS mode ON/OFF, Low Battery, Over Load, Over Temperature, Short Circuit'
-      }
-    },
-    {
-      model: 'EEE1550',
-      capacity: '1KVA',
-      input: {
-        ratedACVoltage: '230V AC (1Ph + N + PE)',
-        voltageRange: 'Inverter mode 100 - 280V AC ±5VAC, UPS Mode 180 - 270V AC ±5VAC',
-        frequencyRange: '50 Hz ±0.5 Hz',
-      },
-      battery: {
-        chemistry: 'LiFePO4',
-        voltage: '25.6VDC',
-        capacity: '1KW',
-        chargingCurrentMax: '0.25C at 100% load(configurable)',
-        lowVoltageProtection: '20.8± 0.2VDC'
-      },
-      output: {
-        ratedVoltage: '230VAC (1Ph + N)',
-        frequencyRange: '50 Hz ±0.5 Hz',
-        voltageRegulation: '± 1%',
-        harmonicDistortion: '<3%',
-        CrestFactor: '3:1/5 milliseconds (UPS Mode)',
-        efficiency: '98% UPS Mode',
-        overload: '≤100% 50 Min'
-      },
-      systemFeatures: {
-        display: 'LCD Display',
-        ipRating: 'IP40',
-        alarmProtection: 'Short Circuit, Input Under/Over Voltage, Over Temperature, Over Load',
-        audibleAlarms: 'Low battery, Overload, Fuse Blown',
-        ledIndications: 'Mains on, Charging on, UPS on',
-        lcdDisplayInformation: 'AC mains input voltage, AC output voltage, AC mains ON/OFF, Output Load percentage, Battery voltage, UPS mode ON/OFF, Low Battery, Over Load, Over Temperature, Short Circuit'
-      }
-    }
-  ];
-
-
-  faqs = [
-    {
-      question: 'What is a Lithium-Ion Battery?',
-      answer: 'A lithium-ion battery is a rechargeable battery type that uses lithium ions to store and release energy. It is widely used in portable electronics, electric vehicles, and renewable energy systems.'
-    },
-    {
-      question: 'How long does a lithium-ion battery last?',
-      answer: 'The lifespan of a lithium-ion battery typically ranges between 2 to 10 years, depending on usage patterns, charging cycles, and environmental factors.'
-    },
-    {
-      question: 'Are lithium-ion batteries safe?',
-      answer: 'Lithium-ion batteries are generally safe when used properly. However, misuse, overcharging, or exposure to extreme heat can lead to safety hazards, including fire or explosion.'
-    },
-    {
-      question: 'What are the benefits of using lithium-ion batteries?',
-      answer: 'Lithium-ion batteries have a high energy density, low self-discharge rate, and are lightweight, making them ideal for use in portable electronics and electric vehicles.'
-    },
-    {
-      question: 'How do I prolong the life of my lithium-ion battery?',
-      answer: 'To prolong the life of a lithium-ion battery, avoid overcharging, minimize exposure to high temperatures, and follow recommended usage and charging practices.'
-    }
-  ];
+ 
 
   tableHeaders = [
     'Battery Type',

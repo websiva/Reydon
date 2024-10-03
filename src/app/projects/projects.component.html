@@ -47,7 +47,8 @@
                 <input type="range" id="priceRange" [min]="MinPrice" [max]="Maxprice" step="10"
                     [(ngModel)]="pricePerUnit" (input)="onPriceChange($event)" />
                 <div style="display: flex; align-items: center;margin-top: 5px;">
-                    <span style="color: white; margin-right: 8px;">{{ pricePerUnit | currency: 'INR':'symbol':'1.0-0' }} /</span>
+                    <span style="color: white; margin-right: 8px;">{{ pricePerUnit | currency: 'INR':'symbol':'1.0-0' }}
+                        /</span>
                     <select [ngModel]="selectedUnit" name="" id="" style="display: inline-block;"
                         (change)="onUnitChange($event)">
                         <option value="Sq Ft">Sq Ft</option>
@@ -104,7 +105,8 @@
                     <input type="range" id="priceRange" min="0" [max]="Maxprice" step="100" [(ngModel)]="pricePerUnit"
                         (input)="onPriceChange($event)" />
                     <div style="display: flex; align-items: center;margin-top: 5px;">
-                        <span style="color: white; margin-right: 8px;">{{ pricePerUnit | currency: 'INR':'symbol':'1.0-0' }} /</span>
+                        <span style="color: white; margin-right: 8px;">{{ pricePerUnit | currency:
+                            'INR':'symbol':'1.0-0' }} /</span>
                         <select [ngModel]="selectedUnit" name="" id="" style="display: inline-block;"
                             (change)="onUnitChange($event)">
                             <option value="Sq Ft">Sq Ft</option>
@@ -170,7 +172,8 @@
                         <input type="range" id="priceRange" min="0" [max]="Maxprice" step="100"
                             [(ngModel)]="pricePerUnit" (input)="onPriceChange($event)" />
                         <div style="display: flex; align-items: center;margin-top: 5px;">
-                            <span style="color: white; margin-right: 8px;">{{ pricePerUnit | currency: 'INR':'symbol':'1.0-0' }} /</span>
+                            <span style="color: white; margin-right: 8px;">{{ pricePerUnit | currency:
+                                'INR':'symbol':'1.0-0' }} /</span>
                             <select [ngModel]="selectedUnit" name="" id="" style="display: inline-block;"
                                 (change)="onUnitChange($event)">
                                 <option value="Sq Ft">Sq Ft</option>
@@ -189,6 +192,9 @@
             <div class="project-card" *ngFor="let project of FilteredProjects">
                 <div class="image-section">
                     <img [src]="project.CardImage" alt="{{ project.ProjectName }}">
+                    <span class="image-overlay"></span>
+                    <span class="image-label"
+                        [ngStyle]="{'background-color':getLabelBackgroundColor(project.TransactionType)}">{{project.TransactionType}}</span>
                 </div>
                 <div class="content-section">
                     <div class="category-label">
@@ -224,8 +230,9 @@
                         <span>{{project.HeaderLocation}}</span>
                     </div>
                     <div class="knowmore-btn-section">
-                        <span class="plots-count">Total no of plots: {{project.TotalPlots}}</span>
-                        <button class="know-more-btn mb-1"
+                        <span *ngIf="project.Category==='Layout'" class="plots-count">Total no of plots:
+                            {{project.TotalPlots}}</span>
+                        <button class="know-more-btn mb-1 ms-auto"
                             (click)="goingDetailPage(project.Category,project.ProjectName,project.ProjectId)">Know
                             more</button>
                     </div>
@@ -236,7 +243,8 @@
                                 <img *ngFor="let aminity of project.CardAmenities" [src]="'aminities/'+aminity+'.svg'"
                                     alt="aminity">
                             </div>
-                            <div class="apartment" *ngIf="project.Category==='Apartment'">
+                            <div class="apartment"
+                                *ngIf="project.Category==='Apartment'||project.Category==='Villa House'">
                                 <i class="fas fa-bed"></i>
                                 <span class="ms-1">{{project.TotalBedrooms}}</span>
                                 <i class="fas fa-bathtub ms-2"></i>

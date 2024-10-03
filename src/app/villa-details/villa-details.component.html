@@ -1,1 +1,834 @@
-<p>villa-details works!</p>
+<div class="container-fluid w-100 p-0">
+    <div class="full-section w-100" *ngFor="let project of ProjectData">
+        <div class="banner-section">
+            <div class="banner-image">
+                <img class="slider-image" [src]="image" *ngFor="let image of BannerImages;let i=index"
+                    [class.active]="i===currentIndex" alt="">
+            </div>
+            <div class="header-images">
+                <img src="https://res.cloudinary.com/dbzme4gd3/image/upload/v1726207991/DTCP_zulxsb.png" alt=""
+                    class="dtcp-approved-image" *ngIf="project.DTCPApproved===true&&project.RERAApproved===false">
+                <img src="https://res.cloudinary.com/dbzme4gd3/image/upload/v1726207994/RERA_a6whco.png" alt=""
+                    class="dtcp-approved-image" *ngIf="project.DTCPApproved===false&&project.RERAApproved===true">
+                <img src="https://res.cloudinary.com/dbzme4gd3/image/upload/v1726207993/RERA-DTCP-Approved_ij2dc0.png"
+                    alt="" class="dtcp-rera-approved-image"
+                    *ngIf="project.DTCPApproved===true&&project.RERAApproved===true">
+                <img src="https://res.cloudinary.com/dbzme4gd3/image/upload/v1726207995/verified_mnspvg.png"
+                    style="background-color: white;border-radius: 50%;" alt="" class="verified-image"
+                    *ngIf="project.VerifiedByReydon===true">
+            </div>
+        </div>
+        <div class="navigation-section sticky-top">
+            <nav class="navigation">
+                <ul>
+                    <li><a (click)="scrollToSection('project-overview')">Project Overview</a></li>
+                    <li><a (click)="scrollToSection('building-details')">Building Details</a></li>
+                    <li><a (click)="scrollToSection('aminities')">Amenities</a></li>
+                    <li><a (click)="scrollToSection('proximity')">Proximities</a></li>
+                    <li><a (click)="scrollToSection('legal-finaancial')">Legal & Financial</a></li>
+                    <li><a (click)="scrollToSection('youtube-video')">Photos & Videos</a></li>
+                    <li><a (click)="scrollToSection('property-address')">Location</a></li>
+                    <li><a (click)="scrollToSection('property-contact')">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <section id="project-overview">
+            <div class="hero-section">
+                <div class="row p-0 m-0">
+                    <div class="col-md-6">
+                        <h6 class="project-name">{{project.ProjectName}}</h6>
+                        <div class="category-label my-2">
+                            <ul>
+                                <li [ngStyle]="{'background-color':getLabelBackgroundColor(project.Type)}">
+                                    {{project.Type}}
+                                </li>
+                                <li [ngStyle]="{'background-color':getLabelBackgroundColor(project.Category)}">
+                                    {{project.Category}}</li>
+                            </ul>
+                        </div>
+                        <div class="header-location-section">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M12 6C9.79086 6 8 7.79086 8 10C8 12.2091 9.79086 14 12 14C14.2091 14 16 12.2091 16 10C16 7.79086 14.2091 6 12 6ZM12 8C10.8954 8 10 8.89543 10 10C10 11.1046 10.8954 12 12 12C13.1046 12 14 11.1046 14 10C14 8.89543 13.1046 8 12 8Z"
+                                        fill="#7e7e7e"></path>
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M11.0901 22.5958C11.2059 22.6753 11.2981 22.7366 11.3626 22.7788L11.4687 22.8472C11.7933 23.0504 12.2061 23.0508 12.5307 22.8476L12.6375 22.7788C12.7019 22.7366 12.7941 22.6753 12.9099 22.5958C13.1415 22.4367 13.4685 22.2041 13.8591 21.9041C14.6386 21.3054 15.6801 20.4322 16.7247 19.3336C18.7857 17.1661 21 13.9725 21 10.1818C21 7.75381 20.0571 5.42084 18.3719 3.69728C16.6859 1.97296 14.3943 1 12 1C9.60571 1 7.31415 1.97296 5.62814 3.69728C3.94288 5.42084 3 7.75381 3 10.1818C3 13.9725 5.21434 17.1661 7.27531 19.3336C8.31993 20.4322 9.36136 21.3054 10.1409 21.9041C10.5315 22.2041 10.8585 22.4367 11.0901 22.5958ZM12 3C10.1508 3 8.37273 3.75107 7.05815 5.09552C5.74283 6.44073 5 8.26992 5 10.1818C5 13.2007 6.78566 15.9162 8.72469 17.9554C9.68007 18.9602 10.6386 19.7646 11.3591 20.3179C11.6046 20.5065 11.8215 20.6651 12 20.7918C12.1785 20.6651 12.3954 20.5065 12.6409 20.3179C13.3614 19.7646 14.3199 18.9602 15.2753 17.9554C17.2143 15.9162 19 13.2007 19 10.1818C19 8.26992 18.2572 6.44073 16.9418 5.09552C15.6273 3.75107 13.8492 3 12 3Z"
+                                        fill="#7e7e7e"></path>
+                                </g>
+                            </svg>
+                            <span>{{project.HeaderLocation}}</span>
+                        </div>
+                        <div class="apartment-location mt-2">
+                            <h6>{{project.apartmentHomeaddress}}</h6>
+                        </div>
+                        <!--<h6 class="my-auto fs-6">Age of Building: {{project.AgeOfBuilding}}
+                        </h6>
+                        <h6 class="my-auto fs-6">Age of Residing: {{project.AgeOfResiding}}
+                        </h6>-->
+                    </div>
+                    <div class="col-md-6">
+                        <div class="header-location-section w-100 text-end me-2">
+                            <span class="me-3">Age of Property: {{project.AgeOfBuilding}}</span>
+                        </div>
+                        <div class="download-section">
+                            <button type="button" class="btn" data-bs-toggle="modal"
+                                data-bs-target="#download-contact-form"
+                                (click)="setDownloadFormId(project.ProjectName,'brochure',project.BrouchureLink)">
+                                <svg viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" fill="#ffffff">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier">
+                                        <title>image-picture</title>
+                                        <desc>Created with Sketch Beta.</desc>
+                                        <defs> </defs>
+                                        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"
+                                            sketch:type="MSPage">
+                                            <g id="Icon-Set" sketch:type="MSLayerGroup"
+                                                transform="translate(-360.000000, -99.000000)" fill="#ffffff">
+                                                <path
+                                                    d="M368,109 C366.896,109 366,108.104 366,107 C366,105.896 366.896,105 368,105 C369.104,105 370,105.896 370,107 C370,108.104 369.104,109 368,109 L368,109 Z M368,103 C365.791,103 364,104.791 364,107 C364,109.209 365.791,111 368,111 C370.209,111 372,109.209 372,107 C372,104.791 370.209,103 368,103 L368,103 Z M390,116.128 L384,110 L374.059,120.111 L370,116 L362,123.337 L362,103 C362,101.896 362.896,101 364,101 L388,101 C389.104,101 390,101.896 390,103 L390,116.128 L390,116.128 Z M390,127 C390,128.104 389.104,129 388,129 L382.832,129 L375.464,121.535 L384,112.999 L390,118.999 L390,127 L390,127 Z M364,129 C362.896,129 362,128.104 362,127 L362,126.061 L369.945,118.945 L380.001,129 L364,129 L364,129 Z M388,99 L364,99 C361.791,99 360,100.791 360,103 L360,127 C360,129.209 361.791,131 364,131 L388,131 C390.209,131 392,129.209 392,127 L392,103 C392,100.791 390.209,99 388,99 L388,99 Z"
+                                                    id="image-picture" sketch:type="MSShapeGroup"> </path>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+                                <span>Brochure</span>
+                            </button>
+                            <button type="button" class="btn" data-bs-toggle="modal"
+                                data-bs-target="#download-contact-form"
+                                (click)="setDownloadFormId(project.ProjectName,'layout-map',project.BrouchureLink)">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier">
+                                        <path
+                                            d="M21 7.16229C21 6.11871 21 5.59692 20.7169 5.20409C20.4337 4.81126 19.9387 4.64625 18.9487 4.31624L17.7839 3.92799C16.4168 3.47229 15.7333 3.24444 15.0451 3.3366C14.3569 3.42876 13.7574 3.82843 12.5583 4.62778L11.176 5.54937C10.2399 6.1734 9.77191 6.48541 9.24685 6.60952C9.05401 6.65511 8.85714 6.68147 8.6591 6.68823C8.11989 6.70665 7.58626 6.52877 6.51901 6.17302C5.12109 5.70705 4.42213 5.47406 3.89029 5.71066C3.70147 5.79466 3.53204 5.91678 3.39264 6.06935C3 6.49907 3 7.23584 3 8.70938V12.7736M21 11V15.2907C21 16.7642 21 17.501 20.6074 17.9307C20.468 18.0833 20.2985 18.2054 20.1097 18.2894C19.5779 18.526 18.8789 18.293 17.481 17.827C16.4137 17.4713 15.8801 17.2934 15.3409 17.3118C15.1429 17.3186 14.946 17.3449 14.7532 17.3905C14.2281 17.5146 13.7601 17.8266 12.824 18.4507L11.4417 19.3722C10.2426 20.1716 9.64311 20.5713 8.95493 20.6634C8.26674 20.7556 7.58319 20.5277 6.21609 20.072L5.05132 19.6838C4.06129 19.3538 3.56627 19.1888 3.28314 18.7959C3.01507 18.424 3.0008 17.9365 3.00004 17"
+                                            stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"></path>
+                                        <path d="M15 3.5V7M15 17V11" stroke="#ffffff" stroke-width="1.5"
+                                            stroke-linecap="round"></path>
+                                        <path d="M9 20.5V17M9 7V13" stroke="#ffffff" stroke-width="1.5"
+                                            stroke-linecap="round"></path>
+                                    </g>
+                                </svg>
+                                <span>Property Design</span></button>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="#download-contact-form" tabindex="-1"
+                                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            ...
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary"
+                                                data-bs-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-primary">Save changes</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="description-section">
+                <div class="row">
+                    <p class="property-description">{{project.PropertyDescription}}</p>
+                </div>
+            </div>
+        </section>
+        <section id="building-details">
+            <div class="building-details-section">
+                <div class="additional-info">
+                    <div class="info-section-container">
+                        <div class="row m-0">
+                            <div class="col-md-3">
+                                <div class="additional-info-card">
+                                    <svg fill="#004274" height="200px" width="200px" version="1.1" id="Layer_1"
+                                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                        viewBox="0 0 512 512" xml:space="preserve" stroke="#004274">
+                                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round">
+                                        </g>
+                                        <g id="SVGRepo_iconCarrier">
+                                            <g>
+                                                <g>
+                                                    <path
+                                                        d="M490.667,170.667H416V21.333h74.667c5.867,0,10.667-4.8,10.667-10.667C501.333,4.8,496.533,0,490.667,0h-85.333 c-0.32,0-0.64,0.107-0.96,0.213c-0.64,0.107-1.28,0.213-1.92,0.427c-1.067,0.32-2.133,0.853-3.093,1.493h-0.107 c-0.533,0.32-1.067,0.747-1.6,1.173l-84.16,63.147c-0.427,0.213-0.747,0.533-1.173,0.853l-84.48,63.36 c-0.213,0.213-0.533,0.32-0.747,0.64l-84.907,63.68c-0.107,0.107-0.32,0.213-0.427,0.32L56.427,259.2l-41.493,31.04 c-4.693,3.52-5.653,10.24-2.133,14.933c3.52,4.693,10.24,5.653,14.933,2.133l25.6-19.2v138.56h-32 c-5.867,0-10.667,4.8-10.667,10.667v64c0,5.867,4.8,10.667,10.667,10.667h469.333c5.867,0,10.667-4.8,10.667-10.667v-320 C501.333,175.467,496.533,170.667,490.667,170.667z M330.667,80.213l64-48v138.453H384c-5.867,0-10.667,4.8-10.667,10.667v53.333 h-42.667V80.213z M245.333,144.213l64-48v138.453h-10.667c-5.867,0-10.667,4.8-10.667,10.667V288h-42.667V144.213z M160,208.107 l64-48V288h-21.333C196.8,288,192,292.8,192,298.667v64h-32V208.107z M74.667,272.107l64-48v138.56h-21.333 c-5.867,0-10.667,4.8-10.667,10.667v53.333h-32V272.107z M480,490.667H32V448h85.333C123.2,448,128,443.2,128,437.333V384h74.667 c5.867,0,10.667-4.8,10.667-10.667v-64h85.333c5.867,0,10.667-4.8,10.667-10.667V256H384c5.867,0,10.667-4.8,10.667-10.667V192 H480V490.667z">
+                                                    </path>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                    <div class="additional-info-content">
+                                        <p class="info-name p-0 m-0">Floors</p>
+                                        <p class="info-value">{{project.NoofFloors}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="additional-info-card">
+                                    <svg fill="#004274" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 676.176 676.176"
+                                        xml:space="preserve" stroke="#004274">
+                                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round">
+                                        </g>
+                                        <g id="SVGRepo_iconCarrier">
+                                            <g>
+                                                <path
+                                                    d="M676.167,388.971c0.014-0.719,0.01-1.439-0.009-2.16c0.084-10.703-3.603-21.498-11.08-32.633 c-0.854-1.27-1.687-2.549-2.493-3.836c-7.784-13.96-12.798-28.542-13.426-45.662c-1.08-27.539-13.5-49.23-42.391-58.14 c-0.634-0.192-1.244-0.417-1.866-0.627c-10.83-5.807-21.076-12.313-30.588-19.922c-4.56-4.436-8.864-9.194-13.086-14.01 c-4.491-5.173-9.218-9.321-14.269-12.441c-9.685-7.664-21.959-10.02-35.692-6.55c-12.431,3.167-25.107,4.828-37.749,4.925 c-12.641-0.097-25.317-1.758-37.749-4.925c-13.732-3.47-26.009-1.114-35.691,6.55c-5.052,3.12-9.777,7.268-14.27,12.441 c-4.221,4.816-8.525,9.575-13.086,14.01c-9.511,7.61-19.757,14.116-30.588,19.922c-0.622,0.21-1.232,0.435-1.866,0.627 c-28.89,8.91-41.31,30.601-42.39,58.14c-0.628,17.119-5.643,31.701-13.425,45.662c-0.808,1.287-1.64,2.566-2.494,3.836 c-7.479,11.135-11.164,21.93-11.08,32.633c-0.019,0.721-0.022,1.441-0.009,2.16c-0.01,0.555-0.012,1.107-0.002,1.662 c-0.115,10.738,3.571,21.496,11.079,32.758c0.627,0.934,1.239,1.873,1.843,2.816c8.112,14.271,13.365,29.145,14.008,46.682 c1.08,27.541,13.5,49.23,42.391,58.143c0.772,0.232,1.521,0.504,2.274,0.764c10.359,5.57,20.191,11.771,29.347,18.984 c4.87,4.658,9.442,9.703,13.919,14.811c4.677,5.389,9.611,9.656,14.899,12.816c9.608,7.367,21.708,9.59,35.218,6.176 c12.405-3.16,25.057-4.822,37.671-4.926c12.614,0.104,25.266,1.766,37.671,4.926c13.511,3.414,25.608,1.191,35.218-6.176 c5.288-3.16,10.224-7.43,14.899-12.816c4.478-5.105,9.049-10.15,13.919-14.811c9.154-7.213,18.986-13.414,29.347-18.984 c0.755-0.26,1.503-0.529,2.274-0.764c28.891-8.91,41.311-30.602,42.391-58.143c0.645-17.535,5.896-32.41,14.01-46.682 c0.604-0.943,1.216-1.883,1.843-2.816c7.508-11.262,11.194-22.02,11.079-32.758C676.179,390.078,676.177,389.525,676.167,388.971z M474.201,546.238c-0.229,0.006-0.454,0.004-0.683,0.008c-0.228-0.004-0.454-0.002-0.682-0.008 c-17.501-0.072-34.558-2.959-50.619-8.252c-61.69-21.52-107.629-82.143-108.128-148.617c-0.006-0.729,0.005-1.451,0.008-2.176 c0.95-65.966,46.569-125.994,107.786-147.5c16.163-5.366,33.34-8.292,50.967-8.365c0.225-0.005,0.445-0.002,0.668-0.007 c0.224,0.004,0.444,0.001,0.668,0.007c17.627,0.074,34.805,2.999,50.968,8.365c61.217,21.506,106.836,81.534,107.784,147.5 c0.005,0.725,0.016,1.447,0.01,2.176c-0.498,66.475-46.438,127.1-108.128,148.617C508.758,543.279,491.702,546.166,474.201,546.238 z">
+                                                </path>
+                                                <path
+                                                    d="M564.104,462.646c0-6.479,0.092-12.146,0-17.729c-0.54-24.029-8.011-32.039-31.229-34.469 c-0.72-0.094-1.53-0.184-2.25-0.184c-6.84-0.539-14.939-2.16-19.71-6.479c-8.82-7.92-12.149-18.539-6.3-30.689 c4.5-9.358,7.83-19.26,12.06-28.801c9.99-22.589,1.08-41.669-13.319-57.688c-8.278-9.271-17.908-13.41-27.358-13.141 c-9.45-0.27-19.08,3.87-27.36,13.141c-14.397,16.02-23.31,35.1-13.319,57.688c4.229,9.541,7.562,19.44,12.062,28.801 c5.851,12.062,2.521,22.771-6.3,30.689c-4.771,4.229-12.87,5.85-19.71,6.479c-0.812,0.09-1.53,0.184-2.25,0.184 c-23.13,2.43-30.69,10.527-31.229,34.469c-0.091,5.67-0.091,11.43,0,18c0,1.711,0,3.51,0,5.4l0,0l0,0c29.88,0,59.13,0,88.199,0 c29.07,0,58.32,0,88.2,0l0,0l0,0C564.104,466.338,564.104,464.447,564.104,462.646z">
+                                                </path>
+                                                <rect x="258.188" y="524.1" width="25.2" height="25.199"></rect>
+                                                <path
+                                                    d="M269.55,303.641c0.778-19.841,6.068-36.996,15.726-51.063c10.833-15.777,26.524-26.923,46.64-33.126l0.116-0.036 c12.036-3.656,21.809-13.97,32.422-26.076c5.662-6.512,11.746-11.937,18.219-16.281c0.777-1.073,1.559-2.152,2.348-3.239 c-26.371-28.26-52.021-55.53-78.479-83.79C286.47,111.63,172.89,243.21,152.01,258.87v-36.72H77.76v120.87 c-0.72,0.988-59.4,70.199-77.76,93.602h75.15V572.25c3.42-3.061,6.48-5.76,9.18-8.818c49.95-55.17,101.25-109.08,148.77-166.318 c3.479-4.178,6.623-8.637,9.532-13.289c0.793-14.142,5.52-28.324,14.103-42.26C265.257,327.798,269.079,316.476,269.55,303.641z">
+                                                </path>
+                                                <path
+                                                    d="M258.363,439.113c-3.374-5.062-6.212-10.158-8.514-15.279L117.655,572.248h53.329l98.307-109.834 c-2.25-8.02-5.897-15.818-10.866-23.207L258.363,439.113z">
+                                                </path>
+                                                <path
+                                                    d="M257.918,487.559v25.201h20.117c-3.441-7.764-5.491-16.227-6.022-25.201H257.918z">
+                                                </path>
+                                                <path
+                                                    d="M303.188,549.299h10.917c-3.883-1.936-7.523-4.102-10.917-6.471V549.299z">
+                                                </path>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                    <div class="additional-info-content">
+                                        <p class="info-name p-0 m-0">Owners</p>
+                                        <p class="info-value">{{project.NoofOwners}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="additional-info-card">
+                                    <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round">
+                                        </g>
+                                        <g id="SVGRepo_iconCarrier">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M18.4164 31H29.5837C30.0096 30.0175 30.5783 29.0337 31.1077 28.1972C31.9501 26.8663 32.8498 25.6684 33.3793 25.0221C34.7882 23.2987 35.668 21.225 35.9229 19.0407C36.1778 16.8563 35.798 14.6443 34.8245 12.6584C33.8509 10.6721 32.3213 8.98968 30.4066 7.80939C28.4915 6.62888 26.2713 6.00036 24.0019 6C21.7326 5.99964 19.5121 6.62747 17.5967 7.80738C15.6816 8.98707 14.1514 10.6691 13.1771 12.6551C12.203 14.6407 11.8225 16.8525 12.0767 19.037C12.3308 21.2216 13.2102 23.2957 14.6187 25.0197C15.1472 25.6656 16.0473 26.8635 16.8906 28.1951C17.4206 29.032 17.9901 30.0165 18.4164 31ZM34.9273 26.2885C36.5762 24.2717 37.6099 21.8396 37.9094 19.2725C38.209 16.7053 37.7621 14.1074 36.6204 11.7782C35.4787 9.44891 33.6885 7.48298 31.4561 6.10687C29.2237 4.73075 26.6398 4.00041 24.0022 4C21.3646 3.99959 18.7806 4.72911 16.5477 6.10453C14.3149 7.47995 12.524 9.44531 11.3816 11.7742C10.2391 14.1031 9.79137 16.7008 10.0901 19.2681C10.3888 21.8354 11.4217 24.2678 13.0699 26.2851C14.0324 27.4611 16.4803 30.8176 17 33H31C31.5197 30.8193 33.9648 27.4628 34.9273 26.2885Z"
+                                                fill="#004274"></path>
+                                            <path d="M19 21L25 12V18H29L23 27L23 21H19Z" fill="#004274"></path>
+                                            <path d="M17 35H31V37H17V35Z" fill="#004274"></path>
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M29 41H19L19 42H29V41ZM17 39V42C17 43.1046 17.8954 44 19 44H29C30.1046 44 31 43.1046 31 42V39H17Z"
+                                                fill="#004274"></path>
+                                        </g>
+                                    </svg>
+                                    <div class="additional-info-content">
+                                        <p class="info-name p-0 m-0">EB Connection</p>
+                                        <p class="info-value">{{project.NoOfElectricityConnection}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="additional-info-card">
+                                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round">
+                                        </g>
+                                        <g id="SVGRepo_iconCarrier">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M15.5304 7.46967C15.8232 7.76256 15.8232 8.23744 15.5304 8.53033L12.0304 12.0303C11.7375 12.3232 11.2626 12.3232 10.9697 12.0303L8.9697 10.0303C8.6768 9.73744 8.6768 9.26256 8.9697 8.96967C9.26259 8.67678 9.73746 8.67678 10.0304 8.96967L11.5 10.4393L14.4697 7.46967C14.7626 7.17678 15.2375 7.17678 15.5304 7.46967Z"
+                                                fill="#004274"></path>
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M3.52439 8.85685C3.87872 4.55824 7.47087 1.25 11.7841 1.25H12.216C16.5292 1.25 20.1213 4.55824 20.4757 8.85685C20.666 11.166 19.9527 13.4589 18.4861 15.2526L13.693 21.1144C12.818 22.1845 11.1821 22.1845 10.307 21.1144L5.51399 15.2526C4.04733 13.4589 3.33405 11.166 3.52439 8.85685ZM11.7841 2.75C8.25152 2.75 5.30952 5.45948 5.01932 8.98008C4.8609 10.9019 5.45455 12.8102 6.67521 14.3031L11.4683 20.1649C11.7431 20.501 12.2569 20.501 12.5318 20.1649L17.3248 14.3031C18.5455 12.8102 19.1391 10.9019 18.9807 8.98008C18.6905 5.45948 15.7485 2.75 12.216 2.75H11.7841Z"
+                                                fill="#004274"></path>
+                                        </g>
+                                    </svg>
+                                    <div class="additional-info-content">
+                                        <p class="info-name p-0 m-0">Villa Location</p>
+                                        <p class="info-value">{{project.villaAddress}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="overview-section-container">
+                    <div class="row m-0">
+                        <div class="col-md-3 overview-section">
+                            <i class="fas fa-bed"></i>
+                            <span>{{project.TotalBedrooms}} Bedrooms</span>
+                        </div>
+                        <div class="col-md-3 overview-section">
+                            <i class="fas fa-bathtub"></i>
+                            <span>{{project.TotalBathrooms}} Bathrooms</span>
+                        </div>
+                        <div class="col-md-3 overview-section">
+                            <i class="fas fa-car"></i>
+                            <span>{{project.TotalParking}} Parking</span>
+                        </div>
+                        <div class="col-md-3 overview-section">
+                            <i class="fas fa-ruler-combined"></i>
+                            <span>{{project.TotalArea}} sqft</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="sizes-section">
+                    <div class="row m-0">
+                        <h6>Room Sizes:</h6>
+                        <div class="size-section-container">
+                            <div class="size-card" *ngFor="let size of project.SizeDetails">
+                                <p class="size-name">{{size.name}}</p>
+                                <div class="sizes">
+                                    <p *ngIf="size.length>0&&size.breadth>0" class="length-breath">
+                                        {{size.length}} x {{size.breadth}},</p>
+                                    <p class="area">{{size.area}} sqft</p>
+                                </div>
+                            </div>
+                            <div class="carpet-card" *ngFor="let carpetSize of project.carpetSizeDetails">
+                                <p class="carpet-name">{{carpetSize.name}}</p>
+                                <p class="carpet-sizes">{{carpetSize.sqft}} sqft, {{carpetSize.cents}} Cent</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="features-section">
+                    <div class="row m-0">
+                        <h6>Exceptional Apartment Features:</h6>
+                        <div class="features-container">
+                            <div class="feature" *ngFor="let feature of project.Features">
+                                <div class="feature-image">
+                                    <img [src]="feature.imageUrl" [alt]="feature.featureName">
+                                </div>
+                                <div class="feature-content">
+                                    <p>{{feature.featureName}}</p>
+                                    <!--<p>{{feature.description}}</p>-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="aminities">
+            <div class="Amenities-section">
+                <div class="amenities-and-proximity">
+                    <div class="row p-0 m-0">
+                        <div class="col-12">
+                            <div class="section-header">
+                                <h6 class="section-title w-100">Amenities</h6>
+                                <div class="divider"></div>
+                            </div>
+                            <div class="amenities-container d-flex flex-wrap justify-content-start align-items-center">
+                                <div class="aminities-card" *ngFor="let aminity of project.Amenities"
+                                    style="width: 315px;">
+                                    <div class="icon">
+                                        <img [src]="'aminities_layout/'+getAmenityIcon(aminity)" alt="">
+                                    </div>
+                                    <h6>{{aminity}}</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="proximity">
+            <div class="proximity-section">
+                <div class="proximity">
+                    <div class="row p-0 m-0">
+                        <div class="col-12 proximity">
+                            <div class="section-header">
+                                <h6 class="section-title w-100">Near By Proximity </h6>
+                                <div class="divider"></div>
+                            </div>
+                            <div
+                                class="proximity-card-container d-flex flex-wrap justify-content-start align-items-center">
+                                <div class="promity-card" *ngFor="let proximity of project.NearByProximity">
+                                    <img [src]="'Proximity/'+proximity.Category+'.svg'" alt="">
+                                    <div class="content">
+                                        <p class="proximity-name m-0">{{proximity.ProximityName}}</p>
+                                        <p><span class="proximity-distance">{{proximity.Distance}} </span><span
+                                                class="promity-duration">({{proximity.Duration}})</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--<app-proximity-map [mainLocation]="mainLocation"
+                    [proximityLocations]="proximityLocations"></app-proximity-map>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="top-5-reasons-section">
+            <div class="reasons">
+                <div class="row p-0 m-0">
+                    <div class="section-header">
+                        <h6 class="section-title w-100">Top 5 Reasons to Pick This Property</h6>
+                        <div class="divider"></div>
+                    </div>
+                    <div class="reasons-card-container d-flex flex-wrap justify-content-center align-items-center">
+                        <div class="reason-card" *ngFor="let reason of project.TopFiveReasons;let i=index">
+                            <div class="s-no w-100">
+                                <i aria-hidden="true" class="fa fa-quote-left fa-1x"></i>
+                                <h6>0{{i+1}}</h6>
+                            </div>
+                            <div class="reason-card-image">
+                                <img [src]="'reasons/'+reason.Title+'.svg'" alt="">
+                            </div>
+                            <div class="reason-card-title">
+                                <h6 class="title my-auto">{{reason.Title}}</h6>
+                            </div>
+                            <div class="reason-card-content">
+                                <p class="reason-card-description">{{reason.Description}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section id="legal-finaancial">
+            <div class="Legal-Financial-section px-md-5">
+                <div class="Legal-Financial">
+                    <div class="row p-0 m-0">
+                        <div class="section-header">
+                            <h6 class="section-title w-100">Legal & Financial</h6>
+                            <div class="divider"></div>
+                        </div>
+                        <div class="col-md-6">
+                            <table class="w-100">
+                                <tr class="row m-0">
+                                    <th class="col-md-4">DTCP Approval No</th>
+                                    <td class="col-md-8 my-auto">: {{project.LegalAndFinancial.DTCPApprovalNo}}</td>
+                                </tr>
+                                <tr class="row m-0">
+                                    <th class="col-md-4">RERA Approval No</th>
+                                    <td class="col-md-8 my-auto">: {{project.LegalAndFinancial.RERAApprovalNo}}</td>
+                                </tr>
+                                <tr class="row m-0">
+                                    <th class="col-md-4">Building Approval No</th>
+                                    <td class="col-md-8 my-auto">: {{project.LegalAndFinancial.BuildingApprovalNo}}</td>
+                                </tr>
+                                <tr class="row m-0">
+                                    <th class="col-md-4">Litigation Property</th>
+                                    <td class="col-md-8 my-auto">: {{project.LegalAndFinancial.LitigationProperty}}</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="col-md-6">
+                            <table class="w-100">
+                                <tr class="row m-0">
+                                    <th class="col-md-9">Titdle Deed is Clear Document</th>
+                                    <td class="col-md-3 my-auto">:
+                                        {{project.LegalAndFinancial.TitdleDeedisClearDocument}}
+                                    </td>
+                                </tr>
+                                <tr class="row m-0">
+                                    <th class="col-md-9">Local Body Taxes Paid as of Now</th>
+                                    <td class="col-md-3 my-auto">:
+                                        {{project.LegalAndFinancial.LocalBodyTaxesPaidAsOfNow}}
+                                    </td>
+                                </tr>
+                                <tr class="row m-0">
+                                    <th class="col-md-9">Encumberance Certificate is Clear</th>
+                                    <td class="col-md-3 my-auto">:
+                                        {{project.LegalAndFinancial.EncumberanceCertificateisClear}}
+                                    </td>
+                                </tr>
+                                <tr class="row m-0">
+                                    <th class="col-md-9">Property is Under Hypothecation by Bank/Finance</th>
+                                    <td class="col-md-3 my-auto">:
+                                        {{project.LegalAndFinancial.PropertyisUnderHypothecationbyBank}}</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="youtube-video">
+            <div class="youtube-video-section w-100">
+                <div class="youtube-video">
+                    <iframe [src]="safeYoutubeUrl" frameborder="0" allowfullscreen
+                        allow="autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
+                </div>
+            </div>
+        </section>
+        <section id="property-address">
+            <div class="property-address-details-section w-100">
+                <div class="address-details">
+                    <div class="row p-0 m-0">
+                        <!--<div class="section-header">
+                            <h6 class="section-title w-100">Location Map</h6>
+                            <div class="divider"></div>
+                        </div>
+                        <div class="address-section">
+                            <div class="address">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round">
+                                    </g>
+                                    <g id="SVGRepo_iconCarrier">
+                                        <path
+                                            d="M2.43627 5.14686C2 5.64345 2 6.49488 2 8.19773V17.591C2 18.797 2 19.4 2.3146 19.854C2.62919 20.3079 3.17921 20.4986 4.27924 20.88L5.57343 21.3286C6.27436 21.5717 6.81371 21.7586 7.26633 21.879C7.5616 21.9576 7.83333 21.7258 7.83333 21.4203V6.2701C7.83333 6.02118 7.64964 5.81111 7.40837 5.74991C7.01914 5.65118 6.55127 5.48897 5.91002 5.26666C4.35676 4.72817 3.58014 4.45893 2.98922 4.73235C2.77941 4.82942 2.59116 4.97054 2.43627 5.14686Z"
+                                            fill="#7e7e7e"></path>
+                                        <path
+                                            d="M12.6204 3.48096L11.0844 4.54596C10.5287 4.93124 10.1215 5.2136 9.77375 5.41491C9.60895 5.51032 9.5 5.68291 9.5 5.87334V20.9203C9.5 21.2909 9.88398 21.5222 10.1962 21.3225C10.5312 21.1082 10.9149 20.8422 11.3796 20.5199L12.9156 19.4549C13.4712 19.0697 13.8785 18.7873 14.2262 18.586C14.3911 18.4906 14.5 18.318 14.5 18.1276V3.08063C14.5 2.71004 14.116 2.47866 13.8038 2.67836C13.4688 2.89271 13.0851 3.15874 12.6204 3.48096Z"
+                                            fill="#7e7e7e"></path>
+                                        <path
+                                            d="M19.7208 3.12093L18.4266 2.67226C17.7256 2.42923 17.1863 2.24228 16.7337 2.12187C16.4384 2.04333 16.1667 2.2751 16.1667 2.58064V17.7308C16.1667 17.9797 16.3504 18.1898 16.5916 18.251C16.9809 18.3497 17.4488 18.5119 18.09 18.7342C19.6432 19.2727 20.4199 19.542 21.0108 19.2686C21.2206 19.1715 21.4088 19.0304 21.5637 18.854C22 18.3575 22 17.506 22 15.8032V6.40988C22 5.2039 22 4.60091 21.6854 4.14695C21.3708 3.69298 20.8208 3.5023 19.7208 3.12093Z"
+                                            fill="#7e7e7e"></path>
+                                    </g>
+                                </svg>
+                                <p class="m-0"><strong>Address: </strong>{{project.AddressDetails.Address}},
+                                    {{project.AddressDetails.Taluk}},
+                                    {{project.AddressDetails.District}}</p>
+                            </div>
+                            <div class="landmark">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round">
+                                    </g>
+                                    <g id="SVGRepo_iconCarrier">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M12.9951 9.90096C15.2798 9.43957 17 7.42067 17 5C17 2.23858 14.7614 0 12 0C9.23857 0 6.99999 2.23858 6.99999 5C6.99999 7.42067 8.72019 9.43957 11.0048 9.90096C11.0016 9.93354 11 9.96658 11 10V19C11 19.5523 11.4477 20 12 20C12.5523 20 13 19.5523 13 19V10C13 9.96658 12.9984 9.93354 12.9951 9.90096ZM12 8.0065C10.3396 8.0065 8.9935 6.66044 8.9935 5C8.9935 3.33956 10.3396 1.9935 12 1.9935C13.6604 1.9935 15.0065 3.33956 15.0065 5C15.0065 6.66044 13.6604 8.0065 12 8.0065Z"
+                                            fill="#7e7e7e"></path>
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M4.78369 16.299C5.62603 15.6557 6.73206 15.2123 8.00216 15.0591C8.55047 14.993 8.99998 15.4477 8.99998 16C8.99998 16.5523 8.54907 16.9896 8.00393 17.0782C7.16144 17.215 6.4816 17.5189 5.99751 17.8885C5.32619 18.4012 5.09028 18.9788 5.12241 19.4288C5.15277 19.8538 5.44623 20.4684 6.50713 21.0185C7.57831 21.5739 9.33864 22 11.9999 22C14.6613 22 16.4216 21.5739 17.4928 21.0185C18.5537 20.4684 18.8472 19.8538 18.8775 19.4288C18.9097 18.9788 18.6738 18.4012 18.0024 17.8885C17.5184 17.5189 16.8385 17.215 15.996 17.0782C15.4509 16.9896 15 16.5523 15 16C15 15.4477 15.4495 14.993 15.9978 15.0591C17.2679 15.2123 18.3739 15.6557 19.2163 16.299C20.2637 17.0988 20.9653 18.2712 20.8724 19.5712C20.7778 20.8962 19.8838 22.0316 18.4134 22.794C16.9533 23.5511 14.8387 24 11.9999 24C9.16123 24 7.04656 23.5511 5.58649 22.794C4.11615 22.0316 3.22212 20.8962 3.12749 19.5712C3.03464 18.2712 3.73625 17.0988 4.78369 16.299Z"
+                                            fill="#7e7e7e"></path>
+                                    </g>
+                                </svg>
+                                <p class="m-0"><strong>Landmark: </strong>{{project.AddressDetails.Landmark}}</p>
+                            </div>
+                        </div>-->
+                        <div class="row address p-0 m-0 map-section">
+                            <iframe width="100%" height="500" style="border:0" loading="lazy" allowfullscreen
+                                referrerpolicy="no-referrer-when-downgrade" [src]="safeMapLink">
+                            </iframe>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="property-contact">
+            <div class="contact-information-section"
+                style="background: url(contact.jpg);background-position: center;background-attachment: fixed;background-size: cover;background-repeat: no-repeat;">
+                <div class="overlay"></div>
+                <div class="row contact m-0">
+                    <div class="col-12 contact-form">
+                        <div class="form">
+                            <form [formGroup]="contactForm" (ngSubmit)="ngContactFormSubmit(project.ProjectName)">
+                                <h6>Contact Form</h6>
+                                <div class="row m-0 w-100">
+                                    <div class="col-12 mb-3 p-0">
+                                        <label for="name" class="form-label required">Name</label>
+                                        <input type="text" id="name" class="form-control" placeholder="Enter your name"
+                                            formControlName="name" [(ngModel)]="contcatFormName" />
+                                        <div *ngIf="contactForm.controls['name'].invalid && contactForm.controls['name'].touched"
+                                            class="text-danger">
+                                            <small *ngIf="contactForm.controls['name'].errors?.['required']">Name is
+                                                required.</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row m-0 w-100">
+                                    <div class="col-12 mb-3 p-0">
+                                        <label for="phoneNumber" class="form-label required">Phone number</label>
+                                        <input type="text" maxlength="10" id="phoneNumber" class="form-control"
+                                            placeholder="Phone number" formControlName="phone"
+                                            [(ngModel)]="contactFormPhoneNumber" />
+                                        <div *ngIf="contactForm.controls['phone'].invalid && contactForm.controls['phone'].touched"
+                                            class="text-danger">
+                                            <small *ngIf="contactForm.controls['phone'].errors?.['required']">Phone
+                                                number
+                                                is
+                                                required.</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row m-0">
+                                    <div class="col-12 p-0 mb-3">
+                                        <label for="email" class="form-label required">Email</label>
+                                        <input type="email" id="email" class="form-control" placeholder="Email"
+                                            formControlName="email" [(ngModel)]="contactFormEmail" />
+                                        <div *ngIf="contactForm.controls['email'].invalid && contactForm.controls['email'].touched"
+                                            class="text-danger">
+                                            <small *ngIf="contactForm.controls['email'].errors?.['required']">Email
+                                                is
+                                                required.</small>
+                                            <small *ngIf="contactForm.controls['email'].errors?.['email']">Please
+                                                enter
+                                                a
+                                                valid
+                                                email
+                                                address.</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row m-0">
+                                    <div class="col-12 p-0 mb-3">
+                                        <label for="message" class="form-label required">Message</label>
+                                        <textarea id="message" rows="5" class="form-control" placeholder="Message"
+                                            formControlName="message" [(ngModel)]="contactFormMessage"></textarea>
+                                        <div *ngIf="contactForm.controls['message'].invalid && contactForm.controls['message'].touched"
+                                            class="text-danger">
+                                            <small *ngIf="contactForm.controls['message'].errors?.['required']">Message
+                                                is
+                                                required.</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <button type="submit" class="btn send-button w-100"
+                                            [disabled]="contactForm.invalid">Send
+                                            message</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="bank-partners-section">
+            <div class="row m-0 bank-partners">
+                <div class="section-header">
+                    <h6 class="section-title w-100">Banking Partner</h6>
+                    <div class="divider"></div>
+                </div>
+                <div class="row m-0 banks">
+                    <img *ngFor="let bank of project.BankPartners" [src]="gettingBankIconUrl(bank)"
+                        [alt]="bank + ' logo'" class="bank-logo">
+                </div>
+            </div>
+        </div>
+        <div *ngIf="RelatedProjects.length>0" class="related-projects-section">
+            <div class="related-projects">
+                <div class="row m-0">
+                    <div class="section-header">
+                        <h6 class="section-title w-100">Related Projects</h6>
+                        <div class="divider"></div>
+                    </div>
+                    <div class="cards-container" *ngIf="RelatedProjects.length>0">
+                        <div class="row">
+                            <div class="project-card" *ngFor="let project of RelatedProjects">
+                                <div class="image-section">
+                                    <img [src]="project.CardImage" alt="{{ project.ProjectName }}">
+                                </div>
+                                <div class="content-section">
+                                    <div class="category-label">
+                                        <ul>
+                                            <li [ngStyle]="{'background-color':getLabelBackgroundColor(project.Type)}">
+                                                {{project.Type}}
+                                            </li>
+                                            <li
+                                                [ngStyle]="{'background-color':getLabelBackgroundColor(project.Category)}">
+                                                {{project.Category}}</li>
+                                        </ul>
+                                    </div>
+                                    <div class="title-section">
+                                        <h6 class="m-0">{{project.ProjectName}}</h6>
+                                    </div>
+                                    <div class="location-section">
+                                        <svg fill="#000000" version="1.1" id="Layer_1"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24"
+                                            xml:space="preserve">
+                                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round"
+                                                stroke-linejoin="round">
+                                            </g>
+                                            <g id="SVGRepo_iconCarrier">
+                                                <style type="text/css">
+                                                    .st0 {
+                                                        fill: none;
+                                                    }
+                                                </style>
+                                                <path
+                                                    d="M12,2C8.7,2,6,4.7,6,8c0,5.2,6,11.1,6,11.1s6-6,6-11.1C18,4.7,15.3,2,12,2z M12,5.9c1.1,0,2.1,1,2.1,2.1 c0,1.2-0.9,2.1-2.1,2.1S9.9,9.1,9.9,8C9.9,6.8,10.9,5.9,12,5.9z M6.8,15.1c-1.3,0.3-2.3,0.6-3.2,1c-0.4,0.2-0.8,0.5-1.1,0.8 S2,17.8,2,18.3c0,0.8,0.5,1.4,1.1,1.8s1.3,0.7,2.2,1C7.1,21.7,9.4,22,12,22s4.9-0.3,6.7-0.8c0.9-0.3,1.6-0.6,2.2-1s1.1-1,1.1-1.8 c0-1-0.8-1.7-1.6-2.2c-0.8-0.5-1.9-0.8-3.2-1l-0.3,2c1.1,0.2,2,0.5,2.6,0.8c0.4,0.2,0.5,0.4,0.6,0.4c0,0-0.1,0.1-0.2,0.2 c-0.3,0.2-0.9,0.5-1.6,0.7C16.6,19.7,14.4,20,12,20s-4.6-0.3-6.1-0.8c-0.7-0.2-1.3-0.5-1.6-0.7c-0.1-0.1-0.2-0.2-0.2-0.2 c0.1-0.1,0.2-0.2,0.5-0.4c0.6-0.3,1.5-0.6,2.7-0.8L6.8,15.1z">
+                                                </path>
+                                                <rect class="st0" width="24" height="24"></rect>
+                                            </g>
+                                        </svg>
+                                        <span>{{project.HeaderLocation}}</span>
+                                    </div>
+                                    <div class="knowmore-btn-section">
+                                        <span class="plots-count">Total no of plots: {{project.TotalPlots}}</span>
+                                        <button class="know-more-btn"
+                                            (click)="goingDetailPage(project.Category,project.ProjectName,project.ProjectId)">Know
+                                            more</button>
+                                    </div>
+                                    <hr class="divider">
+                                    <div class="amenities-section">
+                                        <div class="project-card-amenities">
+                                            <img *ngFor="let aminity of project.CardAmenities"
+                                                [src]="'aminities/'+aminity+'.svg'" alt="aminity">
+                                        </div>
+                                        <div class="project-updated-date">
+                                            <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fill="#767F86">
+                                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round"
+                                                    stroke-linejoin="round"></g>
+                                                <g id="SVGRepo_iconCarrier">
+                                                    <title>time-history</title>
+                                                    <g id="Layer_2" data-name="Layer 2">
+                                                        <g id="invisible_box" data-name="invisible box">
+                                                            <rect width="48" height="48" fill="none"></rect>
+                                                        </g>
+                                                        <g id="icons_Q2" data-name="icons Q2">
+                                                            <path
+                                                                d="M46,24A22,22,0,0,1,4.3,33.7a2,2,0,0,1,.5-2.6,2,2,0,0,1,3,.7A18,18,0,1,0,10.6,12h5.3A2.1,2.1,0,0,1,18,13.7,2,2,0,0,1,16,16H6a2,2,0,0,1-2-2V4.1A2.1,2.1,0,0,1,5.7,2,2,2,0,0,1,8,4V8.9A22,22,0,0,1,46,24Z">
+                                                            </path>
+                                                            <path
+                                                                d="M34,32a1.7,1.7,0,0,1-1-.3L22,25.1V14a2,2,0,0,1,4,0v8.9l9,5.4a1.9,1.9,0,0,1,.7,2.7A1.9,1.9,0,0,1,34,32Z">
+                                                            </path>
+                                                        </g>
+                                                    </g>
+                                                </g>
+                                            </svg>
+                                            <h6 class="my-auto">{{calculateRelativeTime(project.ProjectLaunchDate)}}
+                                            </h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="enquirey-now-button">
+        <button (click)="scrollToSection('property-contact')">Enquire Now</button>
+    </div>
+    <div class="contact-buttons">
+        <div class="phone-icon-container">
+            <svg class="phone" height="200px" width="200px" version="1.1" id="Layer_1"
+                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 0 392.558 392.558" xml:space="preserve" fill="#000000">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                    <path style="fill:#FFFFFF;"
+                        d="M72.841,26.186c-5.883-5.883-15.451-5.883-21.333,0l-8.792,8.857 C-2.73,80.489,30.95,191.034,116.284,276.432C201.617,361.766,312.098,395.446,357.609,350l8.857-8.857 c5.883-5.883,5.883-15.451,0-21.333l-77.253-77.317c-5.883-5.883-15.451-5.883-21.333,0l-35.297,35.297 c-20.234,20.234-61.996,10.214-94.966-22.82s-43.055-74.731-22.82-94.966l35.297-35.297c5.883-5.883,5.883-15.451,0-21.269 L72.841,26.186z">
+                    </path>
+                    <path style="fill:#56ACE0;"
+                        d="M190.11,309.143c25.212,6.271,46.352-4.59,57.471-15.58l30.578-30.578l67.685,67.685l-4.073,4.073 C332.461,344.182,266.975,366.162,190.11,309.143z M83.443,202.541C67.928,178.881,26.36,94.517,57.779,50.752l4.073-4.073 l67.685,67.685l-30.578,30.578C84.866,159.099,79.371,179.721,83.443,202.541z">
+                    </path>
+                    <g>
+                        <path style="fill:#194F82;"
+                            d="M381.851,304.36l-77.253-77.253c-14.352-14.352-37.689-14.352-52.105,0l-35.297,35.297 c-9.762,9.762-39.24,2.069-64.129-22.82s-32.582-54.368-22.82-64.129l35.297-35.297c14.352-14.352,14.352-37.689,0-52.105 L88.292,10.8C73.94-3.552,50.603-3.552,36.187,10.8l-8.986,8.792C-28.46,75.253,3.863,194.784,100.769,291.754 c96.97,96.905,216.436,129.228,272.162,73.568l8.857-8.857C396.138,342.113,396.138,318.776,381.851,304.36z M366.401,341.079 l-8.857,8.857c-45.446,45.446-155.992,11.766-241.39-73.503C30.886,191.034-2.795,80.489,42.716,35.107l8.857-8.857 c5.883-5.883,15.451-5.883,21.333,0l13.899,13.964L52.542,74.477c-4.267,4.267-4.267,11.119,0,15.386s11.119,4.267,15.386,0 l34.263-34.133l15.386,15.386l-14.998,14.869c-4.267,4.267-4.267,11.119,0,15.386s11.119,4.267,15.386,0l14.998-14.998 l17.002,17.002c5.883,5.883,5.883,15.451,0,21.269l-35.297,35.297c-20.234,20.234-10.214,61.996,22.82,94.966 s74.731,43.055,94.966,22.82l35.297-35.297c5.883-5.883,15.451-5.883,21.333,0l77.253,77.253 C372.284,325.628,372.284,335.196,366.401,341.079z">
+                        </path>
+                        <path style="fill:#194F82;"
+                            d="M214.805,22.113c85.851,0,155.733,69.883,155.733,155.733c0,6.012,4.848,10.925,10.925,10.925 s10.925-4.848,10.925-10.925C392.259,79.907,312.68,0.327,214.805,0.327c-6.012,0-10.925,4.848-10.925,10.925 S208.728,22.113,214.805,22.113z">
+                        </path>
+                        <path style="fill:#194F82;"
+                            d="M214.805,65.685c61.802,0,112.097,50.295,112.097,112.097c0,6.012,4.848,10.925,10.925,10.925 c6.012,0,10.925-4.848,10.925-10.925c0-73.891-60.057-133.883-133.883-133.883c-6.012,0-10.925,4.848-10.925,10.925 C203.88,60.836,208.728,65.685,214.805,65.685z">
+                        </path>
+                        <path style="fill:#194F82;"
+                            d="M214.805,87.471c-6.012,0-10.925,4.848-10.925,10.925c0,6.077,4.848,10.925,10.925,10.925 c37.818,0,68.525,30.772,68.525,68.525c0,6.012,4.848,10.925,10.925,10.925c6.077,0,10.925-4.848,10.925-10.925 C305.116,127.939,264.647,87.471,214.805,87.471z">
+                        </path>
+                    </g>
+                </g>
+            </svg>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="download-contact-form" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" style="width:100%;max-width: 400px;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h6 class="my-auto">Download document</h6>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" style="padding: 0;">
+                <p class="form-description mt-2">Please fill out the form below to receive your document. We require
+                    some basic
+                    information to process your request.</p>
+                <div class="contact-form" style="padding: 0; margin: 0;">
+                    <div class="form">
+                        <form [formGroup]="fileDownloadForm" (ngSubmit)="ngSubmitFileDownloadform()"
+                            style="padding: 0;">
+                            <div class="row m-0 w-100">
+                                <div class="col-12 mb-3 p-0">
+                                    <label for="name" class="form-label required">Name</label>
+                                    <input type="text" id="name" class="form-control" placeholder="Enter your name"
+                                        formControlName="name" [(ngModel)]="contcatFormName" />
+                                    <div *ngIf="contactForm.controls['name'].invalid && contactForm.controls['name'].touched"
+                                        class="text-danger">
+                                        <small *ngIf="contactForm.controls['name'].errors?.['required']">Name is
+                                            required.</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row m-0 w-100">
+                                <div class="col-12 mb-3 p-0">
+                                    <label for="phoneNumber" class="form-label required">Phone number</label>
+                                    <input type="text" maxlength="10" id="phoneNumber" class="form-control"
+                                        placeholder="Phone number" formControlName="phone"
+                                        [(ngModel)]="contactFormPhoneNumber" />
+                                    <div *ngIf="contactForm.controls['phone'].invalid && contactForm.controls['phone'].touched"
+                                        class="text-danger">
+                                        <small *ngIf="contactForm.controls['phone'].errors?.['required']">Phone
+                                            number
+                                            is
+                                            required.</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row m-0">
+                                <div class="col-12 p-0 mb-3">
+                                    <label for="email" class="form-label required">Email</label>
+                                    <input type="email" id="email" class="form-control" placeholder="Email"
+                                        formControlName="email" [(ngModel)]="contactFormEmail" />
+                                    <div *ngIf="contactForm.controls['email'].invalid && contactForm.controls['email'].touched"
+                                        class="text-danger">
+                                        <small *ngIf="contactForm.controls['email'].errors?.['required']">Email is
+                                            required.</small>
+                                        <small *ngIf="contactForm.controls['email'].errors?.['email']">Please enter a
+                                            valid email address.</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <button type="submit" data-bs-dismiss="modal" class="btn send-button w-100"
+                                        [disabled]="fileDownloadForm.invalid" (click)="downloadFile()">Download</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- image Modal -->
+<div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="imageModalLabel">Image Preview</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+                <img [src]="modalImageUrl" class="img-fluid" alt="Selected Image">
+            </div>
+        </div>
+    </div>
+</div>
