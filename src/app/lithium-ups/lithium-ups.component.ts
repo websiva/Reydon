@@ -47,31 +47,14 @@ export class LithiumUPSComponent implements OnInit {
     { src: 'products/battery/product_image/product1.jpg', alt: 'Product 1' },
     { src: 'products/battery/product_image/product2.jpg', alt: 'Product 2' },
     { src: 'products/battery/product_image/product3.jpg', alt: 'Product 3' },
-    { src: 'products/battery/product_image/product4.jpg', alt: 'Product 4' },
-    { src: 'products/battery/product_image/product5.jpg', alt: 'Product 5' },
-
-    // New images
-    { src: 'https://eeepvtltd.com/wp-content/uploads/2022/12/3Wheeler-Battery.png', alt: '3 Wheeler Battery' },
     { src: 'https://eeepvtltd.com/wp-content/uploads/2022/12/12v-80ah.png', alt: '12v 80Ah Battery' },
-    { src: 'https://eeepvtltd.com/wp-content/uploads/2022/12/48V-1280x1280.jpg', alt: '48V Battery' },
-    { src: 'https://eeepvtltd.com/wp-content/uploads/2022/12/96V96Ah.jpg', alt: '96V 96Ah Battery' },
-    { src: 'https://eeepvtltd.com/wp-content/uploads/2022/12/96v96ah1.jpg', alt: '96V 96Ah Battery 1' },
     { src: 'https://eeepvtltd.com/wp-content/uploads/2022/12/96v96Ah2.jpg', alt: '96V 96Ah Battery 2' },
     { src: 'https://eeepvtltd.com/wp-content/uploads/2022/12/4824-without-address-1280x1280.jpg', alt: '4824 Battery' },
     { src: 'https://eeepvtltd.com/wp-content/uploads/2022/12/adirath-UPS-1280x970.jpg', alt: 'Adirath UPS' },
     { src: 'https://eeepvtltd.com/wp-content/uploads/2022/12/Bike-Batteries-copy.png', alt: 'Bike Battery' },
-    { src: 'https://eeepvtltd.com/wp-content/uploads/2022/12/DSC04040-1280x854.jpg', alt: 'Battery DSC04040' },
     { src: 'https://eeepvtltd.com/wp-content/uploads/2022/12/Electric-Vehicle-Batteries-1280x1122.jpg', alt: 'Electric Vehicle Batteries' },
     { src: 'https://eeepvtltd.com/wp-content/uploads/2022/12/ESS-Battery.jpg', alt: 'ESS Battery' },
-    { src: 'https://eeepvtltd.com/wp-content/uploads/2022/12/ESS-Battery1.jpg', alt: 'ESS Battery 1' },
-    { src: 'https://eeepvtltd.com/wp-content/uploads/2022/12/IMG_20220430_103710-1280x1280.jpg', alt: 'Battery IMG 20220430' },
-    { src: 'https://eeepvtltd.com/wp-content/uploads/2022/12/IMG_20220517_172255-1280x2123.jpg', alt: 'Battery IMG 20220517' },
-    { src: 'https://eeepvtltd.com/wp-content/uploads/2022/12/IMG_20220526_125601-1280x1699.jpg', alt: 'Battery IMG 20220526' },
-    { src: 'https://eeepvtltd.com/wp-content/uploads/2022/12/IMG_20220616_172144-1280x958.jpg', alt: 'Battery IMG 20220616' },
-    { src: 'https://eeepvtltd.com/wp-content/uploads/2022/12/IMG_20220621_152954-1280x958.jpg', alt: 'Battery IMG 20220621' },
-    { src: 'https://eeepvtltd.com/wp-content/uploads/2022/12/IMG_20221008_105941-copy-1280x1014.jpg', alt: 'Battery IMG 20221008' },
-    { src: 'https://eeepvtltd.com/wp-content/uploads/2022/12/Rickshaw-Battery.png', alt: 'Rickshaw Battery' },
-    { src: 'https://eeepvtltd.com/wp-content/uploads/2022/12/Robot-Battery-1280x1280.png', alt: 'Robot Battery' }
+    { src: 'https://eeepvtltd.com/wp-content/uploads/2022/12/IMG_20220616_172144-1280x958.jpg', alt: 'Battery IMG 20220616' }
 ];
 
   // Slider Data

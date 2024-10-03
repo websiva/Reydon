@@ -204,10 +204,6 @@ section>.row {
 }
 
 /***************Features***************************/
-.features-container {
-    /*display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;*/
-}
 .features{
     background-color: #f1f1f1;
 }
@@ -255,11 +251,6 @@ section>.row {
 }
 
 /**************************Hightlights****************/
-.highlights {
-    /*background-color: #f7f8fa;*/
-}
-
-.highlight {}
 
 .highlight-box {
     display: flex;
@@ -323,8 +314,6 @@ section>.row {
     align-items: center;
 }
 
-.review-section .carousel-caption .content-box {}
-
 .review-section .carousel-caption svg {
     width: 40px;
     height: 40px;
@@ -384,9 +373,6 @@ section>.row {
 }
 
 /**********************Specifications****************/
-.specifications {
-    /* background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(0,66,116,0.5270483193277311) 100%);*/
-}
 
 .specifications table {
     box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);

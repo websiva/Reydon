@@ -11,8 +11,7 @@
                     constructive solutions to fulfil all your dream homes inspire with a touch of AI technology!
                 </header>
                 <div class="container">
-                    <h6 class="title">Land Measurement Units</h6>
-                    <div class="table-responsive">
+                    <!--<div class="table-responsive">
                         <table class="table table-bordered w-100">
                             <thead>
                                 <tr>
@@ -40,11 +39,11 @@
                                 </tr>
                             </tbody>
                         </table>
-                    </div>
+                    </div>-->
                     <div class="unit-converter mb-3">
-                        <h2 class="title">Land Unit Converter</h2>
+                        <h2 class="title mb-3">Land Unit Converter</h2>
                         <div class="row">
-                            <div class="col-md-6">
+                            <div class="col-md-5">
                                 <div class="row">
                                     <div class="col-6">
                                         <input type="number" id="inputValue" class="form-control" [(ngModel)]="inputValue"
@@ -58,7 +57,10 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-6">
+                            <div class="col-md-2">
+                                <h6 class="d-flex justify-content-center" style="width:100; margin: 0 auto;color: gray;">to</h6>
+                            </div>
+                            <div class="col-md-5">
                                 <div class="row toUnit-container">
                                     <div class="col-6">
                                         <input type="number" class="form-control" id="outputValue" [(ngModel)]="convertedValue" readonly />

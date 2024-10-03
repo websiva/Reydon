@@ -42,79 +42,51 @@ export class EnergyStorageSystemComponent implements OnInit {
   }
 
   productImages = [ 
-    { src: 'https://eeepvtltd.com/wp-content/uploads/2022/12/3Wheeler-Battery.png', alt: '3 Wheeler Battery' },
     { src: 'https://eeepvtltd.com/wp-content/uploads/2022/12/12v-80ah.png', alt: '12v 80Ah Battery' },
-    { src: 'https://eeepvtltd.com/wp-content/uploads/2022/12/48V-1280x1280.jpg', alt: '48V Battery' },
-    { src: 'https://eeepvtltd.com/wp-content/uploads/2022/12/96V96Ah.jpg', alt: '96V 96Ah Battery' },
-    { src: 'https://eeepvtltd.com/wp-content/uploads/2022/12/96v96ah1.jpg', alt: '96V 96Ah Battery 1' },
     { src: 'https://eeepvtltd.com/wp-content/uploads/2022/12/96v96Ah2.jpg', alt: '96V 96Ah Battery 2' },
     { src: 'https://eeepvtltd.com/wp-content/uploads/2022/12/4824-without-address-1280x1280.jpg', alt: '4824 Battery' },
-    { src: 'https://eeepvtltd.com/wp-content/uploads/2022/12/adirath-UPS-1280x970.jpg', alt: 'Adirath UPS' },
     { src: 'https://eeepvtltd.com/wp-content/uploads/2022/12/Bike-Batteries-copy.png', alt: 'Bike Battery' },
-    { src: 'https://eeepvtltd.com/wp-content/uploads/2022/12/DSC04040-1280x854.jpg', alt: 'Battery DSC04040' },
     { src: 'https://eeepvtltd.com/wp-content/uploads/2022/12/Electric-Vehicle-Batteries-1280x1122.jpg', alt: 'Electric Vehicle Batteries' },
     { src: 'https://eeepvtltd.com/wp-content/uploads/2022/12/ESS-Battery.jpg', alt: 'ESS Battery' },
-    { src: 'https://eeepvtltd.com/wp-content/uploads/2022/12/ESS-Battery1.jpg', alt: 'ESS Battery 1' },
-    { src: 'https://eeepvtltd.com/wp-content/uploads/2022/12/IMG_20220430_103710-1280x1280.jpg', alt: 'Battery IMG 20220430' },
-    { src: 'https://eeepvtltd.com/wp-content/uploads/2022/12/IMG_20220517_172255-1280x2123.jpg', alt: 'Battery IMG 20220517' },
-    { src: 'https://eeepvtltd.com/wp-content/uploads/2022/12/IMG_20220526_125601-1280x1699.jpg', alt: 'Battery IMG 20220526' },
     { src: 'https://eeepvtltd.com/wp-content/uploads/2022/12/IMG_20220616_172144-1280x958.jpg', alt: 'Battery IMG 20220616' },
-    { src: 'https://eeepvtltd.com/wp-content/uploads/2022/12/IMG_20220621_152954-1280x958.jpg', alt: 'Battery IMG 20220621' },
-    { src: 'https://eeepvtltd.com/wp-content/uploads/2022/12/IMG_20221008_105941-copy-1280x1014.jpg', alt: 'Battery IMG 20221008' },
     { src: 'https://eeepvtltd.com/wp-content/uploads/2022/12/Rickshaw-Battery.png', alt: 'Rickshaw Battery' },
     { src: 'https://eeepvtltd.com/wp-content/uploads/2022/12/Robot-Battery-1280x1280.png', alt: 'Robot Battery' }
+
 ];
 
-  lithiumBatteryFeatures = [
-    { feature: "DSP based Pure Sine Wave UPS", img: "DSP.png" },
-    { feature: "20 KHz Noiseless Operation", img: "20hz.png" },
-    { feature: "More Efficient & Reduce Human Error", img: "smd_design.png" }, 
-    { feature: "Resettable Circuit Breaker", img: "circuit_breaker.png" },
-    { feature: "LCD with Audible Alarm", img: "audible_alaram.png" },
-    { feature: "Build-in Thermal Sensor", img: "thermal_sensor.png" },
-    { feature: "For Computer & Home Appliances", img: "computer_home.png" },
-    { feature: "No Protruding Wires", img: "protruding_wires.png" },
-    { feature: "No Fumes", img: "no_fumes.png" },
-    { feature: "All-in-one Integrated Design", img: "integrated_design.png" },
-    { feature: "Battery Life up to 10 Years", img: "battery_life.png" },
-    { feature: "Zero Maintenance", img: "maintanance.png" },
-    { feature: "Rapid Charging", img: "rapid_charging.png" },
-    { feature: "Superior Performance", img: "superior_performence.png" },
-    { feature: "Space-saving Compact Design", img: "compact_design.png" }
-  ];
-
+  
   batteryHighlights: { name: string, svg: string }[] = [
     {
       name: "Battery back-up system",
-      svg: "products/battery/highlights/quick-installation.svg"
+      svg: "Battery.svg"
     },
     {
       name: "Durability",
-      svg: "products/battery/highlights/lightweight.svg"
+      svg: "Durability.svg"
     },
     {
       name: "Increased stability",
-      svg: "products/battery/highlights/faster-recharge.svg"
+      svg: "Stability.svg"
     },
     {
       name: "Environmental-friendly",
-      svg: "products/battery/highlights/long_life.svg" // You may need to provide this SVG file path if it exists
+      svg: "Eco friendly.svg" // You may need to provide this SVG file path if it exists
     },
     {
       name: "Economical",
-      svg: "products/battery/highlights/highest_power_availability.svg"
+      svg: "Economical.svg"
     },
     {
       name: "Better life cycle",
-      svg: "products/battery/highlights/compactness.svg"
+      svg: "Lifecycle.svg"
     },
     {
       name: "Low maintenance",
-      svg: "products/battery/highlights/noise_protection.svg"
+      svg: "Low maintenance.svg"
     },
     {
       name: "High safety level",
-      svg: "products/battery/highlights/zero_transfer_time_to_battery.svg"
+      svg: "High Safety.svg"
     }
   ];
 
