@@ -1,10 +1,15 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { CommonModule } from '@angular/common';
+import { Component, OnInit,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { Router, RouterModule, RouterOutlet } from '@angular/router';
+import { HomeProjectsComponent } from '../home-projects/home-projects.component';
 
 @Component({
   selector: 'app-home-hero-section',
+  standalone:true,
+  imports:[CommonModule,RouterModule,RouterOutlet],
   templateUrl: './home-hero-section.component.html',
-  styleUrl: './home-hero-section.component.css'
+  styleUrl: './home-hero-section.component.css',
+  schemas:[CUSTOM_ELEMENTS_SCHEMA]
 })
 export class HomeHeroSectionComponent implements OnInit {
 

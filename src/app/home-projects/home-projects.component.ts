@@ -1,11 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { PropertyDataService } from '../angular-service/property-data.service';
 import { Proximity } from '../models/layout-proximity';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-home-projects',
+  standalone: true,
+  imports: [CommonModule,RouterModule],
   templateUrl: './home-projects.component.html',
   styleUrl: './home-projects.component.css'
 })

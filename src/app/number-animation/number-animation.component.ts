@@ -1,7 +1,11 @@
+import { CommonModule } from '@angular/common';
 import { Component, OnInit, HostListener, OnDestroy  } from '@angular/core';
+import { RouterModule, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-number-animation',
+  standalone:true,
+  imports:[CommonModule,RouterModule,RouterOutlet],
   templateUrl: './number-animation.component.html',
   styleUrl: './number-animation.component.css'
 })

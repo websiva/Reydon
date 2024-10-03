@@ -1,9 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, RouterModule, RouterOutlet } from '@angular/router';
 import { PropertyDataService } from '../angular-service/property-data.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-explore-by-cities',
+  standalone:true,
+  imports:[CommonModule,RouterModule,RouterOutlet],
   templateUrl: './explore-by-cities.component.html',
   styleUrl: './explore-by-cities.component.css'
 })

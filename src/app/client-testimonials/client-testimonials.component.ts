@@ -1,7 +1,11 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { RouterModule, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-client-testimonials',
+  standalone:true,
+  imports:[CommonModule,RouterModule,RouterOutlet],
   templateUrl: './client-testimonials.component.html',
   styleUrl: './client-testimonials.component.css'
 })

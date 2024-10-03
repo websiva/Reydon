@@ -1,30 +1,85 @@
-<div class="container-fluid p-0 position-relative" style="z-index: 1;width: 100%;
-height: 700px;">
-    <img class="slider-image" [src]="image"
-    *ngFor="let image of bannerImages;let i=index" [class.active]="i===currentIndex" alt="">
-   <div class="row">
-         <!--<div class="col-12 content p-0">
-            <div class="content-container">
-                <h2>Welcome to Reydon Resources</h2>
-                <p>Reydon Resources Private Limited - Making your real-estate dreams become reality. Your trusted
-                    partner in real estate and allied trading & services.</p>
-                <div class="button-container w-100 d-flex justify-content-center mt-1">
-                    <button class="btn btn-primary px-3 py-2 fw-medium" routerLink="/about" style="background-color: var(--primary-color); border: none;">About us</button>
-                </div>
-                <div class="row w-100 email-container" style="margin-top: 50px; opacity: 1;">
-                    <h6 class="enquiry-text p-0 m-0" style="font-size: 16px;font-weight: 500;text-align: left;">For Enquiry</h6>
-                    <div class="col-9 p-0">
-                        <input class="form-control w-100  rounded-0"  style="background-color: white;" type="email" placeholder="Email" [(ngModel)]="email" >
-                    </div>
-                    <div class="col-3 p-0">
-                        <button class="btn send-button w-100 text-white  rounded-0 fw-semibold"
-                            style="background-color: var(--primary-color);" (click)="SendEmail()">Send</button>
-                    </div>
+<div class="swiper">
+    <swiper-container class="mySwiper" pagination="true" pagination-clickable="true" navigation="true"
+        space-between="30" centered-slides="true" autoplay-delay="6000" autoplay-disable-on-interaction="false">
+
+        <!-- Real Estate Slide -->
+        <swiper-slide>
+            <div class="slide-content">
+                <img src="https://res.cloudinary.com/dbzme4gd3/image/upload/v1726208001/home-her-banner-3_zobnty.jpg"
+                    alt="Real Estate Background" class="bg-image">
+                <div class="blur-background"></div>
+                <div class="overlay">
+                    <h1 class="title">Find Your Dream Home</h1>
+                    <p class="subtitle d-none d-md-block">Explore a variety of properties tailored to your needs. Your perfect home awaits!</p>
+                    <button class="know-more-btn" routerLink="/projects">Explore Now</button>
                 </div>
             </div>
-        </div>
-        <div class="col-md-6 p-0 image">
-            <img [src]="imageAddress" alt="">
-        </div>-->
-    </div>
+        </swiper-slide>
+
+        <!-- Battery Slide -->
+        <swiper-slide>
+            <div class="slide-content">
+                <img src="https://res.cloudinary.com/dbzme4gd3/image/upload/v1727971748/money-2696229_rudjtf.jpg" alt="Battery Background" class="bg-image">
+                <div class="blur-background"></div>
+                <div class="overlay">
+                    <h1 class="title">Powering Your Future</h1>
+                    <p class="subtitle d-none d-md-block">Embrace sustainable living with our innovative energy solutions for a greener</p>
+                    <button class="know-more-btn" routerLink="/lithium-ups">Learn More</button>
+                </div>
+            </div>
+        </swiper-slide>
+
+        <!-- Contact Slide -->
+        <swiper-slide>
+            <div class="slide-content">
+                <img src="https://res.cloudinary.com/dbzme4gd3/image/upload/v1727971892/handshake-4002834_nmae8s.jpg" alt="Contact Background" class="bg-image">
+                <div class="blur-background"></div>
+                <div class="overlay">
+                    <h1 class="title">Get in Touch with Us</h1>
+                    <p class="subtitle d-none d-md-block">Questions? Our team is here to assist you every step of the way. Reach out today!</p>
+                    <button class="know-more-btn" routerLink="/contact">Contact Us</button>
+                </div>
+            </div>
+        </swiper-slide>
+
+        <!-- About Us Slide -->
+        <swiper-slide>
+            <div class="slide-content">
+                <img src="https://res.cloudinary.com/dbzme4gd3/image/upload/v1727972227/chairs-2181994_qtqfpr.jpg" alt="About Us Background" class="bg-image">
+                <div class="blur-background"></div>
+                <div class="overlay">
+                    <h1 class="title">About Us</h1>
+                    <p class="subtitle d-none d-md-block">Your trusted partner in real estate, dedicated to helping you find the right property.</p>
+                    <button class="know-more-btn" routerLink="/about">Discover More</button>
+                </div>
+            </div>
+        </swiper-slide>
+
+        <!-- Meet Our Team Slide -->
+        <swiper-slide>
+            <div class="slide-content">
+                <img src="https://res.cloudinary.com/dbzme4gd3/image/upload/v1727972232/businessman-2969641_m9vrqt.png" alt="Meet Our Team Background" class="bg-image">
+                <div class="blur-background"></div>
+                <div class="overlay">
+                    <h1 class="title">Meet Our Team</h1>
+                    <p class="subtitle d-none d-md-block">Meet the experts who are passionate about providing outstanding real estate services.</p>
+                    <button class="know-more-btn" routerLink="/about">Meet Us</button>
+                </div>
+            </div>
+        </swiper-slide>
+
+        <!-- Services Slide -->
+        <swiper-slide>
+            <div class="slide-content">
+                <img src="https://res.cloudinary.com/dbzme4gd3/image/upload/v1727972322/business-5475661_pbiyb9.jpg" alt="Services Background" class="bg-image">
+                <div class="blur-background"></div>
+                <div class="overlay">
+                    <h1 class="title">Our Services</h1>
+                    <p class="subtitle d-none d-md-block">Comprehensive real estate solutions tailored for your needs. Let us guide you!</p>
+                    <button class="know-more-btn" routerLink="/services">Explore Services</button>
+                </div>
+            </div>
+        </swiper-slide>
+
+    </swiper-container>
 </div>
