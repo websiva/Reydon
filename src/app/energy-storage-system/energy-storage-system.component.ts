@@ -1,16 +1,15 @@
-import { Component, OnInit,HostListener } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-lithium-ups',
-  templateUrl: './lithium-ups.component.html',
-  styleUrl: './lithium-ups.component.css'
+  selector: 'app-energy-storage-system',
+  templateUrl: './energy-storage-system.component.html',
+  styleUrl: './energy-storage-system.component.css'
 })
-export class LithiumUPSComponent implements OnInit {
+export class EnergyStorageSystemComponent implements OnInit {
   currentIndex: number = 0;
   interval: any;
   currentSlide: number = 0;
   currentSlideIndex = 0;
-
   imagesPerSlide = 6;
 
   @HostListener('window:resize',['$event'])
@@ -42,15 +41,7 @@ export class LithiumUPSComponent implements OnInit {
     }
   }
 
-  productImages = [
-    // Old images
-    { src: 'products/battery/product_image/product1.jpg', alt: 'Product 1' },
-    { src: 'products/battery/product_image/product2.jpg', alt: 'Product 2' },
-    { src: 'products/battery/product_image/product3.jpg', alt: 'Product 3' },
-    { src: 'products/battery/product_image/product4.jpg', alt: 'Product 4' },
-    { src: 'products/battery/product_image/product5.jpg', alt: 'Product 5' },
-
-    // New images
+  productImages = [ 
     { src: 'https://eeepvtltd.com/wp-content/uploads/2022/12/3Wheeler-Battery.png', alt: '3 Wheeler Battery' },
     { src: 'https://eeepvtltd.com/wp-content/uploads/2022/12/12v-80ah.png', alt: '12v 80Ah Battery' },
     { src: 'https://eeepvtltd.com/wp-content/uploads/2022/12/48V-1280x1280.jpg', alt: '48V Battery' },
@@ -74,35 +65,6 @@ export class LithiumUPSComponent implements OnInit {
     { src: 'https://eeepvtltd.com/wp-content/uploads/2022/12/Robot-Battery-1280x1280.png', alt: 'Robot Battery' }
 ];
 
-  // Slider Data
-  sliderData = [
-    {
-      image: 'products/battery/slider-image/eco_friendly.jpg',
-      heading: 'Sustainable Energy for a Greener Future',
-      description: 'Our eco-friendly lithium UPS systems harness renewable energy, helping you reduce your carbon footprint while enjoying reliable power.'
-    },
-    {
-      image: 'products/battery/slider-image/power_protection.jpg',
-      heading: 'Shield Your Devices with Confidence',
-      description: 'Protect your critical equipment from unexpected power interruptions and surges with our advanced lithium UPS solutions designed for maximum reliability.'
-    },
-    {
-      image: 'products/battery/slider-image/rapid_charging.jpg',
-      heading: 'Get Back to Power in No Time',
-      description: 'Experience rapid charging capabilities with our lithium UPS systems, ensuring your devices are powered up and ready to go when you need them most.'
-    },
-    {
-      image: 'products/battery/slider-image/remote_monitoring.jpg',
-      heading: 'Stay Connected, Stay In Control',
-      description: 'Monitor and manage your UPS performance from anywhere with our intelligent remote monitoring system, providing real-time updates and alerts for your peace of mind.'
-    },
-    {
-      image: 'products/battery/slider-image/zero_maintanace.jpg',
-      heading: 'Worry-Free Power Solutions',
-      description: 'Enjoy hassle-free operation with our zero-maintenance lithium UPS systems, engineered for durability and long-lasting performance without the need for regular upkeep.'
-    }
-  ];
-
   lithiumBatteryFeatures = [
     { feature: "DSP based Pure Sine Wave UPS", img: "DSP.png" },
     { feature: "20 KHz Noiseless Operation", img: "20hz.png" },
@@ -123,51 +85,47 @@ export class LithiumUPSComponent implements OnInit {
 
   batteryHighlights: { name: string, svg: string }[] = [
     {
-      name: "Quick installation",
+      name: "Battery back-up system",
       svg: "products/battery/highlights/quick-installation.svg"
     },
     {
-      name: "Lightweight",
+      name: "Durability",
       svg: "products/battery/highlights/lightweight.svg"
     },
     {
-      name: "Faster rechargeable times",
+      name: "Increased stability",
       svg: "products/battery/highlights/faster-recharge.svg"
     },
     {
-      name: "Longer life span",
+      name: "Environmental-friendly",
       svg: "products/battery/highlights/long_life.svg" // You may need to provide this SVG file path if it exists
     },
     {
-      name: "Highest power availability",
+      name: "Economical",
       svg: "products/battery/highlights/highest_power_availability.svg"
     },
     {
-      name: "Compactness",
+      name: "Better life cycle",
       svg: "products/battery/highlights/compactness.svg"
     },
     {
-      name: "Surge and Noise Protection",
+      name: "Low maintenance",
       svg: "products/battery/highlights/noise_protection.svg"
     },
     {
-      name: "Zero Transfer Time to Battery",
+      name: "High safety level",
       svg: "products/battery/highlights/zero_transfer_time_to_battery.svg"
     }
   ];
 
   batteryApplicationAreas = [
-    { name: "All Commercial Buildings", image: "commercial-building.jpg" },
-    { name: "Offices", image: "offices.jpg" },
-    { name: "Schools & Colleges", image: "school.jpg" },
-    { name: "Industrial Workstations", image: "industrial-workstation.jpg" },
-    { name: "Public Buildings", image: "public_building.jpg" },
-    { name: "Temples", image: "temple.jpg" },
-    { name: "CCTV & Systems working areas", image: "cctv.jpg" },
-    { name: "Emergency lighting areas", image: "emergency-exit.jpg" },
-    { name: "PLC & SCADA systems", image: "PLC_SCADA_systems.jpg" },
-    { name: "Bank", image: "bank.jpg" },
-    { name: "ATM", image: "ATM.jpg" }
+    { name: "Telecom Energy Storage System", image: "Telecom.jpg" },
+    { name: "EV Charging stations", image: "ev.jpg" },
+    { name: "Petrol Bunk", image: "petrol-bunk.jpg" },
+    { name: "Wind Power Plants", image: "windpower.jpg" },
+    { name: "Farm House", image: "form_house.jpg" },
+    { name: "Remote area Buildings", image: "remote-area.jpg" },
+    { name: "Solar Street Lights", image: "solar-strret-lighty.jpg" }
   ];
 
   inverterTroubleshooting: string[] = [
@@ -268,5 +226,32 @@ export class LithiumUPSComponent implements OnInit {
       question: 'How do I prolong the life of my lithium-ion battery?',
       answer: 'To prolong the life of a lithium-ion battery, avoid overcharging, minimize exposure to high temperatures, and follow recommended usage and charging practices.'
     }
+  ];
+
+  tableHeaders = [
+    'Battery Type',
+    'Cell Type',
+    'Nominal Voltage (V)',
+    'Voltage Range (V)',
+    'Nominal Capacity (Ah)',
+    'Nominal Energy (Wh)',
+    'Available Energy (Wh)',
+    'Continuous Charging Current (A)',
+    'Continuous Discharging Current (A)',
+    '30s Peak Discharging Current (A)',
+    'T (Charging, °C)',
+    'T (Discharging, °C)',
+    'Humidity (%)',
+    'Dimension (L/W/H, mm)',
+    'Weight (kg)',
+    'Cycle Life (times)',
+    'Communication Protocol'
+  ];
+
+  batteryData = [
+    ['12V', 'LFP', 'Cylindrical', 12.8, 14.6, 96, 1229, 1401.6, 40, 80, 240, '<70°C', '<70°C', '90%-95%', '310*300*100', 13.69, 2000, 'No'],
+    ['24V', 'LFP', 'Cylindrical', 25.6, 29.2, 96, 2457, 2803.2, 40, 80, 240, '<70°C', '<70°C', '90%-95%', '310*300*185', 25.26, 2000, 'No'],
+    ['36V', 'LFP', 'Cylindrical', 38.4, 43.8, 96, 3686, 4204.8, 40, 80, 240, '<70°C', '<70°C', '90%-95%', '575*420*100', 37.24, 2000, 'No'],
+    ['48V', 'LFP', 'Cylindrical', 48, 54.75, 96, 4608, 5256, 40, 80, 240, '<70°C', '<70°C', '90%-95%', '575*300*185', 43.6, 2000, 'No']
   ];
 }

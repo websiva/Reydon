@@ -443,4 +443,41 @@ scrollToSection(sectionName:string){
     { element: 'Garden / Walking Track', carpetArea: 'No', builtUpArea: 'No', superBuiltUpArea: 'Yes' },
     { element: 'Swimming pool', carpetArea: 'No', builtUpArea: 'No', superBuiltUpArea: 'Yes' }
   ];
+
+  unit: string[] = ['Acre', 'Cent', 'Sqft', 'Ground', 'Sq. Mtr', 'Sq. Yrd', 'Hectare'];
+
+  units: number[][] = [
+    [1, 100, 43560, 18.15, 4046.85, 4840, 0.40469],  // Acre
+    [0.01, 1, 435.6, 0.1815, 0.02471, 0.02066, 247.128],  // Cent
+    [0.0000229568, 0.00229568, 1, 0.000417, 0.092903, 0.11111, 9.2903],  // Sqft
+    [0.055, 5.529, 2400, 1, 223, 266.705, 0.0223],  // Ground
+    [0.000247, 0.02471, 10.7639, 0.0044, 1, 1.1959, 0.0001],  // Sq. Mtr
+    [0.000206613, 0.02066, 9, 0.003759, 0.837, 1, 8.3613],  // Sq. Yrd
+    [2.47105, 247.128, 107639, 49.2611, 10000, 11959.9, 1]  // Hectare
+  ];
+
+  selectedFromUnit: string = 'Acre'; // Default from unit
+  selectedToUnit: string = 'Acre'; // Default to unit
+  inputValue: number = 1; // Input value for conversion
+  convertedValue: number | string = '1'; // Store converted value
+
+  // Method to convert the value from one unit to another
+  convertValue() {
+    try {
+      const fromIndex = this.unit.indexOf(this.selectedFromUnit); // Get index of from unit
+      const toIndex = this.unit.indexOf(this.selectedToUnit); // Get index of to unit
+
+      // Check if indexes are valid
+      if (fromIndex === -1 || toIndex === -1) {
+        throw new Error('Invalid units selected.');
+      }
+
+      // Use the correct indexing for conversion
+      const conversionFactor = this.units[fromIndex][toIndex]; // Conversion factor based on selected units
+      this.convertedValue = this.inputValue * conversionFactor; // Perform conversion
+    } catch (error) {
+      console.error(error);
+      this.convertedValue = 'Invalid units'; // Error handling
+    }
+  }
 }

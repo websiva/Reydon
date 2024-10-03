@@ -91,7 +91,7 @@ section>.row {
 
 /*********************product name***************/
 .product-name {
-    padding: 40px 0 0 0;
+    padding: 40px 0;
 }
 
 .product-name h3 {
@@ -127,6 +127,12 @@ section>.row {
     height: auto;
     object-fit: cover;
 }
+.product-about-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
 
 .product-about-content p {
     font-size: 16px;
@@ -134,73 +140,14 @@ section>.row {
     text-align: justify;
 }
 
-/********************bout-section-card******************/
-.about-section-card{
+/*******************additional-about-content************/
+.additional-about-content{
     padding: 0;
-    background-color: #f1f1f1;
 }
-.cards-container{
-    height: auto;
-}
-.about-section-card .about-card{
-    padding: 20px 60px;
-    position: relative;
-    height: 450px;
-}
-.about-section-card .about-card .card-content{
-    position: absolute;
-    top: -10%;
-    width: 350px;
-    height: 100%;
-    background-color: white;
-    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
-}
-.about-section-card .about-card .image-container{
-    width: 100%;
-    height: 200px;
-}
-.about-section-card .about-card .image-container img:nth-child(1){
-    position: relative;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-}
-.about-section-card .about-card .image-container img:nth-child(2){
-    position: absolute;
-}
-.about-section-card .about-card .card-text-section{
-    width: 100%;
-    height: 250px;
-}
-.about-section-card .about-card .card-title{
-    padding: 5px 15px;
-    font-size: 26px;
-    color: var(--primary-color);
-    font-weight: 500;
-}
-.about-section-card .about-card .card-description{
-    padding:0 15px 5px 15px;
+.additional-about-content p{
+    text-align: justify;
     font-size: 16px;
     font-weight: 300;
-    text-align: justify;
-}
-/******************Certification slider************/
-.certification-slider {
-    width: 100%;
-    background-color: #f7f8fa;
-    padding: 20px 0;
-}
-
-.certification-slider .col-md-3 {
-    display: flex;
-    justify-content: center;
-}
-
-.certification-slider img {
-    width: auto;
-    height: 125px;
-    object-fit: cover;
 }
 
 /***************Features***************************/
@@ -392,8 +339,9 @@ section>.row {
     box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
 }
 
-.specifications table td {
+.specifications table tbody tr td:not(:nth-child(1)) {
     font-size: 16px;
+    font-weight: 300;
 }
 .table-section-heading{
     background-color: #0042742f;
@@ -412,8 +360,11 @@ section>.row {
     color: var(--primary-color);
     font-weight: 500;
 }
-
-.specifications .table-responsive {
+.row-header{
+    font-weight: 500;
+}
+  
+  .specifications .table-responsive {
     display: block;
     width: 100%;
     overflow-x: auto;
@@ -464,7 +415,6 @@ section>.row {
     overflow: hidden;
     display: flex;
     align-items: center;
-    height: 900px;
     padding: 0;
 }
 
@@ -476,7 +426,6 @@ section>.row {
     transition: transform 0.4s ease;
     width: 100%;
 }
-
 .product-images .row{
     width: 100%;
 }
@@ -656,9 +605,6 @@ section>.row {
         background-color: white;
         box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
     }
-    .product-slider-container {
-        height: 500px;
-    }
 }
 
 /* Media query for medium screens  */
@@ -686,9 +632,6 @@ section>.row {
         background-color: white;
         box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
     }
-    .product-slider-container {
-        height: 500px;
-    }
 }
 
 /* Media query for medium screens  */
@@ -696,9 +639,6 @@ section>.row {
     .carousel-item img {
         height: 400px;
         object-fit: cover;
-    }
-    .product-slider-container {
-        height: 900px;
     }
 
     .certification-slider .col-md-3 {
@@ -711,7 +651,7 @@ section>.row {
         margin: auto 0;
     }
 
-    .carousel-caption h5 {
+    .banner .carousel-caption h5 {
         font-size: 28px;
         font-weight: 400;
         line-height: 32px;
@@ -768,9 +708,6 @@ section>.row {
     .certification-slider .col-md-3 {
         margin: 20px 0;
     }
-    .product-slider-container {
-        height: 900px;
-    }
 
     .carousel-caption {
         width: auto;
@@ -778,7 +715,7 @@ section>.row {
         margin: auto 0;
     }
 
-    .carousel-caption h5 {
+    .banner .carousel-caption h5 {
         font-size: 28px;
         font-weight: 400;
         line-height: 32px;

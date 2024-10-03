@@ -10,6 +10,70 @@
                 <header class="section-header">Reydon Resources Private Limited aims to provide innovative and
                     constructive solutions to fulfil all your dream homes inspire with a touch of AI technology!
                 </header>
+                <div class="container">
+                    <h6 class="title">Land Measurement Units</h6>
+                    <div class="table-responsive">
+                        <table class="table table-bordered w-100">
+                            <thead>
+                                <tr>
+                                    <th>Unit</th>
+                                    <th>Acre</th>
+                                    <th>Cent</th>
+                                    <th>Sqft</th>
+                                    <th>Ground</th>
+                                    <th>Sq. Mtr</th>
+                                    <th>Sq. Yrd</th>
+                                    <th>Hectare</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                <tr *ngFor="let row of units; let i = index">
+                                    <th>{{ unit[i] }}</th>
+                                    <td>{{ row[0] }}</td>
+                                    <td>{{ row[1] }}</td>
+                                    <td>{{ row[2] }}</td>
+                                    <td>{{ row[3] }}</td>
+                                    <td>{{ row[4] }}</td>
+                                    <td>{{ row[5] }}</td>
+                                    <td>{{ row[6] }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="unit-converter mb-3">
+                        <h2 class="title">Land Unit Converter</h2>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <input type="number" id="inputValue" class="form-control" [(ngModel)]="inputValue"
+                                        (ngModelChange)="convertValue()" placeholder="Enter value" />
+                                    </div>
+                                    <div class="col-6">
+                                        <select class="form-select" id="fromUnit" aria-label="fromUnit"
+                                        [(ngModel)]="selectedFromUnit" (ngModelChange)="convertValue()">
+                                        <option *ngFor="let unit of unit" [value]="unit">{{ unit }}</option>
+                                    </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="row toUnit-container">
+                                    <div class="col-6">
+                                        <input type="number" class="form-control" id="outputValue" [(ngModel)]="convertedValue" readonly />
+                                    </div>
+                                    <div class="col-6">
+                                        <select class="form-select" aria-label="toUnit" id="toUnit"
+                                            [(ngModel)]="selectedToUnit" (ngModelChange)="convertValue()">
+                                            <option *ngFor="let unit of unit" [value]="unit">{{ unit }}</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="section-content" *ngFor="let item of mainDetails;let i=index">
                     <h6 class="title">{{i+1}}. {{item.MainTitle}}</h6>
                     <ul>
@@ -74,7 +138,8 @@
                         <table class="table table-bordered">
                             <thead>
                                 <tr>
-                                    <th style="background-color: var(--primary-color);color: white;font-weight: 400;" class="fs-6" colspan="4">Carpet area, built up area and super built up area in
+                                    <th style="background-color: var(--primary-color);color: white;font-weight: 400;"
+                                        class="fs-6" colspan="4">Carpet area, built up area and super built up area in
                                         Indian real estate</th>
                                 </tr>
                                 <tr>
@@ -104,7 +169,7 @@
                         <table class="table table-bordered">
                             <thead>
                                 <tr>
-                                    <th>Zone  -- Zone Name -- Districts</th>
+                                    <th>Zone -- Zone Name -- Districts</th>
                                     <th>Count</th>
                                 </tr>
                             </thead>

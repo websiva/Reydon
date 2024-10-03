@@ -57,6 +57,7 @@ import { ApartmentDetailsComponent } from './apartment-details/apartment-details
 import { CommercialBuildingDetailsComponent } from './commercial-building-details/commercial-building-details.component';
 import { RelatedProjectsComponent } from './related-projects/related-projects.component';
 import { LithiumUPSComponent } from './lithium-ups/lithium-ups.component';
+import { EnergyStorageSystemComponent } from './energy-storage-system/energy-storage-system.component';
 
 register();
 
@@ -105,7 +106,8 @@ register();
     ApartmentDetailsComponent,
     CommercialBuildingDetailsComponent,
     RelatedProjectsComponent,
-    LithiumUPSComponent
+    LithiumUPSComponent,
+    EnergyStorageSystemComponent
   ],
   imports: [
     BrowserModule,

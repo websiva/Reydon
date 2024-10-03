@@ -25,6 +25,7 @@ import { VillaDetailsComponent } from './villa-details/villa-details.component';
 import { ApartmentDetailsComponent } from './apartment-details/apartment-details.component';
 import { CommercialBuildingDetailsComponent } from './commercial-building-details/commercial-building-details.component';
 import { LithiumUPSComponent } from './lithium-ups/lithium-ups.component';
+import { EnergyStorageSystemComponent } from './energy-storage-system/energy-storage-system.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -52,6 +53,7 @@ const routes: Routes = [
   { path: 'apartment/:projectName', component: ApartmentDetailsComponent },
   { path: 'building/:projectName', component: CommercialBuildingDetailsComponent },
   { path: 'lithium-ups', component: LithiumUPSComponent },
+  { path: 'energy-storage-system', component: EnergyStorageSystemComponent },
   { path: '**', redirectTo: '/home' },
 ];
 
