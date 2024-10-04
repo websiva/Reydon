@@ -101,7 +101,7 @@ export class LithiumUPSComponent implements OnInit {
     description: 'Our eco-friendly lithium UPS systems harness renewable energy, helping you reduce your carbon footprint while enjoying reliable power.'
   },
   {
-    imageUrl: 'phttps://res.cloudinary.com/dbzme4gd3/image/upload/v1727965878/industrial_applications_ox4n51.jpg',
+    imageUrl: 'https://res.cloudinary.com/dbzme4gd3/image/upload/v1727965878/industrial_applications_ox4n51.jpg',
     heading: 'Industrial Applications',
     description: 'The next generation of electric vehicle batteries, with greater range and improved safety!'
   }
