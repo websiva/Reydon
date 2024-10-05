@@ -1,4 +1,4 @@
-<div class="container-fluid w-100 p-0">
+<div class="container-fluid w-100 p-0" style="margin-top: 75px;">
     <div class="full-section w-100" *ngFor="let project of ProjectData">
         <div class="banner-section">
             <div class="banner-image">
@@ -371,7 +371,7 @@
                     <div class="row p-0 m-0">
                         <div class="col-12">
                             <div class="section-header">
-                                <h6 class="section-title w-100">Amenities</h6>
+                                <h6 class="section-title">Amenities</h6>
                                 <div class="divider"></div>
                             </div>
                             <div class="amenities-container d-flex flex-wrap justify-content-start align-items-center">
@@ -725,6 +725,31 @@
                 </div>
             </div>
         </div>
+        <section class="faq-section">
+            <div class="container row">
+                <div class="section-header">
+                    <h6 class="section-title">Frequently Asked Questions(FAQ)</h6>
+                    <div class="divider"></div>
+                </div>
+                <div class="accordion accordion-flush" id="lithiumBatteryFaq">
+                    <div *ngFor="let faq of faqs; let i = index" class="accordion-item">
+                        <h2 class="accordion-header" [id]="'faqHeading' + i">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                [attr.data-bs-target]="'#faqCollapse' + i" aria-expanded="true"
+                                [attr.aria-controls]="'faqCollapse' + i">
+                                {{ faq.Question }}
+                            </button>
+                        </h2>
+                        <div [id]="'faqCollapse' + i" class="accordion-collapse collapse"
+                            [attr.aria-labelledby]="'faqHeading' + i" data-bs-parent="#lithiumBatteryFaq">
+                            <div class="accordion-body">
+                                {{ faq.Answer }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
         <div *ngIf="RelatedProjects.length>0" class="related-projects-section">
             <div class="related-projects">
                 <div class="row m-0">

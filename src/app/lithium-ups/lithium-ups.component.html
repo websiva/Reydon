@@ -1,4 +1,4 @@
-<div class="container-fluid p-0">
+<div class="container-fluid p-0 mt-5">
     <!-- Slider main container -->
     <section class="swiper">
         <swiper-container class="mySwiper" pagination="true" pagination-clickable="true" navigation="true"
@@ -32,7 +32,8 @@
         <div class="row">
             <div class="product-image col-lg-6">
                 <div class="image-container">
-                    <img src="https://res.cloudinary.com/dbzme4gd3/image/upload/v1727965962/battery_zkq04t.jpg" alt="UPS" class="img-responsive">
+                    <img src="https://res.cloudinary.com/dbzme4gd3/image/upload/v1727965962/battery_zkq04t.jpg"
+                        alt="UPS" class="img-responsive">
                 </div>
             </div>
             <div class="product-about-content col-lg-6">
@@ -163,8 +164,7 @@
                         <div class="feature-box d-flex flex-column justify-content-center align-items-center animate__animated animate__zoomIn"
                             [ngStyle]="{'animation-delay': (i * 0.15) + 's'}">
                             <div class="image-container">
-                                <img [src]="feature.img" alt=""
-                                    class="img-responsive">
+                                <img [src]="feature.img" alt="" class="img-responsive">
                             </div>
                             <h3 class="feature-title">{{feature.feature}}</h3>
                         </div>
@@ -209,10 +209,12 @@
                                         </g>
                                     </g>
                                 </svg>
-                                <p>Our collaboration with EEE Energy Private Limited has greatly benefited our clients
+                                <p>Our collaboration with Reydon Resources Private Limited has greatly benefited our
+                                    clients
                                     in achieving their energy efficiency goals and ensuring reliable power backup
                                     solutions for various applications. The remarkable battery packs and power backup
-                                    solutions we have sourced from EEE Energy Private Limited have not only demonstrated
+                                    solutions we have sourced from Reydon Resources Private Limited have not only
+                                    demonstrated
                                     exceptional A performance but have also proven to be highly adaptable to the unique
                                     requirements of our clients.</p>
                                 <img src="https://eeepvtltd.com/wp-content/uploads/2021/08/7.jpeg" alt=""
@@ -272,7 +274,7 @@
                                         </g>
                                     </g>
                                 </svg>
-                                <p>The innovative battery packs and power backup solutions provided by EEE Energy
+                                <p>The innovative battery packs and power backup solutions provided by Reydon Resources
                                     Private Limited have significantly enhanced the quality and competitiveness of our
                                     electric vehicles.</p>
                                 <img src="https://eeepvtltd.com/wp-content/uploads/2021/08/8.jpeg" alt=""
@@ -302,7 +304,8 @@
                                         </g>
                                     </g>
                                 </svg>
-                                <p>EEE Energy Private Limited's pioneering battery technology and unwavering commitment
+                                <p>Reydon Resources Private Limited's pioneering battery technology and unwavering
+                                    commitment
                                     to innovation have played an instrumental role in our ability to provide Electric
                                     Vehicles that excel in performance, efficiency, and reliability. The Lithium-Ion and
                                     Lithium Ferro Phosphate battery packs they offer have consistently surpassed our
@@ -596,16 +599,20 @@
             <div class="section-content">
                 <div class="row">
                     <div class="certificate col-md-3">
-                        <img src="https://res.cloudinary.com/dbzme4gd3/image/upload/v1727965966/ROHS_uc7pyk.jpg" alt="" class="img-responsive">
+                        <img src="https://res.cloudinary.com/dbzme4gd3/image/upload/v1727965966/ROHS_uc7pyk.jpg" alt=""
+                            class="img-responsive">
                     </div>
                     <div class="certificate col-md-3">
-                        <img src="https://res.cloudinary.com/dbzme4gd3/image/upload/v1727965960/45001_xdknwl.jpg" alt="" class="img-responsive">
+                        <img src="https://res.cloudinary.com/dbzme4gd3/image/upload/v1727965960/45001_xdknwl.jpg" alt=""
+                            class="img-responsive">
                     </div>
                     <div class="certificate col-md-3">
-                        <img src="https://res.cloudinary.com/dbzme4gd3/image/upload/v1727965957/9001_kn5w5t.jpg" alt="" class="img-responsive">
+                        <img src="https://res.cloudinary.com/dbzme4gd3/image/upload/v1727965957/9001_kn5w5t.jpg" alt=""
+                            class="img-responsive">
                     </div>
                     <div class="certificate col-md-3">
-                        <img src="https://res.cloudinary.com/dbzme4gd3/image/upload/v1727965958/14001_dwi11v.jpg" alt="" class="img-responsive">
+                        <img src="https://res.cloudinary.com/dbzme4gd3/image/upload/v1727965958/14001_dwi11v.jpg" alt=""
+                            class="img-responsive">
                     </div>
                 </div>
             </div>
@@ -721,8 +728,8 @@
                                     <div class="col-12">
                                         <div class="row">
                                             <div class="troubleshoot-image-container col-md-6">
-                                                <img src="https://res.cloudinary.com/dbzme4gd3/image/upload/v1727965968/trouble-shoot_yr2ubc.png" alt=""
-                                                    class="inverter-image">
+                                                <img src="https://res.cloudinary.com/dbzme4gd3/image/upload/v1727965968/trouble-shoot_yr2ubc.png"
+                                                    alt="" class="inverter-image">
                                             </div>
                                             <div class="troubleshoot-points-container col-md-6">
                                                 <ol>
@@ -746,7 +753,7 @@
     <section class="faq-section">
         <div class="container row">
             <div class="section-title">
-                <h6>FAQs</h6>
+                <h6>Frequently Asked Questions(FAQ's)</h6>
             </div>
             <div class="accordion accordion-flush" id="lithiumBatteryFaq">
                 <div *ngFor="let faq of faqs; let i = index" class="accordion-item">
@@ -754,13 +761,13 @@
                         <button class="accordion-button" type="button" data-bs-toggle="collapse"
                             [attr.data-bs-target]="'#faqCollapse' + i" aria-expanded="true"
                             [attr.aria-controls]="'faqCollapse' + i">
-                            {{ faq.question }}
+                            {{ faq.Question }}
                         </button>
                     </h2>
                     <div [id]="'faqCollapse' + i" class="accordion-collapse collapse"
                         [attr.aria-labelledby]="'faqHeading' + i" data-bs-parent="#lithiumBatteryFaq">
                         <div class="accordion-body">
-                            {{ faq.answer }}
+                            {{ faq.Answer }}
                         </div>
                     </div>
                 </div>

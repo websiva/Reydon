@@ -86,12 +86,35 @@
     vertical-align: middle;
     text-align: center;  
 }
-.zone-name-title{
+
+
+.zone-classification .zone-name-title {
     color: var(--primary-color);
     font-weight: 500;
 }
-.zone-name{
-    border-bottom: 0!important;
+
+.zone-classification td {
+    vertical-align: middle;
+    text-align: left;
+}
+
+.zone-classification th {
+    vertical-align: middle;
+    text-align: center;
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.zone-classification .modal-body {
+    overflow-x: auto;
+}
+
+.zone-classification .table-responsive {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    /* Adds smooth scrolling on mobile */
 }
 
 

@@ -396,6 +396,42 @@ export class LayoutComponent implements OnInit, OnDestroy {
   }
 
 
+  faqs = [
+    {
+      Question: "What factors should I consider when buying a plot?",
+      Answer: "Consider location, infrastructure, legal clearances, future development plans, and proximity to essential services."
+    },
+    {
+      Question: "How is the price of a premium plot determined?",
+      Answer: "Prices are influenced by location, plot size, amenities, demand, and future development prospects."
+    },
+    {
+      Question: "Can I get financing for a commercial plot purchase?",
+      Answer: "Yes, many banks and financial institutions offer loans for purchasing commercial plots, subject to eligibility and documentation."
+    },
+    {
+      Question: "What are premium plots?",
+      Answer: "Premium plots are high-value parcels of land located in prime areas, often offering better amenities, views, and proximity to important locations like business hubs and recreational facilities."
+    },
+    {
+      Question: "What are commercial plots?",
+      Answer: "Commercial plots are land parcels designated for business activities like offices, shops, and other commercial establishments."
+    },
+    {
+      Question: "What is Carpet Area?",
+      Answer: "A carpet area is an area that can be covered by carpet, or a net usable area is called a carpet area. The carpet area is the distance between the inner walls."
+    },
+    {
+      Question: "What is Build up Area?",
+      Answer: "The built-up area in a flat is its carpet area, plus the space taken by the walls. The build-up area in a flat also includes other unusable areas like balcony, terrace etc. Built-up area = Carpet area + area of walls + area of balcony."
+    },
+    {
+      Question: "What is Super Build up Area?",
+      Answer: "Super built-up area is the built-up area of the property, along with the proportionate area of the common facilities in the housing project. These facilities may include the lobby, the lift shaft, the stairs, the swimming pool, the garden, the park and clubhouse, etc. Super built-up area = Built-up area + proportionate common area."
+    }
+  ];
+
+
 
   ngOnDestroy(): void {
     clearInterval(this.interval);

@@ -17,6 +17,8 @@ import {MatIconModule} from '@angular/material/icon';
 import { BreadCrumbComponent } from './bread-crumb/bread-crumb.component';
 import {GoogleMapsModule} from '@angular/google-maps';
 import { YouTubePlayerModule } from '@angular/youtube-player';
+import {CdkAccordionModule} from '@angular/cdk/accordion';
+import {MatExpansionModule} from '@angular/material/expansion';
 
 
 import { register } from 'swiper/element/bundle';
@@ -111,7 +113,8 @@ register();
     FormsModule,
     ReactiveFormsModule,
     GoogleMapsModule,
-    YouTubePlayerModule
+    YouTubePlayerModule,
+    MatExpansionModule
   ],
   providers: [provideHttpClient(), provideAnimationsAsync(),PropertyService,PropertyResolverService,PropertyDataService],
   bootstrap: [AppComponent],

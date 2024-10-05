@@ -53,12 +53,9 @@ export class EnergyStorageSystemComponent implements OnInit {
     { src: 'https://res.cloudinary.com/dbzme4gd3/image/upload/v1727968553/12v-80ah_m3feiq.png', alt: '12v 80Ah Battery' },
     { src: 'https://res.cloudinary.com/dbzme4gd3/image/upload/v1727968582/96v96Ah2_qlqc05.jpg', alt: '96V 96Ah Battery 2' },
     { src: 'https://res.cloudinary.com/dbzme4gd3/image/upload/v1727968598/4824-without-address-1280x1280_ury0tj.jpg', alt: '4824 Battery' },
-    { src: 'https://res.cloudinary.com/dbzme4gd3/image/upload/v1727968615/adirath-UPS-1280x970_ovlfpl.jpg', alt: 'Adirath UPS' },
     { src: 'https://res.cloudinary.com/dbzme4gd3/image/upload/v1727968632/Bike-Batteries-copy_hehbqk.png', alt: 'Bike Battery' },
     { src: 'https://res.cloudinary.com/dbzme4gd3/image/upload/v1727968648/Electric-Vehicle-Batteries-1280x1122_wh5egs.jpg', alt: 'Electric Vehicle Batteries' },
-    { src: 'https://res.cloudinary.com/dbzme4gd3/image/upload/v1727968662/ESS-Battery_b3tn3h.jpg', alt: 'ESS Battery' },
-    { src: 'https://res.cloudinary.com/dbzme4gd3/image/upload/v1727969277/product1_ven0mt.jpg', alt: 'Product 3' },
-    { src: 'https://res.cloudinary.com/dbzme4gd3/image/upload/v1727968699/IMG_20220616_172144-1280x958_xsbahb.jpg', alt: 'Battery IMG 20220616' }
+    { src: 'https://res.cloudinary.com/dbzme4gd3/image/upload/v1727968662/ESS-Battery_b3tn3h.jpg', alt: 'ESS Battery' }
 ];
 
 carouselSlides = [
@@ -93,7 +90,7 @@ carouselSlides = [
     description: 'Our eco-friendly lithium UPS systems harness renewable energy, helping you reduce your carbon footprint while enjoying reliable power.'
   },
   {
-    imageUrl: 'phttps://res.cloudinary.com/dbzme4gd3/image/upload/v1727965878/industrial_applications_ox4n51.jpg',
+    imageUrl: 'https://res.cloudinary.com/dbzme4gd3/image/upload/v1727965878/industrial_applications_ox4n51.jpg',
     heading: 'Industrial Applications',
     description: 'The next generation of electric vehicle batteries, with greater range and improved safety!'
   }

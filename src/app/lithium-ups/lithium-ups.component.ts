@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit,HostListener,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { Component, OnInit,HostListener,CUSTOM_ELEMENTS_SCHEMA,ChangeDetectionStrategy,signal } from '@angular/core';
 import { RouterModule, RouterOutlet } from '@angular/router';
 
 @Component({
@@ -12,7 +12,7 @@ import { RouterModule, RouterOutlet } from '@angular/router';
 })
 export class LithiumUPSComponent implements OnInit {
   currentSlideIndex = 0;
-
+  expandedIndex = 0;
   imagesPerSlide = 6;
 
   activeIndex = 0; // To keep track of the active slide index
@@ -253,24 +253,16 @@ export class LithiumUPSComponent implements OnInit {
 
   faqs = [
     {
-      question: 'What is a Lithium-Ion Battery?',
-      answer: 'A lithium-ion battery is a rechargeable battery type that uses lithium ions to store and release energy. It is widely used in portable electronics, electric vehicles, and renewable energy systems.'
+      Question: "What are lithium battery inverters?",
+      Answer: "Lithium battery inverters are devices that store energy in lithium batteries and convert it to electricity for home or business use during power outages."
     },
     {
-      question: 'How long does a lithium-ion battery last?',
-      answer: 'The lifespan of a lithium-ion battery typically ranges between 2 to 10 years, depending on usage patterns, charging cycles, and environmental factors.'
+      Question: "What are the benefits of lithium battery inverters?",
+      Answer: "Benefits include longer lifespan, higher efficiency, lower maintenance, and faster charging compared to traditional batteries."
     },
     {
-      question: 'Are lithium-ion batteries safe?',
-      answer: 'Lithium-ion batteries are generally safe when used properly. However, misuse, overcharging, or exposure to extreme heat can lead to safety hazards, including fire or explosion.'
-    },
-    {
-      question: 'What are the benefits of using lithium-ion batteries?',
-      answer: 'Lithium-ion batteries have a high energy density, low self-discharge rate, and are lightweight, making them ideal for use in portable electronics and electric vehicles.'
-    },
-    {
-      question: 'How do I prolong the life of my lithium-ion battery?',
-      answer: 'To prolong the life of a lithium-ion battery, avoid overcharging, minimize exposure to high temperatures, and follow recommended usage and charging practices.'
+      Question: "How do I choose the right lithium battery inverter?",
+      Answer: "Consider your energy needs, budget, brand reputation, warranty, and after-sales support."
     }
   ];
 }

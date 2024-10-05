@@ -168,29 +168,32 @@
                 <ul>
                     <li>
                         <h6 class="inner-question">Q. How TN districts are classified under Zones?</h6>
-                        <table class="table table-bordered">
-                            <thead>
-                                <tr>
-                                    <th>Zone -- Zone Name -- Districts</th>
-                                    <th>Count</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <ng-container *ngFor="let zone of zoneTableData">
-                                    <tr class="zone-name">
-                                        <td class="zone-name-title">{{zone.zone}} - {{zone.zoneName}}</td>
-                                        <td rowspan="2" class="text-center">{{zone.count}}</td>
-                                    </tr>
+                        <div class="table-responsive" style="overflow-x: auto;">
+                            <table class="table table-bordered w-100">
+                                <thead>
                                     <tr>
-                                        <td>{{zone.districts}}</td>
+                                        <th>Zone</th>
+                                        <th>Zone Name</th>
+                                        <th>Districts</th>
+                                        <th>Count</th>
                                     </tr>
-                                </ng-container>
-                                <tr>
-                                    <th>Total District</th>
-                                    <th class="text-center">38</th>
-                                </tr>
-                            </tbody>
-                        </table>
+                                </thead>
+                                <tbody>
+                                    <ng-container *ngFor="let zone of zoneTableData">
+                                        <tr class="zone-name">
+                                            <td class="zone-name-title">{{zone.zone}}</td>
+                                            <td>{{zone.zoneName}}</td>
+                                            <td>{{zone.districts}}</td>
+                                            <td class="text-center">{{zone.count}}</td>
+                                        </tr>
+                                    </ng-container>
+                                    <tr>
+                                        <th colspan="3">Total District</th>
+                                        <th class="text-center">38</th>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </li>
                 </ul>
             </section>
