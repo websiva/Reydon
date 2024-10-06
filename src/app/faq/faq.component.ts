@@ -317,9 +317,9 @@ scrollToSection(sectionName:string){
       ]
     }
   ]
-  awarness = [
+  realEstateAwarness = [
     {
-      MainTitle: "",
+      MainTitle: "Real Estate",
       SectionQuestions: [
         {
           Question: "What factors should I consider when buying a plot?",
@@ -362,7 +362,9 @@ scrollToSection(sectionName:string){
           Answer: "Uses include agriculture, horticulture, livestock farming, and sometimes agro-tourism."
         },
       ]
-    },
+    }
+  ];
+  batteryAwarness = [
     {
       MainTitle: "Lithium Battery Inverters",
       SectionQuestions: [

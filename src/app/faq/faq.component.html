@@ -95,7 +95,7 @@
                 <header class="section-header">
                     Awareness for our Valued Customers
                 </header>
-                <div class="section-content" *ngFor="let item of awarness">
+                <div class="section-content" *ngFor="let item of realEstateAwarness">
                     <h6 class="title">{{item.MainTitle}}</h6>
                     <ul>
                         <li *ngFor="let question of item.SectionQuestions">
@@ -106,7 +106,7 @@
                 </div>
             </section>
             <section class="third-section" id="third-section">
-                <h6 class="title">Carpet area, Built up area and Super built up area in Indian Real Estate</h6>
+                <!--<h6 class="title">Carpet area, Built up area and Super built up area in Indian Real Estate</h6>-->
                 <ul>
                     <li>
                         <h6 class="inner-question">Q.What is Carpet Area?</h6>
@@ -164,7 +164,6 @@
                 </ul>
             </section>
             <section class="zone-classification" id="zone">
-                <h6 class="title">Zone Clarification</h6>
                 <ul>
                     <li>
                         <h6 class="inner-question">Q. How TN districts are classified under Zones?</h6>
@@ -196,6 +195,17 @@
                         </div>
                     </li>
                 </ul>
+            </section>
+            <section class="second-section" id="second-section">
+                <div class="section-content" *ngFor="let item of batteryAwarness">
+                    <h6 class="title">{{item.MainTitle}}</h6>
+                    <ul>
+                        <li *ngFor="let question of item.SectionQuestions">
+                            <h6 class="inner-question">Q. {{question.Question}}</h6>
+                            <p>{{question.Answer}}</p>
+                        </li>
+                    </ul>
+                </div>
             </section>
             <p class="mt-2 fs-5">EV Charging Units - Coming Soon…</p>
         </div>

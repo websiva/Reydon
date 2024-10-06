@@ -65,6 +65,7 @@ import { RelatedProjectsComponent } from './related-projects/related-projects.co
 import { LithiumUPSComponent } from './lithium-ups/lithium-ups.component';
 import { EnergyStorageSystemComponent } from './energy-storage-system/energy-storage-system.component';
 import { UnitConverterComponent } from './unit-converter/unit-converter.component';
+import { AreaConverterComponent } from './area-converter/area-converter.component';
 
 
 register();
@@ -109,7 +110,8 @@ register();
     CommercialBuildingDetailsComponent,
     RelatedProjectsComponent,
     EnergyStorageSystemComponent,
-    UnitConverterComponent
+    UnitConverterComponent,
+    AreaConverterComponent
   ],
   imports: [
     BrowserModule,
