@@ -2,71 +2,180 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     background-color: var(--background-color);
-    padding: 100px 0;
+    padding: 60px 0;
     margin: 0;
+}
+h2{
+    font-size: 38px;
+    font-weight: 500;
+    text-align: center;
+    color: var(--primary-color);
+}
+.caption {
+    width: 100%;
+    font-weight: 16px;
+    font-weight: 400;
+    text-align: center;
+    color: gray;
+    margin-bottom: 30px;
 }
 .vision-mision-section .row{
     width: 100%;
-    max-width: 1100px;
-}
-.image-container{
-    margin-bottom: 10px;
+    max-width: 1400px;
 }
 .col-md-4{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 0px;
+    padding: 0;
+    margin: 0;
+}
+.image-section{
+    height: 200px;
 }
 .vision,.mission,.values{
     width: 100%;
     max-width: 300px;
-    height: 450px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
-    background-color: var(--button-shade1);
     padding: 20px 0;
-    p{
-        padding: 0 30px;
-    }
+    position: relative;
 }
-h6{
-    font-size: 28px;
+.vision .image-container{
+    background-color: var(--primary-color);
+    padding: 30px;
+    border-radius: 50%;
+}
+.vision .image-outer-border{
+    padding: 15px;
+    border-radius: 50%;
+    border: 4px dashed var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mission .image-container{
+    background-color: #ed8c2d;
+    padding: 30px;
+    border-radius: 50%;
+}
+.mission .image-outer-border{
+    padding: 15px;
+    border-radius: 50%;
+    border: 4px dashed #ed8c2d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.values .image-container{
+    background-color: #ce3730;
+    padding: 30px;
+    border-radius: 50%;
+}
+.values .image-outer-border{
+    padding: 15px;
+    border-radius: 50%;
+    border: 4px dashed #ce3730;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content-container{
+    height: 320px;
+    display: flex;
+    padding: 20px 0 20px 0;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    z-index: 100;
+    position: relative;
+    color: white;
+}
+.vision .content-container{
+    background-color: var(--primary-color);
+}
+.mission .content-container{
+    background-color: #ed8c2d;
+}
+.values .content-container{
+    background-color: #ce3730;
+}
+
+.card-header{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter:blur(20px);
+    box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.1);
+}
+.content-container h6{
+    font-size: 24px;
     font-weight: 400;
+    margin: 8px 0;
+    padding: 0;
+
 }
-p{
+.content-container p{
     text-align: justify;
     font-size: 16px;
     font-weight: 400;
-    padding: 0 10px;
+    margin: 20px;
 }
 img{
-    width: 100px;
+    width: auto;
     height: 100px;
 }
-/*.vision{
-    background-color: #c3ebfb;
-}
-.mission{
-    background-color: #fdb2a7;
-}
-.values{
-    background-color: #c0a3fb;
-}*/
-
-@media (max-width: 768px) {
-
+svg{
+    width: auto;
+    height: 80px;
 }
 
-/* Media query for small screens (e.g., mobile devices) */
-@media (max-width: 480px) {
-    .col-md-4{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: 30px;
+
+.diamond-shape {
+    display: none;
+    width: 175px;
+    height: 175px;
+    background-color: var(--primary-color);
+    transform: rotate(45deg);
+    position: absolute;
+    bottom: -50%;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    z-index: -1;
+}
+
+
+@media (min-width:1200px) {
+    .caption {
+        width: 60%;
     }
+}
+
+
+/* Media query for medium screens */
+@media (max-width: 1200px) {
+
+}
+
+/* Media query for medium screens  */
+@media (max-width: 992px) {
+    
+}
+
+/* Media query for medium screens  */
+@media (max-width: 768px) {
+    .between:nth-of-type(2){
+        display: none;
+    } 
+}
+
+/* Media query for small screens  */
+@media (max-width: 576px) {
+
 }
