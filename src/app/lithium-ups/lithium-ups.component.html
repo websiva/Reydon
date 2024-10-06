@@ -756,18 +756,149 @@
                 <h6>Frequently Asked Questions(FAQ's)</h6>
             </div>
             <div class="accordion accordion-flush" id="lithiumBatteryFaq">
-                <div *ngFor="let faq of faqs; let i = index" class="accordion-item">
-                    <h2 class="accordion-header" [id]="'faqHeading' + i">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="faqHeading1">
                         <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                            [attr.data-bs-target]="'#faqCollapse' + i" aria-expanded="true"
-                            [attr.aria-controls]="'faqCollapse' + i">
-                            {{ faq.Question }}
+                            data-bs-target="#faqCollapse1" aria-expanded="true" aria-controls="faqCollapse1">
+                            1. What is advantage of your Li-ion Battery vs others?
                         </button>
                     </h2>
-                    <div [id]="'faqCollapse' + i" class="accordion-collapse collapse"
-                        [attr.aria-labelledby]="'faqHeading' + i" data-bs-parent="#lithiumBatteryFaq">
+                    <div id="faqCollapse1" class="accordion-collapse collapse" aria-labelledby="faqHeading1"
+                        data-bs-parent="#lithiumBatteryFaq">
                         <div class="accordion-body">
-                            {{ faq.Answer }}
+                            <ol>
+                                <li><strong>Cycle life:</strong> Lithium-ion batteries cycle 2000 times or more while
+                                    lead acid cycle 300-500 cycles.</li>
+                                <li><strong>BMS:</strong> It monitors the battery performance, providing cell protection
+                                    (temp, current, over/ under voltage), cell balancing, stateof charge and health and
+                                    alarms/ reports.</li>
+                                <li><strong>Value for money:</strong> While lithium-ion batteries may cost more but the
+                                    long-term savings are tremendous.</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="faqHeading2">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#faqCollapse2" aria-expanded="false" aria-controls="faqCollapse2">
+                            2. Can we use your lithium-ion battery of same specification can be used for both inverter
+                            and
+                            UPS?
+                        </button>
+                    </h2>
+                    <div id="faqCollapse2" class="accordion-collapse collapse" aria-labelledby="faqHeading2"
+                        data-bs-parent="#lithiumBatteryFaq">
+                        <div class="accordion-body">
+                            Yes, the same specification can be used for both inverter and UPS.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="faqHeading3">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#faqCollapse3" aria-expanded="false" aria-controls="faqCollapse3">
+                            3. Can we use your lithium-ion battery as replacement for allmajor Inverter brands like
+                            Luminous, Sukam, Microtek etc.?
+                        </button>
+                    </h2>
+                    <div id="faqCollapse3" class="accordion-collapse collapse" aria-labelledby="faqHeading3"
+                        data-bs-parent="#lithiumBatteryFaq">
+                        <div class="accordion-body">
+                            Yes, we can use or Lithium Battery as a replacement for most of the low inverter brands like
+                            Luminous, Sukam, Microtek.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="faqHeading4">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#faqCollapse4" aria-expanded="false" aria-controls="faqCollapse4">
+                            4. Can we replace lead acid inverter battery with your Lithium-ion battery? What things need
+                            to
+                            be taken care to have maximum efficiency?
+                        </button>
+                    </h2>
+                    <div id="faqCollapse4" class="accordion-collapse collapse" aria-labelledby="faqHeading4"
+                        data-bs-parent="#lithiumBatteryFaq">
+                        <div class="accordion-body">
+                            Yes, we can replace the lead acid battery by our Lithium battery, for maximum efficiency
+                            avoid multiple cable joints in-between the inverter and battery and installation place must
+                            be clean and well ventilated.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="faqHeading5">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#faqCollapse5" aria-expanded="false" aria-controls="faqCollapse5">
+                            5. What is the key parameter needed to be checked before installing/plugging in your
+                            Lithium-ion battery for inverter application?
+                        </button>
+                    </h2>
+                    <div id="faqCollapse5" class="accordion-collapse collapse" aria-labelledby="faqHeading5"
+                        data-bs-parent="#lithiumBatteryFaq">
+                        <div class="accordion-body">
+                            <p>The key parameters needed to be checked are the battery Low Buzzer Voltage, Low Cut Voltage,
+                            Battery charged Voltage.</p><br>
+                            <strong>Mostly this value will be around for 12V</strong><br>
+                            <ul>
+                                <li>Low Buzzer Voltage: 10.2V ~ 10.75V</li>
+                                <li>Low Cut-off Voltage: 10.2V ~ 10.5V</li>
+                                <li>Charge Voltage: 14.2V~ 14.6V</li>
+                            </ul><br>
+                            <strong>Our lithium Battery Values</strong>
+                            <ul>
+                                <li>Low Cut-off Voltage: 10.0V ~ 11V</li>
+                                <li>Charge Voltage: 14.2V~ 14.6V</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="faqHeading6">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#faqCollapse6" aria-expanded="false" aria-controls="faqCollapse6">
+                            6. What are the Pre-installation Checks to do before connecting UPS / Battery?
+                        </button>
+                    </h2>
+                    <div id="faqCollapse6" class="accordion-collapse collapse" aria-labelledby="faqHeading6"
+                        data-bs-parent="#lithiumBatteryFaq">
+                        <div class="accordion-body">
+                            <ul>
+                                <li>Before Installation, Please Check the following and make sure that everything found to be OK as per requirement.</li>
+                                <li>Before Installation check the input and output wiring and the input supply at the input mains socket (Phase on Right side, Neutral on Left side and Earth on top)</li>
+                                <li>Check the voltage of Neutral to earth voltage should be less than 5V. </li>
+                                <li>Before connecting the UPS to the Battery, ensure the inverter switch in OFF.</li>
+                                <li>Position, then connect UPS wires to the battery terminals with proper tight.</li>
+                                <li>Switch ON the ADIRATH LITHIUM UPS switch and check the load without AC input.</li>
+                                <li>Switch ON AC Mains to the ADIRATH LITHIUM UPS by plugging the mains card for charging the battery.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="faqHeading7">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#faqCollapse7" aria-expanded="false" aria-controls="faqCollapse7">
+                            7. What is the warranty period for the ADIRATH LITHIUM UPS and battery?
+                        </button>
+                    </h2>
+                    <div id="faqCollapse7" class="accordion-collapse collapse" aria-labelledby="faqHeading7"
+                        data-bs-parent="#lithiumBatteryFaq">
+                        <div class="accordion-body">
+                            <ul>
+                                <li>Every ADIRATH LITHIUM UPS is inspected and tested thoroughly before leaving our premises. We undertake to repair the Inverter free of cost for 24 months and the Battery free of cost for 72 months from the date of purchase.</li>
+                                <li>The warranty does not cover any form of damage resulting from accident, misuse, application of incorrect voltage, fire, water, or during transportation, etc.</li>
+                                <li>The warranty is not valid if the serial number and/or warranty seal of the ADIRATH LITHIUM UPS has been deleted, defaced, or altered.</li>
+                                <li>The company will not accept any responsibility for damage or loss incurred during transit of the UPS system.</li>
+                                <li>This warranty does not cover any cost of transportation of the ADIRATH LITHIUM UPS from the installation place to the service centre and vice versa.</li>
+                                <li>Any accessories like LED/LCD, plastic parts connected to the system will not be covered under warranty.</li>
+                                <li>If the ADIRATH LITHIUM UPS system is purchased from an unauthorized source or dealer, the warranty will be null and void. Customers have to produce the warranty card and invoice for lodging any claim.</li>
+                                <li>The warranty issued at Tiruchengode court shall have exclusive jurisdiction over matters covered by or following from this warranty.</li>
+                            </ul>
                         </div>
                     </div>
                 </div>

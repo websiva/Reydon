@@ -395,6 +395,25 @@ export class ApartmentDetailsComponent {
     }
   }
 
+  faqs = [
+    {
+      Question: "What are service apartments?",
+      Answer: "Service apartments are fully furnished apartments available for short or long-term stays, providing hotel-like amenities and services."
+    },
+    {
+      Question: "What is Carpet Area?",
+      Answer: "A carpet area is an area that can be covered by carpet, or a net usable area is called a carpet area. The carpet area is the distance between the inner walls."
+    },
+    {
+      Question: "What is Build up Area?",
+      Answer: "The built-up area in a flat is its carpet area, plus the space taken by the walls. The build-up area in a flat also includes other unusable areas like balcony, terrace etc. Built-up area = Carpet area + area of walls + area of balcony."
+    },
+    {
+      Question: "What is Super Build up Area?",
+      Answer: "Super built-up area is the built-up area of the property, along with the proportionate area of the common facilities in the housing project. These facilities may include the lobby, the lift shaft, the stairs, the swimming pool, the garden, the park and clubhouse, etc. Super built-up area = Built-up area + proportionate common area."
+    }
+  ];
+
 
 
   ngOnDestroy(): void {

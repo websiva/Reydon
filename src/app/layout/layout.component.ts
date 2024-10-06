@@ -416,19 +416,29 @@ export class LayoutComponent implements OnInit, OnDestroy {
     {
       Question: "What are commercial plots?",
       Answer: "Commercial plots are land parcels designated for business activities like offices, shops, and other commercial establishments."
-    },
-    {
-      Question: "What is Carpet Area?",
-      Answer: "A carpet area is an area that can be covered by carpet, or a net usable area is called a carpet area. The carpet area is the distance between the inner walls."
-    },
-    {
-      Question: "What is Build up Area?",
-      Answer: "The built-up area in a flat is its carpet area, plus the space taken by the walls. The build-up area in a flat also includes other unusable areas like balcony, terrace etc. Built-up area = Carpet area + area of walls + area of balcony."
-    },
-    {
-      Question: "What is Super Build up Area?",
-      Answer: "Super built-up area is the built-up area of the property, along with the proportionate area of the common facilities in the housing project. These facilities may include the lobby, the lift shaft, the stairs, the swimming pool, the garden, the park and clubhouse, etc. Super built-up area = Built-up area + proportionate common area."
     }
+  ];
+
+
+  carpetAreaTableData = [
+    { element: 'Living room/Hall', carpetArea: 'Yes', builtUpArea: 'Yes', superBuiltUpArea: 'Yes' },
+    { element: 'Bedroom', carpetArea: 'Yes', builtUpArea: 'Yes', superBuiltUpArea: 'Yes' },
+    { element: 'Dining room', carpetArea: 'Yes', builtUpArea: 'Yes', superBuiltUpArea: 'Yes' },
+    { element: 'Kitchen', carpetArea: 'Yes', builtUpArea: 'Yes', superBuiltUpArea: 'Yes' },
+    { element: 'Bathroom', carpetArea: 'Yes', builtUpArea: 'Yes', superBuiltUpArea: 'Yes' },
+    { element: 'Pooja room', carpetArea: 'Yes', builtUpArea: 'Yes', superBuiltUpArea: 'Yes' },
+    { element: 'Study room & Guest room', carpetArea: 'Yes', builtUpArea: 'Yes', superBuiltUpArea: 'Yes' },
+    { element: 'Home Theater/ GYM', carpetArea: 'Yes', builtUpArea: 'Yes', superBuiltUpArea: 'Yes' },
+    { element: 'Utility areas', carpetArea: 'Yes', builtUpArea: 'Yes', superBuiltUpArea: 'Yes' },
+    { element: 'Staircase (inside the house)', carpetArea: 'Yes', builtUpArea: 'Yes', superBuiltUpArea: 'Yes' },
+    { element: 'Balcony', carpetArea: 'No', builtUpArea: 'Yes', superBuiltUpArea: 'Yes' },
+    { element: 'Staircase (outside the house)', carpetArea: 'No', builtUpArea: 'Yes', superBuiltUpArea: 'Yes' },
+    { element: 'Terrace', carpetArea: 'No', builtUpArea: 'Yes', superBuiltUpArea: 'Yes' },
+    { element: 'Verandah / Portico', carpetArea: 'No', builtUpArea: 'Yes', superBuiltUpArea: 'Yes' },
+    { element: 'Lift', carpetArea: 'No', builtUpArea: 'No', superBuiltUpArea: 'Yes' },
+    { element: 'Lobby', carpetArea: 'No', builtUpArea: 'No', superBuiltUpArea: 'Yes' },
+    { element: 'Garden / Walking Track', carpetArea: 'No', builtUpArea: 'No', superBuiltUpArea: 'Yes' },
+    { element: 'Swimming pool', carpetArea: 'No', builtUpArea: 'No', superBuiltUpArea: 'Yes' }
   ];
 
 

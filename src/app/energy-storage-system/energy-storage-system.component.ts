@@ -136,8 +136,8 @@ carouselSlides = [
     { name: "EV Charging stations", image: "https://res.cloudinary.com/dbzme4gd3/image/upload/v1727966104/ev_lqcc71.jpg" },
     { name: "Petrol Bunk", image: "https://res.cloudinary.com/dbzme4gd3/image/upload/v1727966108/petrol-bunk_its8mt.jpg" },
     { name: "Wind Power Plants", image: "https://res.cloudinary.com/dbzme4gd3/image/upload/v1727966113/windpower_focrgt.jpg" },
-    { name: "Farm House", image: "https://res.cloudinary.com/dbzme4gd3/image/upload/v1727966106/form_house_wdj45t.jpg" },
-    { name: "Remote area Buildings", image: "https://res.cloudinary.com/dbzme4gd3/image/upload/v1727966109/remote-area_mislgf.jpg" },
+    { name: "Robotics", image: "https://res.cloudinary.com/dbzme4gd3/image/upload/v1728201545/industry-2692640_1920_w8boqs.jpg" },
+    { name: "Medical Areas", image: "https://res.cloudinary.com/dbzme4gd3/image/upload/v1728201546/hospital-3089884_1920_ygjqhh.jpg" },
     { name: "Solar Street Lights", image: "https://res.cloudinary.com/dbzme4gd3/image/upload/v1727966110/solar-strret-lighty_mcjrmd.jpg" }
   ];
 

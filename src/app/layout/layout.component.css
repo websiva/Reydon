@@ -937,6 +937,17 @@ form {
     height: auto;
     border: none;
 }
+.faq-see-more-btn{
+    width: auto;
+    margin: 10px auto;
+    padding: 10px 25px;
+    font-size: 18px;
+    background-color: var(--button-color);
+    border: none;
+    color: white;
+    border-radius: 6px;
+    font-weight: 500;
+}
 
 
 

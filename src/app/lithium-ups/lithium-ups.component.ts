@@ -253,7 +253,7 @@ export class LithiumUPSComponent implements OnInit {
 
   faqs = [
     {
-      Question: "What are lithium battery inverters?",
+      Question: "What is advantage of your Li-ion Battery vs others?",
       Answer: "Lithium battery inverters are devices that store energy in lithium batteries and convert it to electricity for home or business use during power outages."
     },
     {

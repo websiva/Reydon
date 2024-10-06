@@ -456,6 +456,9 @@
                 </div>
             </div>
         </section>
+        <section class="area-converter">
+            <app-unit-converter></app-unit-converter>
+        </section>
         <section id="youtube-video">
             <div class="youtube-video-section w-100">
                 <div class="youtube-video">
@@ -614,6 +617,32 @@
                 </div>
             </div>
         </div>
+        <section class="faq-section">
+            <div class="container row">
+                <div class="section-header">
+                    <h6 class="section-title">Frequently Asked Questions(FAQ)</h6>
+                    <div class="divider"></div>
+                </div>
+                <div class="accordion accordion-flush" id="lithiumBatteryFaq">
+                    <div *ngFor="let faq of faqs; let i = index" class="accordion-item">
+                        <h2 class="accordion-header" [id]="'faqHeading' + i">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                [attr.data-bs-target]="'#faqCollapse' + i" aria-expanded="true"
+                                [attr.aria-controls]="'faqCollapse' + i">
+                                {{ faq.Question }}
+                            </button>
+                        </h2>
+                        <div [id]="'faqCollapse' + i" class="accordion-collapse collapse"
+                            [attr.aria-labelledby]="'faqHeading' + i" data-bs-parent="#lithiumBatteryFaq">
+                            <div class="accordion-body">
+                                {{ faq.Answer }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="faq-see-more-btn" routerLink="/FAQ">See More</button>
+            </div>
+        </section>
         <div *ngIf="RelatedProjects.length>0" class="related-projects-section">
             <div class="related-projects">
                 <div class="row m-0">

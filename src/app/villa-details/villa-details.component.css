@@ -124,19 +124,13 @@
 
 
 .section-title {
-    font-size: 30px;
+    font-size: 28px;
+    font-weight: 500;
     text-align: left;
-    width: 100%;
     color: var(--primary-color);
-    font-weight: 300;
-    padding: 0;
-    margin: 0 0 20px 0;
-}
-
-.divider {
-    border: none;
-    border-top: 1px solid #e5e4e4;
-    width: 100%;
+    padding: 0 0 5px 0;
+    margin: 0 auto 0 0;
+    position: relative;
 }
 
 .section-description {
@@ -1074,7 +1068,46 @@ form {
     width: auto;
     margin: 10px;
 }
+/**************************faq-section*****************/
+.faq-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #f7f8fa;
+    padding: 40px 0;
+}
 
+.faq-section .row {
+    width: 100%;
+    max-width: 1400px;
+}
+
+.accordion-item {
+    margin: 15px 0;
+    /*box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);*/
+    border-radius: 8px;
+}
+
+.accordion-header {
+    margin: 0;
+}
+.accordion-button{
+    padding: 5px 10px;
+    background-color: transparent;
+    height: auto;
+    border: none;
+}
+.faq-see-more-btn{
+    width: auto;
+    margin: 10px auto;
+    padding: 10px 25px;
+    font-size: 18px;
+    background-color: var(--button-color);
+    border: none;
+    color: white;
+    border-radius: 6px;
+    font-weight: 500;
+}
 
 
 

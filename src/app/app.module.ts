@@ -17,8 +17,11 @@ import {MatIconModule} from '@angular/material/icon';
 import { BreadCrumbComponent } from './bread-crumb/bread-crumb.component';
 import {GoogleMapsModule} from '@angular/google-maps';
 import { YouTubePlayerModule } from '@angular/youtube-player';
-import {CdkAccordionModule} from '@angular/cdk/accordion';
 import {MatExpansionModule} from '@angular/material/expansion';
+import {MatButtonModule} from '@angular/material/button';
+import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatSelectModule} from '@angular/material/select';
 
 
 import { register } from 'swiper/element/bundle';
@@ -61,6 +64,7 @@ import { CommercialBuildingDetailsComponent } from './commercial-building-detail
 import { RelatedProjectsComponent } from './related-projects/related-projects.component';
 import { LithiumUPSComponent } from './lithium-ups/lithium-ups.component';
 import { EnergyStorageSystemComponent } from './energy-storage-system/energy-storage-system.component';
+import { UnitConverterComponent } from './unit-converter/unit-converter.component';
 
 
 register();
@@ -104,7 +108,8 @@ register();
     ApartmentDetailsComponent,
     CommercialBuildingDetailsComponent,
     RelatedProjectsComponent,
-    EnergyStorageSystemComponent
+    EnergyStorageSystemComponent,
+    UnitConverterComponent
   ],
   imports: [
     BrowserModule,
@@ -114,7 +119,11 @@ register();
     ReactiveFormsModule,
     GoogleMapsModule,
     YouTubePlayerModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatButtonModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatSelectModule
   ],
   providers: [provideHttpClient(), provideAnimationsAsync(),PropertyService,PropertyResolverService,PropertyDataService],
   bootstrap: [AppComponent],
