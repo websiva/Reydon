@@ -53,33 +53,34 @@ h2{
 .vision .image-outer-border{
     padding: 15px;
     border-radius: 50%;
-    border: 4px dashed var(--primary-color);
+    border: 4px dashed #004274;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .mission .image-container{
-    background-color: #ed8c2d;
+    background-color: var(--primary-color);
     padding: 30px;
     border-radius: 50%;
 }
 .mission .image-outer-border{
     padding: 15px;
     border-radius: 50%;
-    border: 4px dashed #ed8c2d;
+    border: 4px dashed var(--primary-color);
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .values .image-container{
-    background-color: #ce3730;
+    background-color: var(--primary-color);
+    /*background-color: #ce3730;*/
     padding: 30px;
     border-radius: 50%;
 }
 .values .image-outer-border{
     padding: 15px;
     border-radius: 50%;
-    border: 4px dashed #ce3730;
+    border: 4px dashed var(--primary-color);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -99,10 +100,12 @@ h2{
     background-color: var(--primary-color);
 }
 .mission .content-container{
-    background-color: #ed8c2d;
+    /*background-color: #ed8c2d;*/
+    background-color: var(--primary-color);
 }
 .values .content-container{
-    background-color: #ce3730;
+   /* background-color: #ce3830c6;*/
+   background-color: var(--primary-color);
 }
 
 .card-header{

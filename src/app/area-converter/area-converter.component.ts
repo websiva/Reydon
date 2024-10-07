@@ -36,7 +36,7 @@ export class AreaConverterComponent {
 
       // Use the correct indexing for conversion
       const conversionFactor = this.units[fromIndex][toIndex]; // Conversion factor based on selected units
-      this.convertedValue = this.inputValue * conversionFactor; // Perform conversion
+      this.convertedValue = (this.inputValue * conversionFactor).toFixed(4); // Perform conversion
     } catch (error) {
       console.error(error);
       this.convertedValue = 'Invalid units'; // Error handling
