@@ -207,6 +207,25 @@
     font-size: 16px;
     font-weight: 400;
 }
+/****Header Age section *****/
+.header-age-section{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 10px 0;
+}
+.header-age-section svg {
+    width: 25px;
+    height: 25px;
+    margin-right: 8px;
+}
+
+.header-age-section p {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--primary-color);
+}
 
 /***Header project Id **/
 .project-id {
@@ -422,21 +441,27 @@
     font-weight: 400;
 }
 
+.right-section{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
 .download-section {
     width: 100%;
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
     flex-wrap: wrap;
-    margin: 0;
+    padding: 0 10px;
+    margin: 10px 0 0 0;
 }
 
 .download-section button {
-    width: 75%;
-    max-width: 180px;
+    width: 45%;
     border-radius: 0;
     border: 1px solid var(--button-color);
-    font-size: 16px;
-    margin: 20px 20px 20px 0;
+    font-size: 14px;
+    margin: 0 10px 0 0;
     display: flex;
     justify-content: center;
     background-color: var(--button-color);
@@ -497,18 +522,13 @@
 .overview-section-container {
     width: 100%;
     max-width: 1400px;
-    /* display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-wrap: wrap;*/
-    background-color: white;
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+}
+.overview-section-container .row {
+    background-color: white;
 }
 
 .overview-section {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
     padding: 40px 20px;
 }
 
@@ -685,7 +705,7 @@
     height: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     padding: 40px 10px;
     background-color: white;
 }
@@ -1358,11 +1378,56 @@ form {
         justify-content: center;
         align-items: center;
     }
+    .download-section {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        flex-wrap: wrap;
+        margin: 0;
+        padding: 0;
+    }
+    .download-section button {
+        width: 75%;
+        max-width: 180px;
+        border-radius: 0;
+        border: 1px solid var(--button-color);
+        font-size: 16px;
+        display: flex;
+        justify-content: center;
+        background-color: var(--button-color);
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 6px;
+    }
 }
 
 
 /* Media query for medium screens */
 @media (max-width: 1200px) {
+    .download-section {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        flex-wrap: wrap;
+        margin: 0;
+    }
+    .download-section button {
+        width: 46%;
+        border-radius: 0;
+        border: 1px solid var(--button-color);
+        font-size: 16px;
+        display: flex;
+        justify-content: center;
+        background-color: var(--button-color);
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 6px;
+        margin: 0;
+    }
     .property-description-section {
         padding: 40px 20px;
     }

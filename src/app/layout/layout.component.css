@@ -439,15 +439,6 @@
     margin-right: 8px;
 }
 
-.download-section button:nth-child(3) {
-    width: 75%;
-    max-width: 150px;
-    border-radius: 0;
-    background-color: var(--button-color);
-    color: white;
-    font-size: 16px;
-}
-
 /**************************main-detail-section ***************/
 .main-detail-section {
     padding: 40px 0;
