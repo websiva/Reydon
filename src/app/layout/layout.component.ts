@@ -19,6 +19,7 @@ export class LayoutComponent implements OnInit, OnDestroy {
   contactFormMessage: string = "";
   contactFormProject: string = "";
   contactFormDownloadType: string = "";
+  contactFormModalOpen:boolean=false;
   fileDownloadForm: FormGroup;
   ProjectName: string = '';
   ProjectId: string = '';
@@ -70,7 +71,17 @@ export class LayoutComponent implements OnInit, OnDestroy {
         this.ProjectName = data['projectName'];
         console.log(this.ProjectName);
         await this.loadPropertyData(this.ProjectId);
-      })
+      });
+
+      //setting contactformfilled status to false
+      let sessionValue=sessionStorage.getItem("contactFormFilled");
+      if(sessionValue=="true"){
+        this.contactFormModalOpen=true;
+      }
+      else{
+        this.contactFormModalOpen=false;
+      }
+
     } catch (error) {
       console.error(error);
     }
@@ -296,15 +307,15 @@ export class LayoutComponent implements OnInit, OnDestroy {
   }
 
   //submitting project contact form data to google sheet
-  ngContactFormSubmit(projectName:string) {
-    this.contactFormProject=projectName
-;    const sheetData = {
-      Name: this.contcatFormName,
-      Email: this.contactFormEmail,
-      PhoneNumber: this.contactFormPhoneNumber,
-      Message:this.contactFormMessage,
-      ProjectName: this.contactFormProject
-    };
+  ngContactFormSubmit(projectName: string) {
+    this.contactFormProject = projectName
+      ; const sheetData = {
+        Name: this.contcatFormName,
+        Email: this.contactFormEmail,
+        PhoneNumber: this.contactFormPhoneNumber,
+        Message: this.contactFormMessage,
+        ProjectName: this.contactFormProject
+      };
 
     this.googleFormDataSercice.StoreProjectContactUsPageFormData(sheetData).subscribe((response: any) => {
       if (response && response.sucess !== false) {
@@ -324,6 +335,15 @@ export class LayoutComponent implements OnInit, OnDestroy {
     this.contactFormDownloadType = value;
     this.downloadFormId = value;
     this.downloadDocumentLink = fileLink;
+
+    let contactFormStatus = sessionStorage.getItem("contactFormFilled");
+    if (contactFormStatus == "true") {
+        this.contactFormModalOpen=true;      
+        this.downloadDocument();
+    }
+    else {      
+      this.contactFormModalOpen=false;
+     }
   }
 
   //downloading file and submitting data to google sheet
@@ -338,11 +358,9 @@ export class LayoutComponent implements OnInit, OnDestroy {
 
     this.googleFormDataSercice.StoreDownloadFormDataInGoogleSheet(sheetData).subscribe((response: any) => {
       if (response && response.sucess !== false) {
-        const link = document.createElement('a');
-        link.href = `${this.downloadDocumentLink}`;
-        //alert(link.href);
-        link.download = this.downloadFormId;
-        link.click();
+        sessionStorage.setItem("contactFormFilled", "true");
+        this.downloadDocument();
+        this.contactFormModalOpen=true;
       }
       else {
         alert('Failed to submit data. Please try again.');
@@ -350,6 +368,13 @@ export class LayoutComponent implements OnInit, OnDestroy {
     }, error => {
       alert('Failed to submit data. Please try again.');
     });
+  }
+
+  downloadDocument() {
+    const link = document.createElement('a');
+    link.href = `${this.downloadDocumentLink}`;
+    link.download = this.downloadFormId;
+    link.click();
   }
 
 
@@ -445,6 +470,7 @@ export class LayoutComponent implements OnInit, OnDestroy {
 
   ngOnDestroy(): void {
     clearInterval(this.interval);
+    sessionStorage.removeItem("contactFormFilled");
   }
 
 }

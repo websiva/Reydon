@@ -11,7 +11,7 @@ import { PostFormDataService } from '../angular-service/post-form-data.service';
   templateUrl: './villa-details.component.html',
   styleUrl: './villa-details.component.css'
 })
-export class VillaDetailsComponent {
+export class VillaDetailsComponent implements OnDestroy,OnInit {
   contactForm: FormGroup;
   contcatFormName: string = '';
   contactFormEmail: string = "";
@@ -19,6 +19,7 @@ export class VillaDetailsComponent {
   contactFormMessage: string = "";
   contactFormProject: string = "";
   contactFormDownloadType: string = "";
+  contactFormModalOpen:boolean=false;
   fileDownloadForm: FormGroup;
   ProjectName: string = '';
   ProjectId: string = '';
@@ -70,7 +71,16 @@ export class VillaDetailsComponent {
         this.ProjectName = data['projectName'];
         console.log(this.ProjectName);
         await this.loadPropertyData(this.ProjectId);
-      })
+      });
+
+      //setting contactformfilled status to false
+      let sessionValue=sessionStorage.getItem("contactFormFilled");
+      if(sessionValue=="true"){
+        this.contactFormModalOpen=true;
+      }
+      else{
+        this.contactFormModalOpen=false;
+      }
     } catch (error) {
       console.error(error);
     }
@@ -326,6 +336,15 @@ export class VillaDetailsComponent {
     this.contactFormDownloadType = value;
     this.downloadFormId = value;
     this.downloadDocumentLink = fileLink;
+
+    let contactFormStatus = sessionStorage.getItem("contactFormFilled");
+    if (contactFormStatus == "true") {
+        this.contactFormModalOpen=true;      
+        this.downloadDocument();
+    }
+    else {      
+      this.contactFormModalOpen=false;
+     }
   }
 
   //downloading file and submitting data to google sheet
@@ -340,11 +359,9 @@ export class VillaDetailsComponent {
 
     this.googleFormDataSercice.StoreDownloadFormDataInGoogleSheet(sheetData).subscribe((response: any) => {
       if (response && response.sucess !== false) {
-        const link = document.createElement('a');
-        link.href = `${this.downloadDocumentLink}`;
-        //alert(link.href);
-        link.download = this.downloadFormId;
-        link.click();
+        sessionStorage.setItem("contactFormFilled", "true");
+        this.downloadDocument();
+        this.contactFormModalOpen=true;
       }
       else {
         alert('Failed to submit data. Please try again.');
@@ -354,7 +371,12 @@ export class VillaDetailsComponent {
     });
   }
 
-
+  downloadDocument() {
+    const link = document.createElement('a');
+    link.href = `${this.downloadDocumentLink}`;
+    link.download = this.downloadFormId;
+    link.click();
+  }
 
   openBannerImages(image: string) {
     this.modalImageUrl = image;
@@ -415,5 +437,6 @@ export class VillaDetailsComponent {
 
   ngOnDestroy(): void {
     clearInterval(this.interval);
+    sessionStorage.removeItem("contactFormFilled");
   }
 }

@@ -64,7 +64,8 @@
                         </div>
                     </div>
                     <div class="col-md-6 p-0 right-section">
-                        <div class="header-age-section w-100 text-md-end me-2 ps-3 d-flex align-items-center justify-content-start justify-content-md-end">
+                        <div
+                            class="header-age-section w-100 text-md-end me-2 ps-3 d-flex align-items-center justify-content-start justify-content-md-end">
                             <svg fill="#004274" width="64px" height="64px" viewBox="0 0 24 24" id="Layer_1"
                                 data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" stroke="#004274">
                                 <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -943,69 +944,74 @@
 </div>
 
 <!-- Modal -->
-<div class="modal fade" id="download-contact-form" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" style="width:100%;max-width: 400px;">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h6 class="my-auto">Download document</h6>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body" style="padding: 0;">
-                <p class="form-description mt-2">Please fill out the form below to receive your document. We require
-                    some basic
-                    information to process your request.</p>
-                <div class="contact-form" style="padding: 0; margin: 0;">
-                    <div class="form">
-                        <form [formGroup]="fileDownloadForm" (ngSubmit)="ngSubmitFileDownloadform()"
-                            style="padding: 0;">
-                            <div class="row m-0 w-100">
-                                <div class="col-12 mb-3 p-0">
-                                    <label for="name" class="form-label required">Name</label>
-                                    <input type="text" id="name" class="form-control" placeholder="Enter your name"
-                                        formControlName="name" [(ngModel)]="contcatFormName" />
-                                    <div *ngIf="contactForm.controls['name'].invalid && contactForm.controls['name'].touched"
-                                        class="text-danger">
-                                        <small *ngIf="contactForm.controls['name'].errors?.['required']">Name is
-                                            required.</small>
+<div class="modal-condition-container" *ngIf="!contactFormModalOpen">
+    <div class="modal fade" id="download-contact-form" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" style="width:100%;max-width: 400px;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h6 class="my-auto">Download document</h6>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" style="padding: 0;">
+                    <p class="form-description mt-2">Please fill out the form below to receive your document. We require
+                        some basic
+                        information to process your request.</p>
+                    <div class="contact-form" style="padding: 0; margin: 0;">
+                        <div class="form">
+                            <form [formGroup]="fileDownloadForm" (ngSubmit)="ngSubmitFileDownloadform()"
+                                style="padding: 0;">
+                                <div class="row m-0 w-100">
+                                    <div class="col-12 mb-3 p-0">
+                                        <label for="name" class="form-label required">Name</label>
+                                        <input type="text" id="name" class="form-control" placeholder="Enter your name"
+                                            formControlName="name" [(ngModel)]="contcatFormName" />
+                                        <div *ngIf="contactForm.controls['name'].invalid && contactForm.controls['name'].touched"
+                                            class="text-danger">
+                                            <small *ngIf="contactForm.controls['name'].errors?.['required']">Name is
+                                                required.</small>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="row m-0 w-100">
-                                <div class="col-12 mb-3 p-0">
-                                    <label for="phoneNumber" class="form-label required">Phone number</label>
-                                    <input type="text" maxlength="10" id="phoneNumber" class="form-control"
-                                        placeholder="Phone number" formControlName="phone"
-                                        [(ngModel)]="contactFormPhoneNumber" />
-                                    <div *ngIf="contactForm.controls['phone'].invalid && contactForm.controls['phone'].touched"
-                                        class="text-danger">
-                                        <small *ngIf="contactForm.controls['phone'].errors?.['required']">Phone
-                                            number
-                                            is
-                                            required.</small>
+                                <div class="row m-0 w-100">
+                                    <div class="col-12 mb-3 p-0">
+                                        <label for="phoneNumber" class="form-label required">Phone number</label>
+                                        <input type="text" maxlength="10" id="phoneNumber" class="form-control"
+                                            placeholder="Phone number" formControlName="phone"
+                                            [(ngModel)]="contactFormPhoneNumber" />
+                                        <div *ngIf="contactForm.controls['phone'].invalid && contactForm.controls['phone'].touched"
+                                            class="text-danger">
+                                            <small *ngIf="contactForm.controls['phone'].errors?.['required']">Phone
+                                                number
+                                                is
+                                                required.</small>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="row m-0">
-                                <div class="col-12 p-0 mb-3">
-                                    <label for="email" class="form-label required">Email</label>
-                                    <input type="email" id="email" class="form-control" placeholder="Email"
-                                        formControlName="email" [(ngModel)]="contactFormEmail" />
-                                    <div *ngIf="contactForm.controls['email'].invalid && contactForm.controls['email'].touched"
-                                        class="text-danger">
-                                        <small *ngIf="contactForm.controls['email'].errors?.['required']">Email is
-                                            required.</small>
-                                        <small *ngIf="contactForm.controls['email'].errors?.['email']">Please enter a
-                                            valid email address.</small>
+                                <div class="row m-0">
+                                    <div class="col-12 p-0 mb-3">
+                                        <label for="email" class="form-label required">Email</label>
+                                        <input type="email" id="email" class="form-control" placeholder="Email"
+                                            formControlName="email" [(ngModel)]="contactFormEmail" />
+                                        <div *ngIf="contactForm.controls['email'].invalid && contactForm.controls['email'].touched"
+                                            class="text-danger">
+                                            <small *ngIf="contactForm.controls['email'].errors?.['required']">Email is
+                                                required.</small>
+                                            <small *ngIf="contactForm.controls['email'].errors?.['email']">Please enter
+                                                a
+                                                valid email address.</small>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <button type="submit" data-bs-dismiss="modal" class="btn send-button w-100"
-                                        [disabled]="fileDownloadForm.invalid" (click)="downloadFile()">Download</button>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <button type="submit" data-bs-dismiss="modal" class="btn send-button w-100"
+                                            [disabled]="fileDownloadForm.invalid"
+                                            (click)="downloadFile()">Download</button>
+                                    </div>
                                 </div>
-                            </div>
-                        </form>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
