@@ -388,7 +388,7 @@
 /***************************hero-section******************************/
 .hero-section {
     width: 100%;
-    padding: 40px 0 0 0;
+    padding: 40px 0;
     display: flex;
     justify-content: center;
 }
@@ -403,11 +403,23 @@
     padding: 40px 0 0 0;
     display: flex;
     justify-content: center;
+    background-color: #F7F8FA;
 }
-
+.description-title{
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--primary-color);
+}
 .description-section .row {
     width: 100%;
     max-width: 1400px;
+}
+.property-description {
+    width: 100%;
+    text-align: justify;
+    font-size: 17px;
+    color: #282828;
+    font-weight: 400;
 }
 
 .download-section {
@@ -462,12 +474,7 @@
     max-width: 1400px;
 }
 
-.property-description {
-    width: 100%;
-    text-align: justify;
-    font-size: 16px;
-    font-weight: 300;
-}
+
 
 
 /********************************building-details-section***************/

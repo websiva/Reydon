@@ -2,21 +2,23 @@
     <div class="full-section w-100" *ngFor="let project of ProjectData">
         <div class="banner-section">
             <div class="banner-image">
-                <img class="slider-image" [src]="image"
-                    *ngFor="let image of BannerImages;let i=index" [class.active]="i===currentIndex" alt="">
+                <img class="slider-image" [src]="image" *ngFor="let image of BannerImages;let i=index"
+                    [class.active]="i===currentIndex" alt="">
             </div>
             <div class="header-images">
-                <img src="https://res.cloudinary.com/dbzme4gd3/image/upload/v1726207991/DTCP_zulxsb.png" alt="" class="dtcp-approved-image"
-                    *ngIf="project.DTCPApproved===true&&project.RERAApproved===false">
-                <img src="https://res.cloudinary.com/dbzme4gd3/image/upload/v1726207994/RERA_a6whco.png" alt="" class="dtcp-approved-image"
-                    *ngIf="project.DTCPApproved===false&&project.RERAApproved===true">
-                <img src="https://res.cloudinary.com/dbzme4gd3/image/upload/v1726207993/RERA-DTCP-Approved_ij2dc0.png" alt="" class="dtcp-rera-approved-image"
+                <img src="https://res.cloudinary.com/dbzme4gd3/image/upload/v1726207991/DTCP_zulxsb.png" alt=""
+                    class="dtcp-approved-image" *ngIf="project.DTCPApproved===true&&project.RERAApproved===false">
+                <img src="https://res.cloudinary.com/dbzme4gd3/image/upload/v1726207994/RERA_a6whco.png" alt=""
+                    class="dtcp-approved-image" *ngIf="project.DTCPApproved===false&&project.RERAApproved===true">
+                <img src="https://res.cloudinary.com/dbzme4gd3/image/upload/v1726207993/RERA-DTCP-Approved_ij2dc0.png"
+                    alt="" class="dtcp-rera-approved-image"
                     *ngIf="project.DTCPApproved===true&&project.RERAApproved===true">
-                <img src="https://res.cloudinary.com/dbzme4gd3/image/upload/v1726207995/verified_mnspvg.png" style="background-color: white;border-radius: 50%;" alt=""
-                    class="verified-image" *ngIf="project.VerifiedByReydon===true">
+                <img src="https://res.cloudinary.com/dbzme4gd3/image/upload/v1726207995/verified_mnspvg.png"
+                    style="background-color: white;border-radius: 50%;" alt="" class="verified-image"
+                    *ngIf="project.VerifiedByReydon===true">
             </div>
         </div>
-        <div class="navigation-section sticky-top">
+        <div class="navigation-section sticky-top d-none d-xl-flex">
             <nav class="navigation">
                 <ul>
                     <li><a (click)="scrollToSection('project-overview')">Project Overview</a></li>
@@ -60,13 +62,29 @@
                                     {{project.Category}}</li>
                             </ul>
                         </div>
-                        <h6 class="my-auto fs-6">Age of property: {{calculateRelativeTime(project.ProjectLaunchDate)}}</h6>
-                        <div class="download-section">
-                            <button type="button" class="btn" data-bs-toggle="modal"
-                                data-bs-target="#download-contact-form" (click)="setDownloadFormId(project.ProjectName,'brochure',project.BrouchureLink)">
+                    </div>
+                    <div class="col-md-6 p-0 right-section">
+                        <div class="header-age-section w-100 text-md-end me-2 ps-3 d-flex align-items-center justify-content-start justify-content-md-end">
+                            <svg fill="#004274" width="64px" height="64px" viewBox="0 0 24 24" id="Layer_1"
+                                data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" stroke="#004274">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier">
+                                    <path
+                                        d="M9,24H1a1,1,0,0,1,0-2H9a1,1,0,0,1,0,2Z M7,20H1a1,1,0,0,1,0-2H7a1,1,0,0,1,0,2Z M5,16H1a1,1,0,0,1,0-2H5a1,1,0,0,1,0,2Z M13,23.955a1,1,0,0,1-.089-2A10,10,0,1,0,2.041,11.09a1,1,0,0,1-1.992-.18A12,12,0,0,1,24,12,11.934,11.934,0,0,1,13.09,23.951C13.06,23.954,13.029,23.955,13,23.955Z M12,6a1,1,0,0,0-1,1v5a1,1,0,0,0,.293.707l3,3a1,1,0,0,0,1.414-1.414L13,11.586V7A1,1,0,0,0,12,6Z">
+                                    </path>
+                                </g>
+                            </svg>
+                            <p class="location my-auto">Age of Property:
+                                {{calculateRelativeTime(project.ProjectLaunchDate)}}</p>
+                        </div>
+                        <div class="download-section d-flex justify-content-start justify-content-xl-end mt-2 mt-xxl-0">
+                            <button type="button" class="btn me-4" data-bs-toggle="modal"
+                                data-bs-target="#download-contact-form"
+                                (click)="setDownloadFormId(project.ProjectName,'brochure',project.BrouchureLink)">
                                 <svg viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg"
                                     xmlns:xlink="http://www.w3.org/1999/xlink"
-                                    xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" fill="#000000">
+                                    xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" fill="#ffffff">
                                     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                                     <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
                                     <g id="SVGRepo_iconCarrier">
@@ -76,7 +94,7 @@
                                         <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"
                                             sketch:type="MSPage">
                                             <g id="Icon-Set" sketch:type="MSLayerGroup"
-                                                transform="translate(-360.000000, -99.000000)" fill="#000000">
+                                                transform="translate(-360.000000, -99.000000)" fill="#ffffff">
                                                 <path
                                                     d="M368,109 C366.896,109 366,108.104 366,107 C366,105.896 366.896,105 368,105 C369.104,105 370,105.896 370,107 C370,108.104 369.104,109 368,109 L368,109 Z M368,103 C365.791,103 364,104.791 364,107 C364,109.209 365.791,111 368,111 C370.209,111 372,109.209 372,107 C372,104.791 370.209,103 368,103 L368,103 Z M390,116.128 L384,110 L374.059,120.111 L370,116 L362,123.337 L362,103 C362,101.896 362.896,101 364,101 L388,101 C389.104,101 390,101.896 390,103 L390,116.128 L390,116.128 Z M390,127 C390,128.104 389.104,129 388,129 L382.832,129 L375.464,121.535 L384,112.999 L390,118.999 L390,127 L390,127 Z M364,129 C362.896,129 362,128.104 362,127 L362,126.061 L369.945,118.945 L380.001,129 L364,129 L364,129 Z M388,99 L364,99 C361.791,99 360,100.791 360,103 L360,127 C360,129.209 361.791,131 364,131 L388,131 C390.209,131 392,129.209 392,127 L392,103 C392,100.791 390.209,99 388,99 L388,99 Z"
                                                     id="image-picture" sketch:type="MSShapeGroup"> </path>
@@ -87,21 +105,22 @@
                                 <span>Brochure</span>
                             </button>
                             <button type="button" class="btn" data-bs-toggle="modal"
-                                data-bs-target="#download-contact-form" (click)="setDownloadFormId(project.ProjectName,'layout-map',project.BrouchureLink)">
+                                data-bs-target="#download-contact-form"
+                                (click)="setDownloadFormId(project.ProjectName,'layout-map',project.BrouchureLink)">
                                 <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                                     <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
                                     <g id="SVGRepo_iconCarrier">
                                         <path
                                             d="M21 7.16229C21 6.11871 21 5.59692 20.7169 5.20409C20.4337 4.81126 19.9387 4.64625 18.9487 4.31624L17.7839 3.92799C16.4168 3.47229 15.7333 3.24444 15.0451 3.3366C14.3569 3.42876 13.7574 3.82843 12.5583 4.62778L11.176 5.54937C10.2399 6.1734 9.77191 6.48541 9.24685 6.60952C9.05401 6.65511 8.85714 6.68147 8.6591 6.68823C8.11989 6.70665 7.58626 6.52877 6.51901 6.17302C5.12109 5.70705 4.42213 5.47406 3.89029 5.71066C3.70147 5.79466 3.53204 5.91678 3.39264 6.06935C3 6.49907 3 7.23584 3 8.70938V12.7736M21 11V15.2907C21 16.7642 21 17.501 20.6074 17.9307C20.468 18.0833 20.2985 18.2054 20.1097 18.2894C19.5779 18.526 18.8789 18.293 17.481 17.827C16.4137 17.4713 15.8801 17.2934 15.3409 17.3118C15.1429 17.3186 14.946 17.3449 14.7532 17.3905C14.2281 17.5146 13.7601 17.8266 12.824 18.4507L11.4417 19.3722C10.2426 20.1716 9.64311 20.5713 8.95493 20.6634C8.26674 20.7556 7.58319 20.5277 6.21609 20.072L5.05132 19.6838C4.06129 19.3538 3.56627 19.1888 3.28314 18.7959C3.01507 18.424 3.0008 17.9365 3.00004 17"
-                                            stroke="#000000" stroke-width="1.5" stroke-linecap="round"></path>
-                                        <path d="M15 3.5V7M15 17V11" stroke="#000000" stroke-width="1.5"
+                                            stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"></path>
+                                        <path d="M15 3.5V7M15 17V11" stroke="#ffffff" stroke-width="1.5"
                                             stroke-linecap="round"></path>
-                                        <path d="M9 20.5V17M9 7V13" stroke="#000000" stroke-width="1.5"
+                                        <path d="M9 20.5V17M9 7V13" stroke="#ffffff" stroke-width="1.5"
                                             stroke-linecap="round"></path>
                                     </g>
                                 </svg>
-                                <span>Layout details</span></button>
+                                <span>Property Design</span></button>
 
                             <!-- Modal -->
                             <div class="modal fade" id="#download-contact-form" tabindex="-1"
@@ -126,25 +145,28 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6">
-                        <p class="property-description">{{project.PropertyDescription}}</p>
-                    </div>
                 </div>
             </div>
+            <div class="description-section">
+                <div class="row">
+                    <p class="description-title d-block">Project Description</p>
+                    <p class="property-description">{{project.PropertyDescription}}</p>
+                </div>
+            </div>
+        </section>
+        <section class="main-details">
             <div class="main-detail-section">
                 <div class="main-detail">
-                    <div class="row p-0 m-0">
+                    <div class="row p-0">
                         <div class="col-md-4">
                             <div class="content-box">
-                                <svg viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                                    xmlns:xlink="http://www.w3.org/1999/xlink" fill="#7e7e7e" stroke="#7e7e7e">
+                                <svg viewBox="0 0 48.001 48.001" xmlns="http://www.w3.org/2000/svg" fill="#000000">
                                     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                                     <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
                                     <g id="SVGRepo_iconCarrier">
-                                        <rect width="16" height="16" id="icon-bound" fill="none"></rect>
-                                        <path
-                                            d="M4,12L4,13L12,13L12,12L13,12L13,4L12,4L12,3L4,3L4,4L3,4L3,12L4,12ZM7,7L9,7L9,9L7,9L7,7ZM16,12L16,16L12,16L12,15L4,15L4,16L0,16L0,12L1,12L1,4L0,4L0,0L4,0L4,1L12,1L12,0L16,0L16,4L15,4L15,12L16,12Z">
-                                        </path>
+                                        <path id="area"
+                                            d="M189,471a5.005,5.005,0,0,1-5-5V428a5.006,5.006,0,0,1,5-5h38a5.006,5.006,0,0,1,5,5v38a5.005,5.005,0,0,1-5,5Zm27-2h11a3,3,0,0,0,3-3V455H216Zm-15,0h14V455H201Zm-15-3a3,3,0,0,0,3,3h11V455H186Zm30-12h14V440H216Zm-4.293,0H215v-3.292Zm-4,0H211l-.353-.353,4-4L215,450v-3.293Zm-4,0H207l-.354-.353,8-8L215,446v-3.293ZM201,454h2l-.353-.353,12-12L215,442v-2h-.29a6.88,6.88,0,0,0,.219-1H215V425H201v14h.071a7.047,7.047,0,0,0,.219,1H201v3.292l1.271-1.27a7.068,7.068,0,0,0,.635.779l-1.552,1.553L201,444v3.293l3.331-3.331a6.88,6.88,0,0,0,.932.482l-3.91,3.91L201,448v3.292l6.073-6.073-.848-2.545a5,5,0,1,1,3.55,0L208,448l-.573-1.72-6.073,6.073L201,452Zm-15,0h14V440H186Zm19-16a3,3,0,1,0,3-3A3,3,0,0,0,205,438Zm11,1h14V428a3,3,0,0,0-3-3H216Zm-30-11v11h14V425H189A3,3,0,0,0,186,428Z"
+                                            transform="translate(-184 -423)" fill="#004274"></path>
                                     </g>
                                 </svg>
                                 <div class="content-box-data">
@@ -155,14 +177,20 @@
                         </div>
                         <div class="col-md-3">
                             <div class="content-box">
-                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <svg viewBox="0 0 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" fill="#">
                                     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                                     <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
                                     <g id="SVGRepo_iconCarrier">
-                                        <path
-                                            d="M4 9V18C4 19.1046 4.89543 20 6 20H9M4 9V6C4 4.89543 4.89543 4 6 4H18C19.1046 4 20 4.89543 20 6V9M4 9H9M20 9H9M20 9V14.5M9 9V14.5M9 20H18C19.1046 20 20 19.1046 20 18V14.5M9 20V14.5M9 14.5H20"
-                                            stroke="#7e7e7e" stroke-width="2" stroke-linecap="round"
-                                            stroke-linejoin="round"></path>
+                                        <title>tasks-all</title>
+                                        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                            <g id="Combined-Shape" fill="#004274"
+                                                transform="translate(70.530593, 46.125620)">
+                                                <path
+                                                    d="M185.469407,39.207713 L356.136074,39.207713 L356.136074,81.8743797 L185.469407,81.8743797 L185.469407,39.207713 Z M185.469407,188.541046 L356.136074,188.541046 L356.136074,231.207713 L185.469407,231.207713 L185.469407,188.541046 Z M185.469407,337.87438 L356.136074,337.87438 L356.136074,380.541046 L185.469407,380.541046 L185.469407,337.87438 Z M119.285384,-7.10542736e-15 L144.649352,19.5107443 L68.6167605,118.353113 L2.84217094e-14,58.3134476 L21.0721475,34.2309934 L64.0400737,71.8050464 L119.285384,-7.10542736e-15 Z M119.285384,149.333333 L144.649352,168.844078 L68.6167605,267.686446 L2.84217094e-14,207.646781 L21.0721475,183.564327 L64.0400737,221.13838 L119.285384,149.333333 Z M119.285384,298.666667 L144.649352,318.177411 L68.6167605,417.01978 L2.84217094e-14,356.980114 L21.0721475,332.89766 L64.0400737,370.471713 L119.285384,298.666667 Z">
+                                                </path>
+                                            </g>
+                                        </g>
                                     </g>
                                 </svg>
                                 <div class="content-box-data">
@@ -179,7 +207,7 @@
                                     <g id="SVGRepo_iconCarrier">
                                         <rect width="24" height="24" fill="white"></rect>
                                         <path d="M13 3L16 6L19 9M13 3L5 3L5 21L19 21L19 9M13 3L13 9L19 9"
-                                            stroke="#7e7e7e" stroke-linejoin="round"></path>
+                                            stroke="#004274" stroke-linejoin="round"></path>
                                     </g>
                                 </svg>
                                 <div class="content-box-data">
@@ -189,19 +217,36 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row p-0 m-0">
+                    <div class="row m-0">
                         <div class="col-md-4">
                             <div class="content-box">
-                                <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <svg fill="#004274" height="200px" width="200px" version="1.1" id="Layer_1"
+                                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    viewBox="0 0 512 512" xml:space="preserve" stroke="#004274">
                                     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                                     <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
                                     <g id="SVGRepo_iconCarrier">
-                                        <path
-                                            d="M11.7071 6.70711C12.0976 6.31658 12.0976 5.68342 11.7071 5.29289C11.3166 4.90237 10.6834 4.90237 10.2929 5.29289L7 8.58579L5.70711 7.29289C5.31658 6.90237 4.68342 6.90237 4.29289 7.29289C3.90237 7.68342 3.90237 8.31658 4.29289 8.70711L6.29289 10.7071C6.68342 11.0976 7.31658 11.0976 7.70711 10.7071L11.7071 6.70711Z"
-                                            fill="#7e7e7e"></path>
-                                        <path
-                                            d="M0 8C0 3.58172 3.58172 0 8 0C12.4183 0 16 3.58172 16 8C16 12.4183 12.4183 16 8 16C3.58172 16 0 12.4183 0 8ZM8 2C4.68629 2 2 4.68629 2 8C2 11.3137 4.68629 14 8 14C11.3137 14 14 11.3137 14 8C14 4.68629 11.3137 2 8 2Z"
-                                            fill="#7e7e7e"></path>
+                                        <g>
+                                            <g>
+                                                <path
+                                                    d="M217.624,326.483l-97.186-96.012c-6.335-6.335-14.758-9.824-23.716-9.824c-6.154,0-12.055,1.646-17.2,4.731V109.796 c0-5.9-1.537-11.446-4.222-16.267c1.768-0.601,3.633-0.932,5.545-0.932c9.484,0,17.199,7.716,17.199,17.2v84.951 c0,4.512,3.658,8.17,8.17,8.17s8.17-3.658,8.17-8.17v-84.951c0-18.494-15.045-33.54-33.539-33.54 c-6.227,0-12.226,1.711-17.436,4.891c-5.082-3.101-11.048-4.891-17.424-4.891c-18.494,0-33.54,15.046-33.54,33.547l0.142,161.102 c0.007,7.218,2.679,17.407,6.216,23.7c0.057,0.101,0.115,0.2,0.178,0.298l100.63,162.43c2.122,3.865,4.036,11.226,4.036,15.564 v30.789c0,4.512,3.658,8.17,8.17,8.17c4.512,0,8.17-3.658,8.17-8.17v-30.789c0-7.22-2.669-17.412-6.207-23.707 c-0.057-0.101-0.115-0.2-0.177-0.298L32.97,286.462c-2.122-3.868-4.039-11.231-4.044-15.571l-0.142-161.095 c0-9.484,7.715-17.2,17.199-17.2c9.484,0,17.199,7.716,17.199,17.2v144.392c0,0.204,0.016,0.403,0.031,0.602 c0.149,8.387,3.408,16.728,9.793,23.114l78.059,78.059c3.191,3.191,8.364,3.191,11.554,0c3.191-3.191,3.191-8.364,0-11.554 l-78.058-78.06c-3.248-3.248-5.038-7.568-5.038-12.163c0-4.594,1.79-8.913,5.038-12.162s7.568-5.038,12.162-5.038 c4.594,0,8.913,1.79,12.196,5.073l97.186,96.012c10.808,10.808,19.938,32.851,19.938,48.136V503.83c0,4.512,3.658,8.17,8.17,8.17 s8.17-3.658,8.17-8.17V386.207C242.383,366.601,231.523,340.382,217.624,326.483z">
+                                                </path>
+                                            </g>
+                                        </g>
+                                        <g>
+                                            <g>
+                                                <path
+                                                    d="M466.017,76.255c-6.376,0-12.342,1.79-17.423,4.891c-5.211-3.18-11.211-4.891-17.436-4.891 c-18.494,0-33.54,15.046-33.54,33.54v84.951c0,4.512,3.658,8.17,8.17,8.17s8.17-3.658,8.17-8.17v-84.951 c0-9.484,7.716-17.2,17.199-17.2c1.912,0,3.777,0.331,5.544,0.932c-2.686,4.822-4.222,10.367-4.222,16.267v115.582 c-5.145-3.084-11.046-4.731-17.2-4.731c-8.959,0-17.382,3.489-23.681,9.789l-97.256,96.082 c-13.864,13.864-24.724,40.083-24.724,59.689V503.83c0,4.512,3.658,8.17,8.17,8.17c4.512,0,8.17-3.658,8.17-8.17V386.207 c0-15.284,9.13-37.327,19.903-48.1l97.256-96.082c3.248-3.248,7.568-5.038,12.162-5.038c4.594,0,8.913,1.79,12.162,5.038 c3.248,3.248,5.038,7.568,5.038,12.162c0,4.595-1.79,8.914-5.038,12.163l-78.059,78.059c-3.191,3.191-3.191,8.364,0,11.554 c3.191,3.191,8.364,3.191,11.554,0l78.059-78.059c6.386-6.386,9.644-14.727,9.793-23.114c0.014-0.199,0.031-0.4,0.031-0.602 V109.796c0-9.484,7.716-17.2,17.199-17.2c9.484,0,17.2,7.716,17.2,17.192l-0.142,161.104c-0.003,4.34-1.922,11.703-4.045,15.571 L378.401,448.892c-0.061,0.098-0.12,0.198-0.177,0.298c-3.539,6.294-6.207,16.485-6.207,23.707v30.789 c0,4.512,3.658,8.17,8.17,8.17s8.17-3.658,8.17-8.17v-30.789c0-4.339,1.914-11.699,4.035-15.564l100.63-162.43 c0.061-0.098,0.12-0.198,0.178-0.298c3.538-6.294,6.21-16.483,6.216-23.7l0.142-161.11 C499.556,91.302,484.511,76.255,466.017,76.255z">
+                                                </path>
+                                            </g>
+                                        </g>
+                                        <g>
+                                            <g>
+                                                <path
+                                                    d="M373.106,59.915c4.512,0,8.17-3.658,8.17-8.17V8.17c0-4.512-3.658-8.17-8.17-8.17H138.894c-4.512,0-8.17,3.658-8.17,8.17 v43.574c0,4.512,3.658,8.17,8.17,8.17h2.723v16.34h-2.723c-4.512,0-8.17,3.658-8.17,8.17V128c0,4.512,3.658,8.17,8.17,8.17h2.723 v16.34h-2.723c-4.512,0-8.17,3.658-8.17,8.17v43.574c0,4.512,3.658,8.17,8.17,8.17h234.213c4.512,0,8.17-3.658,8.17-8.17v-43.574 c0-4.512-3.658-8.17-8.17-8.17h-2.723v-16.34h2.723c4.512,0,8.17-3.658,8.17-8.17V84.426c0-4.512-3.658-8.17-8.17-8.17h-2.723 v-16.34H373.106z M364.936,196.085H147.064v-27.234h217.872V196.085z M364.936,119.83h-35.404c-4.512,0-8.17,3.658-8.17,8.17 s3.658,8.17,8.17,8.17h24.511v16.34H157.957v-16.34h138.894c4.512,0,8.17-3.658,8.17-8.17s-3.658-8.17-8.17-8.17H147.064V92.596 h217.872V119.83z M157.957,76.255v-16.34h196.085v16.34H157.957z M364.936,43.574H147.064V16.34h217.872V43.574z">
+                                                </path>
+                                            </g>
+                                        </g>
                                     </g>
                                 </svg>
                                 <div class="content-box-data">
@@ -212,9 +257,9 @@
                         </div>
                         <div class="col-md-3">
                             <div class="content-box">
-                                <svg fill="#7e7e7e" height="200px" width="200px" version="1.1" id="Layer_1"
+                                <!--<svg fill="#004274" height="200px" width="200px" version="1.1" id="Layer_1"
                                     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                                    viewBox="0 0 511.996 511.996" xml:space="preserve" stroke="#7e7e7e">
+                                    viewBox="0 0 511.996 511.996" xml:space="preserve" stroke="#004274">
                                     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                                     <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
                                     <g id="SVGRepo_iconCarrier">
@@ -261,12 +306,22 @@
                                             </g>
                                         </g>
                                     </g>
+                                </svg>-->
+                                <svg width="64px" height="64px" viewBox="0 0 24.00 24.00"
+                                    xmlns="http://www.w3.org/2000/svg" fill="#004274" stroke="#004274">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier">
+                                        <path
+                                            d="M9.5 2h-6A1.502 1.502 0 0 0 2 3.5v6A1.502 1.502 0 0 0 3.5 11h6A1.502 1.502 0 0 0 11 9.5v-6A1.502 1.502 0 0 0 9.5 2zm.5 7.5a.501.501 0 0 1-.5.5h-6a.501.501 0 0 1-.5-.5v-6a.501.501 0 0 1 .5-.5h6a.501.501 0 0 1 .5.5zM20.5 2h-6A1.502 1.502 0 0 0 13 3.5v6a1.502 1.502 0 0 0 1.5 1.5h6A1.502 1.502 0 0 0 22 9.5v-6A1.502 1.502 0 0 0 20.5 2zm.5 7.5a.501.501 0 0 1-.5.5h-6a.501.501 0 0 1-.5-.5v-6a.501.501 0 0 1 .5-.5h6a.501.501 0 0 1 .5.5zM9.5 13h-6A1.502 1.502 0 0 0 2 14.5v6A1.502 1.502 0 0 0 3.5 22h6a1.502 1.502 0 0 0 1.5-1.5v-6A1.502 1.502 0 0 0 9.5 13zm.5 7.5a.501.501 0 0 1-.5.5h-6a.501.501 0 0 1-.5-.5v-6a.501.501 0 0 1 .5-.5h6a.501.501 0 0 1 .5.5zM20.5 13h-6a1.502 1.502 0 0 0-1.5 1.5v6a1.502 1.502 0 0 0 1.5 1.5h6a1.502 1.502 0 0 0 1.5-1.5v-6a1.502 1.502 0 0 0-1.5-1.5zm.5 7.5a.501.501 0 0 1-.5.5h-6a.501.501 0 0 1-.5-.5v-6a.501.501 0 0 1 .5-.5h6a.501.501 0 0 1 .5.5z">
+                                        </path>
+                                        <path fill="none" d="M0 0h24v24H0z"></path>
+                                    </g>
                                 </svg>
                                 <div class="content-box-data">
                                     <p>No of Phases</p>
                                     <div class="d-flex align-items-center">
                                         <h6 class="p-0 m-0">{{project.Phases.NoOfPhases}}</h6>
-                                        <a class="ms-2" href="#">see details</a>
                                     </div>
                                 </div>
                             </div>
@@ -281,7 +336,7 @@
                                             <style>
                                                 .a {
                                                     fill: none;
-                                                    stroke: #7e7e7e;
+                                                    stroke: #004274;
                                                     stroke-linecap: round;
                                                     stroke-linejoin: round;
                                                 }
@@ -360,15 +415,13 @@
                     </table>
                     <div class="see-all-property-details w-100 d-flex justify-content-center">
                         <button class="btn" data-bs-toggle="modal" data-bs-target="#download-contact-form"
-                            (click)="setDownloadFormId(project.ProjectName,'layout-details',project.BrouchureLink)">View all
+                            (click)="setDownloadFormId(project.ProjectName,'layout-details',project.BrouchureLink)">View
+                            all
                             layout details</button>
                     </div>
                 </div>
             </div>
         </section>
-        <!--<section class="area-converter">
-            <app-unit-converter></app-unit-converter>
-        </section>-->
         <section class="area-converter">
             <app-area-converter></app-area-converter>
         </section>
@@ -665,7 +718,8 @@
                                     <div class="col-12 mb-3 p-0">
                                         <label for="phoneNumber" class="form-label required">Phone number</label>
                                         <input type="text" maxlength="10" id="phoneNumber" class="form-control"
-                                            placeholder="Phone number" formControlName="phone" [(ngModel)]="contactFormPhoneNumber" />
+                                            placeholder="Phone number" formControlName="phone"
+                                            [(ngModel)]="contactFormPhoneNumber" />
                                         <div *ngIf="contactForm.controls['phone'].invalid && contactForm.controls['phone'].touched"
                                             class="text-danger">
                                             <small *ngIf="contactForm.controls['phone'].errors?.['required']">Phone
@@ -698,7 +752,7 @@
                                     <div class="col-12 p-0 mb-3">
                                         <label for="message" class="form-label required">Message</label>
                                         <textarea id="message" rows="5" class="form-control" placeholder="Message"
-                                            formControlName="message" [(ngModel)]="contactFormMessage" ></textarea>
+                                            formControlName="message" [(ngModel)]="contactFormMessage"></textarea>
                                         <div *ngIf="contactForm.controls['message'].invalid && contactForm.controls['message'].touched"
                                             class="text-danger">
                                             <small *ngIf="contactForm.controls['message'].errors?.['required']">Message
@@ -732,7 +786,7 @@
                 </div>
             </div>
         </div>
-        <section class="faq-section"  id="faq-section">
+        <section class="faq-section" id="faq-section">
             <div class="container row">
                 <div class="section-header">
                     <h6 class="section-title">Frequently Asked Questions(FAQ)</h6>
@@ -769,8 +823,7 @@
                         <div class="row">
                             <div class="project-card" *ngFor="let project of RelatedProjects">
                                 <div class="image-section">
-                                    <img [src]="project.CardImage"
-                                        alt="{{ project.ProjectName }}">
+                                    <img [src]="project.CardImage" alt="{{ project.ProjectName }}">
                                 </div>
                                 <div class="content-section">
                                     <div class="category-label">
@@ -921,7 +974,8 @@
                                 <div class="col-12 mb-3 p-0">
                                     <label for="phoneNumber" class="form-label required">Phone number</label>
                                     <input type="text" maxlength="10" id="phoneNumber" class="form-control"
-                                        placeholder="Phone number" formControlName="phone" [(ngModel)]="contactFormPhoneNumber" />
+                                        placeholder="Phone number" formControlName="phone"
+                                        [(ngModel)]="contactFormPhoneNumber" />
                                     <div *ngIf="contactForm.controls['phone'].invalid && contactForm.controls['phone'].touched"
                                         class="text-danger">
                                         <small *ngIf="contactForm.controls['phone'].errors?.['required']">Phone
@@ -940,15 +994,15 @@
                                         class="text-danger">
                                         <small *ngIf="contactForm.controls['email'].errors?.['required']">Email is
                                             required.</small>
-                                        <small *ngIf="contactForm.controls['email'].errors?.['email']">Please enter a valid email address.</small>
+                                        <small *ngIf="contactForm.controls['email'].errors?.['email']">Please enter a
+                                            valid email address.</small>
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-12">
                                     <button type="submit" data-bs-dismiss="modal" class="btn send-button w-100"
-                                        [disabled]="fileDownloadForm.invalid"
-                                        (click)="downloadFile()">Download</button>
+                                        [disabled]="fileDownloadForm.invalid" (click)="downloadFile()">Download</button>
                                 </div>
                             </div>
                         </form>

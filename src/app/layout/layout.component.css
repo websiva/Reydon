@@ -197,11 +197,31 @@
     margin-right: 8px;
 }
 
-.header-location-section span {
-    font-size: 16px;
-    font-weight: 400;
+.header-location-section p {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--primary-color);
 }
 
+/****Header Age section *****/
+.header-age-section{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 10px 0;
+}
+.header-age-section svg {
+    width: 25px;
+    height: 25px;
+    margin-right: 8px;
+}
+
+.header-age-section p {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--primary-color);
+}
 /***Header project Id **/
 .project-id {
     width: 100%;
@@ -286,60 +306,10 @@
 }
 
 
-/**************************main-detail-section ***************/
-.main-detail-section {
-    padding: 20px 0;
-    /*background-color: var(--primary-color);*/
-    display: flex;
-    justify-content: center;
-}
-
-.main-detail-section .main-detail {
-    width: 100%;
-    max-width: 1300px;
-    box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.25);
-}
-
-.content-box {
-    width: 100%;
-    height: 100%;
-    background-color: #ffffff;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    padding: 10px 0;
-    /*border-radius: 12px;*/
-}
-
-.content-box svg {
-    width: 50px;
-    height: 50px;
-    margin-right: 20px;
-}
-
-.content-box-data {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-}
-
-.content-box p {
-    font-size: 16px;
-    font-weight: 400;
-    color: #7e7e7e;
-    margin: 0 0 3px 0;
-}
-
-.content-box h6 {
-    font-size: 20px;
-    font-weight: 400;
-}
 
 /****************************navigation******************/
 .navigation-section {
     width: 100%;
-    margin-bottom: 20px;
     background-color: var(--primary-color);
     opacity: 0.85;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
@@ -380,16 +350,62 @@
 
 
 /***************************hero-section******************************/
+#project-overview{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
 .hero-section {
     width: 100%;
-    padding: 40px 0 0 0;
+    max-width: 1400px;
+    padding: 40px 0;
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 .hero-section .row {
     width: 100%;
-    max-width: 1300px;
+}
+
+.description-section {
+    width: 100%;
+    padding: 40px 0 0 0;
+    display: flex;
+    justify-content: center;
+    background-color: #f7f8fa;
+
+}
+.description-title{
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+.description-section .row {
+    width: 100%;
+    max-width: 1400px;
+}
+.property-description {
+    width: 100%;
+    text-align: justify;
+    font-size: 17px;
+    color: #282828;
+    font-weight: 400;
+}
+
+.right-section{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+.header-location .location{
+    color: var(--primary-color)!important;
 }
 
 .download-section {
@@ -397,18 +413,24 @@
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
-    margin: 0;
+    padding: 0 10px;
+    margin: 10px 0 0 0;
 }
 
 .download-section button {
-    width: 75%;
-    max-width: 180px;
+    width: 45%;
     border-radius: 0;
     border: 1px solid var(--button-color);
-    font-size: 16px;
-    margin: 20px 20px 20px 0;
+    font-size: 14px;
+    margin: 0 10px 0 0;
     display: flex;
     justify-content: center;
+    background-color: var(--button-color);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
 }
 
 .download-section button svg {
@@ -426,25 +448,58 @@
     font-size: 16px;
 }
 
-/****************************property-description-section*********************/
-.property-description-section {
-    width: 100%;
-    padding: 40px 0 0 0;
+/**************************main-detail-section ***************/
+.main-detail-section {
+    padding: 40px 0;
     display: flex;
     justify-content: center;
 }
 
-.property-description-section .description {
+.main-detail-section .main-detail {
     width: 100%;
     max-width: 1400px;
+    padding: 20px;
+    /*box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.25);*/
+    background-color: white;
 }
 
-.property-description {
+.content-box {
     width: 100%;
-    text-align: justify;
-    font-size: 16px;
-    font-weight: 300;
+    height: 100%;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 10px 0;
+    /*border-radius: 12px;*/
 }
+
+.content-box svg {
+    width: 45px;
+    height: 45px;
+    margin-right: 20px;
+}
+
+.content-box-data {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.content-box p {
+    font-size: 16px;
+    font-weight: 400;
+    color: gray;
+    margin: 0 0 1px 0;
+}
+
+.content-box h6 {
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
 
 /*******************************Address section******************/
 .property-address-details-section {
@@ -637,7 +692,7 @@
 /********************************layout-map-section***************/
 .layout-map-section {
     width: 100%;
-    margin: 30px 0;
+    padding: 40px 0;
     display: flex;
     justify-content: center;
     background-color: white;
@@ -1145,11 +1200,73 @@ form {
         justify-content: center;
         align-items: center;
     }
+    .header-age-section{
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    .download-section {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        flex-wrap: wrap;
+        margin: 0;
+        padding: 0;
+    }
+    .download-section button {
+        width: 75%;
+        max-width: 180px;
+        border-radius: 0;
+        border: 1px solid var(--button-color);
+        font-size: 16px;
+        display: flex;
+        justify-content: center;
+        background-color: var(--button-color);
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 6px;
+    }
+
+    .main-detail-section .main-detail {
+        width: 100%;
+        max-width: 1400px;
+        padding: 30px 30px;
+        /*box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.25);*/
+        background-color: white;
+    }
+    .main-detail-section .main-detail .row:nth-child(1) {
+        margin: 0 0 30px 0;
+    }
 }
 
 
 /* Media query for medium screens */
 @media (max-width: 1200px) {
+    .download-section {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        flex-wrap: wrap;
+        margin: 0;
+    }
+    .download-section button {
+        width: 46%;
+        border-radius: 0;
+        border: 1px solid var(--button-color);
+        font-size: 16px;
+        display: flex;
+        justify-content: center;
+        background-color: var(--button-color);
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 6px;
+        margin: 0;
+    }
     .property-description-section {
         padding: 40px 20px;
     }
