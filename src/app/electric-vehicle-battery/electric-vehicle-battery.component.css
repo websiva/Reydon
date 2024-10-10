@@ -434,20 +434,35 @@ swiper-container {
     width: 100%;
     height: 400px;
     background-color: white;
+    display: flex;
+    padding: 20px 0 0 0;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+}
+.image-title{
+    font-size: 18px;
+    font-weight: 500;
+    display: none;
+    text-align: center;
+    color: var(--primary-color);
+}
+.image-title.active{
+    display: block;
 }
 
 .product-slide {
     width: 100%;
-    height: 100%;
+    height: 80%;
     display: none;
     object-fit: cover;
 }
 
 .product-slide.active {
     width: 100%;
-    height: 100%;
+    height: 80%;
     display: block;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .prev,

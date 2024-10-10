@@ -50,49 +50,44 @@ export class ElectricVehicleBatteryComponent implements OnInit {
   }
 
   productImages = [
-    { src: 'https://res.cloudinary.com/dbzme4gd3/image/upload/v1727968553/12v-80ah_m3feiq.png', alt: '12v 80Ah Battery' },
-    { src: 'https://res.cloudinary.com/dbzme4gd3/image/upload/v1727968582/96v96Ah2_qlqc05.jpg', alt: '96V 96Ah Battery 2' },
-    { src: 'https://res.cloudinary.com/dbzme4gd3/image/upload/v1727968598/4824-without-address-1280x1280_ury0tj.jpg', alt: '4824 Battery' },
-    { src: 'https://res.cloudinary.com/dbzme4gd3/image/upload/v1727968632/Bike-Batteries-copy_hehbqk.png', alt: 'Bike Battery' },
-    { src: 'https://res.cloudinary.com/dbzme4gd3/image/upload/v1727968648/Electric-Vehicle-Batteries-1280x1122_wh5egs.jpg', alt: 'Electric Vehicle Batteries' },
-    { src: 'https://res.cloudinary.com/dbzme4gd3/image/upload/v1727968662/ESS-Battery_b3tn3h.jpg', alt: 'ESS Battery' }
+    { src: 'https://res.cloudinary.com/dbzme4gd3/image/upload/v1727968553/12v-80ah_m3feiq.png', alt: '12v 80Ah Battery',name:'EV Battery' },
+    { src: 'https://res.cloudinary.com/dbzme4gd3/image/upload/v1728560810/WhatsApp-Image-2021-07-14-at-3.05.50-PM-removebg-preview_vya9mp.png', alt: '96V 96Ah Battery 2',name:'EV Battery' },
+    { src: 'https://res.cloudinary.com/dbzme4gd3/image/upload/v1727968598/4824-without-address-1280x1280_ury0tj.jpg', alt: '4824 Battery',name:'EV Battery' },
+    { src: 'https://res.cloudinary.com/dbzme4gd3/image/upload/v1727968632/Bike-Batteries-copy_hehbqk.png', alt: 'Bike Battery',name:'EV Battery' },
+    { src: 'https://res.cloudinary.com/dbzme4gd3/image/upload/v1727968648/Electric-Vehicle-Batteries-1280x1122_wh5egs.jpg', alt: 'Electric Vehicle Batteries',name:'EV Battery' },
+    { src: 'https://res.cloudinary.com/dbzme4gd3/image/upload/v1728560811/WhatsApp-Image-2021-07-14-at-3.05.50-PM-5-removebg-preview_z5vqjo.png', alt: 'ESS Battery',name:'EV Battery' }
 ];
 
 carouselSlides = [
   {
-    imageUrl: 'https://res.cloudinary.com/dbzme4gd3/image/upload/v1727965877/EV_d13fxu.jpg',
-    heading: 'Electric Vehicle Battery',
-    description: 'Driven by technological advances! Energy Storage for a Better World.'
+    imageUrl: 'https://res.cloudinary.com/dbzme4gd3/image/upload/v1728564169/electric-car-charging-station-isolated-white-background_xbfza6.jpg',
+    heading: 'Revolutionizing Transportation',
+    description: 'Discover how electric vehicle batteries are transforming the automotive industry and driving the future of eco-friendly transportation.'
   },
   {
-    imageUrl: 'https://res.cloudinary.com/dbzme4gd3/image/upload/v1727965885/zero_maintanace_y1axmp.jpg',
-    heading: 'Worry-Free Power Solutions',
-    description: 'Enjoy hassle-free operation with our zero-maintenance lithium UPS systems, engineered for durability and long-lasting performance without the need for regular upkeep.'
+    imageUrl: 'https://res.cloudinary.com/dbzme4gd3/image/upload/v1728562349/board-3699939_izvhle.jpg',
+    heading: 'Innovative Battery Designs',
+    description: 'Learn about cutting-edge battery designs that improve efficiency, reduce weight, and enhance overall vehicle performance.'
   },
   {
-    imageUrl: 'https://res.cloudinary.com/dbzme4gd3/image/upload/v1727965879/power_protection_p5boxa.jpg',
-    heading: 'Shield Your Devices with Confidence',
-    description: 'Protect your critical equipment from unexpected power interruptions and surges with our advanced lithium UPS solutions designed for maximum reliability.'
+    imageUrl: 'https://res.cloudinary.com/dbzme4gd3/image/upload/v1728562780/recycle-icon-compact-fluorescent-light-bulb-against-white-background_qi64hd.jpg',
+    heading: 'Battery Recycling and Sustainability',
+    description: 'Find out how battery recycling initiatives are reducing waste and contributing to a more sustainable energy ecosystem.'
   },
   {
-    imageUrl: 'https://res.cloudinary.com/dbzme4gd3/image/upload/v1727965880/rapid_charging_dm7rqn.webp',
-    heading: 'Get Back to Power in No Time',
-    description: 'Experience rapid charging capabilities with our lithium UPS systems, ensuring your devices are powered up and ready to go when you need them most.'
+    imageUrl: 'https://res.cloudinary.com/dbzme4gd3/image/upload/v1728562900/6089757_22735_xycxee.jpg',
+    heading: 'Eco-Friendly and Sustainable',
+    description: 'Manufactured with environmentally friendly materials, our EV batteries help reduce your carbon footprint while delivering high performance.'
   },
   {
-    imageUrl: 'https://res.cloudinary.com/dbzme4gd3/image/upload/v1727965881/remote_monitoring_xen2wu.jpg',
-    heading: 'Stay Connected, Stay In Control',
-    description: 'Monitor and manage your UPS performance from anywhere with our intelligent remote monitoring system, providing real-time updates and alerts for your peace of mind.'
+    imageUrl: 'https://res.cloudinary.com/dbzme4gd3/image/upload/v1728563036/6201165_3189779_mgjbns.svg',
+    heading: 'EV Charging Infrastructure',
+    description: 'Understand the growing infrastructure for electric vehicle charging, making EV ownership more convenient than ever.'
   },
   {
-    imageUrl: 'https://res.cloudinary.com/dbzme4gd3/image/upload/v1727965875/eco_friendly_gyrpug.jpg',
-    heading: 'Sustainable Energy for a Greener Future',
-    description: 'Our eco-friendly lithium UPS systems harness renewable energy, helping you reduce your carbon footprint while enjoying reliable power.'
-  },
-  {
-    imageUrl: 'https://res.cloudinary.com/dbzme4gd3/image/upload/v1727965878/industrial_applications_ox4n51.jpg',
-    heading: 'Industrial Applications',
-    description: 'The next generation of electric vehicle batteries, with greater range and improved safety!'
+    imageUrl: 'https://res.cloudinary.com/dbzme4gd3/image/upload/v1728563509/electric-vehicle-charger-plug-with-digital-display_q2mgt0.jpg',
+    heading: 'Fast Charging Technology',
+    description: 'Experience ultra-fast charging that reduces downtime, enabling you to recharge your EV battery in minutes instead of hours.'
   }
 ];
   
@@ -163,9 +158,8 @@ carouselSlides = [
   ];
 
   batteryData = [
-    ['12V', 'LFP', 'Cylindrical', 12.8, 14.6, 96, 1229, 1401.6, 40, 80, 240, '<70°C', '<70°C', '90%-95%', '310*300*100', 13.69, 2000, 'No'],
-    ['24V', 'LFP', 'Cylindrical', 25.6, 29.2, 96, 2457, 2803.2, 40, 80, 240, '<70°C', '<70°C', '90%-95%', '310*300*185', 25.26, 2000, 'No'],
-    ['36V', 'LFP', 'Cylindrical', 38.4, 43.8, 96, 3686, 4204.8, 40, 80, 240, '<70°C', '<70°C', '90%-95%', '575*420*100', 37.24, 2000, 'No'],
-    ['48V', 'LFP', 'Cylindrical', 48, 54.75, 96, 4608, 5256, 40, 80, 240, '<70°C', '<70°C', '90%-95%', '575*300*185', 43.6, 2000, 'No']
+    ['72V', 'NMC', 'Cylindrical', 74, 84, '31.2(As per requirements)', 2308.8, 2620.8, '20A', '50A','150A' , '25°C', '35°C', '90%', '210*155*255', 14.66, 1000, 'No'],
+    ['60V', 'NMC', 'Cylindrical', 59.2, 67.2, '31.2(As per requirements)', 1847, 2097, '20A', '45A', '135A', '25°C', '35°C', '90%', '200*165*280', 11.75, 1000, 'No'],
+    ['48V', 'NMC', 'Cylindrical', 48.1, 54.6, '31.2(As per requirements)', 1501, 1704, '20A', '40A', '120A', '25°C', '35°C', '90%', '150*165*255', 9.45, 1000, 'No']
   ];
 }

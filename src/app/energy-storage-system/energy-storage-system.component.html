@@ -37,28 +37,24 @@
             </div>
             <div class="product-about-content col-md-6">
                 <h6 class="productName">About the Product</h6>
-                <p class="product-description">Energy storage system is solar’s best friend. They work together to turn
-                    extra on-site generation into an energy powerhouse that can be used even when the sun isn’t shining
-                    or grid-sourced electricity is most expensive. That means you can benefit from more cost savings.
+                <p>Energy storage system is solar’s best friend. this concept is used widely
+                    in most of the sectors across domestic, commercial, and industrial areas. Basically, it stores
+                    energy from renewable sources like solar panels, wind power, electric poles, generators, and much
+                    more to facilitate individuals or business owners in enforcing their demands.
                 </p>
-                <p> Businesses with a lot of demand variation have a “spiky” load, which is based on how much energy
-                    they consume, with abrupt shifts throughout the day. That rise – and the related energy expense –
-                    can be mitigated with storage.</p>
-                <p>If you haven’t looked at battery energy storage systems you may be surprised, by both price drops and
-                    major product upgrades.</p>
-                <p>Energy storage is a promising method of storing electrical energy so that it can be used whenever it
-                    is needed. Energy storage systems, to put it simple, work by charging and discharging batteries, and
-                    they are both safe and dependable.</p>
-                <p>Battery energy storage systems are rechargeable batteries that store and provide energy from solar
-                    panels or the electric grid to a home or business. They can readily execute things that were
-                    previously difficult or impossible, such as peak shaving and load shifting, because they feature
-                    modern technology that normal batteries lack.</p>
-                <p>The energy storage system is a latest technology developed for storing electric charge through the
-                    exert of specially developed batteries.</p>
+                <p> Energy storage is a promising method of storing electrical energy, simply work by charging and
+                    discharging batteries, and they are both safe and dependable. these storage batteries are much
+                    stronger than regular ones as far as durability, maintenance, and efficiency are concerned. Battery
+                    energy storage systems are rechargeable batteries that store and provide energy from solar panels or
+                    the electric grid to a home or business.</p>
+                <p>Adirath’s Energy Resources has earned a reputation for excellence and best-in-class development
+                    skills. With our competence, scale, size and scope of services, we have become a leader in energy
+                    storage. We believe battery energy storage systems will gradually transform the way we interact with
+                    energy.</p>
             </div>
         </div>
     </section>
-    <section class="additional-about-content">
+    <!--<section class="additional-about-content">
         <div class="additional-about-content-container row">
             <p>This concept is used widely in most of the sectors across domestic, commercial, and industrial areas.
                 Basically, it stores energy from renewable sources like solar panels, wind power, electric poles,
@@ -76,7 +72,7 @@
                 make solar energy a no-brainer for a lot more people, provide them more independence from traditional
                 utilities, and give them access to a lot more energy options.</p>
         </div>
-    </section>
+    </section>-->
     <section class="highlights">
         <div class="row">
             <div class="section-title">
@@ -320,18 +316,24 @@
                     <div class="row m-0 d-flex">
                         <div class="col-md-4">
                             <div class="image-container">
+                                <h6 *ngFor="let image of productImages; let i = index" class="image-title"
+                                    [class.active]="i === currentSlideIndex">{{image.name}}</h6>
                                 <img *ngFor="let image of productImages; let i = index" [src]="image.src"
                                     [alt]="image.alt" [class.active]="i === currentSlideIndex" class="product-slide">
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="image-container">
+                                <h6 *ngFor="let image of productImages; let i = index" class="image-title"
+                                    [class.active]="i === currentSlideIndex+1">{{image.name}}</h6>
                                 <img *ngFor="let image of productImages; let i = index" [src]="image.src"
                                     [alt]="image.alt" [class.active]="i === currentSlideIndex+1" class="product-slide">
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="image-container">
+                                <h6 *ngFor="let image of productImages; let i = index" class="image-title"
+                                    [class.active]="i === currentSlideIndex+2">{{image.name}}</h6>
                                 <img *ngFor="let image of productImages; let i = index" [src]="image.src"
                                     [alt]="image.alt" [class.active]="i === currentSlideIndex+2" class="product-slide">
                             </div>
@@ -340,18 +342,24 @@
                     <div class="row d-none d-md-flex">
                         <div class="col-md-4">
                             <div class="image-container">
+                                <h6 *ngFor="let image of productImages; let i = index" class="image-title"
+                                    [class.active]="i === currentSlideIndex+3">{{image.name}}</h6>
                                 <img *ngFor="let image of productImages; let i = index" [src]="image.src"
                                     [alt]="image.alt" [class.active]="i === currentSlideIndex+3" class="product-slide">
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="image-container">
+                                <h6 *ngFor="let image of productImages; let i = index" class="image-title"
+                                    [class.active]="i === currentSlideIndex+4">{{image.name}}</h6>
                                 <img *ngFor="let image of productImages; let i = index" [src]="image.src"
                                     [alt]="image.alt" [class.active]="i === currentSlideIndex+4" class="product-slide">
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="image-container">
+                                <h6 *ngFor="let image of productImages; let i = index" class="image-title"
+                                    [class.active]="i === currentSlideIndex+5">{{image.name}}</h6>
                                 <img *ngFor="let image of productImages; let i = index" [src]="image.src"
                                     [alt]="image.alt" [class.active]="i === currentSlideIndex+5" class="product-slide">
                             </div>

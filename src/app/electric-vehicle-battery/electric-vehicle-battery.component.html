@@ -38,38 +38,31 @@
             <div class="product-about-content col-md-6">
                 <h6 class="productName">About the Product</h6>
                 <div class="product-description">
-                    <p>Energy storage system is solar’s best friend. They work together to
-                        turn
-                        extra on-site generation into an energy powerhouse that can be used even when the sun isn’t
-                        shining
-                        or grid-sourced electricity is most expensive. That means you can benefit from more cost
-                        savings.
+                    <p>Electric vehicles are battery powered and there is no pollution when compared to your diesel or
+                        petrol vehicles. <strong> The cost of running an electric vehicle is very low.</strong>
                     </p>
-                    <p> Businesses with a lot of demand variation have a “spiky” load, which is based on how much energy
-                        they consume, with abrupt shifts throughout the day. That rise – and the related energy expense
-                        –
-                        can be mitigated with storage.</p>
-                    <p>If you haven’t looked at battery energy storage systems you may be surprised, by both price drops
-                        and
-                        major product upgrades.</p>
-                    <p>Energy storage is a promising method of storing electrical energy so that it can be used whenever
-                        it
-                        is needed. Energy storage systems, to put it simple, work by charging and discharging batteries,
-                        and
-                        they are both safe and dependable.</p>
-                    <p>Battery energy storage systems are rechargeable batteries that store and provide energy from
-                        solar
-                        panels or the electric grid to a home or business. They can readily execute things that were
-                        previously difficult or impossible, such as peak shaving and load shifting, because they feature
-                        modern technology that normal batteries lack.</p>
-                    <p>The energy storage system is a latest technology developed for storing electric charge through
-                        the
-                        exert of specially developed batteries.</p>
+                    <p> The majority of electric vehicles use lithium batteries, which are simple to maintain. Electric
+                        vehicles do not require routine maintenance. An electric vehicle’s key components are the motor,
+                        controller, battery, battery management system, and charger.</p>
+                    <p>An electric-vehicle battery is a battery used to power the electric motors of a battery electric
+                        vehicle (BEV) or hybrid electric vehicle (HEV).</p>
+                    <p>Lithium-ion batteries of various designs are used in electric cars, similar to those used in cell
+                        phones and laptop computers, but on a much greater scale. <strong>Lithium-ion batteries</strong>
+                        have a <strong>high
+                            energy density</strong> and are less prone to lose their charge when not in use than other
+                        types of
+                        batteries.</p>
+                    <p>Here, our providers incorporate the advancement effect into our product to help make your
+                        <strong>vehicle
+                            eco-friendlier.</strong> You can blindly go for our product if you are considering the
+                        cheaper but yet
+                        efficient electric vehicle batteries. Moreover, it is an excellent value for money over the long
+                        term as far as operating costs are concerned.</p>
                 </div>
             </div>
         </div>
     </section>
-    <section class="additional-about-content">
+    <!--<section class="additional-about-content">
         <div class="additional-about-content-container row">
             <p>This concept is used widely in most of the sectors across domestic, commercial, and industrial areas.
                 Basically, it stores energy from renewable sources like solar panels, wind power, electric poles,
@@ -87,7 +80,7 @@
                 make solar energy a no-brainer for a lot more people, provide them more independence from traditional
                 utilities, and give them access to a lot more energy options.</p>
         </div>
-    </section>
+    </section>-->
     <section class="highlights">
         <div class="row">
             <div class="section-title">
@@ -331,18 +324,24 @@
                     <div class="row m-0 d-flex">
                         <div class="col-md-4">
                             <div class="image-container">
+                                <h6 *ngFor="let image of productImages; let i = index" class="image-title"
+                                    [class.active]="i === currentSlideIndex">{{image.name}}</h6>
                                 <img *ngFor="let image of productImages; let i = index" [src]="image.src"
                                     [alt]="image.alt" [class.active]="i === currentSlideIndex" class="product-slide">
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="image-container">
+                                <h6 *ngFor="let image of productImages; let i = index" class="image-title"
+                                    [class.active]="i === currentSlideIndex+1">{{image.name}}</h6>
                                 <img *ngFor="let image of productImages; let i = index" [src]="image.src"
                                     [alt]="image.alt" [class.active]="i === currentSlideIndex+1" class="product-slide">
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="image-container">
+                                <h6 *ngFor="let image of productImages; let i = index" class="image-title"
+                                    [class.active]="i === currentSlideIndex+2">{{image.name}}</h6>
                                 <img *ngFor="let image of productImages; let i = index" [src]="image.src"
                                     [alt]="image.alt" [class.active]="i === currentSlideIndex+2" class="product-slide">
                             </div>
@@ -351,18 +350,24 @@
                     <div class="row d-none d-md-flex">
                         <div class="col-md-4">
                             <div class="image-container">
+                                <h6 *ngFor="let image of productImages; let i = index" class="image-title"
+                                    [class.active]="i === currentSlideIndex+3">{{image.name}}</h6>
                                 <img *ngFor="let image of productImages; let i = index" [src]="image.src"
                                     [alt]="image.alt" [class.active]="i === currentSlideIndex+3" class="product-slide">
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="image-container">
+                                <h6 *ngFor="let image of productImages; let i = index" class="image-title"
+                                    [class.active]="i === currentSlideIndex+4">{{image.name}}</h6>
                                 <img *ngFor="let image of productImages; let i = index" [src]="image.src"
                                     [alt]="image.alt" [class.active]="i === currentSlideIndex+4" class="product-slide">
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="image-container">
+                                <h6 *ngFor="let image of productImages; let i = index" class="image-title"
+                                    [class.active]="i === currentSlideIndex+5">{{image.name}}</h6>
                                 <img *ngFor="let image of productImages; let i = index" [src]="image.src"
                                     [alt]="image.alt" [class.active]="i === currentSlideIndex+5" class="product-slide">
                             </div>
@@ -382,10 +387,9 @@
                 <p>While a number of electric drive vehicles are available on the market, further improvements in
                     batteries could make them more affordable and suitable to consumers. With our Electric Vehicle
                     battery, you can take your commitment a step further while enjoying reliable power that emits no
-                    gasses, fumes or pollution. The areas of application of EV Battery includes:</p>                
+                    gasses, fumes or pollution. The areas of application of EV Battery includes:</p>
                 <div class="areas-container row">
-                    <div class="area col-12 col-md-6 col-lg-4"
-                        *ngFor="let applicationArea of batteryApplicationAreas">
+                    <div class="area col-12 col-md-6 col-lg-4" *ngFor="let applicationArea of batteryApplicationAreas">
                         <div class="application-box">
                             <img [src]="applicationArea.image" alt="">
                             <p class="application-name">{{applicationArea.name}}</p>

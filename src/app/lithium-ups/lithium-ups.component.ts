@@ -56,17 +56,17 @@ export class LithiumUPSComponent implements OnInit {
 
   productImages = [
     // Old images
-    { src: 'https://res.cloudinary.com/dbzme4gd3/image/upload/v1727965810/product2_gflxii.jpg', alt: '2kva' },
-    { src: 'https://res.cloudinary.com/dbzme4gd3/image/upload/v1727969111/1KVA_ezm3ap.png', alt: '1kva' },
-    { src: 'https://res.cloudinary.com/dbzme4gd3/image/upload/v1727968553/12v-80ah_m3feiq.png', alt: '12v 80Ah Battery' },
-    { src: 'https://res.cloudinary.com/dbzme4gd3/image/upload/v1727968582/96v96Ah2_qlqc05.jpg', alt: '96V 96Ah Battery 2' },
-    { src: 'https://res.cloudinary.com/dbzme4gd3/image/upload/v1727968598/4824-without-address-1280x1280_ury0tj.jpg', alt: '4824 Battery' },
-    { src: 'https://res.cloudinary.com/dbzme4gd3/image/upload/v1727968615/adirath-UPS-1280x970_ovlfpl.jpg', alt: 'Adirath UPS' },
-    { src: 'https://res.cloudinary.com/dbzme4gd3/image/upload/v1727968632/Bike-Batteries-copy_hehbqk.png', alt: 'Bike Battery' },
-    { src: 'https://res.cloudinary.com/dbzme4gd3/image/upload/v1727968648/Electric-Vehicle-Batteries-1280x1122_wh5egs.jpg', alt: 'Electric Vehicle Batteries' },
-    { src: 'https://res.cloudinary.com/dbzme4gd3/image/upload/v1727968662/ESS-Battery_b3tn3h.jpg', alt: 'ESS Battery' },
-    { src: 'https://res.cloudinary.com/dbzme4gd3/image/upload/v1727969277/product1_ven0mt.jpg', alt: 'Product 3' },
-    { src: 'https://res.cloudinary.com/dbzme4gd3/image/upload/v1727968699/IMG_20220616_172144-1280x958_xsbahb.jpg', alt: 'Battery IMG 20220616' }
+    { src: 'https://res.cloudinary.com/dbzme4gd3/image/upload/v1727965810/product2_gflxii.jpg', alt: '2kva',name:'UPS-EEE2500' },
+    { src: 'https://res.cloudinary.com/dbzme4gd3/image/upload/v1727969111/1KVA_ezm3ap.png', alt: '1kva',name:'UPS-EEE1550' },
+    { src: 'https://res.cloudinary.com/dbzme4gd3/image/upload/v1727968553/12v-80ah_m3feiq.png', alt: '12v 80Ah Battery',name:'EV Battery' },
+    { src: 'https://res.cloudinary.com/dbzme4gd3/image/upload/v1727968582/96v96Ah2_qlqc05.jpg', alt: '96V 96Ah Battery 2',name:'Energy Storage System' },
+    { src: 'https://res.cloudinary.com/dbzme4gd3/image/upload/v1727968598/4824-without-address-1280x1280_ury0tj.jpg', alt: '4824 Battery',name:'EV Battery' },
+    { src: 'https://res.cloudinary.com/dbzme4gd3/image/upload/v1727968615/adirath-UPS-1280x970_ovlfpl.jpg', alt: 'Adirath UPS',name:'Adirath UPS' },
+    { src: 'https://res.cloudinary.com/dbzme4gd3/image/upload/v1727968632/Bike-Batteries-copy_hehbqk.png', alt: 'Bike Battery',name:'EV Battery' },
+    { src: 'https://res.cloudinary.com/dbzme4gd3/image/upload/v1727968648/Electric-Vehicle-Batteries-1280x1122_wh5egs.jpg', alt: 'Electric Vehicle Batteries',name:'EV Battery' },
+    { src: 'https://res.cloudinary.com/dbzme4gd3/image/upload/v1727968662/ESS-Battery_b3tn3h.jpg', alt: 'ESS Battery',name:'Energy Storage System' },
+    { src: 'https://res.cloudinary.com/dbzme4gd3/image/upload/v1727969277/product1_ven0mt.jpg', alt: 'Product 3',name:'Adirath UPS' },
+    { src: 'https://res.cloudinary.com/dbzme4gd3/image/upload/v1727968699/IMG_20220616_172144-1280x958_xsbahb.jpg', alt: 'Battery IMG 20220616',name:'UPS Battery' }
 ];
 
   carouselSlides = [

@@ -38,23 +38,14 @@
             </div>
             <div class="product-about-content col-lg-6">
                 <h6 class="product-name">About the Product</h6>
-                <p class="product-description">UPS/Inverter system supplies conditioned utility power to its outlets and
+                <p>UPS/Inverter system supplies conditioned utility power to its outlets and
                     keeps its internal battery charged as long as the electricity is on. It also safeguards your data
                     and valuable gadgets against power issues such as power surges and unexpected voltages. If the power
-                    goes out, the UPS/Inverter system provides backup power from its internal battery. This allows your
-                    devices to stay on during a power outage, which is especially useful for devices like computers that
-                    can lose data when they turn off unexpectedly.</p>
+                    goes out, the UPS/Inverter system provides backup power from its internal battery. </p>
                 <p> Your appliances are under constant threat from power problems. Even a brief loss of power or a surge
                     can cause priceless data to be corrupted, ranging from corporate documents to family images. This
                     can be avoided with the use of a UPS. UPS systems are simple to operate. Simply connect the UPS to a
-                    wall outlet, connect your equipment to the UPS outlets, and turn the UPS on. Extra functions, such
-                    as interacting with a computer or modifying the default settings, are available on most UPS systems,
-                    but they are not required.</p>
-                <p>The UPS/Inverter battery is the integral component of industrial computers and other usages. During
-                    abrupt power outages, it acts as a reliable shield to defend your valuable devices. So to handle the
-                    unforeseen condition, our UPS/Inverter battery comes into play with its amplifying redundancy and
-                    scalability feature. Recently, it gains momentum due to its enticing concept of answering power
-                    protection necessity.</p>
+                    wall outlet, connect your equipment to the UPS outlets, and turn the UPS on. </p>
                 <p>Here, we support our customers in choosing the right UPS that befits their requisite. As we care for
                     our customers, we sell UPS batteries that are highly efficacious and competent.</p>
             </div>
@@ -504,18 +495,24 @@
                     <div class="row m-0 d-flex">
                         <div class="col-md-4">
                             <div class="image-container">
+                                <h6 *ngFor="let image of productImages; let i = index" class="image-title"
+                                    [class.active]="i === currentSlideIndex">{{image.name}}</h6>
                                 <img *ngFor="let image of productImages; let i = index" [src]="image.src"
                                     [alt]="image.alt" [class.active]="i === currentSlideIndex" class="product-slide">
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="image-container">
+                                <h6 *ngFor="let image of productImages; let i = index" class="image-title"
+                                    [class.active]="i === currentSlideIndex+1">{{image.name}}</h6>
                                 <img *ngFor="let image of productImages; let i = index" [src]="image.src"
                                     [alt]="image.alt" [class.active]="i === currentSlideIndex+1" class="product-slide">
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="image-container">
+                                <h6 *ngFor="let image of productImages; let i = index" class="image-title"
+                                    [class.active]="i === currentSlideIndex+2">{{image.name}}</h6>
                                 <img *ngFor="let image of productImages; let i = index" [src]="image.src"
                                     [alt]="image.alt" [class.active]="i === currentSlideIndex+2" class="product-slide">
                             </div>
@@ -524,18 +521,24 @@
                     <div class="row d-none d-md-flex">
                         <div class="col-md-4">
                             <div class="image-container">
+                                <h6 *ngFor="let image of productImages; let i = index" class="image-title"
+                                    [class.active]="i === currentSlideIndex+3">{{image.name}}</h6>
                                 <img *ngFor="let image of productImages; let i = index" [src]="image.src"
                                     [alt]="image.alt" [class.active]="i === currentSlideIndex+3" class="product-slide">
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="image-container">
+                                <h6 *ngFor="let image of productImages; let i = index" class="image-title"
+                                    [class.active]="i === currentSlideIndex+4">{{image.name}}</h6>
                                 <img *ngFor="let image of productImages; let i = index" [src]="image.src"
                                     [alt]="image.alt" [class.active]="i === currentSlideIndex+4" class="product-slide">
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="image-container">
+                                <h6 *ngFor="let image of productImages; let i = index" class="image-title"
+                                    [class.active]="i === currentSlideIndex+5">{{image.name}}</h6>
                                 <img *ngFor="let image of productImages; let i = index" [src]="image.src"
                                     [alt]="image.alt" [class.active]="i === currentSlideIndex+5" class="product-slide">
                             </div>
