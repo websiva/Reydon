@@ -26,6 +26,8 @@ import { ApartmentDetailsComponent } from './apartment-details/apartment-details
 import { CommercialBuildingDetailsComponent } from './commercial-building-details/commercial-building-details.component';
 import { LithiumUPSComponent } from './lithium-ups/lithium-ups.component';
 import { EnergyStorageSystemComponent } from './energy-storage-system/energy-storage-system.component';
+import { CookiesPolicyComponent } from './cookies-policy/cookies-policy.component';
+import { ElectricVehicleBatteryComponent } from './electric-vehicle-battery/electric-vehicle-battery.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -47,6 +49,7 @@ const routes: Routes = [
   { path: 'careers', component: CareersComponent },
   { path: 'admin', component: AdminLoginComponent },
   { path: 'privacy-policy', component: PrivacyPolicyComponent },
+  { path: 'cookies-policy', component: CookiesPolicyComponent },
   { path: 'terms-of-use', component: TermsOfUseComponent },
   { path: 'FAQ', component: FAQComponent },
   { path: 'villa/:projectName', component: VillaDetailsComponent },
@@ -54,6 +57,7 @@ const routes: Routes = [
   { path: 'building/:projectName', component: CommercialBuildingDetailsComponent },
   { path: 'lithium-ups', component: LithiumUPSComponent },
   { path: 'energy-storage-system', component: EnergyStorageSystemComponent },
+  { path: 'electic-vehicle-battery', component: ElectricVehicleBatteryComponent },
   { path: '**', redirectTo: '/home' },
 ];
 

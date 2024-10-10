@@ -66,6 +66,8 @@ import { LithiumUPSComponent } from './lithium-ups/lithium-ups.component';
 import { EnergyStorageSystemComponent } from './energy-storage-system/energy-storage-system.component';
 import { UnitConverterComponent } from './unit-converter/unit-converter.component';
 import { AreaConverterComponent } from './area-converter/area-converter.component';
+import { CookiesPolicyComponent } from './cookies-policy/cookies-policy.component';
+import { ElectricVehicleBatteryComponent } from './electric-vehicle-battery/electric-vehicle-battery.component';
 
 
 register();
@@ -111,7 +113,9 @@ register();
     RelatedProjectsComponent,
     EnergyStorageSystemComponent,
     UnitConverterComponent,
-    AreaConverterComponent
+    AreaConverterComponent,
+    CookiesPolicyComponent,
+    ElectricVehicleBatteryComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,45 @@
+<div class="container-fluid banner p-0" style="margin-top: 75px;">
+    <div class="row">
+        <h2 class="banner-title">Cookie Policy for Reydon Resources Private Limited</h2>
+    </div>
+</div>
+<div class="container-fluid w-100 privacy-policy-content">
+    <div class="content-section">
+        <div class="row p-0 m-0 w-100">
+            <div class="section">
+                <p class="description">Last Updated: 09/10/2024</p>
+                <p class="description">Welcome to the Cookie Policy of Reydon Resources Private Limited ("we," "our,"
+                    "us"). This policy explains how we use cookies and similar technologies on our website to enhance
+                    your browsing experience, analyze site usage, and personalize content and advertisements.
+                </p>
+            </div>
+            <div class="section">
+                <p class="description">By using our website, you consent to the use of cookies as described in this
+                    policy. If you do not agree with our use of cookies, please adjust your browser settings accordingly
+                    or refrain from using our website.
+                </p>
+            </div>
+            <div *ngFor="let section of cookieSections" class="section">
+                <h2 class="title">{{ section.title }}</h2>
+                <p class="description">{{ section.description }}</p>
+
+                <div *ngIf="section.subSections">
+                    <div *ngFor="let subSection of section.subSections">
+                        <h3 class="title-2">{{ subSection.subTitle }}</h3>
+                        <p class="description">{{ subSection.details }}</p>
+                        <p><em>{{ subSection.example }}</em></p>
+                    </div>
+                </div>
+
+                <p *ngIf="section.example"><strong>{{ section.example }}</strong></p>
+                <p *ngIf="section.note"><em>{{ section.note }}</em></p>
+            </div>
+            <div class="section">
+                <p class="description">
+                    <span class="company-name">Reydon Resources Private Limited</span> <br>
+                    (Complete address)
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

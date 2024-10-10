@@ -1,0 +1,754 @@
+section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 40px 0;
+}
+
+section>.row {
+    width: 100%;
+    max-width: 1400px;
+}
+
+.section-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-title h6 {
+    font-size: 28px;
+    margin: 20px 0;
+    width: 100%;
+    text-align: left;
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+/***********************************/
+/* Basic Swiper container styles */
+.swiper {
+    padding: 0;
+}
+
+swiper-container {
+    width: 100%;
+    height: 750px;
+}
+
+.swiper-slide {
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.slide-content {
+    height: 100%;
+}
+
+.bg-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Ensures the image covers the entire slide */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    /* Places the image in the background */
+}
+
+.swiper .overlay {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    /* Ensures the text appears on top of the background */
+    color: white;
+}
+
+
+.swiper .title {
+    width: 75%;
+    font-size: 70px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    letter-spacing: normal;
+    text-align: center;
+}
+
+.swiper .subtitle {
+    width: 40%;
+    font-size: 1.25rem;
+    font-weight: 300;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.blur-background {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+    z-index: 1;
+    /* Ensure it is above the image but below the caption */
+}
+
+/*********************product name***************/
+.product-name {
+    padding: 40px 0;
+}
+
+.product-name h3 {
+    font-size: 35px;
+    font-weight: 500;
+    width: 100%;
+    text-align: left;
+    color: var(--primary-color);
+}
+
+/******************************About product***************/
+.about-product {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0 80px 20px;
+}
+
+.about-product .row {
+    width: 100%;
+    max-width: 1400px;
+}
+
+.about-product .image-container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-image .image-container img {
+    width: 85%;
+    height: auto;
+    object-fit: cover;
+}
+.product-description p{
+    font-size: 16px;
+    font-weight: 400;
+    text-align: justify;
+}
+.product-about-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/*******************additional-about-content************/
+.additional-about-content{
+    padding: 0;
+}
+.additional-about-content p{
+    text-align: justify;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+/***************Features***************************/
+.features{
+    background-color: #f1f1f1;
+}
+
+.feature {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.masonry-item {
+    padding: 20px;
+}
+
+.feature-box {
+    width: 100%;
+    height: 150px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    border-radius: 8px;
+    background-color: white;
+    /*box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.3);*/
+    padding: 0 15px;
+    cursor: pointer;
+}
+.feature-box .image-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.feature-box img{
+    width: 70px;
+    height: 70px;
+}
+.feature-title {
+    font-size: 18px;
+    padding: 0;
+    margin: 10px 0 0 0;
+    line-height: 20px;
+}
+
+.feature-box:hover {
+    transform: translateY(-10px);
+}
+
+/**************************Hightlights****************/
+
+.highlight-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    margin: 20px;
+    border-radius: 8px;
+    transition: 0.25s all ease-in-out;
+    padding: 10px 0;
+}
+
+.highlight-box:hover {
+    transform: scale(1.1);
+}
+
+.highlight-box .image-container {
+    width: 100px;
+    height: 100px;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 4px solid var(--button-color);
+}
+
+.highlight img {
+    width: 50px;
+    height: 50px;
+}
+
+.highlight p {
+    font-size: 20px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+/************************User review**************/
+.user-review {
+    padding: 0;
+}
+
+.review-section {
+    width: 100%;
+    position: relative;
+    background-color: black;
+    padding: 0 0 50px 0;
+}
+
+.user-review .carousel-item {
+    width: 100%;
+    height: 425px;
+}
+
+.review-section .carousel-caption {
+    height: 100%;
+    padding: auto 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.review-section .carousel-caption svg {
+    width: 40px;
+    height: 40px;
+    margin: 0 0 30px 0;
+}
+
+.review-section .carousel-caption img {
+    width: 40px;
+    height: 40px;
+    margin: 5px 0;
+    border-radius: 50%;
+}
+
+.review-section .carousel-caption p {
+    color: white;
+    font-size: 18px;
+    font-family: "Poppins", system-ui;
+    font-weight: 300;
+    text-align: center;
+}
+
+.review-section .carousel-caption .company-name {
+    font-size: 22px;
+    color: white;
+    font-weight: 500;
+}
+
+/*************************banner-content-1***************/
+
+
+.banner-content-1 .content {
+    padding: 40px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.banner-content-1 .content h4 {
+    color: var(--primary-color);
+}
+.banner-content-1 .content p {
+    text-align: justify;
+}
+.banner-content-1 .image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+}
+
+.banner-content-1 .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/**********************Specifications****************/
+
+.specifications table {
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
+}
+
+.specifications table tbody tr td:not(:nth-child(1)) {
+    font-size: 16px;
+    font-weight: 300;
+}
+.table-section-heading{
+    background-color: #0042742f;
+    color: black;
+}
+.table-section-heading strong{
+    color: white;
+}
+
+.specifications table thead th {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.specifications table td strong {
+    color: var(--primary-color);
+    font-weight: 500;
+}
+.row-header{
+    font-weight: 500;
+}
+  
+  .specifications .table-responsive {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    /* Adds smooth scrolling on mobile */
+}
+
+/****************************Application*********************/
+
+.application-areas .section-content p {
+    font-size: 16px;
+    font-weight: 300;
+    text-align: justify;
+}
+
+.application-areas .areas-container .area {
+    padding: 20px;
+    height: 400px;
+}
+
+.application-box {
+    width: 100%;
+    height: 100%;
+}
+
+.application-areas .areas-container .area .application-box img {
+    width: 100%;
+    height: 80%;
+    object-fit: contain;
+}
+
+.application-areas .areas-container p {
+    text-align: center;
+    font-size: 18px;
+    color: var(--primary-color);
+    font-weight: 500;
+    margin-top: 20px;
+}
+
+/************************Product image slider***************/
+.product-images{
+    background-color: #f1f1f1;
+}
+.product-slider-container {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    padding: 0;
+}
+
+.product-images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: transform 0.4s ease;
+    width: 100%;
+}
+.product-images .row{
+    width: 100%;
+}
+.product-images .col-md-4{
+    padding: 20px;
+}
+.product-images .image-container{
+    width: 100%;
+    height: 400px;
+    background-color: white;
+}
+
+.product-slide {
+    width: 100%;
+    height: 100%;
+    display: none;
+    object-fit: cover;
+}
+
+.product-slide.active {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev {
+    left: 0;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+}
+.additional-images{
+    padding: 0;
+}
+/*******************Certificates****************/
+.certificates {
+    background-color: #f7f8fa;
+}
+
+.certificate {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+.certificates img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+}
+
+/************************For user ref********************/
+.load-details-section .table-title {
+    font-size: 22px;
+    font-weight: 400;
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+.load-details-section table td {
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.load-details-section table th {
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+    text-align: center;
+    background-color: var(--primary-color);
+}
+
+.troubleshooting {
+    margin: 0 30px;
+}
+
+.troubleshooting .title {
+    font-size: 22px;
+    font-weight: 400;
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+.troubleshoot-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.troubleshooting img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.troubleshoot-points-container li {
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+/**************************faq-section*****************/
+.faq-section {
+    background-color: #f7f8fa;
+}
+
+.faq-section .row {
+    width: 100%;
+    max-width: 1400px;
+}
+
+.accordion-item {
+    padding: 10px 0;
+    margin: 15px 0;
+    /*box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);*/
+}
+
+.accordion-header {
+    margin: 0;
+}
+
+.accordion-button {
+    height: 70px;
+}
+
+
+
+
+
+
+
+
+
+@media (min-width:1200px) {}
+
+
+/* Media query for medium screens */
+@media (max-width: 1200px) {
+        .about-section-card .about-card{
+        padding: 20px;
+        position: relative;
+        height: 450px;
+    }
+    .about-section-card .about-card .card-content{
+        position: relative;
+        top: 0%;
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+    }
+}
+
+/* Media query for medium screens  */
+@media (max-width: 992px) {
+    swiper-container {
+        width: 100%;
+        height: 350px;
+    }
+
+    .swiper .title {
+        width: 80%;
+        font-size: 28px;
+        font-weight: 400;
+        line-height: 32px;
+    }
+
+    .swiper .subtitle {
+        width: 60%;
+    }
+    .about-section-card .about-card{
+        padding: 20px;
+        position: relative;
+        height: 450px;
+    }
+    .about-section-card .about-card .card-content{
+        position: relative;
+        top: 0%;
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+    }
+}
+
+/* Media query for medium screens  */
+@media (max-width: 768px) {
+    swiper-container {
+        width: 100%;
+        height: 350px;
+    }
+
+    .swiper .title {
+        font-size: 28px;
+        font-weight: 400;
+        line-height: 32px;
+    }
+
+    .banner-content-1 .image-container img {
+        position: relative;
+        top: 0%;
+    }
+
+    .user-review .carousel-item {
+        width: 100%;
+        height: 650px;
+    }
+
+    .review-section .carousel-caption p {
+        color: white;
+        font-size: 16px;
+        font-family: "Poppins", system-ui;
+        font-weight: 300;
+        text-align: center;
+    }
+
+    .review-section .carousel-caption .company-name {
+        font-size: 20px;
+        color: white;
+    }
+    .banner-content-1 .content h4 {
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 28px;
+    }
+    .banner-content-1 .image-container {
+        position: relative;
+        height: auto;
+    }
+    .about-section-card .about-card{
+        padding: 20px;
+        position: relative;
+        height: 450px;
+    }
+    .about-section-card .about-card .card-content{
+        position: relative;
+        top: 0%;
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+    }
+}
+
+/* Media query for small screens  */
+@media (max-width: 576px) {
+    swiper-container {
+        width: 100%;
+        height: 350px;
+    }
+
+    .swiper .title {
+        font-size: 28px;
+        font-weight: 400;
+        line-height: 32px;
+    }
+
+    .banner-content-1 .image-container img {
+        position: relative;
+        top: 0%;
+    }
+    .user-review .carousel-item {
+        width: 100%;
+        height: 650px;
+    }
+
+    .review-section .carousel-caption p {
+        color: white;
+        font-size: 16px;
+        font-family: "Poppins", system-ui;
+        font-weight: 300;
+        text-align: center;
+    }
+
+    .review-section .carousel-caption .company-name {
+        font-size: 20px;
+        color: white;
+    }
+    .banner-content-1 .content h4 {
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 28px;
+    }
+    .banner-content-1 .image-container {
+        position: relative;
+        height: auto;
+    }
+    .about-section-card .about-card{
+        padding: 20px;
+        position: relative;
+        height: 450px;
+    }
+    .about-section-card .about-card .card-content{
+        position: relative;
+        top: 0%;
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+    }
+}

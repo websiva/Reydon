@@ -37,7 +37,7 @@ export class CareersComponent {
       ],
       validDrivingLicense: 'Should have Valid Driving License for Motor Cycle or Car (MCWG, LMV)',
       ownVehicle: 'Should have Owned Two wheeler',
-      applicationProcess: 'Submit your resume thru our website - carrier (reydonrpl.in) & Email id : reydonrpl@gmail.com',
+      applicationProcess: 'Apply Now & Send Your updated Resume with recent photograph to our official email id : reydonrpl@gmail.com',
       awarenessSource: 'Social Media',
       deadline: '10/30/2024',
       contactInformation: {
@@ -78,7 +78,7 @@ export class CareersComponent {
       ],
       validDrivingLicense: 'Should have Valid Driving License for Motor Cycle or Car (MCWG, LMV)',
       ownVehicle: 'Should have Owned Two wheeler',
-      applicationProcess: 'Submit your resume thru our website - carrier (reydonrpl.in) & Email id : reydonrpl@gmail.com',
+      applicationProcess: 'Apply Now & Send Your updated Resume with recent photograph to our official email id : reydonrpl@gmail.com',
       awarenessSource: 'Friends',
       deadline: '10/30/2024',
       contactInformation: {
