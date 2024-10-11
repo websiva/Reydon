@@ -94,15 +94,15 @@ carouselSlides = [
   batteryHighlights: { name: string, svg: string }[] = [
     {
       name: "Lightweight",
-      svg: "https://res.cloudinary.com/dbzme4gd3/image/upload/v1727966060/Battery_aioakt.svg"
+      svg: "https://res.cloudinary.com/dbzme4gd3/image/upload/v1727965767/lightweight_kwstm1.svg"
     },
     {
       name: "Reliability",
-      svg: "https://res.cloudinary.com/dbzme4gd3/image/upload/v1727966062/Durability_leiapn.svg"
+      svg: "https://res.cloudinary.com/dbzme4gd3/image/upload/v1728618557/Reliability_qhge2j.png"
     },
     {
       name: "Fast charging",
-      svg: "https://res.cloudinary.com/dbzme4gd3/image/upload/v1727966070/Stability_myvb9w.svg"
+      svg: "https://res.cloudinary.com/dbzme4gd3/image/upload/v1727965765/faster-recharge_xmjhsn.svg"
     },
     {
       name: "Environmental-friendly",
@@ -110,11 +110,11 @@ carouselSlides = [
     },
     {
       name: "Ease of usage",
-      svg: "https://res.cloudinary.com/dbzme4gd3/image/upload/v1727966064/Economical_yyzl6q.svg"
+      svg: "https://res.cloudinary.com/dbzme4gd3/image/upload/v1728618557/Ease_of_usage_y2q3u7.png"
     },
     {
       name: "Tendency to hold charge longer",
-      svg: "https://res.cloudinary.com/dbzme4gd3/image/upload/v1727966067/Lifecycle_liuqyf.svg"
+      svg: "https://res.cloudinary.com/dbzme4gd3/image/upload/v1728618557/Tendency_to_hold_longer_pj6tt5.png"
     },
     {
       name: "Low maintenance",
