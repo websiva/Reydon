@@ -310,6 +310,7 @@ export class ApartmentDetailsComponent implements OnDestroy,OnInit {
   ngContactFormSubmit(projectName: string) {
     this.contactFormProject = projectName
       ; const sheetData = {
+        Date:new Date().toLocaleDateString('en-GB'),
         Name: this.contcatFormName,
         Email: this.contactFormEmail,
         PhoneNumber: this.contactFormPhoneNumber,
@@ -349,6 +350,7 @@ export class ApartmentDetailsComponent implements OnDestroy,OnInit {
   //downloading file and submitting data to google sheet
   downloadFile() {
     const sheetData = {
+      Date:new Date().toLocaleDateString('en-GB'),
       Name: this.contcatFormName,
       PhoneNumber: this.contactFormPhoneNumber,
       Email: this.contactFormEmail,

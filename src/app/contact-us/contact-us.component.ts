@@ -34,6 +34,7 @@ export class ContactUsComponent implements OnInit {
   ngSubmit(){
 
     const sheetData={
+      Date:new Date().toLocaleDateString('en-GB'),
       Name:this.name,
       Email:this.email,
       PhoneNumber:this.phone,

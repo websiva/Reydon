@@ -11,7 +11,7 @@ import { PostFormDataService } from '../angular-service/post-form-data.service';
   templateUrl: './villa-details.component.html',
   styleUrl: './villa-details.component.css'
 })
-export class VillaDetailsComponent implements OnDestroy,OnInit {
+export class VillaDetailsComponent implements OnDestroy, OnInit {
   contactForm: FormGroup;
   contcatFormName: string = '';
   contactFormEmail: string = "";
@@ -19,7 +19,7 @@ export class VillaDetailsComponent implements OnDestroy,OnInit {
   contactFormMessage: string = "";
   contactFormProject: string = "";
   contactFormDownloadType: string = "";
-  contactFormModalOpen:boolean=false;
+  contactFormModalOpen: boolean = false;
   fileDownloadForm: FormGroup;
   ProjectName: string = '';
   ProjectId: string = '';
@@ -74,12 +74,12 @@ export class VillaDetailsComponent implements OnDestroy,OnInit {
       });
 
       //setting contactformfilled status to false
-      let sessionValue=sessionStorage.getItem("contactFormFilled");
-      if(sessionValue=="true"){
-        this.contactFormModalOpen=true;
+      let sessionValue = sessionStorage.getItem("contactFormFilled");
+      if (sessionValue == "true") {
+        this.contactFormModalOpen = true;
       }
-      else{
-        this.contactFormModalOpen=false;
+      else {
+        this.contactFormModalOpen = false;
       }
     } catch (error) {
       console.error(error);
@@ -308,15 +308,16 @@ export class VillaDetailsComponent implements OnDestroy,OnInit {
   }
 
   //submitting project contact form data to google sheet
-  ngContactFormSubmit(projectName:string) {
-    this.contactFormProject=projectName
-;    const sheetData = {
-      Name: this.contcatFormName,
-      Email: this.contactFormEmail,
-      PhoneNumber: this.contactFormPhoneNumber,
-      Message:this.contactFormMessage,
-      ProjectName: this.contactFormProject
-    };
+  ngContactFormSubmit(projectName: string) {
+    this.contactFormProject = projectName
+      ; const sheetData = {
+        Date: new Date().toLocaleDateString('en-GB'),
+        Name: this.contcatFormName,
+        Email: this.contactFormEmail,
+        PhoneNumber: this.contactFormPhoneNumber,
+        Message: this.contactFormMessage,
+        ProjectName: this.contactFormProject
+      };
 
     this.googleFormDataSercice.StoreProjectContactUsPageFormData(sheetData).subscribe((response: any) => {
       if (response && response.sucess !== false) {
@@ -339,17 +340,18 @@ export class VillaDetailsComponent implements OnDestroy,OnInit {
 
     let contactFormStatus = sessionStorage.getItem("contactFormFilled");
     if (contactFormStatus == "true") {
-        this.contactFormModalOpen=true;      
-        this.downloadDocument();
+      this.contactFormModalOpen = true;
+      this.downloadDocument();
     }
-    else {      
-      this.contactFormModalOpen=false;
-     }
+    else {
+      this.contactFormModalOpen = false;
+    }
   }
 
   //downloading file and submitting data to google sheet
   downloadFile() {
     const sheetData = {
+      Date:new Date().toLocaleDateString('en-GB'),
       Name: this.contcatFormName,
       PhoneNumber: this.contactFormPhoneNumber,
       Email: this.contactFormEmail,
@@ -361,7 +363,7 @@ export class VillaDetailsComponent implements OnDestroy,OnInit {
       if (response && response.sucess !== false) {
         sessionStorage.setItem("contactFormFilled", "true");
         this.downloadDocument();
-        this.contactFormModalOpen=true;
+        this.contactFormModalOpen = true;
       }
       else {
         alert('Failed to submit data. Please try again.');
