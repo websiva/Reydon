@@ -377,7 +377,7 @@ export class LayoutComponent implements OnInit, OnDestroy {
     link.href = `${this.downloadDocumentLink}`;
     link.download = this.downloadFormId;
     link.click();*/
-    window.open(this.downloadDocumentLink, '_blank');
+    window.open("https://drive.google.com/file/d/1D592cwisfpOREsKA31VX7iCHbTRszcbl/view?usp=drive_link", '_blank');
   }
 
 
