@@ -751,6 +751,24 @@
                                 </div>
                                 <div class="row m-0">
                                     <div class="col-12 p-0 mb-3">
+                                        <label for="city" class="form-label required">City/District</label>
+                                        <input type="text" id="city" class="form-control" placeholder="Place"
+                                            formControlName="city" [(ngModel)]="contactFormCity" />
+                                        <div *ngIf="contactForm.controls['city'].invalid && contactForm.controls['city'].touched"
+                                            class="text-danger">
+                                            <small *ngIf="contactForm.controls['city'].errors?.['required']">Place
+                                                is
+                                                required.</small>
+                                            <small *ngIf="contactForm.controls['city'].errors?.['city']">Please
+                                                enter
+                                                a
+                                                valid
+                                                place</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row m-0">
+                                    <div class="col-12 p-0 mb-3">
                                         <label for="message" class="form-label required">Message</label>
                                         <textarea id="message" rows="5" class="form-control" placeholder="Message"
                                             formControlName="message" [(ngModel)]="contactFormMessage"></textarea>
@@ -1000,6 +1018,19 @@
                                             <small *ngIf="contactForm.controls['email'].errors?.['email']">Please enter
                                                 a
                                                 valid email address.</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row m-0 w-100">
+                                    <div class="col-12 mb-3 p-0">
+                                        <label for="city" class="form-label required">City / District</label>
+                                        <input type="text" maxlength="10" id="city" class="form-control"
+                                            placeholder="place" formControlName="city"
+                                            [(ngModel)]="contactFormCity" />
+                                        <div *ngIf="contactForm.controls['city']?.invalid && contactForm.controls['city']?.touched"
+                                            class="text-danger">
+                                            <small *ngIf="contactForm.controls['city']?.errors?.['required']">place
+                                                required.</small>
                                         </div>
                                     </div>
                                 </div>

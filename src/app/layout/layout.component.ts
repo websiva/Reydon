@@ -19,6 +19,7 @@ export class LayoutComponent implements OnInit, OnDestroy {
   contactFormMessage: string = "";
   contactFormProject: string = "";
   contactFormDownloadType: string = "";
+  contactFormCity:string="";
   contactFormModalOpen:boolean=false;
   fileDownloadForm: FormGroup;
   ProjectName: string = '';
@@ -52,11 +53,13 @@ export class LayoutComponent implements OnInit, OnDestroy {
       email: ['', [Validators.required, Validators.email]],
       phone: ['', [Validators.required]],
       message: ['', [Validators.required]],
+      city: ['', Validators.required]
     });
     this.fileDownloadForm = this.formBuilder.group({
       name: ["", [Validators.required]],
       email: ['', [Validators.required, Validators.email]],
-      phone: ['', [Validators.required]]
+      phone: ['', [Validators.required]],
+      city: ['', Validators.required]
     });
   }
 
@@ -315,7 +318,8 @@ export class LayoutComponent implements OnInit, OnDestroy {
         Email: this.contactFormEmail,
         PhoneNumber: this.contactFormPhoneNumber,
         Message: this.contactFormMessage,
-        ProjectName: this.contactFormProject
+        ProjectName: this.contactFormProject,
+        City:this.contactFormCity
       };
 
     this.googleFormDataSercice.StoreProjectContactUsPageFormData(sheetData).subscribe((response: any) => {
@@ -355,7 +359,8 @@ export class LayoutComponent implements OnInit, OnDestroy {
       PhoneNumber: this.contactFormPhoneNumber,
       Email: this.contactFormEmail,
       ProjectName: this.contactFormProject,
-      DocumentType: this.contactFormDownloadType
+      DocumentType: this.contactFormDownloadType,
+      City:this.contactFormCity
     };
 
     this.googleFormDataSercice.StoreDownloadFormDataInGoogleSheet(sheetData).subscribe((response: any) => {

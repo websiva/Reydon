@@ -20,6 +20,7 @@ export class ApartmentDetailsComponent implements OnDestroy,OnInit {
   contactFormMessage: string = "";
   contactFormProject: string = "";
   contactFormDownloadType: string = "";
+  contactFormCity:string="";
   contactFormModalOpen:boolean=false;
   fileDownloadForm: FormGroup;
   ProjectName: string = '';
@@ -53,11 +54,13 @@ export class ApartmentDetailsComponent implements OnDestroy,OnInit {
       email: ['', [Validators.required, Validators.email]],
       phone: ['', [Validators.required]],
       message: ['', [Validators.required]],
+      city: ['', Validators.required]
     });
     this.fileDownloadForm = this.formBuilder.group({
       name: ["", [Validators.required]],
       email: ['', [Validators.required, Validators.email]],
-      phone: ['', [Validators.required]]
+      phone: ['', [Validators.required]],
+      city: ['', Validators.required]
     });
   }
 
@@ -287,13 +290,6 @@ export class ApartmentDetailsComponent implements OnDestroy,OnInit {
     }
   }
 
-
-  //get first 20 plot details
-  /*firsttwentyPlots() {
-    this.FirstTwentyPlots = this.ProjectData[0].plots.slice(0, 20);
-    console.log(this.FirstTwentyPlots);
-  }*/
-
   //Interval for banner images
   startSlider() {
     this.interval = setInterval(() => {
@@ -315,7 +311,8 @@ export class ApartmentDetailsComponent implements OnDestroy,OnInit {
         Email: this.contactFormEmail,
         PhoneNumber: this.contactFormPhoneNumber,
         Message: this.contactFormMessage,
-        ProjectName: this.contactFormProject
+        ProjectName: this.contactFormProject,
+        City:this.contactFormCity
       };
 
     this.googleFormDataSercice.StoreProjectContactUsPageFormData(sheetData).subscribe((response: any) => {
@@ -355,7 +352,8 @@ export class ApartmentDetailsComponent implements OnDestroy,OnInit {
       PhoneNumber: this.contactFormPhoneNumber,
       Email: this.contactFormEmail,
       ProjectName: this.contactFormProject,
-      DocumentType: this.contactFormDownloadType
+      DocumentType: this.contactFormDownloadType,
+      City:this.contactFormCity
     };
 
     this.googleFormDataSercice.StoreDownloadFormDataInGoogleSheet(sheetData).subscribe((response: any) => {
