@@ -68,12 +68,12 @@ export class ApartmentDetailsComponent implements OnDestroy,OnInit {
     try {
       this.activeroute.queryParams.subscribe(async (data) => {
         this.ProjectId = data['id'];
-        console.log(this.ProjectId);
+        //console.log(this.ProjectId);
         await this.loadPropertyData(this.ProjectId);
       });
       this.activeroute.params.subscribe(async (data) => {
         this.ProjectName = data['projectName'];
-        console.log(this.ProjectName);
+        //console.log(this.ProjectName);
         await this.loadPropertyData(this.ProjectId);
       });
 
@@ -95,7 +95,7 @@ export class ApartmentDetailsComponent implements OnDestroy,OnInit {
     try {
       this.propertyDataService.getAllData().subscribe(data => {
         this.ProjectData = data.filter(project => project.ProjectId === projectId);
-        console.log(this.ProjectData);
+        //console.log(this.ProjectData);
         this.GettingObjectValues();
         this.CollectingLocationsFromMainData();
         //this.firsttwentyPlots();
@@ -298,7 +298,7 @@ export class ApartmentDetailsComponent implements OnDestroy,OnInit {
   }
 
   ngSubmitFileDownloadform() {
-    console.log(this.contactForm.value);
+    //console.log(this.contactForm.value);
     this.fileDownloadForm.reset();
   }
 
@@ -383,7 +383,7 @@ export class ApartmentDetailsComponent implements OnDestroy,OnInit {
 
   openBannerImages(image: string) {
     this.modalImageUrl = image;
-    console.log(image);
+    //console.log(image);
   }
 
   //scroll to top button functionalities

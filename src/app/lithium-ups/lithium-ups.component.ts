@@ -117,7 +117,7 @@ export class LithiumUPSComponent implements OnInit {
     { feature: "For Computer & Home Appliances", img: "https://res.cloudinary.com/dbzme4gd3/image/upload/v1727965714/computer_home_xwqcla.png" },
     { feature: "No Protruding Wires", img: "https://res.cloudinary.com/dbzme4gd3/image/upload/v1727965717/protruding_wires_gpwhyl.png" },
     { feature: "No Fumes", img: "https://res.cloudinary.com/dbzme4gd3/image/upload/v1727965717/no_fumes_xzd2wx.png" },
-    { feature: "All-in-one Integrated Design", img: "https://res.cloudinary.com/dbzme4gd3/image/upload/v1727965717/no_fumes_xzd2wx.png" },
+    { feature: "All-in-one Integrated Design", img: "https://res.cloudinary.com/dbzme4gd3/image/upload/v1727965715/integrated_design_q8hrn2.png" },
     { feature: "Battery Life up to 10 Years", img: "https://res.cloudinary.com/dbzme4gd3/image/upload/v1727965712/battery_life_u6iijx.png" },
     { feature: "Zero Maintenance", img: "https://res.cloudinary.com/dbzme4gd3/image/upload/v1727965716/maintanance_zakjlw.png" },
     { feature: "Rapid Charging", img: "https://res.cloudinary.com/dbzme4gd3/image/upload/v1727965718/rapid_charging_ttfgpt.png" },
