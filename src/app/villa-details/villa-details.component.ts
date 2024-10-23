@@ -374,10 +374,11 @@ export class VillaDetailsComponent implements OnDestroy, OnInit {
   }
 
   downloadDocument() {
-    const link = document.createElement('a');
+    /*const link = document.createElement('a');
     link.href = `${this.downloadDocumentLink}`;
     link.download = this.downloadFormId;
-    link.click();
+    link.click();*/
+    window.open("https://drive.google.com/file/d/1D592cwisfpOREsKA31VX7iCHbTRszcbl/view?usp=drive_link", '_blank');
   }
 
   openBannerImages(image: string) {
