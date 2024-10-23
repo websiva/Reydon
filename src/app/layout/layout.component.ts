@@ -331,7 +331,7 @@ export class LayoutComponent implements OnInit, OnDestroy {
     this.contactForm.reset();
   }
 
-  setDownloadFormId(projectName: string, value: string, fileLink: string) {
+  setDownloadFormId(projectName: string, value: string, fileLink: "https://drive.google.com/file/d/1D592cwisfpOREsKA31VX7iCHbTRszcbl/view?usp=drive_link") {
     this.contactFormProject = projectName;
     this.contactFormDownloadType = value;
     this.downloadFormId = value;
@@ -373,10 +373,11 @@ export class LayoutComponent implements OnInit, OnDestroy {
   }
 
   downloadDocument() {
-    const link = document.createElement('a');
+    /*const link = document.createElement('a');
     link.href = `${this.downloadDocumentLink}`;
     link.download = this.downloadFormId;
-    link.click();
+    link.click();*/
+    window.open(this.downloadDocumentLink, '_blank');
   }
 
 
