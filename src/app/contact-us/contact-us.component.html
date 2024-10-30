@@ -2,13 +2,13 @@
     <div class="row">
         <div class="col-12">
             <div class="overlay">
-                <img src="contactpage.jpg" alt="">
+                <img src="https://res.cloudinary.com/dbzme4gd3/image/upload/v1730281715/contact-us-banner_iieqhq.jpg" alt="">
                 <h2 class="banner-title">Contact Us</h2>
             </div>
         </div>
     </div>
 </div>
-<div class="container-fluid w-100 form-section d-flex flex-column">
+<div class="container-fluid w-100 form-section d-flex flex-column justify-content-center align-items-center">
     <div class="row g-5 form-content-section">
         <div class="col-lg-7 form">
             <p>If you have any questions or need further information, please feel free to contact us.</p>
@@ -96,7 +96,7 @@
 
         </div>
         <div class="col-lg-5  form-contact-content-section">
-            <div class="row bg-white px-2 py-5">
+            <div class="row bg-white px-2 pt-5 pb-2 mb-2">
                 <div class="col-12">
                     <p class="fw-bold">For enquires contact</p>
                     <div class="d-flex align-items-center phone py-2 px-2">
@@ -116,10 +116,6 @@
                             Thanjavur Dist-613005, Tamilnadu.
                         </address>
                     </div>
-                </div>
-            </div>
-            <div class="row my-5">
-                <div class="col-12">
                     <div class="social-media-icons">
                         <ul>
                             <li><a href="https://www.facebook.com/profile.php?id=61566796764128&sk=about" target="_blank"> <img src="social-media/facebook.svg" alt="Facebook"></a></li>
@@ -131,12 +127,15 @@
                     </div>
                 </div>
             </div>
+            <div class="row">
+                <div class="col-12">
+                    <iframe width="100%" height="300" style="border:0" loading="lazy" allowfullscreen
+                    referrerpolicy="no-referrer-when-downgrade" [src]="safeMapLink">
+                </iframe>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="row m-0 map-section w-100">
-        <h4 class="text-center" style="color: var(--primary-color);font-weight: 500;">Reydon Office Location</h4>
-        <iframe width="100%" height="450" style="border:0" loading="lazy" allowfullscreen
-            referrerpolicy="no-referrer-when-downgrade" [src]="safeMapLink">
-        </iframe>
+    <div class="row m-0">
     </div>
 </div>
