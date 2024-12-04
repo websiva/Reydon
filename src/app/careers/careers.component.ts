@@ -39,7 +39,7 @@ export class CareersComponent {
       ownVehicle: 'Should have Owned Two wheeler',
       applicationProcess: 'Apply Now & Send Your updated Resume with recent photograph to our official email id : reydonrpl@gmail.com',
       awarenessSource: 'Social Media',
-      deadline: '10/30/2024',
+      deadline: '31/12/2024',
       contactInformation: {
         name: 'Mr. Kumaran',
         phone: '77089 43894'
@@ -80,7 +80,7 @@ export class CareersComponent {
       ownVehicle: 'Should have Owned Two wheeler',
       applicationProcess: 'Apply Now & Send Your updated Resume with recent photograph to our official email id : reydonrpl@gmail.com',
       awarenessSource: 'Friends',
-      deadline: '10/30/2024',
+      deadline: '31/12/2024',
       contactInformation: {
         name: 'Mr. Kumaran',
         phone: '77089 43894'
