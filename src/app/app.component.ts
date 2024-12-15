@@ -37,4 +37,8 @@ export class AppComponent {
       behavior: 'smooth'
     });
   }
+
+   isAdmin():boolean{
+    return this.router.url==="/admin";
+   }
 }

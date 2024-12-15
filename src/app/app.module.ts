@@ -4,7 +4,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-import { ServicesComponent } from './services/services.component';
 import { PropertiesComponent } from './properties/properties.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
@@ -53,7 +52,6 @@ import { ExploreByCitiesComponent } from './explore-by-cities/explore-by-cities.
 import { HomeProjectsComponent } from './home-projects/home-projects.component';
 import { ProximityGoogleMapComponent } from './proximity-google-map/proximity-google-map.component';
 import { CareersComponent } from './careers/careers.component';
-import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
 import { TermsOfUseComponent } from './terms-of-use/terms-of-use.component';
 import { FAQComponent } from './faq/faq.component';
@@ -68,6 +66,7 @@ import { UnitConverterComponent } from './unit-converter/unit-converter.componen
 import { AreaConverterComponent } from './area-converter/area-converter.component';
 import { CookiesPolicyComponent } from './cookies-policy/cookies-policy.component';
 import { ElectricVehicleBatteryComponent } from './electric-vehicle-battery/electric-vehicle-battery.component';
+import { ReydonServicesComponent } from './reydon-services/reydon-services.component';
 
 
 register();
@@ -75,7 +74,6 @@ register();
 @NgModule({
   declarations: [
     AppComponent,
-    ServicesComponent,
     PropertiesComponent,
     ProjectsComponent,
     ContactUsComponent,
@@ -103,7 +101,6 @@ register();
     ProximityMapComponent,
     ProximityGoogleMapComponent,
     CareersComponent,
-    AdminLoginComponent,
     PrivacyPolicyComponent,
     TermsOfUseComponent,
     FAQComponent,
@@ -115,7 +112,8 @@ register();
     UnitConverterComponent,
     AreaConverterComponent,
     CookiesPolicyComponent,
-    ElectricVehicleBatteryComponent
+    ElectricVehicleBatteryComponent,
+    ReydonServicesComponent
   ],
   imports: [
     BrowserModule,

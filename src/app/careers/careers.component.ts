@@ -49,7 +49,7 @@ export class CareersComponent {
       jobCode: 'JC02',
       segmentType: 'Sales & Service',
       jobTitle: 'Sales Executive - (Product Sales and Service)',
-      location: ['Chennai, Trichy, Madurai, Coimbatore, Salem, Tirunelveli, Kerala'],
+      location: ['Trichy, Madurai'],
       department: 'Sales & Marketing',
       cardExperience:'2-3 Yrs',
       jobType: ['Full Time, Part Time'],
@@ -80,7 +80,7 @@ export class CareersComponent {
       ownVehicle: 'Should have Owned Two wheeler',
       applicationProcess: 'Apply Now & Send Your updated Resume with recent photograph to our official email id : reydonrpl@gmail.com',
       awarenessSource: 'Friends',
-      deadline: '31/12/2024',
+      deadline: '31/01/2025',
       contactInformation: {
         name: 'Mr. Kumaran',
         phone: '77089 43894'

@@ -3,7 +3,7 @@ export interface residentialPlots {
     ProjectName: string;
     Type: string;
     Category: string;
-    TransactionType: string;
+    tag1: string;
     HeaderLocation: string;
     DTCPApproved: boolean;
     RERAApproved: boolean;
@@ -18,14 +18,8 @@ export interface residentialPlots {
     TotalPlots: number;
     AvailablePlots: number;
     LayoutImage: string;
-    Phases: {
-        NoOfPhases: number,
-        PhasesDetails: {
-            StartNumber: number,
-            EndNumber: number
-        }[];
-    };
     PropertyDescription: string;
+    NoOfPhases: number;
     AddressDetails: {
         Address: string,
         PostOffice: string,

@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AdminLoginComponent } from './admin-login.component';
+import { ReydonServicesComponent } from './reydon-services.component';
 
-describe('AdminLoginComponent', () => {
-  let component: AdminLoginComponent;
-  let fixture: ComponentFixture<AdminLoginComponent>;
+describe('ReydonServicesComponent', () => {
+  let component: ReydonServicesComponent;
+  let fixture: ComponentFixture<ReydonServicesComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [AdminLoginComponent]
+      declarations: [ReydonServicesComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(AdminLoginComponent);
+    fixture = TestBed.createComponent(ReydonServicesComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
